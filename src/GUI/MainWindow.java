@@ -16,6 +16,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 
@@ -48,7 +49,6 @@ public class MainWindow extends JFrame {
     private JButton btn_save;
     private JButton btn_database;
     private JButton btn_logout;
-    private String[] denomData = {};
 
     private JPanel panel4;
     private JTable jt_denom;
@@ -379,12 +379,14 @@ public class MainWindow extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
 
+                ArrayList<String> denomData = new ArrayList<>();
+
                 //getting denomination data from JTable as array of Strings
                 for (int i = 0; i < jt_denom.getRowCount();i++){
-                    denomData[i] = (String) jt_denom.getValueAt(i, 2);
+                    denomData.add((String) jt_denom.getValueAt(i, 1));
                 }
 
-                System.out.println(Arrays.toString(denomData));
+                System.out.println(denomData);
 
 
                 String client = JOptionPane.showInputDialog(null,"Unesite ime klijenta","Unos podataka",JOptionPane.INFORMATION_MESSAGE);

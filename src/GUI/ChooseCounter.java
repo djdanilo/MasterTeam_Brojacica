@@ -23,13 +23,14 @@ public class ChooseCounter extends JFrame {
     private JButton btn_reset;
     private JButton btn_refreshPort;
     public static String port;
+    private LoginScreen loginScreen;
 
 
     public ChooseCounter() {
         super();
         this.setSize(400, 350);
         this.setTitle("Odabir mašine za brojanje novca");
-        this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(loginScreen);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         initComponents();

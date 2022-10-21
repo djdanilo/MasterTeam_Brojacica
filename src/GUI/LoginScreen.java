@@ -88,7 +88,7 @@ public class LoginScreen extends JFrame {
         btn_cancel.setPreferredSize(new Dimension(100,50));
 
         //setting the placement of components
-        sl.putConstraint(SpringLayout.WEST, lb_title, 120, SpringLayout.WEST, panel);
+        sl.putConstraint(SpringLayout.WEST, lb_title, 130, SpringLayout.WEST, panel);
         sl.putConstraint(SpringLayout.NORTH, lb_title, 10, SpringLayout.NORTH, panel);
 
         sl.putConstraint(SpringLayout.WEST, lb_username, 60, SpringLayout.WEST, panel);
@@ -106,10 +106,10 @@ public class LoginScreen extends JFrame {
         sl.putConstraint(SpringLayout.WEST, cb_showPassword, 160, SpringLayout.WEST, panel);
         sl.putConstraint(SpringLayout.NORTH, cb_showPassword, 150, SpringLayout.NORTH, panel);
 
-        sl.putConstraint(SpringLayout.WEST, btn_login, 70, SpringLayout.WEST, panel);
+        sl.putConstraint(SpringLayout.WEST, btn_login, 90, SpringLayout.WEST, panel);
         sl.putConstraint(SpringLayout.NORTH, btn_login, 215, SpringLayout.NORTH, panel);
 
-        sl.putConstraint(SpringLayout.WEST, btn_cancel, 190, SpringLayout.WEST, panel);
+        sl.putConstraint(SpringLayout.WEST, btn_cancel, 215, SpringLayout.WEST, panel);
         sl.putConstraint(SpringLayout.NORTH, btn_cancel, 215, SpringLayout.NORTH, panel);
 
         //adding components to JPanel
