@@ -7,9 +7,7 @@ import com.fazecast.jSerialComm.SerialPortEvent;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TestGuiImageBinary {
@@ -96,33 +94,44 @@ public class TestGuiImageBinary {
                 }
                 byte[] readBuffer = new byte[comPort.bytesAvailable()];
                 int numRead = comPort.readBytes(readBuffer, readBuffer.length);
-                System.out.println("Read " + numRead + " bytes.");
+                //System.out.println("Read " + numRead + " bytes.");
 
                 for (Byte b : readBuffer) {
 
+                    if (numRead <= 500) {
+                        break;
+                    }
+
                     s1 = String.format("%8s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0');
 
+
+                    if (s1.equals("01000101")) {
+                        System.out.println();
+                        continue;
+                    }
+
+                    System.out.print(s1);
                     list.add(s1);
+
+                    try {
+                        File f = new File("output.txt");
+                        PrintWriter writer = new PrintWriter("output.txt", "UTF-8");
+                        Scanner sc = new Scanner(s1);
+                        while (sc.hasNextLine()){
+                            String line = sc.nextLine();
+                            writer.append(line);
+                        }
+                        sc.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
                 }
 
-                System.out.println(list);
+                //System.out.println(list);
             }
         });
-
-
-    }
-
-    public static String printBinary(String binary, int blockSize, String separator) {
-
-        // split by blockSize
-        List<String> result = new ArrayList<>();
-        int index = 0;
-        while (index < binary.length()) {
-            result.add(binary.substring(index, Math.min(index + blockSize, binary.length())));
-            index += blockSize;
-        }
-
-        return result.stream().collect(Collectors.joining(separator));
     }
 }
 
