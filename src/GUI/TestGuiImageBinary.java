@@ -27,11 +27,9 @@ public class TestGuiImageBinary {
 
         toImage();
 
-        //invokeDevice();
-        //readWriteImage();
     }
 
-    private static void readingBytes(SerialPort comPort) {
+    private static void readingBytesSN(SerialPort comPort) {
 
         comPort.addDataListener(new SerialPortDataListener() {
             @Override
@@ -43,7 +41,7 @@ public class TestGuiImageBinary {
             public void serialEvent(SerialPortEvent serialPortEvent) {
 
                 ArrayList<String> list = new ArrayList<>();
-                String s1 = new String();
+                String s1;
 
                 if (serialPortEvent.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
                     return;
@@ -54,7 +52,7 @@ public class TestGuiImageBinary {
 
                 for (Byte b : readBuffer) {
 
-                    if (numRead <= 500) {
+                    if (numRead <= 1200) {
                         break;
                     }
 
@@ -66,32 +64,45 @@ public class TestGuiImageBinary {
                         continue;
                     }
 
-                    System.out.print(s1);
-                    list.add(s1);
+                    String newLine = "011000001101100100011011000100011010000111000";
+
+                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+                    Graphics2D g2d = img.createGraphics();
+                    Font font = new Font("Arial", Font.PLAIN, 1);
+                    g2d.setFont(font);
+                    int height = g2d.getFontMetrics().getHeight();
+                    g2d.dispose();
+
+                    img = new BufferedImage(325, 35, BufferedImage.TYPE_INT_RGB);
+                    g2d = img.createGraphics();
+
+                    g2d.setFont(font);
+                    g2d.setColor(Color.WHITE);
+                    int fontSize = 1;
+
+                    int y = 0;
+
+                    for (String line : s1.split(newLine)) {
+                        g2d.drawString(line, 0, height);
+                        height+= fontSize;
+                    }
+                    g2d.dispose();
 
                     try {
-                        File f = new File("output.txt");
-                        PrintWriter writer = new PrintWriter("output.txt", "UTF-8");
-                        Scanner sc = new Scanner(s1);
-                        while (sc.hasNextLine()){
-                            String line = sc.nextLine();
-                            writer.append(line);
-                        }
-                        sc.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                        ImageIO.write(img, "png", new File("Text.png"));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
                     }
-
 
                 }
 
-                //System.out.println(list);
             }
         });
+
     }
 
 
-    private static void readingBytes2(SerialPort comPort) {
+    private static void readingBytesDENOM(SerialPort comPort) {
 
         comPort.addDataListener(new SerialPortDataListener() {
             @Override
@@ -139,37 +150,29 @@ public class TestGuiImageBinary {
         }
 
         String serialNumber = new String(result);
-        StringTokenizer str = new StringTokenizer(serialNumber, "\n\r");
 
-        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_BINARY);
+        String newLine = "011000001101100100011011000100011010000111000";
+
+        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
         Graphics2D g2d = img.createGraphics();
-        Font font = new Font("Arial", Font.PLAIN, 48);
+        Font font = new Font("Arial", Font.PLAIN, 1);
         g2d.setFont(font);
-        FontMetrics fm = g2d.getFontMetrics();
-        int width = fm.stringWidth(serialNumber);
-        int height = fm.getHeight();
+        int height = g2d.getFontMetrics().getHeight();
         g2d.dispose();
 
-        img = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_BINARY);
+        img = new BufferedImage(325, 35, BufferedImage.TYPE_INT_RGB);
         g2d = img.createGraphics();
-        g2d.setRenderingHint(RenderingHints.KEY_ALPHA_INTERPOLATION, RenderingHints.VALUE_ALPHA_INTERPOLATION_QUALITY);
-        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.setRenderingHint(RenderingHints.KEY_COLOR_RENDERING, RenderingHints.VALUE_COLOR_RENDER_QUALITY);
-        g2d.setRenderingHint(RenderingHints.KEY_DITHERING, RenderingHints.VALUE_DITHER_ENABLE);
-        g2d.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON);
-        g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-        g2d.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
+
         g2d.setFont(font);
-        fm = g2d.getFontMetrics();
         g2d.setColor(Color.WHITE);
+        int fontSize = 1;
 
-        while (str.hasMoreTokens()) {
-            String token = str.nextToken();
-            g2d.drawString(token, 0, height + fm.getAscent());
-            height += (fm.getAscent() + fm.getLeading());
+        int y = 0;
+
+        for (String line : serialNumber.split(newLine)) {
+            g2d.drawString(line, 0, height);
+            height+= fontSize;
         }
-
         g2d.dispose();
 
         try {
@@ -180,10 +183,6 @@ public class TestGuiImageBinary {
 
     }
 
-    private void drawString(Graphics g, String text, int x, int y) {
-        for (String line : text.split("\n"))
-            g.drawString(line, x, y += g.getFontMetrics().getHeight());
-    }
 
 }
 
