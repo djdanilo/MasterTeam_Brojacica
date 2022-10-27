@@ -3,11 +3,15 @@ package GUI;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import org.tc33.jheatchart.HeatChart;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class TestGuiImageBinary {
@@ -17,62 +21,14 @@ public class TestGuiImageBinary {
         SerialPort comPort = SerialPort.getCommPort("COM4");
         comPort.openPort();
         comPort.setComPortParameters(115200, 8, 1, SerialPort.NO_PARITY);
-        readingBytes(comPort);
+        comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
+        //readingBytes(comPort);
+        //readingBytes2(comPort);
+
+        toImage();
 
         //invokeDevice();
         //readWriteImage();
-    }
-
-    private static void invokeDevice() throws IOException {
-        String comPort = "COM4";
-        System.out.println(String.format("Connecting to %s", comPort));
-        SerialPort sp = SerialPort.getCommPort(comPort);
-        sp.setBaudRate(115200);
-        sp.setRTS();
-        sp.openPort();
-        sp.addDataListener(new SerialPortDataListener() {
-            @Override
-            public int getListeningEvents() {
-                return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
-            }
-
-            @Override
-            public void serialEvent(SerialPortEvent event) {
-                if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE)
-                    return;
-                byte[] newData = new byte[sp.bytesAvailable()];
-                sp.readBytes(newData, newData.length);
-                try (FileOutputStream fos = new FileOutputStream(new File("C:\\Users\\danilodjurovic\\Desktop\\MasterTeam Brojacica\\output.txt"), true)) {
-                    fos.write(newData);
-                    fos.write("\n===============Start=============".getBytes());
-                    for (byte b : newData) {
-                        fos.write(10);
-                        int i = b;
-                        String s = String.valueOf(i);
-                        fos.write(s.getBytes());
-                    }
-                    fos.write("\n===============Stop=============".getBytes());
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
-
-
-    }
-
-    private static void readWriteImage() throws IOException {
-        BufferedImage bImage = ImageIO.read(new File("C:\\Users\\danilodjurovic\\Desktop\\MasterTeam Brojacica\\src\\sample.jpg"));
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        ImageIO.write(bImage, "jpg", bos);
-        byte[] data = bos.toByteArray();
-
-        //System.out.println(Arrays.toString(data));
-
-        ByteArrayInputStream bis = new ByteArrayInputStream(data);
-        BufferedImage bImage2 = ImageIO.read(bis);
-        ImageIO.write(bImage2, "jpg", new File("output.jpg"));
-        System.out.println("image created");
     }
 
     private static void readingBytes(SerialPort comPort) {
@@ -133,5 +89,107 @@ public class TestGuiImageBinary {
             }
         });
     }
+
+
+    private static void readingBytes2(SerialPort comPort) {
+
+        comPort.addDataListener(new SerialPortDataListener() {
+            @Override
+            public int getListeningEvents() {
+                return 1;
+            }
+
+            @Override
+            public void serialEvent(SerialPortEvent serialPortEvent) {
+
+                Scanner sc = new Scanner(comPort.getInputStream());
+
+                List<String> line = new ArrayList<>();
+                File file = new File("output.txt");
+                try {
+                    FileWriter fw = new FileWriter(file);
+                    while (sc.hasNextLine()) {
+                        line.add(sc.next());
+                        if (line.contains("\u001Bm\u001B3")) {
+                            break;
+                        }
+                    }
+                    fw.write(String.valueOf(line));
+                    fw.flush();
+                    fw.close();
+                    System.out.println(line);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        });
+    }
+
+
+    public static void toImage() throws IOException {
+
+        File txt = new File("serNo.txt");
+        StringBuffer result = new StringBuffer();
+        Scanner sc = new Scanner(txt);
+
+        while(sc.hasNextLine()){
+            result.append(sc.nextLine() + "\n");
+        }
+
+        String serialNumber = new String(result);
+        StringTokenizer str = new StringTokenizer(serialNumber, "\n\r");
+
+        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_BINARY);
+        Graphics2D g2d = img.createGraphics();
+        Font font = new Font("Arial", Font.PLAIN, 48);
+        g2d.setFont(font);
+        FontMetrics fm = g2d.getFontMetrics();
+        int width = fm.stringWidth(serialNumber);
+        int height = fm.getHeight();
+        g2d.dispose();
+
+        img = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_BINARY);
+        g2d = img.createGraphics();
+        g2d.setRenderingHint(RenderingHints.KEY_ALPHA_INTERPOLATION, RenderingHints.VALUE_ALPHA_INTERPOLATION_QUALITY);
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2d.setRenderingHint(RenderingHints.KEY_COLOR_RENDERING, RenderingHints.VALUE_COLOR_RENDER_QUALITY);
+        g2d.setRenderingHint(RenderingHints.KEY_DITHERING, RenderingHints.VALUE_DITHER_ENABLE);
+        g2d.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+        g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g2d.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
+        g2d.setFont(font);
+        fm = g2d.getFontMetrics();
+        g2d.setColor(Color.WHITE);
+
+        while (str.hasMoreTokens()) {
+            String token = str.nextToken();
+            g2d.drawString(token, 0, height + fm.getAscent());
+            height += (fm.getAscent() + fm.getLeading());
+        }
+
+        g2d.dispose();
+
+        try {
+            ImageIO.write(img, "png", new File("Text.png"));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
+    private void drawString(Graphics g, String text, int x, int y) {
+        for (String line : text.split("\n"))
+            g.drawString(line, x, y += g.getFontMetrics().getHeight());
+    }
+
 }
+
+
+
+
+
+
 
