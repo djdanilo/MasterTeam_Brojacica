@@ -74,9 +74,9 @@ public class MainWindow extends JFrame {
     String[] columnNamesUSD = {"Apoen - USD", "Broj komada", "Vrednost"};
     String[] columnNamesEUR = {"Apoen - EUR", "Broj komada", "Vrednost"};
     String[][] denominationEmpty = {{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""}};
-    String[][] denominationRSD = {{"10","",""},{"20","1",""},{"50","1",""},{"100","1",""},{"200","",""},{"500","",""},{"1000","",""},{"2000","",""},{"5000","",""},{"Ukupno","",""}};
-    String[][] denominationUSD = {{"1","",""},{"2","",""},{"5","",""},{"10","",""},{"20","",""},{"50","",""},{"100","",""},{"Ukupno","",""}};
-    String[][] denominationEUR = {{"5","",""},{"10","",""},{"20","",""},{"50","",""},{"100","",""},{"200","",""},{"500","",""},{"Ukupno","",""}};
+    String[][] denominationRSD = {{"10","0",""},{"20","0",""},{"50","0",""},{"100","0",""},{"200","0",""},{"500","0",""},{"1000","0",""},{"2000","0",""},{"5000","0",""},{"Ukupno","0",""}};
+    String[][] denominationUSD = {{"1","0",""},{"2","0",""},{"5","0",""},{"10","0",""},{"20","0",""},{"50","0",""},{"100","0",""},{"Ukupno","0",""}};
+    String[][] denominationEUR = {{"5","0",""},{"10","0",""},{"20","0",""},{"50","0",""},{"100","0",""},{"200","0",""},{"500","0",""},{"Ukupno","0",""}};
 
     public MainWindow(){
         super();
@@ -122,7 +122,7 @@ public class MainWindow extends JFrame {
 
         //panel1 setting
         panel1.setBorder(b);
-        panel1.setPreferredSize(new Dimension(290,200));
+        panel1.setPreferredSize(new Dimension(285,200));
         lb_user = new JLabel();
 
         now = Calendar.getInstance();
@@ -162,7 +162,7 @@ public class MainWindow extends JFrame {
 
 
         panel2.setBorder(b);
-        panel2.setPreferredSize(new Dimension(290,200));
+        panel2.setPreferredSize(new Dimension(285,200));
         lb_settings = new JLabel("Trenutna podešavanja:");
         lb_settings.setFont(f2);
         lb_settings.setBorder(b);
@@ -181,22 +181,22 @@ public class MainWindow extends JFrame {
         sl.putConstraint(SpringLayout.WEST, lb_settings, 30, SpringLayout.WEST, panel2);
         sl.putConstraint(SpringLayout.NORTH, lb_settings, 15, SpringLayout.NORTH, panel2);
 
-        sl.putConstraint(SpringLayout.WEST, lb_counter, 20, SpringLayout.WEST, panel2);
+        sl.putConstraint(SpringLayout.WEST, lb_counter, 30, SpringLayout.WEST, panel2);
         sl.putConstraint(SpringLayout.NORTH, lb_counter, 55, SpringLayout.NORTH, panel2);
-        sl.putConstraint(SpringLayout.WEST, lb_counterData, 99, SpringLayout.WEST, panel2);
+        sl.putConstraint(SpringLayout.WEST, lb_counterData, 109, SpringLayout.WEST, panel2);
         sl.putConstraint(SpringLayout.NORTH, lb_counterData, 55, SpringLayout.NORTH, panel2);
 
-        sl.putConstraint(SpringLayout.WEST, lb_port, 20, SpringLayout.WEST, panel2);
+        sl.putConstraint(SpringLayout.WEST, lb_port, 30, SpringLayout.WEST, panel2);
         sl.putConstraint(SpringLayout.NORTH, lb_port, 85, SpringLayout.NORTH, panel2);
-        sl.putConstraint(SpringLayout.WEST, lb_portData, 50, SpringLayout.WEST, panel2);
+        sl.putConstraint(SpringLayout.WEST, lb_portData, 60, SpringLayout.WEST, panel2);
         sl.putConstraint(SpringLayout.NORTH, lb_portData, 85, SpringLayout.NORTH, panel2);
 
-        sl.putConstraint(SpringLayout.WEST, lb_baudRate, 20, SpringLayout.WEST, panel2);
+        sl.putConstraint(SpringLayout.WEST, lb_baudRate, 30, SpringLayout.WEST, panel2);
         sl.putConstraint(SpringLayout.NORTH, lb_baudRate, 115, SpringLayout.NORTH, panel2);
-        sl.putConstraint(SpringLayout.WEST, lb_baudRateData, 79, SpringLayout.WEST, panel2);
+        sl.putConstraint(SpringLayout.WEST, lb_baudRateData, 89, SpringLayout.WEST, panel2);
         sl.putConstraint(SpringLayout.NORTH, lb_baudRateData, 115, SpringLayout.NORTH, panel2);
 
-        sl.putConstraint(SpringLayout.WEST, btn_changeSettings, 45, SpringLayout.WEST, panel2);
+        sl.putConstraint(SpringLayout.WEST, btn_changeSettings, 65, SpringLayout.WEST, panel2);
         sl.putConstraint(SpringLayout.NORTH, btn_changeSettings, 155, SpringLayout.NORTH, panel2);
 
         panel2.add(lb_settings);
@@ -211,7 +211,7 @@ public class MainWindow extends JFrame {
 
 
         panel3.setBorder(b);
-        panel3.setPreferredSize(new Dimension(290,200));
+        panel3.setPreferredSize(new Dimension(285,200));
         btn_printSave = new JButton("Print i snimi");
         btn_save = new JButton("Snimi");
         btn_database = new JButton("Transakcije");
@@ -232,7 +232,7 @@ public class MainWindow extends JFrame {
 
 
 
-        if (lb_currency.getText().equals(null)){
+        if (lb_currency.getText() == null){
             jt_denom = new JTable(denominationEmpty, columnNamesEmpty);
             jsp_denom = new JScrollPane(jt_denom);
             jsp_denom.setPreferredSize(new Dimension(371,350));
@@ -266,11 +266,11 @@ public class MainWindow extends JFrame {
 
         //PANEL 5(SERIAL NUMBERS)
         panel5.setBorder(b);
-        panel5.setPreferredSize(new Dimension(500,350));
+        panel5.setPreferredSize(new Dimension(485,355));
         lb_serialNumber = new JLabel("Serijski brojevi");
         jta_serialNumber = new JTextArea();
         jsp_serialNumber = new JScrollPane(jta_serialNumber);
-        jsp_serialNumber.setPreferredSize(new Dimension(438,300));
+        jsp_serialNumber.setPreferredSize(new Dimension(480,300));
         btn_serialNumberClear = new JButton("Očisti");
         btn_serialNumberCopy = new JButton("Kopiraj");
         btn_serialNumberCopy.setPreferredSize(new Dimension(130,35));
@@ -383,22 +383,30 @@ public class MainWindow extends JFrame {
 
                 //getting denomination data from JTable as array of Strings
                 for (int i = 0; i < jt_denom.getRowCount();i++){
-                    denomData.add((String) jt_denom.getValueAt(i, 1));
+                    denomData.add(jt_denom.getValueAt(i, 1).toString());
                 }
 
-                System.out.println(denomData);
+                String denomData2 = String.join(", ", denomData);
+                System.out.println(denomData2);
 
 
                 String client = JOptionPane.showInputDialog(null,"Unesite ime klijenta","Unos podataka",JOptionPane.INFORMATION_MESSAGE);
                 System.out.println(client);
 
-                String statement = "INSERT INTO transactions VALUES (?, ?, '1', 'AB12345678')";
+                String statement = "INSERT INTO transactions VALUES (?, ?, ?, 'AB12345678')";
 
                 try{
                     PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
+
+
                     pst.setString(1, client);
                     pst.setString(2, dtf.format(now2));
+                    pst.setString(3, denomData2);
+
                     pst.execute();
+                    pst.close();
+
+                    System.out.println("Transaction saved successfully");
 
 
                 }catch (Exception ex){
