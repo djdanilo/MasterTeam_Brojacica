@@ -74,9 +74,9 @@ public class MainWindow extends JFrame {
     String[] columnNamesUSD = {"Apoen - USD", "Broj komada", "Vrednost"};
     String[] columnNamesEUR = {"Apoen - EUR", "Broj komada", "Vrednost"};
     String[][] denominationEmpty = {{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""}};
-    String[][] denominationRSD = {{"10","0",""},{"20","0",""},{"50","0",""},{"100","0",""},{"200","0",""},{"500","0",""},{"1000","0",""},{"2000","0",""},{"5000","0",""},{"Ukupno","0",""}};
-    String[][] denominationUSD = {{"1","0",""},{"2","0",""},{"5","0",""},{"10","0",""},{"20","0",""},{"50","0",""},{"100","0",""},{"Ukupno","0",""}};
-    String[][] denominationEUR = {{"5","0",""},{"10","0",""},{"20","0",""},{"50","0",""},{"100","0",""},{"200","0",""},{"500","0",""},{"Ukupno","0",""}};
+    String[][] denominationRSD = {{"10","0","0"},{"20","4","0"},{"50","5","0"},{"100","4","0"},{"200","3","0"},{"500","0","0"},{"1000","0","0"},{"2000","0","0"},{"5000","0","0"},{"Ukupno:","0","0"}};
+    String[][] denominationUSD = {{"1","0","0"},{"2","0","0"},{"5","0","0"},{"10","0","0"},{"20","0","0"},{"50","0","0"},{"100","0","0"},{null,null,null},{null,null,null}, {"Ukupno:","0","0"}};
+    String[][] denominationEUR = {{"5","0","0"},{"10","0","0"},{"20","0","0"},{"50","0","0"},{"100","0","0"},{"200","0","0"},{"500","0",""},{null,null,null},{null,null,null}, {"Ukupno:","0","0"}};
 
     public MainWindow(){
         super();
@@ -257,6 +257,8 @@ public class MainWindow extends JFrame {
             JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana!", "Greška", JOptionPane.ERROR_MESSAGE);
         }
 
+
+
         jt_denom.setRowHeight(32);
         jt_denom.setFont(f2);
 
@@ -381,13 +383,26 @@ public class MainWindow extends JFrame {
 
                 ArrayList<String> denomData = new ArrayList<>();
 
+                denomData.add(lb_currency.getText());
+
+
+                ButtonListeners.tableTotalAmountRows(jt_denom);
+                ButtonListeners.tableTotalAmountColumns(jt_denom);
+
+
                 //getting denomination data from JTable as array of Strings
-                for (int i = 0; i < jt_denom.getRowCount();i++){
+                for (int i = 0; i < jt_denom.getRowCount() - 1;i++){
                     denomData.add(jt_denom.getValueAt(i, 1).toString());
                 }
 
+                denomData.add(jt_denom.getValueAt(9,2).toString());
+
                 String denomData2 = String.join(", ", denomData);
+
+
                 System.out.println(denomData2);
+
+
 
 
                 String client = JOptionPane.showInputDialog(null,"Unesite ime klijenta","Unos podataka",JOptionPane.INFORMATION_MESSAGE);

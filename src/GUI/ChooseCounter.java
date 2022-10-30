@@ -166,7 +166,7 @@ public class ChooseCounter extends JFrame {
                     ComPorts comPorts = new ComPorts();
                     port = cb_chooseComPort.getSelectedItem().toString().replace("[","").replace("]","");
 
-                    SerialPort serialPort = comPorts.openSerialPort(SerialPort.getCommPort(port), 10L, (String) cb_baudrate.getSelectedItem());
+                    SerialPort serialPort = comPorts.openSerialPort(SerialPort.getCommPort(port), 0, (String) cb_baudrate.getSelectedItem());
 
                     if (serialPort.isOpen()){
                         JOptionPane.showMessageDialog(null, "Uspešno ste se povezali na " + serialPort.getSystemPortName() + ".", "Obaveštenje", JOptionPane.INFORMATION_MESSAGE);

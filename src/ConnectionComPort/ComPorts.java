@@ -23,9 +23,7 @@ public class ComPorts {
 
         serialPort.openPort(0);
         serialPort.setComPortParameters(Integer.parseInt(baudRate), 8, SerialPort.ONE_STOP_BIT, SerialPort.NO_PARITY);
-        serialPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING
-                        | SerialPort.TIMEOUT_WRITE_BLOCKING, (int) timeout,
-                (int) timeout);
+        serialPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, (int) timeout, (int) timeout);
 
         System.out.println("Successfully connected to " + serialPort.getSystemPortName());
         System.out.println(serialPort.isOpen());
