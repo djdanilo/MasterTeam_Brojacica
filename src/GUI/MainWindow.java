@@ -110,7 +110,7 @@ public class MainWindow extends JFrame {
 
         dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         now2 = LocalDateTime.now();
-        System.out.println(dtf.format(now2));
+        //System.out.println(dtf.format(now2));
 
         Border b = BorderFactory.createEtchedBorder(1);
         Font f = new Font("Arial", 1, 20);
@@ -372,7 +372,7 @@ public class MainWindow extends JFrame {
         btn_database.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                dispose();
+                //dispose();
                 new DatabaseWindow();
             }
         });

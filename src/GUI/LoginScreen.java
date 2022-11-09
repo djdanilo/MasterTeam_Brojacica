@@ -30,7 +30,7 @@ public class LoginScreen extends JFrame {
     public LoginScreen(){
         super();
         this.setSize(400,350);
-        this.setTitle("Login screen");
+        this.setTitle("Login ekran");
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
@@ -134,12 +134,12 @@ public class LoginScreen extends JFrame {
         btn_login.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                String userName = tf_username.getText();
+                String username = tf_username.getText();
                 String password = String.valueOf(pf_password.getPassword());
 
                 try{
                     Statement stm = ConnectionDB.conn.createStatement();
-                    String statement = "SELECT username, password FROM users where username='"+userName+"' and password='"+password+"'";
+                    String statement = "SELECT username, password FROM users where username='"+username+"' and password='"+password+"'";
 
                     ResultSet rs = stm.executeQuery(statement);
 

@@ -87,7 +87,7 @@ select * from transactions]]></console>
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
-          <database-version value="3.39" />
+          <database-version value="3.34" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
@@ -96,7 +96,7 @@ select * from transactions]]></console>
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\danilo\Desktop\MasterTeam_Brojacica\src\MoneyCounter_App.db" schema="main" />
+            <file path="C:\Users\danilodjurovic\Desktop\MasterTeam Brojacica\src\MoneyCounter_App.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

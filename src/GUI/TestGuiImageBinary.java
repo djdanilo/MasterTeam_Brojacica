@@ -18,14 +18,14 @@ public class TestGuiImageBinary {
 
     public static void main(String[] args) throws IOException {
 
-        SerialPort comPort = SerialPort.getCommPort("COM4");
+        SerialPort comPort = SerialPort.getCommPort("COM8");
         comPort.openPort();
         comPort.setComPortParameters(115200, 8, 1, SerialPort.NO_PARITY);
         comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
-        //readingBytes(comPort);
+        readingBytesSN(comPort);
         //readingBytes2(comPort);
 
-        toImage();
+        //toImage();
 
     }
 
@@ -41,7 +41,8 @@ public class TestGuiImageBinary {
             public void serialEvent(SerialPortEvent serialPortEvent) {
 
                 ArrayList<String> list = new ArrayList<>();
-                String s1;
+                String s1 = "";
+                StringBuffer sb = new StringBuffer();
 
                 if (serialPortEvent.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
                     return;
@@ -58,43 +59,41 @@ public class TestGuiImageBinary {
 
                     s1 = String.format("%8s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0');
 
-
-                    if (s1.equals("01000101")) {
-                        System.out.println();
-                        continue;
-                    }
-
-                    String newLine = "011000001101100100011011000100011010000111000";
-
-                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
-                    Graphics2D g2d = img.createGraphics();
-                    Font font = new Font("Arial", Font.PLAIN, 1);
-                    g2d.setFont(font);
-                    int height = g2d.getFontMetrics().getHeight();
-                    g2d.dispose();
-
-                    img = new BufferedImage(325, 35, BufferedImage.TYPE_INT_RGB);
-                    g2d = img.createGraphics();
-
-                    g2d.setFont(font);
-                    g2d.setColor(Color.WHITE);
-                    int fontSize = 1;
-
-                    int y = 0;
-
-                    for (String line : s1.split(newLine)) {
-                        g2d.drawString(line, 0, height);
-                        height+= fontSize;
-                    }
-                    g2d.dispose();
-
-                    try {
-                        ImageIO.write(img, "png", new File("Text.png"));
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
-
+                    sb.append(s1);
                 }
+
+                String sn = fixedLengthString(sb.toString(), 290);
+
+
+                String newLine = "01100000110110010001101100010001101000011100001000101";
+
+                BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+                Graphics2D g2d = img.createGraphics();
+                Font font = new Font("Arial", Font.PLAIN, 1);
+                g2d.setFont(font);
+                int height = g2d.getFontMetrics().getHeight();
+                g2d.dispose();
+
+                img = new BufferedImage(384, 50, BufferedImage.TYPE_INT_RGB);
+                g2d = img.createGraphics();
+
+                g2d.setFont(font);
+                g2d.setColor(Color.WHITE);
+                int fontSize = 1;
+
+                for (String line : sn.split(newLine)) {
+                    g2d.drawString(line, 0, height);
+                    height += fontSize;
+                    System.out.println(line);
+                }
+                g2d.dispose();
+
+                try {
+                    ImageIO.write(img, "png", new File("Text.png"));
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+
 
             }
         });
@@ -145,7 +144,7 @@ public class TestGuiImageBinary {
         StringBuffer result = new StringBuffer();
         Scanner sc = new Scanner(txt);
 
-        while(sc.hasNextLine()){
+        while (sc.hasNextLine()) {
             result.append(sc.nextLine() + "\n");
         }
 
@@ -171,7 +170,7 @@ public class TestGuiImageBinary {
 
         for (String line : serialNumber.split(newLine)) {
             g2d.drawString(line, 0, height);
-            height+= fontSize;
+            height += fontSize;
         }
         g2d.dispose();
 
@@ -181,6 +180,10 @@ public class TestGuiImageBinary {
             ex.printStackTrace();
         }
 
+    }
+
+    public static String fixedLengthString(String string, int length) {
+        return String.format("%1$"+length+ "s", string);
     }
 
 

@@ -67,9 +67,9 @@ public class ChooseCounter extends JFrame {
 
         //adding data to cb_chooseMachine
         cb_chooseMachine.addItem("Kisan K2");
-        cb_chooseMachine.addItem("Hyundai MIB SB-9");
-        cb_chooseMachine.addItem("Hyundai MIB MIB-9");
-        cb_chooseMachine.addItem("Hyundai MIB MIB-11");
+        cb_chooseMachine.addItem("Hyundai SB-9");
+        cb_chooseMachine.addItem("Hyundai MIB-9");
+        cb_chooseMachine.addItem("Hyundai MIB-11");
         cb_chooseMachine.addItem("Lidix ML-2F");
         cb_chooseMachine.addItem("Lidix ML-2FS");
         cb_chooseMachine.addItem("Ribao BC-55");
@@ -155,6 +155,7 @@ public class ChooseCounter extends JFrame {
     public static String getBaudRate(){
         return (String) cb_baudrate.getSelectedItem();
     }
+
 
     private void initListeners() {
         btn_confirm.addMouseListener(new MouseAdapter() {
