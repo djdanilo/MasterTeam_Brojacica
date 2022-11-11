@@ -55,11 +55,12 @@ public class TestGuiImageBinary {
 
                     if (numRead <= 1200) {
                         break;
+                    }else {
+
+                        s1 = String.format("%8s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0');
+
+                        list.add(s1);
                     }
-
-                    s1 = String.format("%8s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0');
-
-                    sb.append(s1);
                 }
 
                 String sn = fixedLengthString(sb.toString(), 290);
