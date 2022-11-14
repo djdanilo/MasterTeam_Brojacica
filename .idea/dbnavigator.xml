@@ -37,9 +37,23 @@ update users set Id = 3 where USERNAME = 'admin';
 
 delete from users where ID = 2;
 
-alter TABLE transactions rename to transactions;
+alter TABLE transactions4 rename to transactions;
 
-select * from transactions]]></console>
+select * from transactions;
+
+drop table transactions;
+
+create table transactions4(
+    Id INTEGER primary key autoincrement not null,
+    Client text not null,
+    Timestamp datetime not null,
+    Denomination text not null,
+    SerialNumberOCR text,
+    SerialNumberImage text
+);
+
+Delete from transactions
+where Id = 1;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -87,7 +101,7 @@ select * from transactions]]></console>
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
-          <database-version value="3.34" />
+          <database-version value="3.39" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
@@ -96,7 +110,7 @@ select * from transactions]]></console>
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\danilodjurovic\Desktop\MasterTeam Brojacica\src\MoneyCounter_App.db" schema="main" />
+            <file path="C:\Users\danilo\Desktop\MasterTeam_Brojacica\src\MoneyCounter_App.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

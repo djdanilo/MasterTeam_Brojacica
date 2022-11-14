@@ -54,8 +54,6 @@ public class MainWindow extends JFrame {
     private JTable jt_denom;
     private JLabel lb_currency;
     private JScrollPane jsp_denom;
-    private JLabel lb_total;
-    private JLabel lb_totalSum;
     private JButton btn_clear;
 
     private JPanel panel5;
@@ -129,7 +127,7 @@ public class MainWindow extends JFrame {
         lb_timeDate = new JLabel(dateFormat.format(now.getTime()));
         lb_timeDate.setBounds(100, 100, 125, 125);
 
-        new Timer(1000, e -> {
+        new Timer(interval, e -> {
             Calendar now1 = Calendar.getInstance();
             lb_timeDate.setText(dateFormat.format(now1.getTime()));
         }).start();
@@ -408,7 +406,8 @@ public class MainWindow extends JFrame {
                 String client = JOptionPane.showInputDialog(null,"Unesite ime klijenta","Unos podataka",JOptionPane.INFORMATION_MESSAGE);
                 System.out.println(client);
 
-                String statement = "INSERT INTO transactions VALUES (?, ?, ?, 'AB12345678')";
+                String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
+                                                        "VALUES (?, ?, ?, 'AB12345678', '1110001111')";
 
                 try{
                     PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
