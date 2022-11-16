@@ -3,7 +3,6 @@ package GUI;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
-import org.tc33.jheatchart.HeatChart;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

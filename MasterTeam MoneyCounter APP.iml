@@ -10,6 +10,6 @@
     <orderEntry type="library" name="sqlite-jdbc-3.39.3.0" level="project" />
     <orderEntry type="library" name="jSerialComm-2.9.2" level="project" />
     <orderEntry type="library" name="rs2xml" level="project" />
-    <orderEntry type="library" name="jheatchart-0.6" level="project" />
+    <orderEntry type="library" name="itextpdf-5.5.13.2" level="project" />
   </component>
 </module>

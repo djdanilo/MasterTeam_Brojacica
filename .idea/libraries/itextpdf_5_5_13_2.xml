@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="jheatchart-0.6">
+  <library name="itextpdf-5.5.13.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/jheatchart-0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/itextpdf-5.5.13.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

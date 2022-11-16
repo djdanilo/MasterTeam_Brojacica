@@ -77,6 +77,8 @@ public class ChooseCounter extends JFrame {
 
         cb_chooseComPort = new JComboBox();
 
+        ComPorts.listSerials(cb_chooseComPort);
+
         cb_baudrate = new JComboBox();
 
         //adding data for baudrate
@@ -142,6 +144,8 @@ public class ChooseCounter extends JFrame {
 
         setContentPane(panel);
 
+
+
     }
 
     public static String getMachine(){
@@ -165,7 +169,7 @@ public class ChooseCounter extends JFrame {
                     JOptionPane.showMessageDialog(null, "Niste odabrali com port!", "Obaveštenje", JOptionPane.INFORMATION_MESSAGE);
                 }else {
                     ComPorts comPorts = new ComPorts();
-                    port = cb_chooseComPort.getSelectedItem().toString().replace("[","").replace("]","");
+                    port = cb_chooseComPort.getSelectedItem().toString();
 
                     SerialPort serialPort = comPorts.openSerialPort(SerialPort.getCommPort(port), 0, (String) cb_baudrate.getSelectedItem());
 
@@ -185,9 +189,8 @@ public class ChooseCounter extends JFrame {
         btn_refreshPort.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ComPorts comPorts = new ComPorts();
                 if (cb_chooseComPort.getSelectedItem() == null) {
-                    cb_chooseComPort.addItem(comPorts.listSerials());
+                    ComPorts.listSerials(cb_chooseComPort);
                 }else{
                     cb_chooseComPort.removeAllItems();
                 }
@@ -201,9 +204,7 @@ public class ChooseCounter extends JFrame {
                 new LoginScreen();
             }
         });
+
     }
-
-
-
 
 }

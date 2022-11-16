@@ -2,18 +2,19 @@ package ConnectionComPort;
 
 import com.fazecast.jSerialComm.SerialPort;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
 public class ComPorts {
 
-    public ArrayList<String> listSerials() {
-        ArrayList<String> portList = new ArrayList<>();
+    public static void listSerials(JComboBox jComboBox) {
+        //ArrayList<String> portList = new ArrayList<>();
         for (SerialPort port : SerialPort.getCommPorts()) {
-            portList.add(port.getSystemPortName());
+            jComboBox.addItem(port.getSystemPortName());
         }
-        return portList;
+
     }
 
 
