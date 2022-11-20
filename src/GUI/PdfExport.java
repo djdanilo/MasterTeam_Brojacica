@@ -31,7 +31,6 @@ public class PdfExport {
             addTitlePage(document, "Korisnik", new Date(), "Danilo");
             addContent(document);
             document.close();
-            System.out.println(denomination.length);
         } catch (Exception e) {
             e.printStackTrace();
         }
