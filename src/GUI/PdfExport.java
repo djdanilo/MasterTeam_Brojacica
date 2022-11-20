@@ -28,9 +28,10 @@ public class PdfExport {
             PdfWriter.getInstance(document, new FileOutputStream(FILE));
             document.open();
             addMetaData(document);
-            addTitlePage(document, "Korisnik", new Date());
+            addTitlePage(document, "Korisnik", new Date(), "Danilo");
             addContent(document);
             document.close();
+            System.out.println(denomination.length);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -44,7 +45,7 @@ public class PdfExport {
         document.addCreator("Lars Vogel");
     }
 
-    private static void addTitlePage(Document document, String user, Date date)
+    private static void addTitlePage(Document document, String user, Date date, String client)
             throws DocumentException {
         Paragraph preface = new Paragraph();
         // We add one empty line
@@ -58,13 +59,19 @@ public class PdfExport {
                 "Izveštaj generisao: " + user + ", " + date, //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
                 smallBold));
         addEmptyLine(preface, 2);
+
+        preface.add(new Paragraph("Klijent: " + client, smallBold));
+
+        addEmptyLine(preface, 1);
+
         preface.add(new Paragraph(
                 "Apoenska struktura transakcije",
                 smallBold));
 
-        addEmptyLine(preface, 4);
+        addEmptyLine(preface, 2);
 
         document.add(preface);
+        document.add(createTable(denomination));
         // Start a new page
         //document.newPage();
     }
@@ -93,7 +100,7 @@ public class PdfExport {
         subCatPart.add(paragraph);
 
         // add a table
-        createTable(subCatPart, denomination);
+        //createTable(subCatPart, denomination);
 
         // now add all this to the document
         document.add(catPart);
@@ -114,7 +121,7 @@ public class PdfExport {
 
     }
 
-    private static void createTable(Section subCatPart, String[] denomination)
+    private static PdfPTable createTable(String[] denomination)
             throws BadElementException {
         PdfPTable table = new PdfPTable(3);
 
@@ -134,7 +141,7 @@ public class PdfExport {
         c1 = new PdfPCell(new Phrase("Vrednost"));
         c1.setHorizontalAlignment(Element.ALIGN_CENTER);
         table.addCell(c1);
-        table.setHeaderRows(denomination.length);
+        table.setHeaderRows(denomination.length - 1);
 
         if (denomination[0].equals("RSD")) {
             table.addCell("10");
@@ -164,12 +171,12 @@ public class PdfExport {
             table.addCell("5000");
             table.addCell(denomination[9]);
             table.addCell(String.valueOf(5000*Integer.parseInt(denomination[9])));
-            table.addCell("Ukupno");
+            table.addCell("Ukupno:");
             table.addCell("16");
             table.addCell(denomination[10]);
         }
 
-        subCatPart.add(table);
+        return table;
 
     }
 
