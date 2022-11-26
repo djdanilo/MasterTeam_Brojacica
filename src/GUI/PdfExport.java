@@ -21,6 +21,8 @@ public class PdfExport {
     private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12,
             Font.BOLD);
     private static String[] denomination = {"RSD", "0", "4", "5", "4", "3", "0", "0", "0", "0", "1330"};
+    private static String[] serialOcr = {"1$", "AA123456"};
+    private static String[] serialImage = {"00001110"};
 
     public static void main(String[] args) {
         try {
@@ -28,8 +30,7 @@ public class PdfExport {
             PdfWriter.getInstance(document, new FileOutputStream(FILE));
             document.open();
             addMetaData(document);
-            addTitlePage(document, "Korisnik", new Date(), "Danilo");
-            addContent(document);
+            createPdf(document, "1","Korisnik", new Date(), "Danilo");
             document.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -37,14 +38,14 @@ public class PdfExport {
     }
 
     private static void addMetaData(Document document) {
-        document.addTitle("My first PDF");
-        document.addSubject("Using iText");
+        document.addTitle("Izveštaj o transakciji");
+        document.addSubject("Izveštaj o transakciji");
         document.addKeywords("Java, PDF, iText");
-        document.addAuthor("Lars Vogel");
-        document.addCreator("Lars Vogel");
+        document.addAuthor("Master Team");
+        document.addCreator("Master Team");
     }
 
-    private static void addTitlePage(Document document, String user, Date date, String client)
+    private static void createPdf(Document document, String id, String user, Date date, String client)
             throws DocumentException {
         Paragraph preface = new Paragraph();
         // We add one empty line
@@ -59,6 +60,7 @@ public class PdfExport {
                 smallBold));
         addEmptyLine(preface, 2);
 
+        preface.add(new Paragraph("Id transakcije: " + id, smallBold));
         preface.add(new Paragraph("Klijent: " + client, smallBold));
 
         addEmptyLine(preface, 1);
@@ -70,57 +72,21 @@ public class PdfExport {
         addEmptyLine(preface, 2);
 
         document.add(preface);
-        document.add(createTable(denomination));
+        document.add(createTableDenom(denomination));
+
+        document.add(new Paragraph("\n", smallBold));
+
+        document.add(new Paragraph("Serijski brojevi ", smallBold));
+        document.add(new Paragraph("\n", smallBold));
+        document.add(new Paragraph("\n", smallBold));
+
+        document.add(createTableSerial(serialOcr, serialImage));
         // Start a new page
         //document.newPage();
     }
 
-    private static void addContent(Document document) throws DocumentException {
-        Anchor anchor = new Anchor("First Chapter", catFont);
-        anchor.setName("First Chapter");
 
-        // Second parameter is the number of the chapter
-        Chapter catPart = new Chapter(new Paragraph(anchor), 1);
-
-        Paragraph subPara = new Paragraph("Subcategory 1", subFont);
-        Section subCatPart = catPart.addSection(subPara);
-        subCatPart.add(new Paragraph("Hello"));
-
-        subPara = new Paragraph("Subcategory 2", subFont);
-        subCatPart = catPart.addSection(subPara);
-        subCatPart.add(new Paragraph("Paragraph 1"));
-        subCatPart.add(new Paragraph("Paragraph 2"));
-        subCatPart.add(new Paragraph("Paragraph 3"));
-
-        // add a list
-        createList(subCatPart);
-        Paragraph paragraph = new Paragraph();
-        addEmptyLine(paragraph, 5);
-        subCatPart.add(paragraph);
-
-        // add a table
-        //createTable(subCatPart, denomination);
-
-        // now add all this to the document
-        document.add(catPart);
-
-        // Next section
-        anchor = new Anchor("Second Chapter", catFont);
-        anchor.setName("Second Chapter");
-
-        // Second parameter is the number of the chapter
-        catPart = new Chapter(new Paragraph(anchor), 1);
-
-        subPara = new Paragraph("Subcategory", subFont);
-        subCatPart = catPart.addSection(subPara);
-        subCatPart.add(new Paragraph("This is a very important message"));
-
-        // now add all this to the document
-        document.add(catPart);
-
-    }
-
-    private static PdfPTable createTable(String[] denomination)
+    private static PdfPTable createTableDenom(String[] denomination)
             throws BadElementException {
         PdfPTable table = new PdfPTable(3);
 
@@ -179,12 +145,46 @@ public class PdfExport {
 
     }
 
-    private static void createList(Section subCatPart) {
-        List list = new List(true, false, 10);
-        list.add(new ListItem("First point"));
-        list.add(new ListItem("Second point"));
-        list.add(new ListItem("Third point"));
-        subCatPart.add(list);
+    private static PdfPTable createTableSerial(String[] serialOcr, String[] serialImage)
+            throws BadElementException {
+        PdfPTable table = new PdfPTable(3);
+
+        // t.setBorderColor(BaseColor.GRAY);
+        // t.setPadding(4);
+        // t.setSpacing(4);
+        // t.setBorderWidth(1);
+
+        PdfPCell c1 = new PdfPCell(new Phrase("Apoen"));
+        c1.setHorizontalAlignment(Element.ALIGN_CENTER);
+        table.addCell(c1);
+
+        c1 = new PdfPCell(new Phrase("Serijski broj"));
+        c1.setHorizontalAlignment(Element.ALIGN_CENTER);
+        table.addCell(c1);
+
+        c1 = new PdfPCell(new Phrase("Slika serijskog broja"));
+        c1.setHorizontalAlignment(Element.ALIGN_CENTER);
+        table.addCell(c1);
+        table.setHeaderRows(serialImage.length - 1);
+
+        try {
+            int i = 0;
+            int j = 0;
+            while (!serialImage[j].){
+                table.addCell(serialOcr[i]);
+                table.addCell(serialOcr[i+1]);
+                table.addCell(serialImage[j]);
+                i+=2;
+                j++;
+                System.out.println("Test");
+            }
+        }catch (ArrayIndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+
+
+        return table;
+
     }
 
     private static void addEmptyLine(Paragraph paragraph, int number) {
