@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class PdfExport {
 
-    private static String FILE = "C:\\Users\\danilodjurovic\\Desktop\\MasterTeam Brojacica\\Sample.pdf";
+    private static String FILE = "C:\\Users\\danilo\\Desktop\\MasterTeam_Brojacica\\Sample.pdf";
     private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,
             Font.BOLD);
     private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12,
@@ -21,8 +21,8 @@ public class PdfExport {
     private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12,
             Font.BOLD);
     private static String[] denomination = {"RSD", "0", "4", "5", "4", "3", "0", "0", "0", "0", "1330"};
-    private static String[] serialOcr = {"1$", "AA123456"};
-    private static String[] serialImage = {"00001110"};
+    private static String[] serialOcr = {"1$", "AA123456", "2$", "AA654321", "100$", "BB123456"};
+    private static String[] serialImage = {"00001110", "00111100", "1000111"};
 
     public static void main(String[] args) {
         try {
@@ -37,7 +37,7 @@ public class PdfExport {
         }
     }
 
-    private static void addMetaData(Document document) {
+    public static void addMetaData(Document document) {
         document.addTitle("Izveštaj o transakciji");
         document.addSubject("Izveštaj o transakciji");
         document.addKeywords("Java, PDF, iText");
@@ -45,7 +45,7 @@ public class PdfExport {
         document.addCreator("Master Team");
     }
 
-    private static void createPdf(Document document, String id, String user, Date date, String client)
+    public static void createPdf(Document document, String id, String user, Date date, String client)
             throws DocumentException {
         Paragraph preface = new Paragraph();
         // We add one empty line
@@ -170,13 +170,12 @@ public class PdfExport {
         try {
             int i = 0;
             int j = 0;
-            while (!serialImage[j].){
+            while (j < serialImage.length){
                 table.addCell(serialOcr[i]);
                 table.addCell(serialOcr[i+1]);
                 table.addCell(serialImage[j]);
                 i+=2;
                 j++;
-                System.out.println("Test");
             }
         }catch (ArrayIndexOutOfBoundsException e){
             e.printStackTrace();
