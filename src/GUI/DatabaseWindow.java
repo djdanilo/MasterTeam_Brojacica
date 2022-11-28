@@ -268,6 +268,11 @@ public class DatabaseWindow extends JFrame {
 
                 int row = jt_transactions.getSelectedRow();
 
+                if (row < 0){
+                    JOptionPane.showMessageDialog(null, "Niste odabrali transakciju!", "Greška!", JOptionPane.ERROR_MESSAGE);
+                }
+
+
                 String Id = jt_transactions.getValueAt(row, 0).toString();
                 String user = LoginScreen.getUser();
                 String client = jt_transactions.getValueAt(row, 1).toString();
@@ -283,6 +288,9 @@ public class DatabaseWindow extends JFrame {
                 JFileChooser jFileChooser = new JFileChooser();
                 jFileChooser.setDialogTitle("Odaberite mesto za snimanje fajla");
 
+                if (jcb_exportPDF.isSelected())
+                    jFileChooser.setFileFilter(new FileNameExtensionFilter("pdf", ".pdf"));
+
                 int userSelection = jFileChooser.showSaveDialog(panel);
 
                 if (userSelection == JFileChooser.APPROVE_OPTION){
@@ -291,15 +299,13 @@ public class DatabaseWindow extends JFrame {
                 }
 
                 if (jcb_exportPDF.isSelected()){
-                    jFileChooser.setFileFilter(new FileNameExtensionFilter(client, ".pdf"));
                     PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 }
                 else if (jcb_exportXLSX.isSelected()){
                     jFileChooser.setFileFilter(new FileNameExtensionFilter(client, ".xls"));
                     ExcelExport.createExcelExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
-                }else{
-                    JOptionPane.showMessageDialog(null, "Niste odabrali transakciju!", "Greška!", JOptionPane.ERROR_MESSAGE);
                 }
+
             }
         });
     }
