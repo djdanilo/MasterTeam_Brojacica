@@ -24,13 +24,13 @@ public class PdfExport {
     private static String[] serialOcr = {"1$", "AA123456", "2$", "AA654321", "100$", "BB123456"};
     private static String[] serialImage = {"00001110", "00111100", "1000111"};
 
-    public static void createPdfExport(String Id, String user, String client, String file) {
+    public static void createPdfExport(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, String[] serialImage) {
         try {
             Document document = new Document();
             PdfWriter.getInstance(document, new FileOutputStream(file));
             document.open();
             addMetaData(document);
-            createPdf(document, Id,user, new Date(), client);
+            createPdf(document, Id,user, new Date(), client, denomination, serialOcr, serialImage);
             document.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -45,7 +45,7 @@ public class PdfExport {
         document.addCreator("Master Team");
     }
 
-    public static void createPdf(Document document, String id, String user, Date date, String client)
+    public static void createPdf(Document document, String id, String user, Date date, String client, String[] denomination, String[] serialOcr, String[] serialImage)
             throws DocumentException {
         Paragraph preface = new Paragraph();
         // We add one empty line

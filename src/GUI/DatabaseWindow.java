@@ -271,6 +271,12 @@ public class DatabaseWindow extends JFrame {
                 String user = LoginScreen.getUser();
                 String client = jt_transactions.getValueAt(row, 1).toString();
                 String filePath = "";
+                String denominationString = jt_transactions.getValueAt(row, 3).toString();
+                String[] denomination = denominationString.split(",");
+                String serialOcrString = jt_transactions.getValueAt(row, 4).toString();
+                String[] serialOcr = serialOcrString.split(",");
+                String serialImageString = jt_transactions.getValueAt(row, 5).toString();
+                String[] serialImage = serialImageString.split(",");
 
 
                 JFileChooser jFileChooser = new JFileChooser();
@@ -284,7 +290,7 @@ public class DatabaseWindow extends JFrame {
                 }
 
                 if (jcb_exportPDF.isSelected()){
-                    PdfExport.createPdfExport(Id, user, client, filePath);
+                    PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 }
                 else if (jcb_exportXLSX.isSelected()){
 
