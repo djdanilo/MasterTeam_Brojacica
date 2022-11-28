@@ -4,6 +4,7 @@ import Database.ConnectionDB;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -290,9 +291,11 @@ public class DatabaseWindow extends JFrame {
                 }
 
                 if (jcb_exportPDF.isSelected()){
+                    jFileChooser.setFileFilter(new FileNameExtensionFilter(client, ".pdf"));
                     PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 }
                 else if (jcb_exportXLSX.isSelected()){
+                    jFileChooser.setFileFilter(new FileNameExtensionFilter(client, ".xls"));
                     ExcelExport.createExcelExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 }else{
                     JOptionPane.showMessageDialog(null, "Niste odabrali transakciju!", "Greška!", JOptionPane.ERROR_MESSAGE);
