@@ -407,7 +407,7 @@ public class MainWindow extends JFrame {
                 System.out.println(client);
 
                 String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
-                                                        "VALUES (?, ?, ?, 'AB12345678', '1110001111')";
+                                                        "VALUES (?, ?, ?, '1$, AB12345678', '1110001111')";
 
                 try{
                     PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);

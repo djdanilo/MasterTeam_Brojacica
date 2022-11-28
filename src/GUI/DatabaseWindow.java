@@ -272,11 +272,11 @@ public class DatabaseWindow extends JFrame {
                 String client = jt_transactions.getValueAt(row, 1).toString();
                 String filePath = "";
                 String denominationString = jt_transactions.getValueAt(row, 3).toString();
-                String[] denomination = denominationString.split(",");
+                String[] denomination = denominationString.split(", ");
                 String serialOcrString = jt_transactions.getValueAt(row, 4).toString();
-                String[] serialOcr = serialOcrString.split(",");
+                String[] serialOcr = serialOcrString.split(", ");
                 String serialImageString = jt_transactions.getValueAt(row, 5).toString();
-                String[] serialImage = serialImageString.split(",");
+                String[] serialImage = serialImageString.split(", ");
 
 
                 JFileChooser jFileChooser = new JFileChooser();
