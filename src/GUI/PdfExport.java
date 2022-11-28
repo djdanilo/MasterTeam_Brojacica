@@ -28,6 +28,7 @@ public class PdfExport {
             addMetaData(document);
             createPdf(document, Id,user, new Date(), client, denomination, serialOcr, serialImage);
             document.close();
+            System.out.println("PDF file has been generated successfully.");
         } catch (Exception e) {
             e.printStackTrace();
         }

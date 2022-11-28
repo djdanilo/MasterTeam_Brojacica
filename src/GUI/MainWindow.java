@@ -22,6 +22,8 @@ import java.util.Calendar;
 
 public class MainWindow extends JFrame {
 
+    ButtonListeners buttonListeners;
+
     private JPanel panel;
     private JPanel panel1;
     private JLabel lb_login;
@@ -379,6 +381,60 @@ public class MainWindow extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
 
+
+                    ArrayList<String> denomData = new ArrayList<>();
+
+                    denomData.add(lb_currency.getText());
+
+
+                    ButtonListeners.tableTotalAmountRows(jt_denom);
+                    ButtonListeners.tableTotalAmountColumns(jt_denom);
+
+
+                    //getting denomination data from JTable as array of Strings
+                    for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
+                        denomData.add(jt_denom.getValueAt(i, 1).toString());
+                    }
+
+                    denomData.add(jt_denom.getValueAt(9, 2).toString());
+
+                    String denomData2 = String.join(", ", denomData);
+
+
+                    System.out.println(denomData2);
+
+
+                    String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
+                    System.out.println(client);
+
+                    String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
+                            "VALUES (?, ?, ?, '1$, AB12345678', '1110001111')";
+
+                    try {
+                        PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
+
+
+                        pst.setString(1, client);
+                        pst.setString(2, dtf.format(now2));
+                        pst.setString(3, denomData2);
+
+                        pst.execute();
+                        pst.close();
+
+                        System.out.println("Transaction saved successfully");
+
+
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
+
+        });
+
+        btn_printSave.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
                 ArrayList<String> denomData = new ArrayList<>();
 
                 denomData.add(lb_currency.getText());
@@ -389,11 +445,11 @@ public class MainWindow extends JFrame {
 
 
                 //getting denomination data from JTable as array of Strings
-                for (int i = 0; i < jt_denom.getRowCount() - 1;i++){
+                for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
                     denomData.add(jt_denom.getValueAt(i, 1).toString());
                 }
 
-                denomData.add(jt_denom.getValueAt(9,2).toString());
+                denomData.add(jt_denom.getValueAt(9, 2).toString());
 
                 String denomData2 = String.join(", ", denomData);
 
@@ -401,15 +457,13 @@ public class MainWindow extends JFrame {
                 System.out.println(denomData2);
 
 
-
-
-                String client = JOptionPane.showInputDialog(null,"Unesite ime klijenta","Unos podataka",JOptionPane.INFORMATION_MESSAGE);
+                String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
                 System.out.println(client);
 
                 String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
-                                                        "VALUES (?, ?, ?, '1$, AB12345678', '1110001111')";
+                        "VALUES (?, ?, ?, '1$, AB12345678', '1110001111')";
 
-                try{
+                try {
                     PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
 
 
@@ -423,9 +477,12 @@ public class MainWindow extends JFrame {
                     System.out.println("Transaction saved successfully");
 
 
-                }catch (Exception ex){
+                } catch (Exception ex) {
                     ex.printStackTrace();
                 }
+
+                buttonListeners.PDFPrinter(PdfExport.createPdfExport());
+
             }
         });
     }

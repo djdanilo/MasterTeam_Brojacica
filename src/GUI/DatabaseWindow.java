@@ -288,8 +288,6 @@ public class DatabaseWindow extends JFrame {
                 JFileChooser jFileChooser = new JFileChooser();
                 jFileChooser.setDialogTitle("Odaberite mesto za snimanje fajla");
 
-                if (jcb_exportPDF.isSelected())
-                    jFileChooser.setFileFilter(new FileNameExtensionFilter("pdf", ".pdf"));
 
                 int userSelection = jFileChooser.showSaveDialog(panel);
 
@@ -299,11 +297,13 @@ public class DatabaseWindow extends JFrame {
                 }
 
                 if (jcb_exportPDF.isSelected()){
+                    if (!filePath.endsWith(".pdf"))
+                        filePath += ".pdf";
                     PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
-                    System.out.println(filePath);
-
                 }
                 else if (jcb_exportXLSX.isSelected()){
+                    if (!filePath.endsWith(".xls"))
+                        filePath += ".xls";
                     ExcelExport.createExcelExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 }
 
