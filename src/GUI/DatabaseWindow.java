@@ -293,7 +293,9 @@ public class DatabaseWindow extends JFrame {
                     PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 }
                 else if (jcb_exportXLSX.isSelected()){
-
+                    ExcelExport.createExcelExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Niste odabrali transakciju!", "Greška!", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

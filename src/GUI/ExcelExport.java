@@ -6,15 +6,12 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.util.CellRangeAddress;
 
 import java.io.FileOutputStream;
+import java.util.Date;
 
 public class ExcelExport {
 
-    private static String FILE = "Sample.xls";
-    private static String[] denomination = {"RSD", "0", "4", "5", "4", "3", "0", "0", "0", "0", "1330"};
-    private static String[] serialOcr = {"1$", "AA123456", "2$", "AA654321", "100$", "BB123456"};
-    private static String[] serialImage = {"00001110", "00111100", "1000111"};
 
-    public static void main(String[] args) {
+    public static void createExcelExport(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, String[] serialImage) {
 
         try {
 
@@ -52,11 +49,11 @@ public class ExcelExport {
             HSSFRow row28 = hssfSheet.createRow(28);
 
             row0.createCell(0).setCellValue("Izveštaj o transakciji");
-            row3.createCell(0).setCellValue("Izveštaj generisao: Korisnik, Sun Nov 27 19:52:16 CET 2022");
-            row6.createCell(0).setCellValue("Id transakcije: 1");
-            row7.createCell(0).setCellValue("Klijent: Danilo");
+            row3.createCell(0).setCellValue("Izveštaj generisao: " + user + ", " + new Date());
+            row6.createCell(0).setCellValue("Id transakcije: " + Id);
+            row7.createCell(0).setCellValue("Klijent: " + client);
             row10.createCell(0).setCellValue("Apoenska struktura transakcije");
-            row12.createCell(0).setCellValue("Apoen");
+            row12.createCell(0).setCellValue("Apoen - " + denomination[0]);
             row12.createCell(1).setCellValue("Broj komada");
             row12.createCell(2).setCellValue("Vrednost");
 
@@ -117,7 +114,7 @@ public class ExcelExport {
 
 
 
-            FileOutputStream fileOut = new FileOutputStream(FILE);
+            FileOutputStream fileOut = new FileOutputStream(file);
             hssfWorkbook.write(fileOut);
 //closing the Stream
             fileOut.close();

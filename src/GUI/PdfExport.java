@@ -11,7 +11,6 @@ import java.util.Date;
 
 public class PdfExport {
 
-    private static String FILE = "C:\\Users\\danilo\\Desktop\\MasterTeam_Brojacica\\Sample.pdf";
     private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,
             Font.BOLD);
     private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12,
@@ -20,9 +19,6 @@ public class PdfExport {
             Font.BOLD);
     private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12,
             Font.BOLD);
-    private static String[] denomination = {"RSD", "0", "4", "5", "4", "3", "0", "0", "0", "0", "1330"};
-    private static String[] serialOcr = {"1$", "AA123456", "2$", "AA654321", "100$", "BB123456"};
-    private static String[] serialImage = {"00001110", "00111100", "1000111"};
 
     public static void createPdfExport(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, String[] serialImage) {
         try {
