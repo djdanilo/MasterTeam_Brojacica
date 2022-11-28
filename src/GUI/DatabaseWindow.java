@@ -300,9 +300,10 @@ public class DatabaseWindow extends JFrame {
 
                 if (jcb_exportPDF.isSelected()){
                     PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
+                    System.out.println(filePath);
+
                 }
                 else if (jcb_exportXLSX.isSelected()){
-                    jFileChooser.setFileFilter(new FileNameExtensionFilter(client, ".xls"));
                     ExcelExport.createExcelExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 }
 
