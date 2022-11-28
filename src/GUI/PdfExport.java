@@ -24,13 +24,13 @@ public class PdfExport {
     private static String[] serialOcr = {"1$", "AA123456", "2$", "AA654321", "100$", "BB123456"};
     private static String[] serialImage = {"00001110", "00111100", "1000111"};
 
-    public static void main(String[] args) {
+    public static void createPdfExport(String Id, String user, String client, String file) {
         try {
             Document document = new Document();
-            PdfWriter.getInstance(document, new FileOutputStream(FILE));
+            PdfWriter.getInstance(document, new FileOutputStream(file));
             document.open();
             addMetaData(document);
-            createPdf(document, "1","Korisnik", new Date(), "Danilo");
+            createPdf(document, Id,user, new Date(), client);
             document.close();
         } catch (Exception e) {
             e.printStackTrace();

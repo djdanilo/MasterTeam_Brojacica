@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,6 +21,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Vector;
 
+import com.itextpdf.text.pdf.PdfPTable;
 import net.proteanit.sql.DbUtils;
 
 public class DatabaseWindow extends JFrame {
@@ -256,6 +258,37 @@ public class DatabaseWindow extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 dispose();
+            }
+        });
+
+        btn_export.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                int row = jt_transactions.getSelectedRow();
+
+                String Id = jt_transactions.getValueAt(row, 0).toString();
+                String user = LoginScreen.getUser();
+                String client = jt_transactions.getValueAt(row, 1).toString();
+                String filePath = "";
+
+
+                JFileChooser jFileChooser = new JFileChooser();
+                jFileChooser.setDialogTitle("Odaberite mesto za snimanje fajla");
+
+                int userSelection = jFileChooser.showSaveDialog(panel);
+
+                if (userSelection == JFileChooser.APPROVE_OPTION){
+                    File file = jFileChooser.getSelectedFile();
+                    filePath = file.getAbsolutePath();
+                }
+
+                if (jcb_exportPDF.isSelected()){
+                    PdfExport.createPdfExport(Id, user, client, filePath);
+                }
+                else if (jcb_exportXLSX.isSelected()){
+
+                }
             }
         });
     }
