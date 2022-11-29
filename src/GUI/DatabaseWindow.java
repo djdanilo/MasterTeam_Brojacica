@@ -47,7 +47,7 @@ public class DatabaseWindow extends JFrame {
     private JButton btn_export;
     private JLabel lb_search;
     private JTextField tf_search;
-    private JTable jt_transactions;
+    public static JTable jt_transactions;
     private JScrollPane jsp_transactions;
     private Vector originalTableModel;
 

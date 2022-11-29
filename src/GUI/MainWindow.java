@@ -22,7 +22,7 @@ import java.util.Calendar;
 
 public class MainWindow extends JFrame {
 
-    ButtonListeners buttonListeners;
+    ButtonListeners buttonListeners = new ButtonListeners();
 
     private JPanel panel;
     private JPanel panel1;
@@ -435,6 +435,9 @@ public class MainWindow extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
 
+                int row = DatabaseWindow.jt_transactions.getRowCount();
+                System.out.println(row);
+
                 ArrayList<String> denomData = new ArrayList<>();
 
                 denomData.add(lb_currency.getText());
@@ -481,7 +484,20 @@ public class MainWindow extends JFrame {
                     ex.printStackTrace();
                 }
 
-                buttonListeners.PDFPrinter(PdfExport.createPdfExport());
+                int row1 = DatabaseWindow.jt_transactions.getRowCount() + 1;
+
+                String Id = DatabaseWindow.jt_transactions.getValueAt(row1, 0).toString();
+                String user = LoginScreen.getUser();
+                String client2 = DatabaseWindow.jt_transactions.getValueAt(row1, 1).toString();
+                String file = "test.pdf";
+                String denominationString = DatabaseWindow.jt_transactions.getValueAt(row1, 3).toString();
+                String[] denomination = denominationString.split(", ");
+                String serialOcrString = DatabaseWindow.jt_transactions.getValueAt(row1, 4).toString();
+                String[] serialOcr = serialOcrString.split(", ");
+                String serialImageString = DatabaseWindow.jt_transactions.getValueAt(row1, 5).toString();
+                String[] serialImage = serialImageString.split(", ");
+
+                buttonListeners.PDFPrinter(PdfExport.createPdfFile(Id, user, client2, file, denomination, serialOcr, serialImage));
 
             }
         });

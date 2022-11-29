@@ -29,7 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="f3ad2408-c5ad-4af0-9b28-c59f5afcddd2">
-      <console name="MoneyCounter_App" type="STANDARD" schema="main" session="Main"><![CDATA[SELECT * FROM users
+      <console name="MoneyCounter_App" type="STANDARD" schema="main" session="Main">SELECT * FROM users
 
 INSERT INTO users values (2, 'Danilo', 'Djurovic');
 
@@ -53,7 +53,7 @@ create table transactions4(
 );
 
 Delete from transactions
-where Id = 1;]]></console>
+where Id = 1;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -110,7 +110,7 @@ where Id = 1;]]></console>
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\danilo\Desktop\MasterTeam_Brojacica\src\MoneyCounter_App.db" schema="main" />
+            <file path="C:\Users\danilodjurovic\Desktop\MasterTeam Brojacica\src\MoneyCounter_App.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
