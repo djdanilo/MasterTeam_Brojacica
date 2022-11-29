@@ -51,6 +51,8 @@ public class DatabaseWindow extends JFrame {
     private JScrollPane jsp_transactions;
     private Vector originalTableModel;
 
+    public static int row;
+
     public DatabaseWindow() {
         super();
         this.setSize(900, 750);
@@ -253,6 +255,13 @@ public class DatabaseWindow extends JFrame {
         }
     }
 
+    public static String getId(int row){
+
+        String Id = jt_transactions.getValueAt(row, 0).toString();
+
+        return Id;
+    }
+
     private void initListeners() {
         btn_back.addMouseListener(new MouseAdapter() {
             @Override
@@ -266,7 +275,7 @@ public class DatabaseWindow extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
 
-                int row = jt_transactions.getSelectedRow();
+                row = jt_transactions.getSelectedRow();
 
                 if (row < 0){
                     JOptionPane.showMessageDialog(null, "Niste odabrali transakciju!", "Greška!", JOptionPane.ERROR_MESSAGE);

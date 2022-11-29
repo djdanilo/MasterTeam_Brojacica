@@ -2,6 +2,7 @@ package GUI;
 
 
 import com.itextpdf.text.*;
+import com.itextpdf.text.Font;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -9,8 +10,6 @@ import com.itextpdf.text.pdf.PdfWriter;
 import javax.swing.*;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.Date;
 
 public class PdfExport {
@@ -24,17 +23,6 @@ public class PdfExport {
     private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12,
             Font.BOLD);
 
-    public static File createPdfFile(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, String[] serialImage){
-
-        JFileChooser jFileChooser = new JFileChooser();
-        File file1 = jFileChooser.getSelectedFile();
-        file = file1.getAbsolutePath();
-        createPdfExport(Id, user, client, file, denomination, serialOcr, serialImage);
-
-
-        return file1;
-
-    }
 
     public static void createPdfExport(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, String[] serialImage) {
         try {

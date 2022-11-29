@@ -11,6 +11,7 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -19,6 +20,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+
+import static GUI.DatabaseWindow.row;
 
 public class MainWindow extends JFrame {
 
@@ -73,12 +76,12 @@ public class MainWindow extends JFrame {
     String[] columnNamesRSD = {"Apoen - RSD", "Broj komada", "Vrednost"};
     String[] columnNamesUSD = {"Apoen - USD", "Broj komada", "Vrednost"};
     String[] columnNamesEUR = {"Apoen - EUR", "Broj komada", "Vrednost"};
-    String[][] denominationEmpty = {{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""},{"","",""}};
-    String[][] denominationRSD = {{"10","0","0"},{"20","4","0"},{"50","5","0"},{"100","4","0"},{"200","3","0"},{"500","0","0"},{"1000","0","0"},{"2000","0","0"},{"5000","0","0"},{"Ukupno:","0","0"}};
-    String[][] denominationUSD = {{"1","0","0"},{"2","0","0"},{"5","0","0"},{"10","0","0"},{"20","0","0"},{"50","0","0"},{"100","0","0"},{null,null,null},{null,null,null}, {"Ukupno:","0","0"}};
-    String[][] denominationEUR = {{"5","0","0"},{"10","0","0"},{"20","0","0"},{"50","0","0"},{"100","0","0"},{"200","0","0"},{"500","0",""},{null,null,null},{null,null,null}, {"Ukupno:","0","0"}};
+    String[][] denominationEmpty = {{"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}};
+    String[][] denominationRSD = {{"10", "0", "0"}, {"20", "4", "0"}, {"50", "5", "0"}, {"100", "4", "0"}, {"200", "3", "0"}, {"500", "0", "0"}, {"1000", "0", "0"}, {"2000", "0", "0"}, {"5000", "0", "0"}, {"Ukupno:", "0", "0"}};
+    String[][] denominationUSD = {{"1", "0", "0"}, {"2", "0", "0"}, {"5", "0", "0"}, {"10", "0", "0"}, {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
+    String[][] denominationEUR = {{"5", "0", "0"}, {"10", "0", "0"}, {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {"200", "0", "0"}, {"500", "0", ""}, {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
 
-    public MainWindow(){
+    public MainWindow() {
         super();
         this.setSize(900, 750);
         this.setTitle("Money Counter");
@@ -90,9 +93,9 @@ public class MainWindow extends JFrame {
         this.setVisible(true);
     }
 
-    public static void clearTable(final JTable table){
+    public static void clearTable(final JTable table) {
         for (int i = 0; i < table.getRowCount(); i++) {
-            for(int j = 1; j < table.getColumnCount(); j=2) {
+            for (int j = 1; j < table.getColumnCount(); j = 2) {
                 table.setValueAt("", i, j);
             }
         }
@@ -118,11 +121,11 @@ public class MainWindow extends JFrame {
         Font f2 = new Font("Arial", 0, 16);
 
         SpringLayout sl = new SpringLayout();
-        GridLayout gl = new GridLayout(4,1);
+        GridLayout gl = new GridLayout(4, 1);
 
         //panel1 setting
         panel1.setBorder(b);
-        panel1.setPreferredSize(new Dimension(285,200));
+        panel1.setPreferredSize(new Dimension(285, 200));
         lb_user = new JLabel();
 
         now = Calendar.getInstance();
@@ -162,7 +165,7 @@ public class MainWindow extends JFrame {
 
 
         panel2.setBorder(b);
-        panel2.setPreferredSize(new Dimension(285,200));
+        panel2.setPreferredSize(new Dimension(285, 200));
         lb_settings = new JLabel("Trenutna podešavanja:");
         lb_settings.setFont(f2);
         lb_settings.setBorder(b);
@@ -209,11 +212,10 @@ public class MainWindow extends JFrame {
         panel2.add(lb_baudRateData);
 
 
-
         panel3.setBorder(b);
-        panel3.setPreferredSize(new Dimension(285,200));
-        btn_printSave = new JButton("Print i snimi");
-        btn_save = new JButton("Snimi");
+        panel3.setPreferredSize(new Dimension(285, 200));
+        btn_printSave = new JButton("Štampaj transakciju");
+        btn_save = new JButton("Snimi transakciju");
         btn_database = new JButton("Transakcije");
         btn_logout = new JButton("Odjava");
 
@@ -225,38 +227,32 @@ public class MainWindow extends JFrame {
 
         //PANEL 4 (DENOMINATION COUNTING RESULT AND VALUE)
         panel4.setBorder(b);
-        panel4.setPreferredSize(new Dimension(375,355));
+        panel4.setPreferredSize(new Dimension(375, 355));
 
         lb_currency = new JLabel("RSD");
         lb_currency.setVisible(false);
 
 
-
-        if (lb_currency.getText() == null){
+        if (lb_currency.getText() == null) {
             jt_denom = new JTable(denominationEmpty, columnNamesEmpty);
             jsp_denom = new JScrollPane(jt_denom);
-            jsp_denom.setPreferredSize(new Dimension(371,350));
-        }
-        else if (lb_currency.getText().equals("RSD")){
+            jsp_denom.setPreferredSize(new Dimension(371, 350));
+        } else if (lb_currency.getText().equals("RSD")) {
             jt_denom = new JTable(denominationRSD, columnNamesRSD);
             jsp_denom = new JScrollPane(jt_denom);
-            jsp_denom.setPreferredSize(new Dimension(371,350));
+            jsp_denom.setPreferredSize(new Dimension(371, 350));
 
-        }
-        else if (lb_currency.getText().equals("USD")){
+        } else if (lb_currency.getText().equals("USD")) {
             jt_denom = new JTable(denominationUSD, columnNamesUSD);
             jsp_denom = new JScrollPane(jt_denom);
-            jsp_denom.setPreferredSize(new Dimension(371,350));
-        }
-        else if (lb_currency.getText().equals("EUR")){
+            jsp_denom.setPreferredSize(new Dimension(371, 350));
+        } else if (lb_currency.getText().equals("EUR")) {
             jt_denom = new JTable(denominationEUR, columnNamesEUR);
             jsp_denom = new JScrollPane(jt_denom);
-            jsp_denom.setPreferredSize(new Dimension(371,350));
-        }
-        else{
+            jsp_denom.setPreferredSize(new Dimension(371, 350));
+        } else {
             JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana!", "Greška", JOptionPane.ERROR_MESSAGE);
         }
-
 
 
         jt_denom.setRowHeight(32);
@@ -268,15 +264,15 @@ public class MainWindow extends JFrame {
 
         //PANEL 5(SERIAL NUMBERS)
         panel5.setBorder(b);
-        panel5.setPreferredSize(new Dimension(485,355));
+        panel5.setPreferredSize(new Dimension(485, 355));
         lb_serialNumber = new JLabel("Serijski brojevi");
         jta_serialNumber = new JTextArea();
         jsp_serialNumber = new JScrollPane(jta_serialNumber);
-        jsp_serialNumber.setPreferredSize(new Dimension(480,300));
+        jsp_serialNumber.setPreferredSize(new Dimension(480, 300));
         btn_serialNumberClear = new JButton("Očisti");
         btn_serialNumberCopy = new JButton("Kopiraj");
-        btn_serialNumberCopy.setPreferredSize(new Dimension(130,35));
-        btn_serialNumberClear.setPreferredSize(new Dimension(130,35));
+        btn_serialNumberCopy.setPreferredSize(new Dimension(130, 35));
+        btn_serialNumberClear.setPreferredSize(new Dimension(130, 35));
 
         sl.putConstraint(SpringLayout.WEST, lb_serialNumber, 185, SpringLayout.WEST, panel5);
         sl.putConstraint(SpringLayout.NORTH, lb_serialNumber, 3, SpringLayout.NORTH, panel5);
@@ -297,7 +293,7 @@ public class MainWindow extends JFrame {
 
 
         panel6.setBorder(b);
-        panel6.setPreferredSize(new Dimension(670,140));
+        panel6.setPreferredSize(new Dimension(670, 140));
 
         panel.add(panel1);
         panel.add(panel2);
@@ -338,9 +334,9 @@ public class MainWindow extends JFrame {
         btn_serialNumberCopy.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                stringSelection = new StringSelection (jta_serialNumber.getText());
-                clipboard = Toolkit.getDefaultToolkit ().getSystemClipboard ();
-                clipboard.setContents (stringSelection, null);
+                stringSelection = new StringSelection(jta_serialNumber.getText());
+                clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                clipboard.setContents(stringSelection, null);
             }
         });
 
@@ -382,52 +378,52 @@ public class MainWindow extends JFrame {
             public void mouseClicked(MouseEvent e) {
 
 
-                    ArrayList<String> denomData = new ArrayList<>();
+                ArrayList<String> denomData = new ArrayList<>();
 
-                    denomData.add(lb_currency.getText());
-
-
-                    ButtonListeners.tableTotalAmountRows(jt_denom);
-                    ButtonListeners.tableTotalAmountColumns(jt_denom);
+                denomData.add(lb_currency.getText());
 
 
-                    //getting denomination data from JTable as array of Strings
-                    for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
-                        denomData.add(jt_denom.getValueAt(i, 1).toString());
-                    }
-
-                    denomData.add(jt_denom.getValueAt(9, 2).toString());
-
-                    String denomData2 = String.join(", ", denomData);
+                ButtonListeners.tableTotalAmountRows(jt_denom);
+                ButtonListeners.tableTotalAmountColumns(jt_denom);
 
 
-                    System.out.println(denomData2);
-
-
-                    String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
-                    System.out.println(client);
-
-                    String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
-                            "VALUES (?, ?, ?, '1$, AB12345678', '1110001111')";
-
-                    try {
-                        PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
-
-
-                        pst.setString(1, client);
-                        pst.setString(2, dtf.format(now2));
-                        pst.setString(3, denomData2);
-
-                        pst.execute();
-                        pst.close();
-
-                        System.out.println("Transaction saved successfully");
-
-
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                    }
+                //getting denomination data from JTable as array of Strings
+                for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
+                    denomData.add(jt_denom.getValueAt(i, 1).toString());
                 }
+
+                denomData.add(jt_denom.getValueAt(9, 2).toString());
+
+                String denomData2 = String.join(", ", denomData);
+
+
+                System.out.println(denomData2);
+
+
+                String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
+                System.out.println(client);
+
+                String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
+                        "VALUES (?, ?, ?, '1$, AB12345678', '1110001111')";
+
+                try {
+                    PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
+
+
+                    pst.setString(1, client);
+                    pst.setString(2, dtf.format(now2));
+                    pst.setString(3, denomData2);
+
+                    pst.execute();
+                    pst.close();
+
+                    System.out.println("Transaction saved successfully");
+
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
 
         });
 
@@ -435,8 +431,6 @@ public class MainWindow extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
 
-                int row = DatabaseWindow.jt_transactions.getRowCount();
-                System.out.println(row);
 
                 ArrayList<String> denomData = new ArrayList<>();
 
@@ -484,25 +478,27 @@ public class MainWindow extends JFrame {
                     ex.printStackTrace();
                 }
 
-                int row1 = DatabaseWindow.jt_transactions.getRowCount() + 1;
-
-                String Id = DatabaseWindow.jt_transactions.getValueAt(row1, 0).toString();
+                String Id = "1";
                 String user = LoginScreen.getUser();
-                String client2 = DatabaseWindow.jt_transactions.getValueAt(row1, 1).toString();
-                String file = "test.pdf";
-                String denominationString = DatabaseWindow.jt_transactions.getValueAt(row1, 3).toString();
-                String[] denomination = denominationString.split(", ");
-                String serialOcrString = DatabaseWindow.jt_transactions.getValueAt(row1, 4).toString();
-                String[] serialOcr = serialOcrString.split(", ");
-                String serialImageString = DatabaseWindow.jt_transactions.getValueAt(row1, 5).toString();
-                String[] serialImage = serialImageString.split(", ");
+                String filePath = "";
+                String[] denomination = denomData2.split(", ");
+                String[] serialOcr = {"1$", "AB12345678"};
+                String[] serialImage = {"1110001111"};
 
-                buttonListeners.PDFPrinter(PdfExport.createPdfFile(Id, user, client2, file, denomination, serialOcr, serialImage));
+                JFileChooser jFileChooser = new JFileChooser();
+                jFileChooser.setDialogTitle("Odaberite mesto za snimanje fajla");
+
+
+                File file = new File("test.pdf");
+                    filePath = file.getAbsolutePath();
+
+                PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
+                buttonListeners.PDFPrinter(file);
+
 
             }
         });
     }
-
 
 
 }

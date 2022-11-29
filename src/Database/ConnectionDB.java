@@ -15,7 +15,7 @@ public class ConnectionDB {
 
     private void initializeDB(){
         final String JDBC_DRIVER = "org.sqlite.JDBC";
-        final String DB_URL = "jdbc:sqlite::resource:MoneyCounter_App.db";
+        final String DB_URL = "jdbc:sqlite:MoneyCounter_App.db";
 
         final String user = "";
         final String password = "";
