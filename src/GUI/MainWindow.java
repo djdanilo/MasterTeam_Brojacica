@@ -2,6 +2,7 @@ package GUI;
 
 import ConnectionComPort.ComPorts;
 import Database.ConnectionDB;
+import Settings.SettingsWindow;
 import com.fazecast.jSerialComm.SerialPort;
 
 import javax.swing.*;
@@ -38,6 +39,7 @@ public class MainWindow extends JFrame {
     private DateTimeFormatter dtf;
     private LocalDateTime now2;
 
+    String pass = "627862";
 
     private JPanel panel2;
     private JLabel lb_settings;
@@ -71,6 +73,9 @@ public class MainWindow extends JFrame {
     private Clipboard clipboard;
 
     private JPanel panel6;
+    private JTextArea jt_logs;
+    private JButton btn_settings;
+    private JLabel lb_logs;
 
     String[] columnNamesEmpty = {"", "", ""};
     String[] columnNamesRSD = {"Apoen - RSD", "Broj komada", "Vrednost"};
@@ -294,6 +299,29 @@ public class MainWindow extends JFrame {
 
         panel6.setBorder(b);
         panel6.setPreferredSize(new Dimension(670, 140));
+        panel6.setLayout(sl);
+
+        lb_logs = new JLabel("Logovi aplikacije");
+        lb_logs.setFont(f2);
+
+        jt_logs = new JTextArea();
+        jt_logs.setPreferredSize(new Dimension(500, 110));
+
+        btn_settings = new JButton("Podešavanja");
+        btn_settings.setPreferredSize(new Dimension(150, 40));
+
+        sl.putConstraint(SpringLayout.WEST, lb_logs, 185, SpringLayout.WEST, panel6);
+        sl.putConstraint(SpringLayout.NORTH, lb_logs, 3, SpringLayout.NORTH, panel6);
+
+        sl.putConstraint(SpringLayout.WEST, jt_logs, 5, SpringLayout.WEST, panel6);
+        sl.putConstraint(SpringLayout.NORTH, jt_logs, 23, SpringLayout.NORTH, panel6);
+
+        sl.putConstraint(SpringLayout.WEST, btn_settings, 510, SpringLayout.WEST, panel6);
+        sl.putConstraint(SpringLayout.NORTH, btn_settings, 50, SpringLayout.NORTH, panel6);
+
+        panel6.add(lb_logs);
+        panel6.add(jt_logs);
+        panel6.add(btn_settings);
 
         panel.add(panel1);
         panel.add(panel2);
@@ -346,7 +374,7 @@ public class MainWindow extends JFrame {
 
                 Object[] options = {"Da", "Ne"};
 
-                int n = JOptionPane.showOptionDialog(null, "Da li ste sigurni da ćelite da se odjavite?", "Pažnja", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+                int n = JOptionPane.showOptionDialog(null, "Da li ste sigurni da želite da se odjavite?", "Pažnja", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 
                 System.out.println(n);
 
@@ -490,12 +518,38 @@ public class MainWindow extends JFrame {
 
 
                 File file = new File("test.pdf");
-                    filePath = file.getAbsolutePath();
+                filePath = file.getAbsolutePath();
 
                 PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 buttonListeners.PDFPrinter(file);
 
 
+            }
+        });
+
+        btn_settings.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                Box box = Box.createHorizontalBox();
+
+                JLabel jl = new JLabel("Unesite lozinku: ");
+                box.add(jl);
+
+                JPasswordField jpf = new JPasswordField(24);
+                box.add(jpf);
+
+                int button = JOptionPane.showConfirmDialog(null, box, "Servisna podešavanja", JOptionPane.OK_CANCEL_OPTION);
+
+                if (button == JOptionPane.OK_OPTION) {
+                    String password = String.valueOf(jpf.getPassword());
+                    if (password.equals(pass)) {
+                        new SettingsWindow();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Pogrešna lozinka", "Greška!", JOptionPane.ERROR_MESSAGE);
+                    }
+
+                }
             }
         });
     }
