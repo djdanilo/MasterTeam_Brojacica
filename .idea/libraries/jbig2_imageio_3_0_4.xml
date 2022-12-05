@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jbig2-imageio-3.0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/tess4j/jbig2-imageio-3.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
