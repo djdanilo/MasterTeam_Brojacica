@@ -3,28 +3,37 @@ package GUI;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class TestGuiImageBinary {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, TesseractException {
 
-        SerialPort comPort = SerialPort.getCommPort("COM8");
-        comPort.openPort();
-        comPort.setComPortParameters(115200, 8, 1, SerialPort.NO_PARITY);
-        comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
-        readingBytesSN(comPort);
+        //SerialPort comPort = SerialPort.getCommPort("COM8");
+        //comPort.openPort();
+        //comPort.setComPortParameters(115200, 8, 1, SerialPort.NO_PARITY);
+        //comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
+        //readingBytesSN(comPort);
         //readingBytes2(comPort);
 
         //toImage();
+
+        File image = new File("text1.png");
+        Tesseract tesseract = new Tesseract();
+        tesseract.setDatapath("src/main/resources/tessdata");
+        tesseract.setLanguage("eng");
+        tesseract.setPageSegMode(1);
+        tesseract.setOcrEngineMode(1);
+        String result = tesseract.doOCR(image);
+        System.out.println(result);
 
     }
 
@@ -39,33 +48,43 @@ public class TestGuiImageBinary {
             @Override
             public void serialEvent(SerialPortEvent serialPortEvent) {
 
-                ArrayList<String> list = new ArrayList<>();
+                InputStream in;
+                long startTime = System.currentTimeMillis();
+
+                String startSn2 = "110000010011010001101100100011011000100011010000111000010001010";
+                String newLine2 = "011000001101100100011011000100011010000111000";
+
+                String startSn = "27434877273598525669";
+                String newLine = "12273598525669";
+                String endOfSn = "12694954545053565052661310";
+                String endOfData = "1227513232131032131032131032131032131027109275132";
+
+
                 String s1 = "";
-                StringBuffer sb = new StringBuffer();
+                String s2 = "";
 
                 if (serialPortEvent.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
                     return;
                 }
-                byte[] readBuffer = new byte[comPort.bytesAvailable()];
-                int numRead = comPort.readBytes(readBuffer, readBuffer.length);
+                //byte[] readBuffer = new byte[comPort.bytesAvailable()];
+                //int numRead = comPort.readBytes(readBuffer, readBuffer.length);
                 //System.out.println("Read " + numRead + " bytes.");
 
-                for (Byte b : readBuffer) {
+                int x = 0;
+                try {
+                    in = comPort.getInputStream();
 
-                    if (numRead <= 1200) {
-                        break;
-                    }else {
-
-                        s1 = String.format("%8s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0');
-
-                        list.add(s1);
+                    while (((x = in.read()) != 109)) {
+                        s1 += String.format("%8s", Integer.toBinaryString(x & 0xFF)).replace(' ', '0');
                     }
+                } catch (IOException e1) {
+                    e1.printStackTrace();
                 }
 
-                String sn = fixedLengthString(sb.toString(), 290);
+                String[] snArray = s1.split(startSn2);
 
+                System.out.println(Arrays.toString(snArray));
 
-                String newLine = "01100000110110010001101100010001101000011100001000101";
 
                 BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
                 Graphics2D g2d = img.createGraphics();
@@ -81,20 +100,20 @@ public class TestGuiImageBinary {
                 g2d.setColor(Color.WHITE);
                 int fontSize = 1;
 
-                for (String line : sn.split(newLine)) {
-                    g2d.drawString(line, 0, height);
-                    height += fontSize;
-                    System.out.println(line);
+                for (int i = 1; i < snArray.length; i++) {
+                    for (String line : snArray[i].split(newLine2)) {
+
+                        g2d.drawString(line, 0, height);
+                        height += fontSize;
+                        //System.out.println("Serial number: " + line);
+                    }
+                    g2d.dispose();
+                    try {
+                        ImageIO.write(img, "png", new File("Text" + i + ".png"));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
                 }
-                g2d.dispose();
-
-                try {
-                    ImageIO.write(img, "png", new File("Text.png"));
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-
-
             }
         });
 
@@ -180,11 +199,11 @@ public class TestGuiImageBinary {
             ex.printStackTrace();
         }
 
+
+
     }
 
-    public static String fixedLengthString(String string, int length) {
-        return String.format("%1$"+length+ "s", string);
-    }
+
 
 
 }
