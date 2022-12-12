@@ -17,23 +17,17 @@ public class TestGuiImageBinary {
 
     public static void main(String[] args) throws IOException, TesseractException {
 
-        //SerialPort comPort = SerialPort.getCommPort("COM8");
-        //comPort.openPort();
-        //comPort.setComPortParameters(115200, 8, 1, SerialPort.NO_PARITY);
-        //comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
-        //readingBytesSN(comPort);
+        SerialPort comPort = SerialPort.getCommPort("COM8");
+        comPort.openPort();
+        comPort.setComPortParameters(115200, 8, 1, SerialPort.NO_PARITY);
+        comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
+        readingBytesSN(comPort);
         //readingBytes2(comPort);
 
         //toImage();
 
-        File image = new File("text1.png");
-        Tesseract tesseract = new Tesseract();
-        tesseract.setDatapath("src/main/resources/tessdata");
-        tesseract.setLanguage("eng");
-        tesseract.setPageSegMode(1);
-        tesseract.setOcrEngineMode(1);
-        String result = tesseract.doOCR(image);
-        System.out.println(result);
+        //String result = SerialOcr("images\\text1.png");
+        //System.out.println(result);
 
     }
 
@@ -52,7 +46,7 @@ public class TestGuiImageBinary {
                 long startTime = System.currentTimeMillis();
 
                 String startSn2 = "110000010011010001101100100011011000100011010000111000010001010";
-                String newLine2 = "011000001101100100011011000100011010000111000";
+                String newLine2 = "01100000110110010001101100010001101000011100001000101";
 
                 String startSn = "27434877273598525669";
                 String newLine = "12273598525669";
@@ -66,13 +60,12 @@ public class TestGuiImageBinary {
                 if (serialPortEvent.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
                     return;
                 }
-                //byte[] readBuffer = new byte[comPort.bytesAvailable()];
-                //int numRead = comPort.readBytes(readBuffer, readBuffer.length);
-                //System.out.println("Read " + numRead + " bytes.");
 
                 int x = 0;
                 try {
+
                     in = comPort.getInputStream();
+
 
                     while (((x = in.read()) != 109)) {
                         s1 += String.format("%8s", Integer.toBinaryString(x & 0xFF)).replace(' ', '0');
@@ -83,36 +76,58 @@ public class TestGuiImageBinary {
 
                 String[] snArray = s1.split(startSn2);
 
-                System.out.println(Arrays.toString(snArray));
 
+                Scanner sc = new Scanner(snArray[0]);
 
-                BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
-                Graphics2D g2d = img.createGraphics();
-                Font font = new Font("Arial", Font.PLAIN, 1);
-                g2d.setFont(font);
-                int height = g2d.getFontMetrics().getHeight();
-                g2d.dispose();
+                List<String> lineArray = new ArrayList<>();
 
-                img = new BufferedImage(384, 50, BufferedImage.TYPE_INT_RGB);
-                g2d = img.createGraphics();
+                while (sc.hasNextLine()) {
+                    lineArray.add(sc.next());
+                }
 
-                g2d.setFont(font);
-                g2d.setColor(Color.WHITE);
-                int fontSize = 1;
+                System.out.println(lineArray);
+
+                //System.out.println(Arrays.toString(snArray));
+
 
                 for (int i = 1; i < snArray.length; i++) {
+
+                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+                    Graphics2D g2d = img.createGraphics();
+                    Font font = new Font("Arial", Font.PLAIN, 2);
+                    g2d.setFont(font);
+                    int height = g2d.getFontMetrics().getHeight();
+                    g2d.dispose();
+
+                    img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
+                    g2d = img.createGraphics();
+
+                    g2d.setFont(font);
+                    g2d.setColor(Color.WHITE);
+                    int fontSize = 1;
+
                     for (String line : snArray[i].split(newLine2)) {
 
                         g2d.drawString(line, 0, height);
                         height += fontSize;
                         //System.out.println("Serial number: " + line);
                     }
-                    g2d.dispose();
+                    //g2d.dispose();
                     try {
-                        ImageIO.write(img, "png", new File("Text" + i + ".png"));
+                        ImageIO.write(img, "png", new File("images\\Text" + i + ".png"));
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
+                    g2d.dispose();
+
+                    String result = null;
+                    try {
+                        result = SerialOcr("images\\Text" + i + ".png");
+                    } catch (TesseractException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(result);
+
                 }
             }
         });
@@ -134,24 +149,18 @@ public class TestGuiImageBinary {
                 Scanner sc = new Scanner(comPort.getInputStream());
 
                 List<String> line = new ArrayList<>();
-                File file = new File("output.txt");
-                try {
-                    FileWriter fw = new FileWriter(file);
-                    while (sc.hasNextLine()) {
-                        line.add(sc.next());
-                        if (line.contains("\u001Bm\u001B3")) {
-                            break;
-                        }
-                    }
-                    fw.write(String.valueOf(line));
-                    fw.flush();
-                    fw.close();
-                    System.out.println(line);
 
-                } catch (IOException e) {
-                    e.printStackTrace();
+                while (sc.hasNextLine()) {
+                    line.add(sc.next());
+                    if (line.contains("\u001Bm\u001B3")) {
+                        break;
+                    }
                 }
+
+                System.out.println(line);
+
             }
+
 
         });
     }
@@ -200,10 +209,20 @@ public class TestGuiImageBinary {
         }
 
 
-
     }
 
+    public static String SerialOcr(String file) throws TesseractException {
 
+        File image = new File(file);
+        Tesseract tesseract = new Tesseract();
+        tesseract.setDatapath("src\\main\\resources\\tessdata");
+        tesseract.setLanguage("eng");
+        tesseract.setPageSegMode(1);
+        tesseract.setOcrEngineMode(1);
+
+
+        return tesseract.doOCR(image);
+    }
 
 
 }

@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="MasterTeam MoneyCounter APP:jar">
+  <artifact type="jar" build-on-make="true" name="MasterTeam MoneyCounter APP:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/MasterTeam_MoneyCounter_APP_jar</output-path>
     <root id="archive" name="MasterTeam MoneyCounter APP.jar">
       <element id="module-output" name="MasterTeam MoneyCounter APP" />
@@ -7,6 +7,27 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/db/sqlite-jdbc-3.39.3.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jSerialComm-2.9.2.jar" path-in-jar="/" />
       <element id="file-copy" path="$PROJECT_DIR$/db/MoneyCounter_App.db" />
+      <element id="library" level="project" name="commons-io-2.11.0" />
+      <element id="library" level="project" name="commons-logging-1.2" />
+      <element id="library" level="project" name="fontbox-2.0.26" />
+      <element id="library" level="project" name="itextpdf-5.5.13.2" />
+      <element id="library" level="project" name="jai-imageio-core-1.4.0" />
+      <element id="library" level="project" name="jbig2-imageio-3.0.4" />
+      <element id="library" level="project" name="jboss-logging-3.1.4.GA" />
+      <element id="library" level="project" name="jboss-vfs-3.2.17.Final" />
+      <element id="library" level="project" name="jna-5.12.1" />
+      <element id="library" level="project" name="jSerialComm-2.9.2" />
+      <element id="library" level="project" name="lept4j-1.16.2" />
+      <element id="library" level="project" name="pdf-renderer" />
+      <element id="library" level="project" name="pdfbox-2.0.26" />
+      <element id="library" level="project" name="pdfbox-debugger-2.0.26" />
+      <element id="library" level="project" name="pdfbox-tools-2.0.26" />
+      <element id="library" level="project" name="poi-3.17" />
+      <element id="library" level="project" name="rs2xml" />
+      <element id="library" level="project" name="slf4j-api-1.7.36" />
+      <element id="library" level="project" name="slf4j-simple-1.6.1" />
+      <element id="library" level="project" name="sqlite-jdbc-3.39.3.0" />
+      <element id="library" level="project" name="tess4j-5.4.0" />
     </root>
   </artifact>
 </component>
