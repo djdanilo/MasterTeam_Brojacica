@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jmrtd-0.7.35">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jmrtd-0.7.35.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

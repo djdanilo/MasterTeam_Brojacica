@@ -76,7 +76,7 @@ public class TestGuiImageBinary {
 
                 String[] snArray = s1.split(startSn2);
 
-
+                
                 Scanner sc = new Scanner(snArray[0]);
 
                 List<String> lineArray = new ArrayList<>();
