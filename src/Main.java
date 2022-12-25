@@ -21,6 +21,7 @@ public class Main {
         conn.initialize();
 
         new LoginScreen();
+        new SettingsWindow();
 
     }
 }

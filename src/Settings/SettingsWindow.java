@@ -31,9 +31,11 @@ public class SettingsWindow extends JFrame {
     private JButton btn_confirm;
 
     private JPanel panel3;
-    private JLabel lb_addUser;
+    private JLabel lb_username;
     private JTextField tf_username;
+    private JLabel lb_password;
     private JPasswordField pf_password;
+    private JLabel lb_password2;
     private JPasswordField pf_password2;
     private JButton btn_addUser;
 
@@ -55,6 +57,7 @@ public class SettingsWindow extends JFrame {
 
         panel = new JPanel();
         SpringLayout sl = new SpringLayout();
+        GridLayout gl = new GridLayout(4, 2);
 
         Border b = BorderFactory.createEtchedBorder(1);
         Font f = new Font("Arial", 1, 12);
@@ -140,9 +143,31 @@ public class SettingsWindow extends JFrame {
 
 
         panel3 = new JPanel();
-        panel3.setLayout(sl);
+        panel3.setLayout(gl);
         panel3.setBorder(b);
         panel3.setPreferredSize(new Dimension(380,150));
+
+
+        lb_username = new JLabel("Korisničko ime:");
+        tf_username = new JTextField();
+
+        lb_password = new JLabel("Lozinka:");
+        pf_password = new JPasswordField();
+
+        lb_password2 = new JLabel("Ponovi lozinku");
+        pf_password2 = new JPasswordField();
+
+        btn_addUser = new JButton("Dodaj korisnika");
+
+
+        panel3.add(lb_username);
+        panel3.add(tf_username);
+        panel3.add(lb_password);
+        panel3.add(pf_password);
+        panel3.add(lb_password2);
+        panel3.add(pf_password2);
+        panel3.add(btn_addUser);
+
 
 
         panel.add(panel2);
