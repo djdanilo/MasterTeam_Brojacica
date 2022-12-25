@@ -13,9 +13,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class LoginScreen extends JFrame {
+public class LoginScreen{
 
     //declaring components
+    public static JFrame jFrame;
     private JPanel panel;
     private JLabel lb_title;
     private JLabel lb_username;
@@ -25,18 +26,18 @@ public class LoginScreen extends JFrame {
     private JButton btn_login;
     private JButton btn_cancel;
     private JCheckBox cb_showPassword;
-    public static String userLoggedIn;
-    
+
+
     public LoginScreen(){
-        super();
-        this.setSize(400,350);
-        this.setTitle("Login ekran");
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setResizable(false);
+        jFrame = new JFrame();
+        jFrame.setSize(400,350);
+        jFrame.setTitle("Login ekran");
+        jFrame.setLocationRelativeTo(null);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrame.setResizable(false);
         initComponents();
         initListeners();
-        this.setVisible(true);
+        jFrame.setVisible(true);
     }
 
     private void initComponents() {
@@ -122,7 +123,7 @@ public class LoginScreen extends JFrame {
         panel.add(btn_cancel);
         panel.add(cb_showPassword);
 
-        setContentPane(panel);
+        jFrame.setContentPane(panel);
     }
 
     public static String getUser(){
@@ -134,29 +135,8 @@ public class LoginScreen extends JFrame {
         btn_login.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                String username = tf_username.getText();
-                String password = String.valueOf(pf_password.getPassword());
 
-                try{
-                    Statement stm = ConnectionDB.conn.createStatement();
-                    String statement = "SELECT username, password FROM users where username='"+username+"' and password='"+password+"'";
-
-                    ResultSet rs = stm.executeQuery(statement);
-
-                    if (rs.next()) {
-                        dispose();
-                        new ChooseCounter();
-                    }else{
-                            JOptionPane.showMessageDialog(null, "Pogrešno korisničko ime i/ili lozinka", "Greška!", JOptionPane.ERROR_MESSAGE);
-                            tf_username.setText("");
-                            pf_password.setText("");
-                        }
-
-                    rs.close();
-
-                }catch (SQLException ex){
-                    ex.printStackTrace();
-                }
+                ButtonListeners.LoginUser(tf_username, pf_password, jFrame);
 
             }
         });

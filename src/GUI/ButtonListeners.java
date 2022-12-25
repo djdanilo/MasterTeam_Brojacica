@@ -1,5 +1,6 @@
 package GUI;
 
+import Database.ConnectionDB;
 import com.sun.pdfview.PDFFile;
 import com.sun.pdfview.PDFPage;
 import com.sun.pdfview.PDFRenderer;
@@ -12,6 +13,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ButtonListeners {
 
@@ -151,6 +155,32 @@ public class ButtonListeners {
             } else {
                 return NO_SUCH_PAGE;
             }
+        }
+    }
+
+    public static void LoginUser(JTextField tf_username, JPasswordField pf_password, JFrame frame){
+        String username = tf_username.getText();
+        String password = String.valueOf(pf_password.getPassword());
+
+        try{
+            Statement stm = ConnectionDB.conn.createStatement();
+            String statement = "SELECT username, password FROM users where username='"+username+"' and password='"+password+"'";
+
+            ResultSet rs = stm.executeQuery(statement);
+
+            if (rs.next()) {
+                frame.dispose();
+                new ChooseCounter();
+            }else{
+                JOptionPane.showMessageDialog(null, "Pogrešno korisničko ime i/ili lozinka", "Greška!", JOptionPane.ERROR_MESSAGE);
+                tf_username.setText("");
+                pf_password.setText("");
+            }
+
+            rs.close();
+
+        }catch (SQLException ex){
+            ex.printStackTrace();
         }
     }
 

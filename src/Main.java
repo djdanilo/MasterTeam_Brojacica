@@ -4,6 +4,7 @@ import GUI.ChooseCounter;
 import GUI.DatabaseWindow;
 import GUI.LoginScreen;
 import GUI.MainWindow;
+import Settings.SettingsWindow;
 
 import javax.swing.*;
 

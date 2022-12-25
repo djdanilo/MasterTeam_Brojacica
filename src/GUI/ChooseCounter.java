@@ -1,6 +1,7 @@
 package GUI;
 
 import ConnectionComPort.ComPorts;
+import Database.ConnectionDB;
 import com.fazecast.jSerialComm.SerialPort;
 import com.sun.tools.javac.Main;
 
@@ -8,6 +9,10 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ChooseCounter extends JFrame {
 
@@ -30,7 +35,7 @@ public class ChooseCounter extends JFrame {
         super();
         this.setSize(400, 350);
         this.setTitle("Odabir mašine za brojanje novca");
-        this.setLocationRelativeTo(loginScreen);
+        this.setLocationRelativeTo(LoginScreen.jFrame);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         initComponents();
@@ -65,15 +70,26 @@ public class ChooseCounter extends JFrame {
 
         cb_chooseMachine = new JComboBox();
 
+
         //adding data to cb_chooseMachine
-        cb_chooseMachine.addItem("Kisan K2");
-        cb_chooseMachine.addItem("Hyundai SB-9");
-        cb_chooseMachine.addItem("Hyundai MIB-9");
-        cb_chooseMachine.addItem("Hyundai MIB-11");
-        cb_chooseMachine.addItem("Lidix ML-2F");
-        cb_chooseMachine.addItem("Lidix ML-2FS");
-        cb_chooseMachine.addItem("Ribao BC-55");
-        cb_chooseMachine.addItem("Ribao BC-40");
+        try {
+
+            String statement = "SELECT * FROM machines;";
+
+            Statement stmt = ConnectionDB.conn.createStatement();
+            ResultSet rs = stmt.executeQuery(statement);
+
+            while (rs.next()){
+                String machine = rs.getString(1);
+                cb_chooseMachine.addItem(machine);
+            }
+
+            rs.close();
+            stmt.close();
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
 
         cb_chooseComPort = new JComboBox();
 

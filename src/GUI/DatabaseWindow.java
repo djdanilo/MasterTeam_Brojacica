@@ -255,13 +255,6 @@ public class DatabaseWindow extends JFrame {
         }
     }
 
-    public static String getId(int row){
-
-        String Id = jt_transactions.getValueAt(row, 0).toString();
-
-        return Id;
-    }
-
     private void initListeners() {
         btn_back.addMouseListener(new MouseAdapter() {
             @Override
