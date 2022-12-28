@@ -1,20 +1,18 @@
 package Settings;
 
 import Database.ConnectionDB;
-import GUI.LoginScreen;
-import GUI.MainWindow;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SettingsWindow extends JFrame {
 
@@ -37,8 +35,10 @@ public class SettingsWindow extends JFrame {
     private JPasswordField pf_password;
     private JLabel lb_password2;
     private JPasswordField pf_password2;
-    private JButton btn_addUser;
 
+
+    private JPanel panel4;
+    private JButton btn_addUser;
 
     public SettingsWindow(){
         super();
@@ -57,7 +57,7 @@ public class SettingsWindow extends JFrame {
 
         panel = new JPanel();
         SpringLayout sl = new SpringLayout();
-        GridLayout gl = new GridLayout(4, 2);
+        GridLayout gl = new GridLayout(3, 2);
 
         Border b = BorderFactory.createEtchedBorder(1);
         Font f = new Font("Arial", 1, 12);
@@ -144,20 +144,17 @@ public class SettingsWindow extends JFrame {
 
         panel3 = new JPanel();
         panel3.setLayout(gl);
-        panel3.setBorder(b);
-        panel3.setPreferredSize(new Dimension(380,150));
+        panel3.setPreferredSize(new Dimension(380,100));
 
 
-        lb_username = new JLabel("Korisničko ime:");
+        lb_username = new JLabel("       Korisničko ime:");
         tf_username = new JTextField();
 
-        lb_password = new JLabel("Lozinka:");
+        lb_password = new JLabel("       Lozinka:");
         pf_password = new JPasswordField();
 
-        lb_password2 = new JLabel("Ponovi lozinku");
+        lb_password2 = new JLabel("       Ponovi lozinku");
         pf_password2 = new JPasswordField();
-
-        btn_addUser = new JButton("Dodaj korisnika");
 
 
         panel3.add(lb_username);
@@ -166,12 +163,19 @@ public class SettingsWindow extends JFrame {
         panel3.add(pf_password);
         panel3.add(lb_password2);
         panel3.add(pf_password2);
-        panel3.add(btn_addUser);
+
+
+        panel4 = new JPanel();
+
+        btn_addUser = new JButton("Dodaj korisnika");
+
+        panel4.add(btn_addUser);
 
 
 
         panel.add(panel2);
         panel.add(panel3);
+        panel.add(panel4);
 
         setContentPane(panel);
     }
@@ -184,11 +188,17 @@ public class SettingsWindow extends JFrame {
                 JCheckBox[] checkBoxes = {jcb_sb9, jcb_mib9, jcb_ml2f, jcb_ml2fs, jcb_k2, jcb_bc55};
                 ArrayList<String> machines = new ArrayList();
 
+
                 for (int i = 0; i < checkBoxes.length; i++){
                     if (checkBoxes[i].isSelected()){
                         String machine = checkBoxes[i].getText();
                         machines.add(machine);
                     }
+                }
+
+                if (machines.size() == 0){
+                    JOptionPane.showMessageDialog(null, "Niste odabrali nijednu mašinu.", "Pažnja!", JOptionPane.OK_OPTION);
+                    return;
                 }
 
                 System.out.println(machines);
@@ -218,6 +228,40 @@ public class SettingsWindow extends JFrame {
                 JOptionPane.showMessageDialog(null, "Uspešno ste izvršili podešavanja. \n Ponovo pokrenite program nakon potvrde.", "Pažnja!", JOptionPane.OK_OPTION);
                 System.exit(0);
 
+            }
+        });
+
+        btn_addUser.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                if (tf_username.getText().equals("") || pf_password.getPassword().length == 0 || pf_password2.getPassword().length == 0){
+                    JOptionPane.showMessageDialog(null, "Niste uneli sve podatke.", "Pažnja!", JOptionPane.OK_OPTION);
+                }
+                else if(!Arrays.equals(pf_password.getPassword(), pf_password2.getPassword())){
+                    JOptionPane.showMessageDialog(null, "Lozinke se ne podudaraju. \nPokušajte ponovo.", "Pažnja!", JOptionPane.OK_OPTION);
+                }
+                else{
+                    String statement = "INSERT INTO users(userName, password) " +
+                            "VALUES (?, ?)";
+
+                    try {
+                        PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
+
+
+                        pst.setString(1, tf_username.getText());
+                        pst.setString(2, String.valueOf(pf_password.getPassword()));
+
+                        pst.execute();
+                        pst.close();
+
+                        System.out.println("User successfully added");
+
+
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
             }
         });
 
