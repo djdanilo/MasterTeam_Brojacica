@@ -6,6 +6,8 @@ import com.sun.pdfview.PDFPage;
 import com.sun.pdfview.PDFRenderer;
 
 import javax.swing.*;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.print.*;
 import java.io.File;
@@ -23,6 +25,9 @@ public class ButtonListeners {
 
         try {
             for (int i = 0; i < table.getRowCount() - 1; i++) {
+                if (table.getValueAt(i, 0) == null) {
+                    continue;
+                }
                 String denom = table.getValueAt(i, 0).toString();
                 int denom2 = Integer.parseInt(denom);
                 String totalPcs = table.getValueAt(i, 1).toString();
@@ -31,24 +36,30 @@ public class ButtonListeners {
                 table.setValueAt(String.valueOf(total), i, 2);
             }
 
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException | NullPointerException e) {
             e.printStackTrace();
         }
     }
 
-    public static void tableTotalAmountColumns(JTable table){
+    public static void tableTotalAmountColumns(JTable table) {
         int totalPcs2 = 0;
         int denom2 = 0;
-        try{
-            for (int i = 0; i < table.getRowCount(); i++){
+        try {
+
+            for (int i = 0; i < table.getRowCount(); i++) {
+                if (table.getValueAt(i, 0) == null) {
+                    continue;
+                }
                 String totalPcs = table.getValueAt(i, 1).toString();
-                totalPcs2 = totalPcs2 + Integer.parseInt(totalPcs);
+                totalPcs2 += Integer.parseInt(totalPcs);
                 String denom = table.getValueAt(i, 2).toString();
-                denom2 = denom2 + Integer.parseInt(denom);
+                denom2 += Integer.parseInt(denom);
             }
-            table.setValueAt(String.valueOf(totalPcs2), 9,1);
-            table.setValueAt(String.valueOf(denom2), 9,2);
-        }catch (NumberFormatException e){
+
+            table.setValueAt(String.valueOf(totalPcs2), 9, 1);
+            table.setValueAt(String.valueOf(denom2), 9, 2);
+
+        } catch (NumberFormatException | NullPointerException e) {
             e.printStackTrace();
         }
     }
@@ -158,20 +169,20 @@ public class ButtonListeners {
         }
     }
 
-    public static void LoginUser(JTextField tf_username, JPasswordField pf_password, JFrame frame){
+    public static void LoginUser(JTextField tf_username, JPasswordField pf_password, JFrame frame) {
         String username = tf_username.getText();
         String password = String.valueOf(pf_password.getPassword());
 
-        try{
+        try {
             Statement stm = ConnectionDB.conn.createStatement();
-            String statement = "SELECT username, password FROM users where username='"+username+"' and password='"+password+"'";
+            String statement = "SELECT username, password FROM users where username='" + username + "' and password='" + password + "'";
 
             ResultSet rs = stm.executeQuery(statement);
 
             if (rs.next()) {
                 frame.dispose();
                 new ChooseCounter();
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, "Pogrešno korisničko ime i/ili lozinka", "Greška!", JOptionPane.ERROR_MESSAGE);
                 tf_username.setText("");
                 pf_password.setText("");
@@ -179,10 +190,45 @@ public class ButtonListeners {
 
             rs.close();
 
-        }catch (SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
+    static class EurTableModel extends AbstractTableModel {
+        // TableModel's column names
+        public static String[] columnNamesEUR = {"Apoen - EUR", "Broj komada", "Vrednost"};
 
+        // TableModel's data
+        public static String[][] denominationEUR = {{"5", "0", "0"}, {"10", "0", "0"},
+                {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {"200", "0", "0"}, {"500", "0", "0"},
+                {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
+
+        @Override
+        public int getRowCount() {
+            return denominationEUR.length;
+        }
+
+        @Override
+        public int getColumnCount() {
+            return columnNamesEUR.length;
+        }
+
+        @Override
+        public String getColumnName(int column) {
+            return columnNamesEUR[column];
+        }
+
+        @Override
+        public Object getValueAt(int rowIndex, int columnIndex) {
+            return denominationEUR[rowIndex][columnIndex];
+        }
+    };
+
+        public static void makeTable() {
+
+            EurTableModel tableModel = new EurTableModel();
+            MainWindow.jt_denom = new JTable(tableModel);
+
+        }
 }

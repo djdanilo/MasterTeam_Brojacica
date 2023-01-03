@@ -19,6 +19,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Vector;
 
@@ -301,7 +302,7 @@ public class DatabaseWindow extends JFrame {
                 if (jcb_exportPDF.isSelected()){
                     if (!filePath.endsWith(".pdf"))
                         filePath += ".pdf";
-                    PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
+                    PDFExportDatabase.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
                 }
                 else if (jcb_exportXLSX.isSelected()){
                     if (!filePath.endsWith(".xls"))

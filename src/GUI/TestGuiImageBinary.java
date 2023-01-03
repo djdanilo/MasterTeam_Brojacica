@@ -3,13 +3,18 @@ package GUI;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import com.sun.tools.javac.Main;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.input.TeeInputStream;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.List;
 
@@ -17,7 +22,7 @@ public class TestGuiImageBinary {
 
     public static void main(String[] args) throws IOException, TesseractException {
 
-        SerialPort comPort = SerialPort.getCommPort("COM8");
+        SerialPort comPort = SerialPort.getCommPort("COM3");
         comPort.openPort();
         comPort.setComPortParameters(115200, 8, 1, SerialPort.NO_PARITY);
         comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
@@ -31,7 +36,7 @@ public class TestGuiImageBinary {
 
     }
 
-    private static void readingBytesSN(SerialPort comPort) {
+    public static void readingBytesSN(SerialPort comPort) {
 
         comPort.addDataListener(new SerialPortDataListener() {
             @Override
@@ -42,8 +47,8 @@ public class TestGuiImageBinary {
             @Override
             public void serialEvent(SerialPortEvent serialPortEvent) {
 
+
                 InputStream in;
-                long startTime = System.currentTimeMillis();
 
                 String startSn2 = "110000010011010001101100100011011000100011010000111000010001010";
                 String newLine2 = "01100000110110010001101100010001101000011100001000101";
@@ -55,7 +60,6 @@ public class TestGuiImageBinary {
 
 
                 String s1 = "";
-                String s2 = "";
 
                 if (serialPortEvent.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
                     return;
@@ -66,8 +70,26 @@ public class TestGuiImageBinary {
 
                     in = comPort.getInputStream();
 
+                    InputStream bufferdInputStream = new BufferedInputStream(in);
+                    bufferdInputStream.mark(1);
 
-                    while (((x = in.read()) != 109)) {
+                    Scanner sc = new Scanner(bufferdInputStream);
+
+                    List<String> line = new ArrayList<>();
+
+                    while (sc.hasNextLine()) {
+                        line.add(sc.next());
+                        if (line.contains("\u001Bm\u001B3")) {
+                            break;
+                        }
+                    }
+
+                    System.out.println(line);
+
+                    bufferdInputStream.reset();
+
+
+                    while (((x = bufferdInputStream.read()) != 109)) {
                         s1 += String.format("%8s", Integer.toBinaryString(x & 0xFF)).replace(' ', '0');
                     }
                 } catch (IOException e1) {
@@ -76,23 +98,11 @@ public class TestGuiImageBinary {
 
                 String[] snArray = s1.split(startSn2);
 
-                
-                Scanner sc = new Scanner(snArray[0]);
-
-                List<String> lineArray = new ArrayList<>();
-
-                while (sc.hasNextLine()) {
-                    lineArray.add(sc.next());
-                }
-
-                System.out.println(lineArray);
-
-                //System.out.println(Arrays.toString(snArray));
 
 
                 for (int i = 1; i < snArray.length; i++) {
 
-                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
                     Graphics2D g2d = img.createGraphics();
                     Font font = new Font("Arial", Font.PLAIN, 2);
                     g2d.setFont(font);
@@ -122,7 +132,7 @@ public class TestGuiImageBinary {
 
                     String result = null;
                     try {
-                        result = SerialOcr("images\\Text" + i + ".png");
+                        result = SerialOcr(new File("images\\Text" + i + ".png"));
                     } catch (TesseractException e) {
                         e.printStackTrace();
                     }
@@ -211,9 +221,8 @@ public class TestGuiImageBinary {
 
     }
 
-    public static String SerialOcr(String file) throws TesseractException {
+    public static String SerialOcr(File file) throws TesseractException {
 
-        File image = new File(file);
         Tesseract tesseract = new Tesseract();
         tesseract.setDatapath("src\\main\\resources\\tessdata");
         tesseract.setLanguage("eng");
@@ -221,7 +230,7 @@ public class TestGuiImageBinary {
         tesseract.setOcrEngineMode(1);
 
 
-        return tesseract.doOCR(image);
+        return tesseract.doOCR(file);
     }
 
 

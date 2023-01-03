@@ -37,12 +37,13 @@ select * from transactions;
 
 select * from machines;
 
+
+
 create table users(
     Id integer primary key autoincrement not null,
     userName text not null,
     password text not null
 );
-
 
 create table transactions(
     Id INTEGER primary key autoincrement not null,

@@ -29,5 +29,7 @@
     <orderEntry type="library" name="tess4j-5.4.0" level="project" />
     <orderEntry type="library" name="slf4j-simple-1.6.1" level="project" />
     <orderEntry type="library" name="jmrtd-0.7.35" level="project" />
+    <orderEntry type="library" name="commons-io-2.11.01" level="project" />
+    <orderEntry type="library" name="commons-codec-1.15" level="project" />
   </component>
 </module>

@@ -12,23 +12,23 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 
-import static GUI.DatabaseWindow.row;
 
 public class MainWindow extends JFrame {
 
     ButtonListeners buttonListeners = new ButtonListeners();
 
-    private JPanel panel;
+    public static JPanel panel;
     private JPanel panel1;
     private JLabel lb_login;
     private JLabel lb_user;
@@ -58,15 +58,21 @@ public class MainWindow extends JFrame {
     private JButton btn_logout;
 
     private JPanel panel4;
-    private JTable jt_denom;
-    private JLabel lb_currency;
-    private JScrollPane jsp_denom;
+    public static JTable jt_denom;
+    public static JLabel lb_currency;
+    public static JScrollPane jsp_denom;
     private JButton btn_clear;
 
     private JPanel panel5;
-    private JLabel lb_serialNumber;
-    private JTextArea jta_serialNumber;
+    private JTabbedPane jtp_serialNumber;
+    private JScrollPane jsp_serialNumberBinary;
+    public static JTextArea jt_serialBinary;
+    private JList<String> jList_ocrText;
+    private JList<ImageIcon> jList_serialImage;
+    public static DefaultListModel<String> model_ocrText;
+    public static DefaultListModel<ImageIcon> model_serialImage;
     private JScrollPane jsp_serialNumber;
+    private JScrollPane jsp_serialNumberImage;
     private JButton btn_serialNumberCopy;
     private JButton btn_serialNumberClear;
     private StringSelection stringSelection;
@@ -78,13 +84,14 @@ public class MainWindow extends JFrame {
     private JLabel lb_logs;
 
     String[] columnNamesEmpty = {"", "", ""};
-    String[] columnNamesRSD = {"Apoen - RSD", "Broj komada", "Vrednost"};
-    String[] columnNamesUSD = {"Apoen - USD", "Broj komada", "Vrednost"};
-    String[] columnNamesEUR = {"Apoen - EUR", "Broj komada", "Vrednost"};
+    public static String[] columnNamesRSD = {"Apoen - RSD", "Broj komada", "Vrednost"};
+    public static String[] columnNamesUSD = {"Apoen - USD", "Broj komada", "Vrednost"};
+    public static String[] columnNamesEUR = {"Apoen - EUR", "Broj komada", "Vrednost"};
     String[][] denominationEmpty = {{"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}};
-    String[][] denominationRSD = {{"10", "0", "0"}, {"20", "4", "0"}, {"50", "5", "0"}, {"100", "4", "0"}, {"200", "3", "0"}, {"500", "0", "0"}, {"1000", "0", "0"}, {"2000", "0", "0"}, {"5000", "0", "0"}, {"Ukupno:", "0", "0"}};
-    String[][] denominationUSD = {{"1", "0", "0"}, {"2", "0", "0"}, {"5", "0", "0"}, {"10", "0", "0"}, {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
-    String[][] denominationEUR = {{"5", "0", "0"}, {"10", "0", "0"}, {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {"200", "0", "0"}, {"500", "0", ""}, {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
+    public static String[][] denominationRSD = {{"10", "0", "0"}, {"20", "4", "0"}, {"50", "5", "0"}, {"100", "4", "0"}, {"200", "3", "0"}, {"500", "0", "0"}, {"1000", "0", "0"}, {"2000", "0", "0"}, {"5000", "0", "0"}, {"Ukupno:", "0", "0"}};
+    public static String[][] denominationUSD = {{"1", "0", "0"}, {"2", "0", "0"}, {"5", "0", "0"}, {"10", "0", "0"}, {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
+    public static String[][] denominationEUR = {{"5", "0", "0"}, {"10", "0", "0"}, {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {"200", "0", "0"}, {"500", "0", "0"}, {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
+
 
     public MainWindow() {
         super();
@@ -234,11 +241,11 @@ public class MainWindow extends JFrame {
         panel4.setBorder(b);
         panel4.setPreferredSize(new Dimension(375, 355));
 
-        lb_currency = new JLabel("RSD");
+        lb_currency = new JLabel();
         lb_currency.setVisible(false);
 
 
-        if (lb_currency.getText() == null) {
+        if (lb_currency.getText() == "") {
             jt_denom = new JTable(denominationEmpty, columnNamesEmpty);
             jsp_denom = new JScrollPane(jt_denom);
             jsp_denom.setPreferredSize(new Dimension(371, 350));
@@ -270,17 +277,34 @@ public class MainWindow extends JFrame {
         //PANEL 5(SERIAL NUMBERS)
         panel5.setBorder(b);
         panel5.setPreferredSize(new Dimension(485, 355));
-        lb_serialNumber = new JLabel("Serijski brojevi");
-        jta_serialNumber = new JTextArea();
-        jsp_serialNumber = new JScrollPane(jta_serialNumber);
-        jsp_serialNumber.setPreferredSize(new Dimension(480, 300));
+
+        jtp_serialNumber = new JTabbedPane();
+
+        jt_serialBinary = new JTextArea();
+
+        model_ocrText = new DefaultListModel<>();
+        jList_ocrText = new JList<>(model_ocrText);
+
+        model_serialImage = new DefaultListModel<>();
+        jList_serialImage = new JList<>(model_serialImage);
+
+        jsp_serialNumber = new JScrollPane(jList_ocrText);
+        jsp_serialNumberImage = new JScrollPane(jList_serialImage);
+        jsp_serialNumberBinary = new JScrollPane(jt_serialBinary);
+
+        jsp_serialNumber.setPreferredSize(new Dimension(480, 280));
+        jsp_serialNumberImage.setPreferredSize(new Dimension(480, 280));
+        jsp_serialNumberBinary.setPreferredSize(new Dimension(480, 280));
+
+        jtp_serialNumber.add("Serijski brojevi", jsp_serialNumber);
+        jtp_serialNumber.add("Slike serijskih brojeva", jsp_serialNumberImage);
+        jtp_serialNumber.add("Binary Serial Number", jsp_serialNumberBinary);
+
         btn_serialNumberClear = new JButton("Očisti");
         btn_serialNumberCopy = new JButton("Kopiraj");
         btn_serialNumberCopy.setPreferredSize(new Dimension(130, 35));
         btn_serialNumberClear.setPreferredSize(new Dimension(130, 35));
 
-        sl.putConstraint(SpringLayout.WEST, lb_serialNumber, 185, SpringLayout.WEST, panel5);
-        sl.putConstraint(SpringLayout.NORTH, lb_serialNumber, 3, SpringLayout.NORTH, panel5);
 
         sl.putConstraint(SpringLayout.WEST, jsp_serialNumber, 1, SpringLayout.WEST, panel5);
         sl.putConstraint(SpringLayout.NORTH, jsp_serialNumber, 17, SpringLayout.NORTH, panel5);
@@ -291,10 +315,10 @@ public class MainWindow extends JFrame {
         sl.putConstraint(SpringLayout.WEST, btn_serialNumberClear, 255, SpringLayout.WEST, panel5);
         sl.putConstraint(SpringLayout.NORTH, btn_serialNumberClear, 313, SpringLayout.NORTH, panel5);
 
-        panel5.add(lb_serialNumber);
-        panel5.add(jsp_serialNumber);
+        //panel5.add(jsp_serialNumber);
         panel5.add(btn_serialNumberCopy);
         panel5.add(btn_serialNumberClear);
+        panel5.add(jtp_serialNumber);
 
 
         panel6.setBorder(b);
@@ -355,14 +379,19 @@ public class MainWindow extends JFrame {
         btn_serialNumberClear.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                jta_serialNumber.setText("");
+                model_ocrText.removeAllElements();
+                model_serialImage.removeAllElements();
             }
         });
 
         btn_serialNumberCopy.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                stringSelection = new StringSelection(jta_serialNumber.getText());
+                String selection = "";
+                for (int i = 0; i < model_ocrText.size(); i++) {
+                    selection += model_ocrText.get(i);
+                }
+                stringSelection = new StringSelection(selection);
                 clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                 clipboard.setContents(stringSelection, null);
             }
@@ -411,10 +440,6 @@ public class MainWindow extends JFrame {
                 denomData.add(lb_currency.getText());
 
 
-                ButtonListeners.tableTotalAmountRows(jt_denom);
-                ButtonListeners.tableTotalAmountColumns(jt_denom);
-
-
                 //getting denomination data from JTable as array of Strings
                 for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
                     denomData.add(jt_denom.getValueAt(i, 1).toString());
@@ -461,32 +486,46 @@ public class MainWindow extends JFrame {
 
 
                 ArrayList<String> denomData = new ArrayList<>();
+                ArrayList<String> ocrData = new ArrayList<>();
+                ArrayList<Image> serialImagePrint = new ArrayList<>();
 
                 denomData.add(lb_currency.getText());
 
 
-                ButtonListeners.tableTotalAmountRows(jt_denom);
-                ButtonListeners.tableTotalAmountColumns(jt_denom);
-
-
                 //getting denomination data from JTable as array of Strings
                 for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
+                    if (jt_denom.getValueAt(i, 1) == null){
+                        continue;
+                    }
                     denomData.add(jt_denom.getValueAt(i, 1).toString());
                 }
 
                 denomData.add(jt_denom.getValueAt(9, 2).toString());
 
+                for (int i = 0; i < model_ocrText.size(); i++){
+                    ocrData.add(model_ocrText.getElementAt(i).replace(" ", ", "));
+                }
+
+                for (int i = 0; i < model_serialImage.size(); i++){
+                    serialImagePrint.add(model_serialImage.getElementAt(i).getImage());
+                }
+
+
                 String denomData2 = String.join(", ", denomData);
+                String ocrData2 = String.join(", ", ocrData);
+                String imageData = jt_serialBinary.getText();
+                System.out.println(imageData);
 
 
                 System.out.println(denomData2);
+                System.out.print(ocrData2);
 
 
                 String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
                 System.out.println(client);
 
                 String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
-                        "VALUES (?, ?, ?, '1$, AB12345678', '1110001111')";
+                        "VALUES (?, ?, ?, ?, ?)";
 
                 try {
                     PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
@@ -495,7 +534,8 @@ public class MainWindow extends JFrame {
                     pst.setString(1, client);
                     pst.setString(2, dtf.format(now2));
                     pst.setString(3, denomData2);
-
+                    pst.setString(4, ocrData2);
+                    pst.setString(5, imageData);
                     pst.execute();
                     pst.close();
 
@@ -510,8 +550,8 @@ public class MainWindow extends JFrame {
                 String user = LoginScreen.getUser();
                 String filePath = "";
                 String[] denomination = denomData2.split(", ");
-                String[] serialOcr = {"1$", "AB12345678"};
-                String[] serialImage = {"1110001111"};
+                String[] serialOcr = ocrData2.split(", ");
+                //serialImage = {"1110001111, 12345646, 132131313"};
 
                 JFileChooser jFileChooser = new JFileChooser();
                 jFileChooser.setDialogTitle("Odaberite mesto za snimanje fajla");
@@ -520,7 +560,7 @@ public class MainWindow extends JFrame {
                 File file = new File("test.pdf");
                 filePath = file.getAbsolutePath();
 
-                PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
+                PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImagePrint);
                 buttonListeners.PDFPrinter(file);
 
 

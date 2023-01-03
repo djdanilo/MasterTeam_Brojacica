@@ -2,6 +2,7 @@ package GUI;
 
 import ConnectionComPort.ComPorts;
 import Database.ConnectionDB;
+import MoneyCounters.MIB_SB9;
 import com.fazecast.jSerialComm.SerialPort;
 import com.sun.tools.javac.Main;
 
@@ -194,6 +195,8 @@ public class ChooseCounter extends JFrame {
                     }else{
                         JOptionPane.showMessageDialog(null, "Odabrani port " + serialPort.getSystemPortName() + " je već otvoren!", "Greška", JOptionPane.ERROR_MESSAGE);
                     }
+
+                    MIB_SB9.readingBytesSN(serialPort);
 
                     dispose();
                     new MainWindow();

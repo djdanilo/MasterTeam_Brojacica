@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class PdfExport {
+public class PDFExportDatabase {
 
     private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,
             Font.BOLD);
@@ -30,7 +30,7 @@ public class PdfExport {
             Font.BOLD);
 
 
-    public static void createPdfExport(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, ArrayList<java.awt.Image> serialImage) {
+    public static void createPdfExport(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, String[] serialImage) {
         try {
             Document document = new Document();
             PdfWriter.getInstance(document, new FileOutputStream(file));
@@ -52,7 +52,7 @@ public class PdfExport {
         document.addCreator("Master Team");
     }
 
-    public static void createPdf(Document document, String id, String user, Date date, String client, String[] denomination, String[] serialOcr, ArrayList<java.awt.Image> serialImage)
+    public static void createPdf(Document document, String id, String user, Date date, String client, String[] denomination, String[] serialOcr, String[] serialImage)
             throws DocumentException {
         Paragraph preface = new Paragraph();
         // We add one empty line
@@ -186,7 +186,7 @@ public class PdfExport {
 
     }
 
-    private static PdfPTable createTableSerial(String[] serialOcr, ArrayList<java.awt.Image> serialImage)
+    private static PdfPTable createTableSerial(String[] serialOcr, String[] serialImage)
             throws BadElementException {
         PdfPTable table = new PdfPTable(3);
 
@@ -208,15 +208,42 @@ public class PdfExport {
         c1 = new PdfPCell(new Phrase("Slika serijskog broja"));
         c1.setHorizontalAlignment(Element.ALIGN_CENTER);
         table.addCell(c1);
-        table.setHeaderRows(serialImage.size() - 1);
+        table.setHeaderRows(serialImage.length - 1);
 
         try {
             int i = 0;
-            int j = 0;
-            while (j < serialImage.size()){
+            int j = 1;
+            while (j < serialImage.length){
                 table.addCell(serialOcr[i]);
                 table.addCell(serialOcr[i+1]);
-                table.addCell(Image.getInstance(serialImage.get(j), null));
+
+                BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
+                Graphics2D g2d = img.createGraphics();
+                java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
+                g2d.setFont(font);
+                int height = g2d.getFontMetrics().getHeight();
+                g2d.dispose();
+
+                img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
+                g2d = img.createGraphics();
+
+                g2d.setFont(font);
+                g2d.setColor(Color.WHITE);
+                int fontSize = 1;
+
+                for (String line2 : serialImage[j].split(newLine2)) {
+
+                    g2d.drawString(line2, 0, height);
+                    height += fontSize;
+                }
+
+                File file = new File("images\\TextDB" + j + ".png");
+
+                ImageIO.write(img, "png", file);
+
+                g2d.dispose();
+
+                table.addCell(Image.getInstance(img, null));
                 i+=2;
                 j++;
             }
