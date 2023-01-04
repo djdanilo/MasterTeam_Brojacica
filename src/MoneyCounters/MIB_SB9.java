@@ -142,8 +142,17 @@ public class MIB_SB9 {
                     }
 
 
-                    insertUSD(line, MainWindow.jt_denom);
-
+                    for (int i = 0; i < line.size(); i++) {
+                        if (line.get(i).equals("RSD")) {
+                            insertUSD(line, MainWindow.jt_denom);
+                        } else if (line.get(i).equals("USD")) {
+                            insertUSD(line, MainWindow.jt_denom);
+                        } else if (line.get(i).equals("EUR")) {
+                            insertEUR(line, MainWindow.jt_denom);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
+                        }
+                    }
 
                     ButtonListeners.tableTotalAmountRows(MainWindow.jt_denom);
                     ButtonListeners.tableTotalAmountColumns(MainWindow.jt_denom);
@@ -165,6 +174,16 @@ public class MIB_SB9 {
 
     public static void insertEUR(List<String> line, JTable jt_denom) {
 
+        MainWindow.lb_currency.setText("EUR");
+        jt_denom.setValueAt("5", 0, 0);
+        jt_denom.setValueAt("10", 1, 0);
+        jt_denom.setValueAt("20", 2, 0);
+        jt_denom.setValueAt("50", 3, 0);
+        jt_denom.setValueAt("100", 4, 0);
+        jt_denom.setValueAt("200", 5, 0);
+        jt_denom.setValueAt("500", 6, 0);
+        jt_denom.setValueAt("Ukupno", 9, 0);
+
         for (int i = 0; i < line.size(); i++) {
             if (line.get(i).equals("E5")) {
                 jt_denom.setValueAt(line.get(i + 1), 0, 1);
@@ -185,6 +204,18 @@ public class MIB_SB9 {
     }
 
     public static void insertRSD(List<String> line, JTable jt_denom) {
+
+        MainWindow.lb_currency.setText("RSD");
+        jt_denom.setValueAt("10", 0, 0);
+        jt_denom.setValueAt("20", 1, 0);
+        jt_denom.setValueAt("50", 2, 0);
+        jt_denom.setValueAt("100", 3, 0);
+        jt_denom.setValueAt("200", 4, 0);
+        jt_denom.setValueAt("500", 5, 0);
+        jt_denom.setValueAt("1000", 6, 0);
+        jt_denom.setValueAt("2000", 7, 0);
+        jt_denom.setValueAt("5000", 8, 0);
+        jt_denom.setValueAt("Ukupno", 9, 0);
 
         for (int i = 0; i < line.size(); i++) {
             if (line.get(i).equals("D10")) {
@@ -210,6 +241,16 @@ public class MIB_SB9 {
     }
 
     public static void insertUSD(List<String> line, JTable jt_denom) {
+
+        MainWindow.lb_currency.setText("USD");
+        jt_denom.setValueAt("1", 0, 0);
+        jt_denom.setValueAt("2", 1, 0);
+        jt_denom.setValueAt("5", 2, 0);
+        jt_denom.setValueAt("10", 3, 0);
+        jt_denom.setValueAt("20", 4, 0);
+        jt_denom.setValueAt("50", 5, 0);
+        jt_denom.setValueAt("100", 6, 0);
+        jt_denom.setValueAt("Ukupno", 9, 0);
 
         for (int i = 0; i < line.size(); i++) {
             if (line.get(i).equals("$1")) {

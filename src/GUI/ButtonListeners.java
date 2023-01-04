@@ -194,41 +194,4 @@ public class ButtonListeners {
             ex.printStackTrace();
         }
     }
-
-    static class EurTableModel extends AbstractTableModel {
-        // TableModel's column names
-        public static String[] columnNamesEUR = {"Apoen - EUR", "Broj komada", "Vrednost"};
-
-        // TableModel's data
-        public static String[][] denominationEUR = {{"5", "0", "0"}, {"10", "0", "0"},
-                {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {"200", "0", "0"}, {"500", "0", "0"},
-                {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
-
-        @Override
-        public int getRowCount() {
-            return denominationEUR.length;
-        }
-
-        @Override
-        public int getColumnCount() {
-            return columnNamesEUR.length;
-        }
-
-        @Override
-        public String getColumnName(int column) {
-            return columnNamesEUR[column];
-        }
-
-        @Override
-        public Object getValueAt(int rowIndex, int columnIndex) {
-            return denominationEUR[rowIndex][columnIndex];
-        }
-    };
-
-        public static void makeTable() {
-
-            EurTableModel tableModel = new EurTableModel();
-            MainWindow.jt_denom = new JTable(tableModel);
-
-        }
 }
