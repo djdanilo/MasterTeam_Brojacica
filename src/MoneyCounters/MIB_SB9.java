@@ -141,19 +141,8 @@ public class MIB_SB9 {
                         MainWindow.model_serialImage.add(i, serialImage.get(i));
                     }
 
-                    for (int i = 0; i < line.size(); i++){
-                        //if (line.get(i).equals("EUR")){
-                            ButtonListeners.makeTable();
-                            insertEUR(line, MainWindow.jt_denom);
-                        //}
-                       // else if (line.get(i).equals("RSD")){
-                            //ButtonListeners.makeTable(MainWindow.jt_denom);
-                            //insertRSD(line, MainWindow.jt_denom);
-                       // }
-                       // else{
-                        //    System.out.println("Nije podržana valuta.");
-                       // }
-                    }
+
+                    insertUSD(line, MainWindow.jt_denom);
 
 
                     ButtonListeners.tableTotalAmountRows(MainWindow.jt_denom);
@@ -216,6 +205,27 @@ public class MIB_SB9 {
                 jt_denom.setValueAt(line.get(i + 1), 7, 1);
             } else if (line.get(i).equals("D5000")) {
                 jt_denom.setValueAt(line.get(i + 1), 8, 1);
+            }
+        }
+    }
+
+    public static void insertUSD(List<String> line, JTable jt_denom) {
+
+        for (int i = 0; i < line.size(); i++) {
+            if (line.get(i).equals("$1")) {
+                jt_denom.setValueAt(line.get(i + 1), 0, 1);
+            } else if (line.get(i).equals("$2")) {
+                jt_denom.setValueAt(line.get(i + 1), 1, 1);
+            } else if (line.get(i).equals("$5")) {
+                jt_denom.setValueAt(line.get(i + 1), 2, 1);
+            } else if (line.get(i).equals("$10")) {
+                jt_denom.setValueAt(line.get(i + 1), 3, 1);
+            } else if (line.get(i).equals("$20")) {
+                jt_denom.setValueAt(line.get(i + 1), 4, 1);
+            } else if (line.get(i).equals("$50")) {
+                jt_denom.setValueAt(line.get(i + 1), 5, 1);
+            } else if (line.get(i).equals("$100")) {
+                jt_denom.setValueAt(line.get(i + 1), 6, 1);
             }
         }
     }

@@ -180,6 +180,35 @@ public class PDFExportDatabase {
             }
             table.addCell(String.valueOf(totalPcs));
             table.addCell(denomination[8]);
+        }else if(denomination[0].equals("USD")) {
+            int totalPcs = 0;
+            table.addCell("1");
+            table.addCell(denomination[1]);
+            table.addCell(String.valueOf(Integer.parseInt(denomination[1])));
+            table.addCell("2");
+            table.addCell(denomination[2]);
+            table.addCell(String.valueOf(2 * Integer.parseInt(denomination[2])));
+            table.addCell("5");
+            table.addCell(denomination[3]);
+            table.addCell(String.valueOf(5 * Integer.parseInt(denomination[3])));
+            table.addCell("10");
+            table.addCell(denomination[4]);
+            table.addCell(String.valueOf(10 * Integer.parseInt(denomination[4])));
+            table.addCell("20");
+            table.addCell(denomination[5]);
+            table.addCell(String.valueOf(20 * Integer.parseInt(denomination[5])));
+            table.addCell("50");
+            table.addCell(denomination[6]);
+            table.addCell(String.valueOf(50 * Integer.parseInt(denomination[6])));
+            table.addCell("100");
+            table.addCell(denomination[7]);
+            table.addCell(String.valueOf(100 * Integer.parseInt(denomination[7])));
+            table.addCell("Ukupno:");
+            for (int i = 1; i < 8; i++) {
+                totalPcs += Integer.parseInt(denomination[i]);
+            }
+            table.addCell(String.valueOf(totalPcs));
+            table.addCell(denomination[8]);
         }
 
         return table;

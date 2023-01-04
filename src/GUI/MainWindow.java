@@ -59,7 +59,7 @@ public class MainWindow extends JFrame {
 
     private JPanel panel4;
     public static JTable jt_denom;
-    public static JLabel lb_currency;
+    public static JLabel lb_currency = new JLabel(" ");
     public static JScrollPane jsp_denom;
     private JButton btn_clear;
 
@@ -82,15 +82,8 @@ public class MainWindow extends JFrame {
     private JTextArea jt_logs;
     private JButton btn_settings;
     private JLabel lb_logs;
-
-    String[] columnNamesEmpty = {"", "", ""};
-    public static String[] columnNamesRSD = {"Apoen - RSD", "Broj komada", "Vrednost"};
-    public static String[] columnNamesUSD = {"Apoen - USD", "Broj komada", "Vrednost"};
-    public static String[] columnNamesEUR = {"Apoen - EUR", "Broj komada", "Vrednost"};
-    String[][] denominationEmpty = {{"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}};
-    public static String[][] denominationRSD = {{"10", "0", "0"}, {"20", "4", "0"}, {"50", "5", "0"}, {"100", "4", "0"}, {"200", "3", "0"}, {"500", "0", "0"}, {"1000", "0", "0"}, {"2000", "0", "0"}, {"5000", "0", "0"}, {"Ukupno:", "0", "0"}};
-    public static String[][] denominationUSD = {{"1", "0", "0"}, {"2", "0", "0"}, {"5", "0", "0"}, {"10", "0", "0"}, {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
-    public static String[][] denominationEUR = {{"5", "0", "0"}, {"10", "0", "0"}, {"20", "0", "0"}, {"50", "0", "0"}, {"100", "0", "0"}, {"200", "0", "0"}, {"500", "0", "0"}, {null, null, null}, {null, null, null}, {"Ukupno:", "0", "0"}};
+    private String[] columnNames = {"Apoen - " + lb_currency.getText(), "Broj komada", "Vrednost"};
+    private String[][] denominationEmpty = {{"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}};
 
 
     public MainWindow() {
@@ -241,30 +234,13 @@ public class MainWindow extends JFrame {
         panel4.setBorder(b);
         panel4.setPreferredSize(new Dimension(375, 355));
 
-        lb_currency = new JLabel();
+
         lb_currency.setVisible(false);
 
 
-        if (lb_currency.getText() == "") {
-            jt_denom = new JTable(denominationEmpty, columnNamesEmpty);
-            jsp_denom = new JScrollPane(jt_denom);
-            jsp_denom.setPreferredSize(new Dimension(371, 350));
-        } else if (lb_currency.getText().equals("RSD")) {
-            jt_denom = new JTable(denominationRSD, columnNamesRSD);
-            jsp_denom = new JScrollPane(jt_denom);
-            jsp_denom.setPreferredSize(new Dimension(371, 350));
-
-        } else if (lb_currency.getText().equals("USD")) {
-            jt_denom = new JTable(denominationUSD, columnNamesUSD);
-            jsp_denom = new JScrollPane(jt_denom);
-            jsp_denom.setPreferredSize(new Dimension(371, 350));
-        } else if (lb_currency.getText().equals("EUR")) {
-            jt_denom = new JTable(denominationEUR, columnNamesEUR);
-            jsp_denom = new JScrollPane(jt_denom);
-            jsp_denom.setPreferredSize(new Dimension(371, 350));
-        } else {
-            JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana!", "Greška", JOptionPane.ERROR_MESSAGE);
-        }
+        jt_denom = new JTable(denominationEmpty, columnNames);
+        jsp_denom = new JScrollPane(jt_denom);
+        jsp_denom.setPreferredSize(new Dimension(371, 350));
 
 
         jt_denom.setRowHeight(32);
@@ -494,7 +470,7 @@ public class MainWindow extends JFrame {
 
                 //getting denomination data from JTable as array of Strings
                 for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
-                    if (jt_denom.getValueAt(i, 1) == null){
+                    if (jt_denom.getValueAt(i, 1) == null) {
                         continue;
                     }
                     denomData.add(jt_denom.getValueAt(i, 1).toString());
@@ -502,11 +478,11 @@ public class MainWindow extends JFrame {
 
                 denomData.add(jt_denom.getValueAt(9, 2).toString());
 
-                for (int i = 0; i < model_ocrText.size(); i++){
+                for (int i = 0; i < model_ocrText.size(); i++) {
                     ocrData.add(model_ocrText.getElementAt(i).replace(" ", ", "));
                 }
 
-                for (int i = 0; i < model_serialImage.size(); i++){
+                for (int i = 0; i < model_serialImage.size(); i++) {
                     serialImagePrint.add(model_serialImage.getElementAt(i).getImage());
                 }
 
@@ -551,7 +527,6 @@ public class MainWindow extends JFrame {
                 String filePath = "";
                 String[] denomination = denomData2.split(", ");
                 String[] serialOcr = ocrData2.split(", ");
-                //serialImage = {"1110001111, 12345646, 132131313"};
 
                 JFileChooser jFileChooser = new JFileChooser();
                 jFileChooser.setDialogTitle("Odaberite mesto za snimanje fajla");
