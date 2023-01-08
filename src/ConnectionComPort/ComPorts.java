@@ -17,8 +17,6 @@ public class ComPorts {
 
     }
 
-
-
     public SerialPort openSerialPort(final SerialPort serialPort,
                                      final long timeout, String baudRate) {
 
@@ -42,10 +40,9 @@ public class ComPorts {
     public static void closePort(SerialPort serialPort) {
         // Check to make sure serial port has reference to avoid a NPE
         if (serialPort != null) {
-                // Close the port.
+            // Close the port.
             serialPort.removeDataListener();
             serialPort.closePort();
-
 
             System.out.println("Serial port " + serialPort.getSystemPortName() + " closed");
 

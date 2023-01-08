@@ -25,7 +25,7 @@ public class ButtonListeners {
 
         try {
             for (int i = 0; i < table.getRowCount() - 1; i++) {
-                if (table.getValueAt(i, 0) == null) {
+                if ((table.getValueAt(i, 0) == null) || table.getValueAt(i,0).equals("")) {
                     continue;
                 }
                 String denom = table.getValueAt(i, 0).toString();
@@ -47,7 +47,8 @@ public class ButtonListeners {
         try {
 
             for (int i = 0; i < table.getRowCount(); i++) {
-                if (table.getValueAt(i, 0) == null) {
+                if ((table.getValueAt(i, 1) == null) || table.getValueAt(i,1).equals("") ||
+                    (table.getValueAt(i, 2) == null) || table.getValueAt(i,2).equals("")){
                     continue;
                 }
                 String totalPcs = table.getValueAt(i, 1).toString();

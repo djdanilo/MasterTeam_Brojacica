@@ -24,11 +24,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 
-public class MainWindow extends JFrame {
+public class MainWindow{
 
+    public static JFrame frame;
     ButtonListeners buttonListeners = new ButtonListeners();
-
-    public static JPanel panel;
+    private JPanel panel;
     private JPanel panel1;
     private JLabel lb_login;
     private JLabel lb_user;
@@ -87,15 +87,15 @@ public class MainWindow extends JFrame {
 
 
     public MainWindow() {
-        super();
-        this.setSize(900, 750);
-        this.setTitle("Money Counter");
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setResizable(false);
+        frame = new JFrame();
+        frame.setSize(900, 750);
+        frame.setTitle("Money Counter");
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
         initComponents();
         initListeners();
-        this.setVisible(true);
+        frame.setVisible(true);
     }
 
     public static void clearTable(final JTable table) {
@@ -331,7 +331,7 @@ public class MainWindow extends JFrame {
         panel.add(panel6);
 
 
-        setContentPane(panel);
+        frame.setContentPane(panel);
 
     }
 
@@ -346,7 +346,7 @@ public class MainWindow extends JFrame {
                     ex.printStackTrace();
                 }
 
-                dispose();
+                frame.dispose();
                 new ChooseCounter();
 
             }
@@ -392,7 +392,7 @@ public class MainWindow extends JFrame {
                         ex.printStackTrace();
                     }
 
-                    dispose();
+                    frame.dispose();
                     new LoginScreen();
                 }
             }
@@ -470,7 +470,7 @@ public class MainWindow extends JFrame {
 
                 //getting denomination data from JTable as array of Strings
                 for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
-                    if (jt_denom.getValueAt(i, 1) == null) {
+                    if ((jt_denom.getValueAt(i, 1) == null) || (jt_denom.getValueAt(i, 1).equals(""))) {
                         continue;
                     }
                     denomData.add(jt_denom.getValueAt(i, 1).toString());

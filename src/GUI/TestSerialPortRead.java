@@ -3,22 +3,17 @@ package GUI;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
-import com.sun.tools.javac.Main;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.input.TeeInputStream;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.*;
 import java.util.List;
 
-public class TestGuiImageBinary {
+public class TestSerialPortRead {
 
     public static void main(String[] args) throws IOException, TesseractException {
 
@@ -50,8 +45,8 @@ public class TestGuiImageBinary {
 
                 InputStream in;
 
-                String startSn2 = "110000010011010001101100100011011000100011010000111000010001010";
-                String newLine2 = "01100000110110010001101100010001101000011100001000101";
+                String startSn2 = "0000110100001010";
+                String newLine2 = "0000101000001101";
 
                 String startSn = "27434877273598525669";
                 String newLine = "483232120323232323232324832";
@@ -89,13 +84,14 @@ public class TestGuiImageBinary {
                     bufferdInputStream.reset();
 
 
-                    while (((x = bufferdInputStream.read()) != 109)) {
-                        System.out.print(x);
+                    while (((x = bufferdInputStream.read()) != 27)) {
                         s1 += String.format("%8s", Integer.toBinaryString(x & 0xFF)).replace(' ', '0');
                     }
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
+
+                System.out.println(s1);
 
                 String[] snArray = s1.split(startSn2);
 

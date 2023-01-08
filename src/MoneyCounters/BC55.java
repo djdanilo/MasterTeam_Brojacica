@@ -1,4 +1,4 @@
 package MoneyCounters;
 
-public class RIBAO_BC55 {
+public class BC55 {
 }

@@ -1,4 +1,4 @@
 package MoneyCounters;
 
-public class MIB_MIB9 {
+public class MIB9 {
 }

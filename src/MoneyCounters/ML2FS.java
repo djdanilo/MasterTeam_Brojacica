@@ -1,4 +1,4 @@
 package MoneyCounters;
 
-public class LIDIX_ML2F {
+public class ML2FS {
 }

@@ -2,15 +2,14 @@ package GUI;
 
 import ConnectionComPort.ComPorts;
 import Database.ConnectionDB;
-import MoneyCounters.MIB_SB9;
+import MoneyCounters.ML2F;
+import MoneyCounters.SB9;
 import com.fazecast.jSerialComm.SerialPort;
-import com.sun.tools.javac.Main;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -22,9 +21,9 @@ public class ChooseCounter extends JFrame {
     private JLabel lb_chooseMachine;
     private JLabel lb_chooseComPort;
     private JLabel lb_baudrate;
-    private static JComboBox cb_chooseMachine;
-    public static JComboBox cb_chooseComPort;
-    private static JComboBox cb_baudrate;
+    private static JComboBox<String> cb_chooseMachine;
+    public static JComboBox<String> cb_chooseComPort;
+    private static JComboBox<String> cb_baudrate;
     private JButton btn_confirm;
     private JButton btn_reset;
     private JButton btn_refreshPort;
@@ -69,7 +68,7 @@ public class ChooseCounter extends JFrame {
         lb_baudrate = new JLabel("Izaberite brzinu:");
         lb_baudrate.setFont(f);
 
-        cb_chooseMachine = new JComboBox();
+        cb_chooseMachine = new JComboBox<>();
 
 
         //adding data to cb_chooseMachine
@@ -92,11 +91,11 @@ public class ChooseCounter extends JFrame {
             e.printStackTrace();
         }
 
-        cb_chooseComPort = new JComboBox();
+        cb_chooseComPort = new JComboBox<>();
 
         ComPorts.listSerials(cb_chooseComPort);
 
-        cb_baudrate = new JComboBox();
+        cb_baudrate = new JComboBox<>();
 
         //adding data for baudrate
         cb_baudrate.addItem("9600");
@@ -196,7 +195,12 @@ public class ChooseCounter extends JFrame {
                         JOptionPane.showMessageDialog(null, "Odabrani port " + serialPort.getSystemPortName() + " je već otvoren!", "Greška", JOptionPane.ERROR_MESSAGE);
                     }
 
-                    MIB_SB9.readingBytesSN(serialPort);
+                    if (cb_chooseComPort.getSelectedItem().equals("SB-9"))
+                        SB9.readingData(serialPort);
+                    else if (cb_chooseComPort.getSelectedItem().equals("ML-2F"))
+                        ML2F.readingData(serialPort);
+                    else if (cb_chooseComPort.getSelectedItem().equals("ML-2FS"))
+
 
                     dispose();
                     new MainWindow();
