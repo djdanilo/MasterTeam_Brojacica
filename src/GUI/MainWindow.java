@@ -28,7 +28,7 @@ public class MainWindow{
 
     public static JFrame frame;
     ButtonListeners buttonListeners = new ButtonListeners();
-    private JPanel panel;
+    public static JPanel panel;
     private JPanel panel1;
     private JLabel lb_login;
     private JLabel lb_user;
@@ -38,6 +38,7 @@ public class MainWindow{
     private Calendar now;
     private DateTimeFormatter dtf;
     private LocalDateTime now2;
+    public static ArrayList<String> ocrDenomination = new ArrayList<>();
 
     String pass = "627862";
 
@@ -330,6 +331,7 @@ public class MainWindow{
         panel.add(panel5);
         panel.add(panel6);
 
+        frame.add(panel);
 
         frame.setContentPane(panel);
 
@@ -478,10 +480,15 @@ public class MainWindow{
 
                 denomData.add(jt_denom.getValueAt(9, 2).toString());
 
+                //getting the denomination from OCRed value and serialNumber from machine OCR
                 for (int i = 0; i < model_ocrText.size(); i++) {
+                    //int index = ocrDenomination.get(i).indexOf(' ');
+                    //ocrData.add(ocrDenomination.get(i).substring(0, index));
                     ocrData.add(model_ocrText.getElementAt(i).replace(" ", ", "));
+
                 }
 
+                //getting all images from jTable of images
                 for (int i = 0; i < model_serialImage.size(); i++) {
                     serialImagePrint.add(model_serialImage.getElementAt(i).getImage());
                 }
@@ -490,7 +497,7 @@ public class MainWindow{
                 String denomData2 = String.join(", ", denomData);
                 String ocrData2 = String.join(", ", ocrData);
                 String imageData = jt_serialBinary.getText();
-                System.out.println(imageData);
+                //System.out.println(imageData);
 
 
                 System.out.println(denomData2);

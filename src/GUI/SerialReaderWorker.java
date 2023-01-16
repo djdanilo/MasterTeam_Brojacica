@@ -1,40 +1,40 @@
 package GUI;
 
-import javax.swing.*;
+import java.io.BufferedInputStream;
 import java.io.InputStream;
+import java.nio.Buffer;
 import java.util.concurrent.ExecutionException;
+import javax.swing.JProgressBar;
+import javax.swing.SwingWorker;
 
-public class SerialReaderWorker extends SwingWorker<String, Void> {
-    private InputStream inputStream;
+public class SerialReaderWorker extends SwingWorker<Void, Void> {
+
     private JProgressBar progressBar;
+    private BufferedInputStream bis;
 
-    public SerialReaderWorker(InputStream inputStream, JProgressBar progressBar) {
-        this.inputStream = inputStream;
+    public SerialReaderWorker(JProgressBar progressBar, BufferedInputStream bis) {
         this.progressBar = progressBar;
+        this.bis = bis;
     }
 
     @Override
-    protected String doInBackground() throws Exception {
-        int totalBytes = inputStream.available();
+    protected Void doInBackground() throws Exception {
         int bytesRead = 0;
         byte[] buffer = new byte[1024];
-
-        while (bytesRead < totalBytes) {
-            int n = inputStream.read(buffer);
-            bytesRead += n;
-            setProgress((int) (100 * ((double) bytesRead / totalBytes)));
+        while ((bytesRead = bis.read(buffer)) != -1) {
+            bytesRead += bytesRead;
+            setProgress((int) (((double) bytesRead / Integer.MAX_VALUE) * 100));
         }
-
-        return new String(buffer);
+        return null;
     }
 
     @Override
     protected void done() {
         try {
-            String result = get();
-            // update the user interface with the result
+            get();
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
     }
+
 }

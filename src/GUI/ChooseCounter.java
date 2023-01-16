@@ -195,11 +195,8 @@ public class ChooseCounter extends JFrame {
                         JOptionPane.showMessageDialog(null, "Odabrani port " + serialPort.getSystemPortName() + " je već otvoren!", "Greška", JOptionPane.ERROR_MESSAGE);
                     }
 
-                    if (cb_chooseComPort.getSelectedItem().equals("SB-9"))
-                        SB9.readingData(serialPort);
-                    else if (cb_chooseComPort.getSelectedItem().equals("ML-2F"))
-                        ML2F.readingData(serialPort);
-                    else if (cb_chooseComPort.getSelectedItem().equals("ML-2FS"))
+
+                    ML2F.readingData(serialPort);
 
 
                     dispose();

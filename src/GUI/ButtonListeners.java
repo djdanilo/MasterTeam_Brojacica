@@ -65,6 +65,14 @@ public class ButtonListeners {
         }
     }
 
+    public static void clearTable(JTable table){
+        for (int i = 0; i < table.getRowCount(); i++){
+            for (int j = 1; j < table.getColumnCount(); j++){
+                table.setValueAt("", i, j);
+            }
+        }
+    };
+
     public void PDFPrinter(File file) {
         try {
             FileInputStream fis = new FileInputStream(file);
@@ -115,7 +123,7 @@ public class ButtonListeners {
         }
     }
 
-    class PDFPrintPage implements Printable {
+    static class PDFPrintPage implements Printable {
         private PDFFile file;
 
         PDFPrintPage(PDFFile file) {
