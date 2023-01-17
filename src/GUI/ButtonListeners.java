@@ -4,10 +4,9 @@ import Database.ConnectionDB;
 import com.sun.pdfview.PDFFile;
 import com.sun.pdfview.PDFPage;
 import com.sun.pdfview.PDFRenderer;
+import org.apache.log4j.Logger;
 
 import javax.swing.*;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.print.*;
 import java.io.File;
@@ -21,11 +20,13 @@ import java.sql.Statement;
 
 public class ButtonListeners {
 
+    public static Logger log = Logger.getLogger(ButtonListeners.class.getName());
+
     public static void tableTotalAmountRows(JTable table) {
 
         try {
             for (int i = 0; i < table.getRowCount() - 1; i++) {
-                if ((table.getValueAt(i, 0) == null) || table.getValueAt(i,0).equals("")) {
+                if ((table.getValueAt(i, 0) == null) || table.getValueAt(i, 0).equals("")) {
                     continue;
                 }
                 String denom = table.getValueAt(i, 0).toString();
@@ -47,8 +48,8 @@ public class ButtonListeners {
         try {
 
             for (int i = 0; i < table.getRowCount(); i++) {
-                if ((table.getValueAt(i, 1) == null) || table.getValueAt(i,1).equals("") ||
-                    (table.getValueAt(i, 2) == null) || table.getValueAt(i,2).equals("")){
+                if ((table.getValueAt(i, 1) == null) || table.getValueAt(i, 1).equals("") ||
+                        (table.getValueAt(i, 2) == null) || table.getValueAt(i, 2).equals("")) {
                     continue;
                 }
                 String totalPcs = table.getValueAt(i, 1).toString();
@@ -65,13 +66,13 @@ public class ButtonListeners {
         }
     }
 
-    public static void clearTable(JTable table){
-        for (int i = 0; i < table.getRowCount(); i++){
-            for (int j = 1; j < table.getColumnCount(); j++){
+    public static void clearTable(JTable table) {
+        for (int i = 0; i < table.getRowCount(); i++) {
+            for (int j = 1; j < table.getColumnCount(); j++) {
                 table.setValueAt("", i, j);
             }
         }
-    };
+    }
 
     public void PDFPrinter(File file) {
         try {
@@ -178,29 +179,25 @@ public class ButtonListeners {
         }
     }
 
-    public static void LoginUser(JTextField tf_username, JPasswordField pf_password, JFrame frame) {
+    public static void LoginUser(JTextField tf_username, JPasswordField pf_password, JFrame frame) throws SQLException {
         String username = tf_username.getText();
         String password = String.valueOf(pf_password.getPassword());
 
-        try {
-            Statement stm = ConnectionDB.conn.createStatement();
-            String statement = "SELECT username, password FROM users where username='" + username + "' and password='" + password + "'";
+        Statement stm = ConnectionDB.conn.createStatement();
+        String statement = "SELECT username, password FROM users where username='" + username + "' and password='" + password + "'";
 
-            ResultSet rs = stm.executeQuery(statement);
+        ResultSet rs = stm.executeQuery(statement);
 
-            if (rs.next()) {
-                frame.dispose();
-                new ChooseCounter();
-            } else {
-                JOptionPane.showMessageDialog(null, "Pogrešno korisničko ime i/ili lozinka", "Greška!", JOptionPane.ERROR_MESSAGE);
-                tf_username.setText("");
-                pf_password.setText("");
-            }
-
-            rs.close();
-
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        if (rs.next()) {
+            frame.dispose();
+            new ChooseCounter();
+            log.info("Successful login. Showing ChooseCounter window.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Pogrešno korisničko ime i/ili lozinka", "Greška!", JOptionPane.ERROR_MESSAGE);
+            tf_username.setText("");
+            pf_password.setText("");
+            log.error("Unsuccessfully trying to login, wrong username or password.");
         }
+        rs.close();
     }
 }

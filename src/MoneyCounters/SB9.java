@@ -5,6 +5,7 @@ import GUI.MainWindow;
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
+import org.apache.log4j.Logger;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -21,29 +22,24 @@ import java.util.Scanner;
 import static GUI.TestSerialPortRead.SerialOcr;
 
 public class SB9 {
-
-
+    public static Logger log = Logger.getLogger(SB9.class.getName());
     public static void readingData(SerialPort comPort) {
-
         comPort.addDataListener(new SerialPortDataListener() {
             @Override
             public int getListeningEvents() {
                 return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
             }
-
             @Override
             public void serialEvent(SerialPortEvent serialPortEvent) {
                 try {
-
                     if (serialPortEvent.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
                         return;
                     }
-
+                    log.info("Receiving data from SB-9.");
                     //clearing count data and serial numbers before that start of next data transfer
                     MainWindow.model_ocrText.removeAllElements();
                     MainWindow.model_serialImage.removeAllElements();
                     ButtonListeners.clearTable(MainWindow.jt_denom);
-
 
                     //here I save the count data in the string array
                     List<String> countData = new ArrayList<>();
@@ -64,7 +60,6 @@ public class SB9 {
                     InputStream in = comPort.getInputStream();
                     BufferedInputStream bufferedInputStream = new BufferedInputStream(in);
                     bufferedInputStream.mark(1000000000);
-
 
                     //trying to show progress of received data from inputStream
                     JFrame frame = new JFrame("Pažnja!");
@@ -91,6 +86,8 @@ public class SB9 {
                             }
                         } catch (IOException e) {
                             // Handle the exception
+                            e.printStackTrace();
+                            log.error(e.getMessage());
                         }
                     });
                     thread.start();
@@ -109,10 +106,11 @@ public class SB9 {
                         }
                     }
 
-                    System.out.println(countData);
+                    log.info("Receiving count data +" + countData);
 
                     if (countData.get(10).equals("RSD") || countData.get(11).equals("RSD")) {
                         insertRSD(countData, MainWindow.jt_denom);
+                        log.info("Received data for RSD currency. Saving to table.");
                     } else {
 
                         String substring = "#b48E"; // the substring you want to remove
@@ -128,8 +126,17 @@ public class SB9 {
                                 i--; // decrease the index by 1 to compensate for the removed element
                             }
                         }
+                        log.info("Received data for EUR or USD currency.");
+                        //checking to see what currency is the data from the machine, and building the gui table accordingly
+                        MainWindow.lb_currency.setText(countData.get(6));
+                        if (countData.get(6).equals("USD"))
+                            insertUSD(countData, MainWindow.jt_denom);
+                        else if (countData.get(6).equals("EUR"))
+                            insertEUR(countData, MainWindow.jt_denom);
+                        else
+                            //in case none of the above currencies is chosen, we show the error message on JOptionPane
+                            JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
 
-                        //System.out.println("Modified: " + countData);
 
                         //here I reset the InputStream, so it can be read again to receive the bytes needed to get the image
                         //of serial number
@@ -142,14 +149,14 @@ public class SB9 {
 
                         //bytes are stored in the String array, they are split by String for the start of serial number
                         String[] binarySerialNumberArr = s1.split(startSn);
+                        log.info("Storing binary data of serial numbers to array.");
 
                         //here I immediately write the binaryString to the gui of MainWindow, so it can be saved to the database
                         MainWindow.jt_serialBinary.setText(String.join(", ", binarySerialNumberArr));
-
+                        log.info("Storing binary data of serial numbers to GUI table.");
 
                         //here we take each element of String array and convert it from BinaryString to image
                         for (int i = 1; i < binarySerialNumberArr.length; i++) {
-
                             //first we create an empty image
                             BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
                             Graphics2D g2d = img.createGraphics();
@@ -157,7 +164,6 @@ public class SB9 {
                             g2d.setFont(font);
                             int height = g2d.getFontMetrics().getHeight();
                             g2d.dispose();
-
                             //here we start to create the actual image of the serial number
                             img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
                             g2d = img.createGraphics();
@@ -177,24 +183,21 @@ public class SB9 {
                             //saving the image to file
                             ImageIO.write(img, "png", file);
                             g2d.dispose();
+                            log.info("Creating an image of serial number in file " + file.getAbsolutePath());
 
-                            //here we use the Tesseracts OCR library to get OCR text from image file
-                            String ocrString = SerialOcr(file);
-                            //here we fix some mistakes that OCR library does when doing OCR on images and add the data to
-                            //OCR string array
-                            MainWindow.ocrDenomination.add(trainOcr2(ocrString));
-                            ocrText.add(trainOcr2(ocrString));
+                            //here we fix some mistakes that Tesseracts does when doing OCR on images and add the data to OCR string array
+                            MainWindow.ocrDenomination.add(trainOcr(SerialOcr(file)));
+                            ocrText.add(trainOcr(SerialOcr(file)));
+                            log.info("Doing OCR on image files of serial numbers.");
                             //we convert to image to ImageIcon and add it to ImageIcon array
                             serialImage.add(makeIcon(img));
-
-
+                            log.info("Adding images to an array");
                         }
 
                         //here we add ocrText to gui MainWindow
                         try {
                             int j = 0;
                             for (int i = 51; i < countData.size(); i++) {
-                                //int index = ocrText.get(j).indexOf(' ');
                                 boolean valid = true;
                                 if (countData.get(i).equals("\u001B3")) {
                                     valid = false;
@@ -206,25 +209,14 @@ public class SB9 {
                                 }
                             }
                         } catch (Exception e) {
+                            log.error(e.getMessage());
                             e.printStackTrace();
                         }
-
 
                         //here we add images to gui MainWindow
                         for (int i = 0; i < serialImage.size(); i++) {
                             MainWindow.model_serialImage.add(i, serialImage.get(i));
                         }
-
-                        //checking to see what currency is the data from the machine, and building the gui table accordingly
-                        MainWindow.lb_currency.setText(countData.get(6));
-                        if (countData.get(6).equals("USD"))
-                            insertUSD(countData, MainWindow.jt_denom);
-                        else if (countData.get(6).equals("EUR"))
-                            insertEUR(countData, MainWindow.jt_denom);
-                        else
-                            //in case none of the above currencies is chosen, we show the error message on JOptionPane
-                            JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
-
                     }
                     //after getting all the data to the gui table in MainWindow, we calculate the total count data
                     ButtonListeners.tableTotalAmountRows(MainWindow.jt_denom);
@@ -232,21 +224,18 @@ public class SB9 {
 
                     frame.dispose();
 
-
                 } catch (Exception e) {
+                    log.error(e.getMessage());
                     e.printStackTrace();
 
                 }
             }
         });
-
     }
 
     public static ImageIcon makeIcon(BufferedImage img) {
-
         return new ImageIcon(img);
     }
-
     public static void insertEUR(List<String> line, JTable jt_denom) {
 
         MainWindow.lb_currency.setText("EUR");
@@ -271,8 +260,6 @@ public class SB9 {
             }
         }
     }
-
-
     public static void insertUSD(List<String> line, JTable jt_denom) {
 
         MainWindow.lb_currency.setText("USD");
@@ -297,7 +284,6 @@ public class SB9 {
             }
         }
     }
-
     public static void insertRSD(List<String> line, JTable jt_denom) {
 
         MainWindow.lb_currency.setText("RSD");
@@ -326,8 +312,7 @@ public class SB9 {
             }
         }
     }
-
-    public static String trainOcr2(String result) {
+    public static String trainOcr(String result) {
         int index = result.indexOf(" ");// index of first blank space
         String firstWord = "";
         if (index != -1) {
@@ -335,43 +320,6 @@ public class SB9 {
             firstWord = firstWord.replaceAll("[8|B]", "0").replaceAll("[S,s]", "5");
         }
         return firstWord;
-    }
-
-    public static String trainOcr(String result) {
-
-        String fix = "";
-
-        if (result.startsWith("ES ")) {
-            fix = result.replaceAll("^ES", "E5");
-        } else if (result.startsWith("E18 ")) {
-            fix = result.replaceAll("^E18", "E10");
-        } else if (result.startsWith("E28 ")) {
-            fix = result.replaceAll("^E28", "E20");
-        } else if (result.startsWith("E58 ")) {
-            fix = result.replaceAll("^E58", "E50");
-        } else if (result.startsWith("ESB")) {
-            fix = result.replaceAll("^ESB", "E50");
-        } else if (result.startsWith("Ese")) {
-            fix = result.replaceAll("^Ese", "E50");
-        } else if (result.startsWith("E108")) {
-            fix = result.replaceAll("^E108", "E100");
-        } else if (result.startsWith("E180")) {
-            fix = result.replaceAll("^E180", "E100");
-        } else if (result.startsWith("E188")) {
-            fix = result.replaceAll("^E188", "E100");
-        } else if (result.startsWith("E288")) {
-            fix = result.replaceAll("^E288", "E200");
-        } else if (result.startsWith("E208")) {
-            fix = result.replaceAll("^E208", "E200");
-        } else if (result.startsWith("E280")) {
-            fix = result.replaceAll("^E280", "E200");
-        } else if (result.startsWith("E588")) {
-            fix = result.replaceAll("^E588", "E500");
-        } else {
-            fix = result;
-        }
-
-        return fix;
     }
 
 }

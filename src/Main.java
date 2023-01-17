@@ -5,10 +5,9 @@ import org.apache.log4j.Logger;
 import javax.swing.*;
 
 public class Main {
-
-    static Logger log = Logger.getLogger(Main.class.getName());
+    public static Logger log = Logger.getLogger(Main.class.getName());
     public static void main(String[] args) {
-        log.info("Starting application.");
+        log.info("------------------------------Starting application------------------------------");
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel"); //Windows Look and feel
             log.info("Setting LookAndFeel to NimbusLookAndFeel.");

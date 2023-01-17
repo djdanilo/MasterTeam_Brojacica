@@ -1,5 +1,7 @@
 package GUI;
 
+import org.apache.log4j.Logger;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -7,10 +9,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
+import java.util.Arrays;
 
-public class LoginScreen{
-
+public class LoginScreen {
     //declaring components
+    public static Logger log = Logger.getLogger(LoginScreen.class.getName());
     public static JFrame jFrame;
     private JPanel panel;
     private JLabel lb_title;
@@ -22,10 +26,9 @@ public class LoginScreen{
     private JButton btn_cancel;
     private JCheckBox cb_showPassword;
 
-
-    public LoginScreen(){
+    public LoginScreen() {
         jFrame = new JFrame();
-        jFrame.setSize(400,350);
+        jFrame.setSize(400, 350);
         jFrame.setTitle("Login ekran");
         jFrame.setLocationRelativeTo(null);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,7 +50,7 @@ public class LoginScreen{
 
         //initializing components
         lb_title = new JLabel("Money Counter");
-        lb_title.setPreferredSize(new Dimension(143,30));
+        lb_title.setPreferredSize(new Dimension(143, 30));
         lb_title.setFont(new Font("Arial", Font.PLAIN, 20));
         lb_title.setBorder(border);
 
@@ -58,30 +61,28 @@ public class LoginScreen{
         lb_password.setFont(f);
 
         tf_username = new JTextField();
-        tf_username.setPreferredSize(new Dimension(130,25));
+        tf_username.setPreferredSize(new Dimension(130, 25));
 
         pf_password = new JPasswordField();
-        pf_password.setPreferredSize(new Dimension(130,25));
+        pf_password.setPreferredSize(new Dimension(130, 25));
 
         cb_showPassword = new JCheckBox("Prikaži lozinku");
         cb_showPassword.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (cb_showPassword.isSelected()){
+                if (cb_showPassword.isSelected()) {
                     pf_password.setEchoChar((char) 0);
-                }else
-                {
+                } else {
                     pf_password.setEchoChar('\u2022');
                 }
             }
         });
 
-
         btn_login = new JButton("Potvrdi");
-        btn_login.setPreferredSize(new Dimension(100,50));
+        btn_login.setPreferredSize(new Dimension(100, 50));
 
         btn_cancel = new JButton("Poništi");
-        btn_cancel.setPreferredSize(new Dimension(100,50));
+        btn_cancel.setPreferredSize(new Dimension(100, 50));
 
         //setting the placement of components
         sl.putConstraint(SpringLayout.WEST, lb_title, 130, SpringLayout.WEST, panel);
@@ -121,30 +122,30 @@ public class LoginScreen{
         jFrame.setContentPane(panel);
     }
 
-    public static String getUser(){
+    public static String getUser() {
         return tf_username.getText();
     }
 
     private void initListeners() {
-
         btn_login.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
-                ButtonListeners.LoginUser(tf_username, pf_password, jFrame);
-
+                try {
+                    log.info("Trying to login a user: [" + tf_username.getText() + "] " + "with password: " + Arrays.toString(pf_password.getPassword()) + ".");
+                    ButtonListeners.LoginUser(tf_username, pf_password, jFrame);
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                    log.error(ex.getMessage());
+                }
             }
         });
-
         btn_cancel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 tf_username.setText("");
                 pf_password.setText("");
+                log.info("Clearing username and password fields.");
             }
         });
     }
-
-
-
 }

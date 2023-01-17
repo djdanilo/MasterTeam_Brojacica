@@ -5,6 +5,7 @@ import Database.ConnectionDB;
 import MoneyCounters.ML2F;
 import MoneyCounters.SB9;
 import com.fazecast.jSerialComm.SerialPort;
+import org.apache.log4j.Logger;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -15,7 +16,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ChooseCounter extends JFrame {
-
+    public static Logger log = Logger.getLogger(ChooseCounter.class.getName());
     private JPanel panel;
     private JLabel lb_title;
     private JLabel lb_chooseMachine;
@@ -70,7 +71,6 @@ public class ChooseCounter extends JFrame {
 
         cb_chooseMachine = new JComboBox<>();
 
-
         //adding data to cb_chooseMachine
         try {
 
@@ -82,12 +82,13 @@ public class ChooseCounter extends JFrame {
             while (rs.next()) {
                 String machine = rs.getString(1);
                 cb_chooseMachine.addItem(machine);
+                log.info("Adding machines " + machine + " to be available");
             }
-
             rs.close();
             stmt.close();
 
         } catch (SQLException e) {
+            log.error(e.getMessage());
             e.printStackTrace();
         }
 
@@ -182,6 +183,7 @@ public class ChooseCounter extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 if (cb_chooseComPort.getSelectedIndex() == -1) {
                     JOptionPane.showMessageDialog(null, "Niste odabrali com port!", "Obaveštenje", JOptionPane.INFORMATION_MESSAGE);
+                    log.error("Port wasn't chosen.");
                 } else {
                     ComPorts comPorts = new ComPorts();
                     port = cb_chooseComPort.getSelectedItem().toString();
@@ -190,43 +192,46 @@ public class ChooseCounter extends JFrame {
 
                     if (serialPort.isOpen()) {
                         JOptionPane.showMessageDialog(null, "Uspešno ste se povezali na " + serialPort.getSystemPortName() + ".", "Obaveštenje", JOptionPane.INFORMATION_MESSAGE);
+                        log.info("Connected to port " + serialPort);
                     } else {
                         JOptionPane.showMessageDialog(null, "Odabrani port " + serialPort.getSystemPortName() + " je već otvoren!", "Greška", JOptionPane.ERROR_MESSAGE);
+                        log.error("Error while opening the port.");
                     }
 
                     if (cb_chooseMachine.getSelectedItem().equals("SB-9")) {
                         SB9.readingData(serialPort);
+                        log.info("Opening port with settings and data read for SB-9");
                     } else if (cb_chooseMachine.getSelectedItem().equals("ML-2F")) {
                         ML2F.readingData(serialPort);
+                        log.info("Opening port with settings and data read for ML-2F");
                     }
-
 
                     dispose();
                     new MainWindow();
+                    log.info("Showing MainWindow, with following settings: " + cb_chooseMachine.getSelectedItem() + ", " + cb_chooseComPort.getSelectedItem()
+                    + ", " + cb_baudrate.getSelectedItem() + ".");
                 }
 
             }
         });
-
         btn_refreshPort.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (cb_chooseComPort.getSelectedItem() == null) {
                     ComPorts.listSerials(cb_chooseComPort);
+                    log.info("Refreshing ports.");
                 } else {
                     cb_chooseComPort.removeAllItems();
                 }
             }
         });
-
         btn_reset.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 dispose();
                 new LoginScreen();
+                log.info("Logging out. Showing LoginScreen.");
             }
         });
-
     }
-
 }
