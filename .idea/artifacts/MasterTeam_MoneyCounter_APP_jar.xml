@@ -30,6 +30,7 @@
       <element id="library" level="project" name="jmrtd-0.7.35" />
       <element id="library" level="project" name="tess4j-5.4.0" />
       <element id="module-output" name="MasterTeam MoneyCounter APP" />
+      <element id="library" level="project" name="slf4j-api-1.7.25" />
     </root>
   </artifact>
 </component>

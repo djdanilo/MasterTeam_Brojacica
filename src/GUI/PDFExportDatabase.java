@@ -36,7 +36,7 @@ public class PDFExportDatabase {
             PdfWriter.getInstance(document, new FileOutputStream(file));
             document.open();
             addMetaData(document);
-            createPdf(document, Id,user, new Date(), client, denomination, serialOcr, serialImage);
+            createPdf(document, Id, user, new Date(), client, denomination, serialOcr, serialImage);
             document.close();
             System.out.println("PDF file has been generated successfully.");
         } catch (Exception e) {
@@ -87,9 +87,69 @@ public class PDFExportDatabase {
         document.add(new Paragraph("\n", smallBold));
         document.add(new Paragraph("\n", smallBold));
 
-        document.add(createTableSerial(serialOcr, serialImage));
-        // Start a new page
-        //document.newPage();
+
+
+        String newLine2 = "01100000110110010001101100010001101000011100001000101";
+
+        document.add(new Paragraph("Apoen" + "            " + "Serijski broj"));
+
+
+
+        try {
+            int i = 0;
+            int j = 1;
+            while (j < serialImage.length) {
+
+
+
+                BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
+                Graphics2D g2d = img.createGraphics();
+                java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
+                g2d.setFont(font);
+                int height = g2d.getFontMetrics().getHeight();
+                g2d.dispose();
+
+                img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
+                g2d = img.createGraphics();
+
+                g2d.setFont(font);
+                g2d.setColor(Color.WHITE);
+                int fontSize = 1;
+
+                for (String line2 : serialImage[j].split(newLine2)) {
+
+                    g2d.drawString(line2, 0, height);
+                    height += fontSize;
+                }
+
+                File file = new File("images\\TextDB" + j + ".png");
+
+                ImageIO.write(img, "png", file);
+
+                g2d.dispose();
+
+                Image image = Image.getInstance(img, null);
+                image.scaleToFit(100,100);
+
+                document.add(new Paragraph(serialOcr[i] + "                   " + serialOcr[i + 1]));
+                document.add(image);
+
+                i += 2;
+                j++;
+            }
+        }
+        catch (DocumentException e){
+            document.newPage();
+            e.printStackTrace();
+        }
+        catch (ArrayIndexOutOfBoundsException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
     }
 
 
@@ -119,68 +179,67 @@ public class PDFExportDatabase {
             int totalPcs = 0;
             table.addCell("10");
             table.addCell(denomination[1]);
-            table.addCell(String.valueOf(10*Integer.parseInt(denomination[1])));
+            table.addCell(String.valueOf(10 * Integer.parseInt(denomination[1])));
             table.addCell("20");
             table.addCell(denomination[2]);
-            table.addCell(String.valueOf(20*Integer.parseInt(denomination[2])));
+            table.addCell(String.valueOf(20 * Integer.parseInt(denomination[2])));
             table.addCell("50");
             table.addCell(denomination[3]);
-            table.addCell(String.valueOf(50*Integer.parseInt(denomination[3])));
+            table.addCell(String.valueOf(50 * Integer.parseInt(denomination[3])));
             table.addCell("100");
             table.addCell(denomination[4]);
-            table.addCell(String.valueOf(100*Integer.parseInt(denomination[4])));
+            table.addCell(String.valueOf(100 * Integer.parseInt(denomination[4])));
             table.addCell("200");
             table.addCell(denomination[5]);
-            table.addCell(String.valueOf(200*Integer.parseInt(denomination[5])));
+            table.addCell(String.valueOf(200 * Integer.parseInt(denomination[5])));
             table.addCell("500");
             table.addCell(denomination[6]);
-            table.addCell(String.valueOf(500*Integer.parseInt(denomination[6])));
+            table.addCell(String.valueOf(500 * Integer.parseInt(denomination[6])));
             table.addCell("1000");
             table.addCell(denomination[7]);
-            table.addCell(String.valueOf(1000*Integer.parseInt(denomination[7])));
+            table.addCell(String.valueOf(1000 * Integer.parseInt(denomination[7])));
             table.addCell("2000");
             table.addCell(denomination[8]);
-            table.addCell(String.valueOf(2000*Integer.parseInt(denomination[8])));
+            table.addCell(String.valueOf(2000 * Integer.parseInt(denomination[8])));
             table.addCell("5000");
             table.addCell(denomination[9]);
-            table.addCell(String.valueOf(5000*Integer.parseInt(denomination[9])));
+            table.addCell(String.valueOf(5000 * Integer.parseInt(denomination[9])));
             table.addCell("Ukupno:");
-            for (int i = 1; i < 10; i++){
+            for (int i = 1; i < 10; i++) {
                 totalPcs += Integer.parseInt(denomination[i]);
             }
             table.addCell(String.valueOf(totalPcs));
             table.addCell(denomination[10]);
-        }
-        else if(denomination[0].equals("EUR")){
+        } else if (denomination[0].equals("EUR")) {
             int totalPcs = 0;
             table.addCell("5");
             table.addCell(denomination[1]);
-            table.addCell(String.valueOf(5*Integer.parseInt(denomination[1])));
+            table.addCell(String.valueOf(5 * Integer.parseInt(denomination[1])));
             table.addCell("10");
             table.addCell(denomination[2]);
-            table.addCell(String.valueOf(10*Integer.parseInt(denomination[2])));
+            table.addCell(String.valueOf(10 * Integer.parseInt(denomination[2])));
             table.addCell("20");
             table.addCell(denomination[3]);
-            table.addCell(String.valueOf(20*Integer.parseInt(denomination[3])));
+            table.addCell(String.valueOf(20 * Integer.parseInt(denomination[3])));
             table.addCell("50");
             table.addCell(denomination[4]);
-            table.addCell(String.valueOf(50*Integer.parseInt(denomination[4])));
+            table.addCell(String.valueOf(50 * Integer.parseInt(denomination[4])));
             table.addCell("100");
             table.addCell(denomination[5]);
-            table.addCell(String.valueOf(100*Integer.parseInt(denomination[5])));
+            table.addCell(String.valueOf(100 * Integer.parseInt(denomination[5])));
             table.addCell("200");
             table.addCell(denomination[6]);
-            table.addCell(String.valueOf(200*Integer.parseInt(denomination[6])));
+            table.addCell(String.valueOf(200 * Integer.parseInt(denomination[6])));
             table.addCell("500");
             table.addCell(denomination[7]);
-            table.addCell(String.valueOf(500*Integer.parseInt(denomination[7])));
+            table.addCell(String.valueOf(500 * Integer.parseInt(denomination[7])));
             table.addCell("Ukupno:");
-            for (int i = 1; i < 8; i++){
+            for (int i = 1; i < 8; i++) {
                 totalPcs += Integer.parseInt(denomination[i]);
             }
             table.addCell(String.valueOf(totalPcs));
             table.addCell(denomination[8]);
-        }else if(denomination[0].equals("USD")) {
+        } else if (denomination[0].equals("USD")) {
             int totalPcs = 0;
             table.addCell("1");
             table.addCell(denomination[1]);
@@ -242,9 +301,9 @@ public class PDFExportDatabase {
         try {
             int i = 0;
             int j = 1;
-            while (j < serialImage.length){
+            while (j < serialImage.length) {
                 table.addCell(serialOcr[i]);
-                table.addCell(serialOcr[i+1]);
+                table.addCell(serialOcr[i + 1]);
 
                 BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
                 Graphics2D g2d = img.createGraphics();
@@ -273,10 +332,10 @@ public class PDFExportDatabase {
                 g2d.dispose();
 
                 table.addCell(Image.getInstance(img, null));
-                i+=2;
+                i += 2;
                 j++;
             }
-        }catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
         } catch (IOException e) {
             throw new RuntimeException(e);
