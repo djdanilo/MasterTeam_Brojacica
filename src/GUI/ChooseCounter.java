@@ -79,7 +79,7 @@ public class ChooseCounter extends JFrame {
             Statement stmt = ConnectionDB.conn.createStatement();
             ResultSet rs = stmt.executeQuery(statement);
 
-            while (rs.next()){
+            while (rs.next()) {
                 String machine = rs.getString(1);
                 cb_chooseMachine.addItem(machine);
             }
@@ -87,7 +87,7 @@ public class ChooseCounter extends JFrame {
             rs.close();
             stmt.close();
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
@@ -113,8 +113,8 @@ public class ChooseCounter extends JFrame {
         btn_reset.setPreferredSize(new Dimension(100, 50));
 
         btn_refreshPort = new JButton("Osveži");
-        btn_refreshPort.setPreferredSize(new Dimension(70,26));
-        btn_refreshPort.setMargin(new Insets(1,0,1,0));
+        btn_refreshPort.setPreferredSize(new Dimension(70, 26));
+        btn_refreshPort.setMargin(new Insets(1, 0, 1, 0));
 
         //setting the placement of components
         sl.putConstraint(SpringLayout.WEST, lb_title, 100, SpringLayout.WEST, panel);
@@ -161,18 +161,17 @@ public class ChooseCounter extends JFrame {
         setContentPane(panel);
 
 
-
     }
 
-    public static String getMachine(){
+    public static String getMachine() {
         return (String) cb_chooseMachine.getSelectedItem();
     }
 
-    public static String getPort(){
+    public static String getPort() {
         return String.valueOf(cb_chooseComPort.getSelectedItem());
     }
 
-    public static String getBaudRate(){
+    public static String getBaudRate() {
         return (String) cb_baudrate.getSelectedItem();
     }
 
@@ -183,20 +182,23 @@ public class ChooseCounter extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 if (cb_chooseComPort.getSelectedIndex() == -1) {
                     JOptionPane.showMessageDialog(null, "Niste odabrali com port!", "Obaveštenje", JOptionPane.INFORMATION_MESSAGE);
-                }else {
+                } else {
                     ComPorts comPorts = new ComPorts();
                     port = cb_chooseComPort.getSelectedItem().toString();
 
                     SerialPort serialPort = comPorts.openSerialPort(SerialPort.getCommPort(port), 0, (String) cb_baudrate.getSelectedItem());
 
-                    if (serialPort.isOpen()){
+                    if (serialPort.isOpen()) {
                         JOptionPane.showMessageDialog(null, "Uspešno ste se povezali na " + serialPort.getSystemPortName() + ".", "Obaveštenje", JOptionPane.INFORMATION_MESSAGE);
-                    }else{
+                    } else {
                         JOptionPane.showMessageDialog(null, "Odabrani port " + serialPort.getSystemPortName() + " je već otvoren!", "Greška", JOptionPane.ERROR_MESSAGE);
                     }
 
-
-                    ML2F.readingData(serialPort);
+                    if (cb_chooseMachine.getSelectedItem().equals("SB-9")) {
+                        SB9.readingData(serialPort);
+                    } else if (cb_chooseMachine.getSelectedItem().equals("ML-2F")) {
+                        ML2F.readingData(serialPort);
+                    }
 
 
                     dispose();
@@ -211,7 +213,7 @@ public class ChooseCounter extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 if (cb_chooseComPort.getSelectedItem() == null) {
                     ComPorts.listSerials(cb_chooseComPort);
-                }else{
+                } else {
                     cb_chooseComPort.removeAllItems();
                 }
             }
