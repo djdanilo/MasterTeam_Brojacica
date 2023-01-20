@@ -198,12 +198,17 @@ public class ChooseCounter extends JFrame {
                         log.error("Error while opening the port.");
                     }
 
-                    if (cb_chooseMachine.getSelectedItem().equals("SB-9")) {
-                        SB9.readingData(serialPort);
-                        log.info("Opening port with settings and data read for SB-9");
-                    } else if (cb_chooseMachine.getSelectedItem().equals("ML-2F")) {
-                        ML2F.readingData(serialPort);
-                        log.info("Opening port with settings and data read for ML-2F");
+                    try {
+                        if (cb_chooseMachine.getSelectedItem().equals("SB-9")) {
+                            SB9.readingData(serialPort);
+                            log.info("Opening port with settings and data read for SB-9");
+                        } else if (cb_chooseMachine.getSelectedItem().equals("ML-2F")) {
+                            ML2F.readingData(serialPort);
+                            log.info("Opening port with settings and data read for ML-2F");
+                        }
+                    }catch (Exception e1){
+                        e1.printStackTrace();
+                        log.error(e1.getMessage());
                     }
 
                     dispose();

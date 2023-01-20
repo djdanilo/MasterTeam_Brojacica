@@ -4,6 +4,8 @@ import Database.ConnectionDB;
 import com.sun.pdfview.PDFFile;
 import com.sun.pdfview.PDFPage;
 import com.sun.pdfview.PDFRenderer;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
@@ -199,5 +201,16 @@ public class ButtonListeners {
             log.error("Unsuccessfully trying to login, wrong username or password.");
         }
         rs.close();
+    }
+
+    public static String SerialOcr(File file) throws TesseractException {
+
+        Tesseract tesseract = new Tesseract();
+        tesseract.setDatapath("tessdata");
+        tesseract.setLanguage("eng");
+        tesseract.setPageSegMode(7);
+        tesseract.setOcrEngineMode(1);
+
+        return tesseract.doOCR(file);
     }
 }

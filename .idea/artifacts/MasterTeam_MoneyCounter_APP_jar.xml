@@ -1,36 +1,60 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="MasterTeam MoneyCounter APP:jar">
+  <artifact type="jar" name="MasterTeam MoneyCounter APP:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/MasterTeam_MoneyCounter_APP_jar</output-path>
     <root id="archive" name="MasterTeam MoneyCounter APP.jar">
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/rs2xml.jar" path-in-jar="/" />
+      <element id="module-output" name="MasterTeam MoneyCounter APP" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/poi-3.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/pdf-renderer.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/jboss-vfs-3.2.17.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/jna-5.12.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/itextpdf-5.5.13.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/pdfbox-tools-2.0.26.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/db/sqlite-jdbc-3.39.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-codec-1.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/slf4j-simple-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/commons-io-2.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/jai-imageio-core-1.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/slf4j-api-1.7.36.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/jboss-logging-3.1.4.GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/tess4j-5.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/rs2xml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jmrtd-0.7.35.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/lept4j-1.16.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-io-2.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/pdfbox-2.0.26.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/fontbox-2.0.26.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/pdfbox-debugger-2.0.26.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jSerialComm-2.9.2.jar" path-in-jar="/" />
-      <element id="library" level="project" name="commons-io-2.11.0" />
-      <element id="library" level="project" name="commons-logging-1.2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/jbig2-imageio-3.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/log4j.jar" path-in-jar="/" />
+      <element id="library" level="project" name="commons-codec-1.15" />
+      <element id="library" level="project" name="commons-io-2.11.01" />
       <element id="library" level="project" name="fontbox-2.0.26" />
+      <element id="library" level="project" name="commons-logging-1.2" />
       <element id="library" level="project" name="itextpdf-5.5.13.2" />
-      <element id="library" level="project" name="jai-imageio-core-1.4.0" />
+      <element id="library" level="project" name="commons-io-2.11.0" />
       <element id="library" level="project" name="jbig2-imageio-3.0.4" />
       <element id="library" level="project" name="jboss-logging-3.1.4.GA" />
       <element id="library" level="project" name="jboss-vfs-3.2.17.Final" />
-      <element id="library" level="project" name="jna-5.12.1" />
+      <element id="library" level="project" name="jmrtd-0.7.35" />
+      <element id="library" level="project" name="jai-imageio-core-1.4.0" />
       <element id="library" level="project" name="jSerialComm-2.9.2" />
+      <element id="library" level="project" name="jna-5.12.1" />
       <element id="library" level="project" name="lept4j-1.16.2" />
+      <element id="library" level="project" name="log4j1" />
       <element id="library" level="project" name="pdf-renderer" />
-      <element id="library" level="project" name="pdfbox-2.0.26" />
       <element id="library" level="project" name="pdfbox-debugger-2.0.26" />
       <element id="library" level="project" name="pdfbox-tools-2.0.26" />
       <element id="library" level="project" name="poi-3.17" />
+      <element id="library" level="project" name="pdfbox-2.0.26" />
       <element id="library" level="project" name="rs2xml" />
-      <element id="library" level="project" name="slf4j-api-1.7.36" />
-      <element id="library" level="project" name="slf4j-simple-1.6.1" />
-      <element id="library" level="project" name="sqlite-jdbc-3.39.3.0" />
-      <element id="library" level="project" name="commons-codec-1.15" />
-      <element id="library" level="project" name="commons-io-2.11.01" />
-      <element id="library" level="project" name="jmrtd-0.7.35" />
-      <element id="library" level="project" name="tess4j-5.4.0" />
-      <element id="module-output" name="MasterTeam MoneyCounter APP" />
       <element id="library" level="project" name="slf4j-api-1.7.25" />
+      <element id="library" level="project" name="slf4j-api-1.7.36" />
+      <element id="library" level="project" name="tess4j-5.4.0" />
+      <element id="library" level="project" name="sqlite-jdbc-3.39.3.0" />
+      <element id="library" level="project" name="slf4j-simple-1.6.1" />
     </root>
   </artifact>
 </component>

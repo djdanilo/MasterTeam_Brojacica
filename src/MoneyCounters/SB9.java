@@ -13,22 +13,25 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static GUI.TestSerialPortRead.SerialOcr;
+import static GUI.MainWindow.model_ocrText;
+import static GUI.MainWindow.model_serialImage;
 
 public class SB9 {
     public static Logger log = Logger.getLogger(SB9.class.getName());
+    public static List<String> countData;
+
     public static void readingData(SerialPort comPort) {
         comPort.addDataListener(new SerialPortDataListener() {
             @Override
             public int getListeningEvents() {
                 return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
             }
+
             @Override
             public void serialEvent(SerialPortEvent serialPortEvent) {
                 try {
@@ -37,12 +40,12 @@ public class SB9 {
                     }
                     log.info("Receiving data from SB-9.");
                     //clearing count data and serial numbers before that start of next data transfer
-                    MainWindow.model_ocrText.removeAllElements();
+                    model_ocrText.removeAllElements();
                     MainWindow.model_serialImage.removeAllElements();
                     ButtonListeners.clearTable(MainWindow.jt_denom);
 
                     //here I save the count data in the string array
-                    List<String> countData = new ArrayList<>();
+                    countData = new ArrayList<>();
                     //here I save the text that is OCRed from the images
                     List<String> ocrText = new ArrayList<>();
                     //here I save the images from the machine
@@ -54,6 +57,10 @@ public class SB9 {
 
                     int x = 0;
                     String s1 = "";
+                    String substring = "#b48E"; // the substring you want to remove
+                    String substring2 = "�";
+                    String substring3 = "\u0000";
+                    String substring4 = "π";
 
                     //getting InputStream from serial port and then converting it to BufferedStream, so it can be reset
                     //and read two times
@@ -63,41 +70,16 @@ public class SB9 {
 
                     //trying to show progress of received data from inputStream
                     JFrame frame = new JFrame("Pažnja!");
-                    JLabel jLabel = new JLabel("Preuzimam podatke.");
-                    JProgressBar jProgressBar = new JProgressBar();
-                    jProgressBar.setMinimum(0);
-                    jProgressBar.setMaximum(100);
-                    frame.add(jLabel);
-                    frame.add(jProgressBar);
+                    JLabel lb_apoenska = new JLabel("Preuzimam apoensku strukturu.");
+                    frame.add(lb_apoenska);
                     frame.setLocationRelativeTo(MainWindow.panel);
                     frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-                    frame.setSize(300, 70);
+                    frame.setSize(300, 150);
                     frame.setLayout(new FlowLayout());
                     frame.setVisible(true);
-                    Thread thread = new Thread(() -> {
-                        try {
-                            int bytesRead = 0;
-                            int totalBytes = bufferedInputStream.available();
-
-                            while (bytesRead < totalBytes) {
-                                int progress = (int) ((double) bytesRead / totalBytes * 100);
-                                SwingUtilities.invokeLater(() -> jProgressBar.setValue(progress));
-                                bytesRead += bufferedInputStream.read();
-                            }
-                        } catch (IOException e) {
-                            // Handle the exception
-                            e.printStackTrace();
-                            log.error(e.getMessage());
-                        }
-                    });
-                    thread.start();
-
-
-                    bufferedInputStream.reset();
 
                     //first reading the input stream with scanner to get count data as Strings
                     Scanner sc = new Scanner(bufferedInputStream);
-
                     while (sc.hasNextLine()) {
                         countData.add(sc.next());
                         //this is the last string in the InputStream, so I use it to break from the while loop
@@ -105,27 +87,22 @@ public class SB9 {
                             break;
                         }
                     }
+                    //removing elements from the array that are not needed
+                    for (int i = 0; i < countData.size(); i++) {
+                        String str = countData.get(i);
+                        if (str.contains(substring) || str.contains(substring2)
+                                || str.contains(substring3) || str.contains(substring4)) {
+                            countData.remove(i);
+                            i--; // decrease the index by 1 to compensate for the removed element
+                        }
+                    }
+                    log.info("Receiving and modifying count data +" + countData);
 
-                    log.info("Receiving count data +" + countData);
-
+                    //checking what currency is counted and processing data accordingly
                     if (countData.get(10).equals("RSD") || countData.get(11).equals("RSD")) {
                         insertRSD(countData, MainWindow.jt_denom);
                         log.info("Received data for RSD currency. Saving to table.");
                     } else {
-
-                        String substring = "#b48E"; // the substring you want to remove
-                        String substring2 = "�";
-                        String substring3 = "\u0000";
-                        String substring4 = "π";
-
-                        for (int i = 0; i < countData.size(); i++) {
-                            String str = countData.get(i);
-                            if (str.contains(substring) || str.contains(substring2)
-                                    || str.contains(substring3) || str.contains(substring4)) {
-                                countData.remove(i);
-                                i--; // decrease the index by 1 to compensate for the removed element
-                            }
-                        }
                         log.info("Received data for EUR or USD currency.");
                         //checking to see what currency is the data from the machine, and building the gui table accordingly
                         MainWindow.lb_currency.setText(countData.get(6));
@@ -136,7 +113,6 @@ public class SB9 {
                         else
                             //in case none of the above currencies is chosen, we show the error message on JOptionPane
                             JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
-
 
                         //here I reset the InputStream, so it can be read again to receive the bytes needed to get the image
                         //of serial number
@@ -186,37 +162,42 @@ public class SB9 {
                             log.info("Creating an image of serial number in file " + file.getAbsolutePath());
 
                             //here we fix some mistakes that Tesseracts does when doing OCR on images and add the data to OCR string array
-                            MainWindow.ocrDenomination.add(trainOcr(SerialOcr(file)));
-                            ocrText.add(trainOcr(SerialOcr(file)));
+                            MainWindow.ocrDenomination.add(trainOcr(ButtonListeners.SerialOcr(file)));
+                            ocrText.add(trainOcr(ButtonListeners.SerialOcr(file)));
                             log.info("Doing OCR on image files of serial numbers.");
                             //we convert to image to ImageIcon and add it to ImageIcon array
                             serialImage.add(makeIcon(img));
                             log.info("Adding images to an array");
-                        }
 
+                            frame.add(new JLabel("Snimam fajlove" + file.getName()));
+                        }
                         //here we add ocrText to gui MainWindow
                         try {
+                            DefaultListModel<String> model1 = new DefaultListModel<>();
                             int j = 0;
+                            boolean valid = true;
                             for (int i = 51; i < countData.size(); i++) {
-                                boolean valid = true;
                                 if (countData.get(i).equals("\u001B3")) {
                                     valid = false;
                                     break;
                                 }
                                 if (valid) {
-                                    MainWindow.model_ocrText.add(j, ocrText.get(j) + " " + countData.get(i));
+                                    model_ocrText.add(j, ocrText.get(j) + " " + countData.get(i));
                                     j++;
                                 }
                             }
+                            MainWindow.jList_ocrText.setModel(model_ocrText);
                         } catch (Exception e) {
                             log.error(e.getMessage());
                             e.printStackTrace();
                         }
-
+                        DefaultListModel<ImageIcon> model2 = new DefaultListModel<>();
                         //here we add images to gui MainWindow
                         for (int i = 0; i < serialImage.size(); i++) {
-                            MainWindow.model_serialImage.add(i, serialImage.get(i));
+                            model_serialImage.add(i, serialImage.get(i));
                         }
+                        MainWindow.jList_serialImage.setModel(model_serialImage);
+
                     }
                     //after getting all the data to the gui table in MainWindow, we calculate the total count data
                     ButtonListeners.tableTotalAmountRows(MainWindow.jt_denom);
@@ -236,6 +217,7 @@ public class SB9 {
     public static ImageIcon makeIcon(BufferedImage img) {
         return new ImageIcon(img);
     }
+
     public static void insertEUR(List<String> line, JTable jt_denom) {
 
         MainWindow.lb_currency.setText("EUR");
@@ -260,6 +242,7 @@ public class SB9 {
             }
         }
     }
+
     public static void insertUSD(List<String> line, JTable jt_denom) {
 
         MainWindow.lb_currency.setText("USD");
@@ -284,6 +267,7 @@ public class SB9 {
             }
         }
     }
+
     public static void insertRSD(List<String> line, JTable jt_denom) {
 
         MainWindow.lb_currency.setText("RSD");
@@ -312,6 +296,7 @@ public class SB9 {
             }
         }
     }
+
     public static String trainOcr(String result) {
         int index = result.indexOf(" ");// index of first blank space
         String firstWord = "";

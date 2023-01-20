@@ -5,6 +5,7 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPRow;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
@@ -17,16 +18,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class PDFExportDatabase {
 
-    private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,
+    private static final Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,
             Font.BOLD);
-    private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12,
+    private static final Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12,
             Font.NORMAL, BaseColor.RED);
-    private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16,
+    private static final Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16,
             Font.BOLD);
-    private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12,
+    private static final Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12,
             Font.BOLD);
 
 
@@ -48,8 +50,8 @@ public class PDFExportDatabase {
         document.addTitle("Izveštaj o transakciji");
         document.addSubject("Izveštaj o transakciji");
         document.addKeywords("Java, PDF, iText");
-        document.addAuthor("Master Team");
-        document.addCreator("Master Team");
+        document.addAuthor("Danilo Djurovic");
+        document.addCreator("Danilo Djurovic");
     }
 
     public static void createPdf(Document document, String id, String user, Date date, String client, String[] denomination, String[] serialOcr, String[] serialImage)
@@ -87,68 +89,26 @@ public class PDFExportDatabase {
         document.add(new Paragraph("\n", smallBold));
         document.add(new Paragraph("\n", smallBold));
 
+        PdfPTable largeTable = createTableSerial(serialOcr, serialImage);
+        List<PdfPRow> rows = largeTable.getRows();
+        int rowsPerTable = 20;
+        int currentRow = 0;
 
-
-        String newLine2 = "01100000110110010001101100010001101000011100001000101";
-
-        document.add(new Paragraph("Apoen" + "            " + "Serijski broj"));
-
-
-
-        try {
-            int i = 0;
-            int j = 1;
-            while (j < serialImage.length) {
-
-
-
-                BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
-                Graphics2D g2d = img.createGraphics();
-                java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
-                g2d.setFont(font);
-                int height = g2d.getFontMetrics().getHeight();
-                g2d.dispose();
-
-                img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
-                g2d = img.createGraphics();
-
-                g2d.setFont(font);
-                g2d.setColor(Color.WHITE);
-                int fontSize = 1;
-
-                for (String line2 : serialImage[j].split(newLine2)) {
-
-                    g2d.drawString(line2, 0, height);
-                    height += fontSize;
+        while(currentRow < rows.size()){
+            PdfPTable smallTable = new PdfPTable(largeTable.getNumberOfColumns());
+            smallTable.setWidthPercentage(100);
+            for (int i = currentRow; i < currentRow + rowsPerTable; i++) {
+                if (i >= rows.size()) {
+                    break;
                 }
-
-                File file = new File("images\\TextDB" + j + ".png");
-
-                ImageIO.write(img, "png", file);
-
-                g2d.dispose();
-
-                Image image = Image.getInstance(img, null);
-                image.scaleToFit(100,100);
-
-                document.add(new Paragraph(serialOcr[i] + "                   " + serialOcr[i + 1]));
-                document.add(image);
-
-                i += 2;
-                j++;
+                PdfPCell[] cells = rows.get(i).getCells();
+                for (PdfPCell cell : cells) {
+                    smallTable.addCell(cell);
+                }
             }
+            document.add(smallTable);
+            currentRow += rowsPerTable;
         }
-        catch (DocumentException e){
-            document.newPage();
-            e.printStackTrace();
-        }
-        catch (ArrayIndexOutOfBoundsException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-
 
     }
 
@@ -161,6 +121,8 @@ public class PDFExportDatabase {
         // t.setPadding(4);
         // t.setSpacing(4);
         // t.setBorderWidth(1);
+
+        table.setWidthPercentage(100);
 
         PdfPCell c1 = new PdfPCell(new Phrase("Apoen - " + denomination[0]));
         c1.setHorizontalAlignment(Element.ALIGN_CENTER);

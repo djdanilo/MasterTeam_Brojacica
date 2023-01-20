@@ -22,12 +22,8 @@ public class TestSerialPortRead {
         comPort.setComPortParameters(115200, 8, 1, SerialPort.NO_PARITY);
         comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
         readingBytesSN(comPort);
-        //readingBytes2(comPort);
 
-        //toImage();
 
-        //String result = SerialOcr("images\\text1.png");
-        //System.out.println(result);
 
     }
 
@@ -41,9 +37,6 @@ public class TestSerialPortRead {
 
             @Override
             public void serialEvent(SerialPortEvent serialPortEvent) {
-
-
-                InputStream in;
 
                 String startSn2 = "0000110100001010";
                 String newLine2 = "0000101000001101";
@@ -60,85 +53,18 @@ public class TestSerialPortRead {
                     return;
                 }
 
-                int x = 0;
                 try {
 
-                    in = comPort.getInputStream();
+                    InputStream in = comPort.getInputStream();
 
-                    InputStream bufferdInputStream = new BufferedInputStream(in);
-                    bufferdInputStream.mark(1);
-
-                    Scanner sc = new Scanner(bufferdInputStream);
-
-                    List<String> line = new ArrayList<>();
-
-                    while (sc.hasNextLine()) {
-                        line.add(sc.next());
-                        if (line.contains("Signature")) {
-                            break;
-                        }
-                    }
-
-                    System.out.println(line);
-
-                    bufferdInputStream.reset();
+                    List<Integer> x = new ArrayList<>();
 
 
-                    while (((x = bufferdInputStream.read()) != 27)) {
-                        s1 += String.format("%8s", Integer.toBinaryString(x & 0xFF)).replace(' ', '0');
-                    }
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-
-                System.out.println(s1);
-
-                String[] snArray = s1.split(startSn2);
-
-
-
-                for (int i = 1; i < snArray.length; i++) {
-
-                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
-                    Graphics2D g2d = img.createGraphics();
-                    Font font = new Font("Arial", Font.PLAIN, 2);
-                    g2d.setFont(font);
-                    int height = g2d.getFontMetrics().getHeight();
-                    g2d.dispose();
-
-                    img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
-                    g2d = img.createGraphics();
-
-                    g2d.setFont(font);
-                    g2d.setColor(Color.WHITE);
-                    int fontSize = 1;
-
-                    for (String line : snArray[i].split(newLine2)) {
-
-                        g2d.drawString(line, 0, height);
-                        height += fontSize;
-                        //System.out.println("Serial number: " + line);
-                    }
-                    //g2d.dispose();
-                    try {
-                        ImageIO.write(img, "png", new File("images\\Text" + i + ".png"));
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
-                    g2d.dispose();
-
-                    String result = null;
-                    try {
-                        result = SerialOcr(new File("images\\Text" + i + ".png"));
-                    } catch (TesseractException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println(result);
-
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         });
-
     }
 
 
@@ -221,15 +147,13 @@ public class TestSerialPortRead {
     public static String SerialOcr(File file) throws TesseractException {
 
         Tesseract tesseract = new Tesseract();
-        tesseract.setDatapath("src\\main\\resources\\tessdata");
+        tesseract.setDatapath("tessdata");
         tesseract.setLanguage("eng");
-        tesseract.setPageSegMode(1);
+        tesseract.setPageSegMode(7);
         tesseract.setOcrEngineMode(1);
-
 
         return tesseract.doOCR(file);
     }
-
 
 }
 

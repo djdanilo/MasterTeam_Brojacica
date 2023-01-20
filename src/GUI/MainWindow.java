@@ -33,9 +33,12 @@ public class MainWindow {
     private DateTimeFormatter dtf;
     private LocalDateTime now2;
     public static ArrayList<String> ocrDenomination = new ArrayList<>();
+    public static JTabbedPane jtp_serialNumber;
     String pass = "627862";
     private JButton btn_changeSettings;
     private JButton btn_printSave;
+    public static JList<String> jList_ocrText;
+    public static JList<ImageIcon> jList_serialImage;
     private JButton btn_save;
     private JButton btn_database;
     private JButton btn_logout;
@@ -207,16 +210,15 @@ public class MainWindow {
         panel5.setBorder(b);
         panel5.setPreferredSize(new Dimension(485, 355));
 
-        JTabbedPane jtp_serialNumber = new JTabbedPane();
+        jtp_serialNumber = new JTabbedPane();
 
         jt_serialBinary = new JTextArea();
         jt_serialBinary.setVisible(false);
 
         model_ocrText = new DefaultListModel<>();
-        JList<String> jList_ocrText = new JList<>(model_ocrText);
-
         model_serialImage = new DefaultListModel<>();
-        JList<ImageIcon> jList_serialImage = new JList<>(model_serialImage);
+        jList_ocrText = new JList<>();
+        jList_serialImage = new JList<>();
 
         JScrollPane jsp_serialNumber = new JScrollPane(jList_ocrText);
         JScrollPane jsp_serialNumberImage = new JScrollPane(jList_serialImage);
@@ -230,6 +232,7 @@ public class MainWindow {
         jtp_serialNumber.add("Serijski brojevi", jsp_serialNumber);
         jtp_serialNumber.add("Slike serijskih brojeva", jsp_serialNumberImage);
         jtp_serialNumber.add("Binary Serial Number", jsp_serialNumberBinary);
+        jtp_serialNumber.removeTabAt(2);
 
         btn_serialNumberClear = new JButton("Očisti");
         btn_serialNumberCopy = new JButton("Kopiraj");
