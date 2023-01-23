@@ -5,6 +5,7 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPRow;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
@@ -17,6 +18,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class PdfExport {
 
@@ -87,11 +89,26 @@ public class PdfExport {
         document.add(new Paragraph("\n", smallBold));
         document.add(new Paragraph("\n", smallBold));
 
+        PdfPTable largeTable = createTableSerial(serialOcr, serialImage);
+        List<PdfPRow> rows = largeTable.getRows();
+        int rowsPerTable = 20;
+        int currentRow = 0;
 
-        document.add(createTableSerial(serialOcr, serialImage));
-
-        // Start a new page
-        //document.newPage();
+        while(currentRow < rows.size()){
+            PdfPTable smallTable = new PdfPTable(largeTable.getNumberOfColumns());
+            smallTable.setWidthPercentage(100);
+            for (int i = currentRow; i < currentRow + rowsPerTable; i++) {
+                if (i >= rows.size()) {
+                    break;
+                }
+                PdfPCell[] cells = rows.get(i).getCells();
+                for (PdfPCell cell : cells) {
+                    smallTable.addCell(cell);
+                }
+            }
+            document.add(smallTable);
+            currentRow += rowsPerTable;
+        }
     }
 
 

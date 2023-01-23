@@ -56,6 +56,7 @@ public class SB9 {
                     String newLine = "01100000110110010001101100010001101000011100001000101";
 
                     int x = 0;
+                    int countBytes = 0;
                     String s1 = "";
                     String substring = "#b48E"; // the substring you want to remove
                     String substring2 = "�";
@@ -70,13 +71,13 @@ public class SB9 {
 
                     //trying to show progress of received data from inputStream
                     JFrame frame = new JFrame("Pažnja!");
-                    JLabel lb_apoenska = new JLabel("Preuzimam apoensku strukturu.");
-                    frame.add(lb_apoenska);
-                    frame.setLocationRelativeTo(MainWindow.panel);
-                    frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    JLabel label = new JLabel("Preuzimam apoensku strukturu.");
                     frame.setSize(300, 150);
+                    frame.setLocationRelativeTo(null);
+                    frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                     frame.setLayout(new FlowLayout());
                     frame.setVisible(true);
+                    frame.add(label);
 
                     //first reading the input stream with scanner to get count data as Strings
                     Scanner sc = new Scanner(bufferedInputStream);
@@ -100,6 +101,7 @@ public class SB9 {
 
                     //checking what currency is counted and processing data accordingly
                     if (countData.get(10).equals("RSD") || countData.get(11).equals("RSD")) {
+                        MainWindow.lb_currency.setText("RSD");
                         insertRSD(countData, MainWindow.jt_denom);
                         log.info("Received data for RSD currency. Saving to table.");
                     } else {
@@ -114,13 +116,17 @@ public class SB9 {
                             //in case none of the above currencies is chosen, we show the error message on JOptionPane
                             JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
 
+                        label.setText("Preuzimam serijske brojeve");
+
                         //here I reset the InputStream, so it can be read again to receive the bytes needed to get the image
                         //of serial number
                         bufferedInputStream.reset();
 
                         while (((x = bufferedInputStream.read()) != 109)) {
+                            label.setText("Preuzimam bajtove: " + countBytes);
                             //bytes are converted to binaryStrings, so I can get the binary image with Java Graphics library
                             s1 += String.format("%8s", Integer.toBinaryString(x & 0xFF)).replace(' ', '0');
+                            countBytes++;
                         }
 
                         //bytes are stored in the String array, they are split by String for the start of serial number
@@ -169,7 +175,7 @@ public class SB9 {
                             serialImage.add(makeIcon(img));
                             log.info("Adding images to an array");
 
-                            frame.add(new JLabel("Snimam fajlove" + file.getName()));
+                            label.setText("Preuzimam slike: " + file.getName());
                         }
                         //here we add ocrText to gui MainWindow
                         try {

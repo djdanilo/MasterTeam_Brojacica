@@ -7,6 +7,7 @@ import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -15,7 +16,18 @@ import java.util.List;
 
 public class TestSerialPortRead {
 
+    public static List<String> countData;
+
     public static void main(String[] args) throws IOException, TesseractException {
+
+
+        countData = new ArrayList<>();
+        for (int i = 0; i < 50; i++){
+            countData.add("test");
+        }
+
+
+
 
         SerialPort comPort = SerialPort.getCommPort("COM8");
         comPort.openPort();

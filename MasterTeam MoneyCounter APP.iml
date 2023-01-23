@@ -13,7 +13,6 @@
     <orderEntry type="library" name="rs2xml" level="project" />
     <orderEntry type="library" name="itextpdf-5.5.13.2" level="project" />
     <orderEntry type="library" name="poi-3.17" level="project" />
-    <orderEntry type="library" name="pdf-renderer" level="project" />
     <orderEntry type="library" name="commons-io-2.11.0" level="project" />
     <orderEntry type="library" name="commons-logging-1.2" level="project" />
     <orderEntry type="library" name="fontbox-2.0.26" level="project" />
@@ -34,5 +33,6 @@
     <orderEntry type="library" name="commons-codec-1.15" level="project" />
     <orderEntry type="library" name="slf4j-api-1.7.25" level="project" />
     <orderEntry type="library" name="log4j1" level="project" />
+    <orderEntry type="library" name="pdf-renderer" level="project" />
   </component>
 </module>
