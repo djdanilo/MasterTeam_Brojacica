@@ -319,7 +319,7 @@ public class MainWindow {
             public void mouseClicked(MouseEvent e) {
                 String selection = "";
                 for (int i = 0; i < model_ocrText.size(); i++) {
-                    selection += model_ocrText.get(i);
+                    selection += model_ocrText.get(i) + "\n";
                 }
                 stringSelection = new StringSelection(selection);
                 clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();

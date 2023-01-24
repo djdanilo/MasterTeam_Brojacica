@@ -233,7 +233,6 @@ public class DatabaseWindow extends JFrame {
             }
         }
     }
-
     private void initListeners() {
         btn_back.addMouseListener(new MouseAdapter() {
             @Override
@@ -258,7 +257,6 @@ public class DatabaseWindow extends JFrame {
         jt_transactions.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
                 try {
                     if (e.getClickCount() == 2) {
                         int row = jt_transactions.getSelectedRow();
@@ -293,7 +291,8 @@ public class DatabaseWindow extends JFrame {
                             JPanel panel = new JPanel();
                             panel.add(label);
                             // Add the JPanel to the JTabbedPane
-                            tabbedPane.addTab("Strana " + (i + 1), panel);
+                            JScrollPane jScrollPane = new JScrollPane(panel);
+                            tabbedPane.addTab("Strana " + (i + 1), jScrollPane);
                         }
                         // Create a JFrame to hold the JTabbedPane
                         JFrame frame = new JFrame();

@@ -201,10 +201,11 @@ public class ChooseCounter extends JFrame {
                     try {
                         if (cb_chooseMachine.getSelectedItem().equals("SB-9")) {
                             SB9.readingData(serialPort);
-                            log.info("Opening port with settings and data read for SB-9");
-                        } else if (cb_chooseMachine.getSelectedItem().equals("ML-2F")) {
+                            log.info("Opening port with settings for SB-9");
+                        } else if (cb_chooseMachine.getSelectedItem().equals("ML-2F")
+                                            || cb_chooseMachine.getSelectedItem().equals("ML-2FS")) {
                             ML2F.readingData(serialPort);
-                            log.info("Opening port with settings and data read for ML-2F");
+                            log.info("Opening port with settings for ML-2F");
                         }
                     }catch (Exception e1){
                         e1.printStackTrace();

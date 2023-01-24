@@ -62,6 +62,7 @@ public class SB9 {
                     String substring2 = "�";
                     String substring3 = "\u0000";
                     String substring4 = "π";
+                    String substring5 = "ǀ";
 
                     //getting InputStream from serial port and then converting it to BufferedStream, so it can be reset
                     //and read two times
@@ -70,14 +71,7 @@ public class SB9 {
                     bufferedInputStream.mark(1000000000);
 
                     //trying to show progress of received data from inputStream
-                    JFrame frame = new JFrame("Pažnja!");
-                    JLabel label = new JLabel("Preuzimam apoensku strukturu.");
-                    frame.setSize(300, 150);
-                    frame.setLocationRelativeTo(null);
-                    frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-                    frame.setLayout(new FlowLayout());
-                    frame.setVisible(true);
-                    frame.add(label);
+                    new ProgressBarFrame();
 
                     //first reading the input stream with scanner to get count data as Strings
                     Scanner sc = new Scanner(bufferedInputStream);
@@ -92,7 +86,7 @@ public class SB9 {
                     for (int i = 0; i < countData.size(); i++) {
                         String str = countData.get(i);
                         if (str.contains(substring) || str.contains(substring2)
-                                || str.contains(substring3) || str.contains(substring4)) {
+                                || str.contains(substring3) || str.contains(substring4) || str.contains(substring5)) {
                             countData.remove(i);
                             i--; // decrease the index by 1 to compensate for the removed element
                         }
@@ -100,7 +94,7 @@ public class SB9 {
                     log.info("Receiving and modifying count data +" + countData);
 
                     //checking what currency is counted and processing data accordingly
-                    if (countData.get(10).equals("RSD") || countData.get(11).equals("RSD")) {
+                    if (countData.contains("RSD")) {
                         MainWindow.lb_currency.setText("RSD");
                         insertRSD(countData, MainWindow.jt_denom);
                         log.info("Received data for RSD currency. Saving to table.");
@@ -108,22 +102,26 @@ public class SB9 {
                         log.info("Received data for EUR or USD currency.");
                         //checking to see what currency is the data from the machine, and building the gui table accordingly
                         MainWindow.lb_currency.setText(countData.get(6));
-                        if (countData.get(6).equals("USD"))
+                        if (countData.contains("USD")) {
+                            MainWindow.lb_currency.setText("RSD");
                             insertUSD(countData, MainWindow.jt_denom);
-                        else if (countData.get(6).equals("EUR"))
+                        }
+                        else if (countData.contains("EUR")) {
+                            MainWindow.lb_currency.setText("RSD");
                             insertEUR(countData, MainWindow.jt_denom);
+                        }
                         else
                             //in case none of the above currencies is chosen, we show the error message on JOptionPane
                             JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
 
-                        label.setText("Preuzimam serijske brojeve");
+                        ProgressBarFrame.label.setText("Preuzimam serijske brojeve");
 
                         //here I reset the InputStream, so it can be read again to receive the bytes needed to get the image
                         //of serial number
                         bufferedInputStream.reset();
 
                         while (((x = bufferedInputStream.read()) != 109)) {
-                            label.setText("Preuzimam bajtove: " + countBytes);
+                            ProgressBarFrame.label.setText("Preuzimam bajtove: " + countBytes);
                             //bytes are converted to binaryStrings, so I can get the binary image with Java Graphics library
                             s1 += String.format("%8s", Integer.toBinaryString(x & 0xFF)).replace(' ', '0');
                             countBytes++;
@@ -161,7 +159,7 @@ public class SB9 {
                                 height += fontSize;
                             }
                             //creating the image file
-                            File file = new File("images\\Text" + i + ".png");
+                            File file = new File("images\\Serijski broj" + i + ".png");
                             //saving the image to file
                             ImageIO.write(img, "png", file);
                             g2d.dispose();
@@ -175,7 +173,7 @@ public class SB9 {
                             serialImage.add(makeIcon(img));
                             log.info("Adding images to an array");
 
-                            label.setText("Preuzimam slike: " + file.getName());
+                            ProgressBarFrame.label.setText("Preuzimam serijske brojeve: " + file.getName());
                         }
                         //here we add ocrText to gui MainWindow
                         try {
@@ -205,11 +203,11 @@ public class SB9 {
                         MainWindow.jList_serialImage.setModel(model_serialImage);
 
                     }
-                    //after getting all the data to the gui table in MainWindow, we calculate the total count data
+                    //after getting all the data to the table in MainWindow, we calculate the total count data
                     ButtonListeners.tableTotalAmountRows(MainWindow.jt_denom);
                     ButtonListeners.tableTotalAmountColumns(MainWindow.jt_denom);
 
-                    frame.dispose();
+                    ProgressBarFrame.frame.dispose();
 
                 } catch (Exception e) {
                     log.error(e.getMessage());
