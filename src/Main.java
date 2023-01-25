@@ -1,6 +1,7 @@
 import Database.ConnectionDB;
 import GUI.DatabaseWindow;
 import GUI.LoginScreen;
+import GUI.TransactionPreview;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;

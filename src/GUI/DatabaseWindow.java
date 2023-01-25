@@ -233,6 +233,7 @@ public class DatabaseWindow extends JFrame {
             }
         }
     }
+
     private void initListeners() {
         btn_back.addMouseListener(new MouseAdapter() {
             @Override
@@ -264,8 +265,6 @@ public class DatabaseWindow extends JFrame {
                         String Id = jt_transactions.getValueAt(row, 0).toString();
                         String user = LoginScreen.getUser();
                         String client = jt_transactions.getValueAt(row, 1).toString();
-                        File file = new File("preview.pdf");
-                        String filePath = file.getAbsolutePath();
                         String denominationString = jt_transactions.getValueAt(row, 3).toString();
                         String[] denomination = denominationString.split(", ");
                         String serialOcrString = jt_transactions.getValueAt(row, 4).toString();
@@ -273,34 +272,14 @@ public class DatabaseWindow extends JFrame {
                         String serialImageString = jt_transactions.getValueAt(row, 5).toString();
                         String[] serialImage = serialImageString.split(", ");
 
-                        PDFExportDatabase.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
+                        JLabel lb_generated = new JLabel("Izveštaj generisao: " + user + ", " + jt_transactions.getValueAt(row, 2));
+                        JLabel lb_id = new JLabel("Id transakcije: " + Id);
+                        JLabel lb_client = new JLabel("Klijent: " + client);
+                        JTable jt_denomination = new JTable();
+                        JTable jt_serialNumbers = new JTable();
 
-                        // Open the PDF file using PDDocument
-                        PDDocument document = PDDocument.load(file);
-                        // Create a PDFRenderer
-                        PDFRenderer renderer = new PDFRenderer(document);
-                        // Create a JTabbedPane to hold the pages
-                        JTabbedPane tabbedPane = new JTabbedPane();
-                        // Iterate through all the pages
-                        for (int i = 0; i < document.getNumberOfPages(); i++) {
-                            // Get the current page
-                            BufferedImage image = renderer.renderImage(i);
-                            // Create a JLabel to display the image
-                            JLabel label = new JLabel(new ImageIcon(image));
-                            // Add the JLabel to a JPanel
-                            JPanel panel = new JPanel();
-                            panel.add(label);
-                            // Add the JPanel to the JTabbedPane
-                            JScrollPane jScrollPane = new JScrollPane(panel);
-                            tabbedPane.addTab("Strana " + (i + 1), jScrollPane);
-                        }
-                        // Create a JFrame to hold the JTabbedPane
-                        JFrame frame = new JFrame();
-                        frame.add(tabbedPane);
-                        frame.pack();
-                        frame.setLocationRelativeTo(null);
-                        frame.setVisible(true);
-                        document.close();
+                        new TransactionPreview(lb_generated, lb_id, lb_client, jt_denomination, jt_serialNumbers);
+
                     }
                 } catch (Exception e2) {
                     e2.printStackTrace();
