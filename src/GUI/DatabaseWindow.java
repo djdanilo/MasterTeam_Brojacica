@@ -272,7 +272,7 @@ public class DatabaseWindow extends JFrame {
                         String serialImageString = jt_transactions.getValueAt(row, 5).toString();
                         String[] serialImage = serialImageString.split(", ");
 
-                        JLabel lb_generated = new JLabel("Izveštaj generisao: " + user + ", " + jt_transactions.getValueAt(row, 2));
+                        JLabel lb_generated = new JLabel("Izveštaj generisao:  " + user + ",  " + jt_transactions.getValueAt(row, 2));
                         JLabel lb_id = new JLabel("Id transakcije: " + Id);
                         JLabel lb_client = new JLabel("Klijent: " + client);
                         JTable jt_denomination = new JTable();
