@@ -21,6 +21,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Vector;
 
@@ -262,29 +263,26 @@ public class DatabaseWindow extends JFrame {
                     if (e.getClickCount() == 2) {
                         int row = jt_transactions.getSelectedRow();
 
-                        String Id = jt_transactions.getValueAt(row, 0).toString();
-                        String user = LoginScreen.getUser();
-                        String client = jt_transactions.getValueAt(row, 1).toString();
+                        String Id = "Id transakcije: " + jt_transactions.getValueAt(row, 0).toString();
+                        String user = "Izveštaj generisao:  "; //+ LoginScreen.getUser();
+                        String time = ",  " + jt_transactions.getValueAt(row, 2);
+                        String generated = user + time;
+                        String client = "Klijent: " + jt_transactions.getValueAt(row, 1).toString();
                         String denominationString = jt_transactions.getValueAt(row, 3).toString();
                         String[] denomination = denominationString.split(", ");
                         String serialOcrString = jt_transactions.getValueAt(row, 4).toString();
                         String[] serialOcr = serialOcrString.split(", ");
                         String serialImageString = jt_transactions.getValueAt(row, 5).toString();
                         String[] serialImage = serialImageString.split(", ");
+                        System.out.println(Arrays.toString(serialOcr));
 
-                        JLabel lb_generated = new JLabel("Izveštaj generisao:  " + user + ",  " + jt_transactions.getValueAt(row, 2));
-                        JLabel lb_id = new JLabel("Id transakcije: " + Id);
-                        JLabel lb_client = new JLabel("Klijent: " + client);
-                        JTable jt_denomination = new JTable();
-                        JTable jt_serialNumbers = new JTable();
 
-                        new TransactionPreview(lb_generated, lb_id, lb_client, jt_denomination, jt_serialNumbers);
+                        new TransactionPreview(generated, Id, client, denomination, serialOcr, serialImage);
 
                     }
                 } catch (Exception e2) {
                     e2.printStackTrace();
                 }
-
             }
         });
         btn_export.addMouseListener(new MouseAdapter() {
