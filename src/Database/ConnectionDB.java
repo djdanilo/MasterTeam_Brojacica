@@ -41,6 +41,7 @@ public class ConnectionDB {
             "    Denomination text not null,\n" +
             "    SerialNumberOCR text,\n" +
             "    SerialNumberImage text\n" +
+            "    Operator text\n" +
             ")";
     String sqlQuery2 = "CREATE TABLE IF NOT EXISTS machines(\n" +
             "    machine text not null\n" +

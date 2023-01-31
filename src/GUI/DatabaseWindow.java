@@ -23,6 +23,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Vector;
 
 import com.itextpdf.text.pdf.*;
@@ -263,10 +264,11 @@ public class DatabaseWindow extends JFrame {
                     if (e.getClickCount() == 2) {
                         int row = jt_transactions.getSelectedRow();
 
-                        String Id = "Id transakcije: " + jt_transactions.getValueAt(row, 0).toString();
-                        String user = "Izveštaj generisao:  "; //+ LoginScreen.getUser();
-                        String time = ",  " + jt_transactions.getValueAt(row, 2);
+                        String Id = jt_transactions.getValueAt(row, 0).toString();
+                        String user = "Izveštaj generisao:  " + jt_transactions.getValueAt(row, 6).toString();
+                        String time = ",  " + new Date();
                         String generated = user + time;
+                        String transactionTime = jt_transactions.getValueAt(row, 2).toString();
                         String client = "Klijent: " + jt_transactions.getValueAt(row, 1).toString();
                         String denominationString = jt_transactions.getValueAt(row, 3).toString();
                         String[] denomination = denominationString.split(", ");
@@ -274,11 +276,9 @@ public class DatabaseWindow extends JFrame {
                         String[] serialOcr = serialOcrString.split(", ");
                         String serialImageString = jt_transactions.getValueAt(row, 5).toString();
                         String[] serialImage = serialImageString.split(", ");
-                        System.out.println(Arrays.toString(serialOcr));
+                        TransactionPreview.lb_currency.setText(denomination[0]);
 
-
-                        new TransactionPreview(generated, Id, client, denomination, serialOcr, serialImage);
-
+                        new TransactionPreview(generated, Id, transactionTime, client, denomination, serialOcr, serialImage);
                     }
                 } catch (Exception e2) {
                     e2.printStackTrace();
@@ -295,8 +295,9 @@ public class DatabaseWindow extends JFrame {
                         JOptionPane.showMessageDialog(null, "Niste odabrali transakciju!", "Greška!", JOptionPane.ERROR_MESSAGE);
                     }
                     String Id = jt_transactions.getValueAt(row, 0).toString();
-                    String user = LoginScreen.getUser();
+                    String user = jt_transactions.getValueAt(row, 6).toString();
                     String client = jt_transactions.getValueAt(row, 1).toString();
+                    String transactionTime = jt_transactions.getValueAt(row, 2).toString();
                     String filePath = "";
                     String denominationString = jt_transactions.getValueAt(row, 3).toString();
                     String[] denomination = denominationString.split(", ");
@@ -318,7 +319,7 @@ public class DatabaseWindow extends JFrame {
                     if (jcb_exportPDF.isSelected()) {
                         if (!filePath.endsWith(".pdf"))
                             filePath += ".pdf";
-                        PDFExportDatabase.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImage);
+                        PDFExportDatabase.createPdfExport(Id, transactionTime, user, client, filePath, denomination, serialOcr, serialImage);
                     } else if (jcb_exportXLSX.isSelected()) {
                         if (!filePath.endsWith(".xls"))
                             filePath += ".xls";

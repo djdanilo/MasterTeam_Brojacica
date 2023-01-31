@@ -37,13 +37,14 @@ select * from transactions;
 
 select * from machines;
 
-
-
 create table users(
     Id integer primary key autoincrement not null,
     userName text not null,
     password text not null
 );
+
+ALTER TABLE transactions
+ADD COLUMN Operator text;
 
 create table transactions(
     Id INTEGER primary key autoincrement not null,
@@ -52,6 +53,7 @@ create table transactions(
     Denomination text not null,
     SerialNumberOCR text,
     SerialNumberImage text
+    Operator text
 );
 
 create table machines(
@@ -116,7 +118,7 @@ create table machines(
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\danilodjurovic\IdeaProjects\MasterTeam_Brojacica\MoneyCounter_App.db" schema="main" />
+            <file path="C:\Users\Danilo\Desktop\MasterTeam_Brojacica\MoneyCounter_App.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

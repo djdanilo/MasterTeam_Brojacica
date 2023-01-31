@@ -28,12 +28,14 @@ public class MainWindow {
     public static JFrame frame;
     ButtonListeners buttonListeners = new ButtonListeners();
     public static JPanel panel;
-    private JLabel lb_timeDate;
+    public static JLabel lb_timeDate;
     final DateFormat dateFormat = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss");
     private DateTimeFormatter dtf;
     private LocalDateTime now2;
+    private Calendar now1;
     public static ArrayList<String> ocrDenomination = new ArrayList<>();
     public static JTabbedPane jtp_serialNumber;
+    public static JTextArea jt_logs;
     String pass = "627862";
     private JButton btn_changeSettings;
     private JButton btn_printSave;
@@ -100,7 +102,7 @@ public class MainWindow {
 
         int interval = 1000;
         new Timer(interval, e -> {
-            Calendar now1 = Calendar.getInstance();
+            now1 = Calendar.getInstance();
             lb_timeDate.setText(dateFormat.format(now1.getTime()));
         }).start();
         lb_timeDate.setFont(f1);
@@ -202,6 +204,7 @@ public class MainWindow {
 
         jt_denom.setRowHeight(32);
         jt_denom.setFont(f2);
+        jt_denom.setEnabled(false);
 
         panel4.add(lb_currency);
         panel4.add(jsp_denom);
@@ -260,8 +263,14 @@ public class MainWindow {
         JLabel lb_logs = new JLabel("Logovi aplikacije");
         lb_logs.setFont(f2);
 
-        JTextArea jt_logs = new JTextArea();
-        jt_logs.setPreferredSize(new Dimension(500, 110));
+
+        jt_logs = new JTextArea();
+        jt_logs.setEditable(false);
+        JScrollPane jsp_logs = new JScrollPane(jt_logs);
+        jsp_logs.setPreferredSize(new Dimension(500, 110));
+
+        jt_logs.append(lb_timeDate.getText() + "     Otvoren port " + ChooseCounter.getPort() + "\n");
+        jt_logs.append(lb_timeDate.getText() + "     Povezana brojačica " + ChooseCounter.getMachine() + "\n");
 
         btn_settings = new JButton("Podešavanja");
         btn_settings.setPreferredSize(new Dimension(150, 40));
@@ -269,14 +278,14 @@ public class MainWindow {
         sl.putConstraint(SpringLayout.WEST, lb_logs, 185, SpringLayout.WEST, panel6);
         sl.putConstraint(SpringLayout.NORTH, lb_logs, 3, SpringLayout.NORTH, panel6);
 
-        sl.putConstraint(SpringLayout.WEST, jt_logs, 5, SpringLayout.WEST, panel6);
-        sl.putConstraint(SpringLayout.NORTH, jt_logs, 23, SpringLayout.NORTH, panel6);
+        sl.putConstraint(SpringLayout.WEST, jsp_logs, 5, SpringLayout.WEST, panel6);
+        sl.putConstraint(SpringLayout.NORTH, jsp_logs, 23, SpringLayout.NORTH, panel6);
 
         sl.putConstraint(SpringLayout.WEST, btn_settings, 510, SpringLayout.WEST, panel6);
         sl.putConstraint(SpringLayout.NORTH, btn_settings, 50, SpringLayout.NORTH, panel6);
 
         panel6.add(lb_logs);
-        panel6.add(jt_logs);
+        panel6.add(jsp_logs);
         panel6.add(btn_settings);
 
         panel.add(panel1);
@@ -296,8 +305,9 @@ public class MainWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 try {
-                    ComPorts.closePort(SerialPort.getCommPort(ChooseCounter.port));
-                    log.info("ChangeSettings pressed. Closing port: " + ChooseCounter.port + " and showing ChooseCounter window");
+                    ComPorts.closePort(SerialPort.getCommPort(ChooseCounter.getPort()));
+                    log.info("ChangeSettings pressed. Closing port: " + ChooseCounter.getPort() + " and showing ChooseCounter window");
+
                 } catch (Exception ex) {
                     ex.printStackTrace();
                     log.error(ex.getMessage());
@@ -312,6 +322,7 @@ public class MainWindow {
                 model_ocrText.removeAllElements();
                 model_serialImage.removeAllElements();
                 log.info("Clearing OCR and Serial Image data.");
+                jt_logs.append(lb_timeDate.getText() + "     Brišem polja sa serijskim brojevima\n");
             }
         });
         btn_serialNumberCopy.addMouseListener(new MouseAdapter() {
@@ -325,6 +336,7 @@ public class MainWindow {
                 clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                 clipboard.setContents(stringSelection, null);
                 log.info("Serial numbers copied to clipboard.");
+                jt_logs.append(lb_timeDate.getText() + "     Serijski brojevi kopirani\n");
             }
         });
         btn_logout.addMouseListener(new MouseAdapter() {
@@ -336,7 +348,7 @@ public class MainWindow {
                 if (n == 0) {
                     try {
                         ComPorts.closePort(SerialPort.getCommPort(ChooseCounter.port));
-                        log.info("Logout pressed. Login user out and closing port " + ChooseCounter.port + ".");
+                        log.info("Logout pressed. User log off and closing port " + ChooseCounter.port + ".");
                     } catch (Exception ex) {
                         ex.printStackTrace();
                         log.error(ex.getMessage());
@@ -353,64 +365,73 @@ public class MainWindow {
                 //dispose();
                 new DatabaseWindow();
                 log.info("Opening Database window");
+                jt_logs.append(lb_timeDate.getText() + "     Otvaram transakcije\n");
             }
         });
         btn_save.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                //array with denomination and total amount.
-                ArrayList<String> denomData = new ArrayList<>();
-                //adding the first element to denomData, so we know which currency is counted
-                denomData.add(lb_currency.getText());
-                //getting denomination data from JTable as array of Strings
-                for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
-                    if ((jt_denom.getValueAt(i, 1) == null) || (jt_denom.getValueAt(i, 1).equals(""))) {
-                        continue;
+                if (jt_denom.getValueAt(1, 1).equals("")) {
+                    JOptionPane.showMessageDialog(null, "Nema podataka u tabeli", "Greška!", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    //array with denomination and total amount.
+                    ArrayList<String> denomData = new ArrayList<>();
+                    //adding the first element to denomData, so we know which currency is counted
+                    denomData.add(lb_currency.getText());
+                    //getting denomination data from JTable as array of Strings
+                    for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
+                        if ((jt_denom.getValueAt(i, 1) == null) || (jt_denom.getValueAt(i, 1).equals(""))) {
+                            continue;
+                        }
+                        denomData.add(jt_denom.getValueAt(i, 1).toString());
                     }
-                    denomData.add(jt_denom.getValueAt(i, 1).toString());
-                }
-                //getting the total amount as the last element of the array
-                denomData.add(jt_denom.getValueAt(9, 2).toString());
-                //converting denomData array to a string delimited with comma, so it can be saved to SQLite
-                String denomData2 = String.join(", ", denomData);
+                    //getting the total amount as the last element of the array
+                    denomData.add(jt_denom.getValueAt(9, 2).toString());
+                    //converting denomData array to a string delimited with comma, so it can be saved to SQLite
+                    String denomData2 = String.join(", ", denomData);
 
 
-                //array for OCR value of serial numbers
-                ArrayList<String> ocrData = new ArrayList<>();
-                //getting OCR value of serial numbers from a table in GUI and adding it to the array
-                for (int i = 0; i < model_ocrText.size(); i++) {
-                    ocrData.add(model_ocrText.getElementAt(i).replace(" ", ", "));
-                }
-                //converting ocrData array to a string delimited with comma, so it can be saved to SQLite
-                String ocrData2 = String.join(", ", ocrData);
+                    //array for OCR value of serial numbers
+                    ArrayList<String> ocrData = new ArrayList<>();
+                    //getting OCR value of serial numbers from a table in GUI and adding it to the array
+                    for (int i = 0; i < model_ocrText.size(); i++) {
+                        ocrData.add(model_ocrText.getElementAt(i).replace(" ", ", "));
+                    }
+                    //converting ocrData array to a string delimited with comma, so it can be saved to SQLite
+                    String ocrData2 = String.join(", ", ocrData);
 
+                    //getting binary data of images from GUI and saving as String, so it can be saved to SQLite
+                    String imageData = jt_serialBinary.getText();
 
-                //getting binary data of images from GUI and saving as String, so it can be saved to SQLite
-                String imageData = jt_serialBinary.getText();
+                    //getting the name of the operator
+                    String operator = LoginScreen.getUser();
 
-                //asking user to enter the name of client when saving the transaction
-                String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
+                    //asking user to enter the name of client when saving the transaction
+                    String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
 
-                String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
-                        "VALUES (?, ?, ?, ?, ?)";
+                    String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage, Operator) " +
+                            "VALUES (?, ?, ?, ?, ?, ?)";
 
-                try {
-                    PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
+                    try {
+                        PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
 
-                    pst.setString(1, client);
-                    pst.setString(2, dtf.format(now2));
-                    pst.setString(3, denomData2);
-                    pst.setString(4, ocrData2);
-                    pst.setString(5, imageData);
+                        pst.setString(1, client);
+                        pst.setString(2, dtf.format(now2));
+                        pst.setString(3, denomData2);
+                        pst.setString(4, ocrData2);
+                        pst.setString(5, imageData);
+                        pst.setString(6, operator);
 
-                    pst.execute();
-                    pst.close();
+                        pst.execute();
+                        pst.close();
 
-                    System.out.println("Transaction saved successfully");
-                    log.info("Transaction saved successfully for client " + client + " with counted data [" + denomData2 + "].");
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                    log.error(ex.getMessage());
+                        System.out.println("Transaction saved successfully");
+                        jt_logs.append(lb_timeDate.getText() + "     Transakcija uspešno snimljena za klijenta " + client + "\n");
+                        log.info("Transaction saved successfully for client " + client + " with counted data [" + denomData2 + "].");
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                        log.error(ex.getMessage());
+                    }
                 }
             }
 
@@ -418,85 +439,93 @@ public class MainWindow {
         btn_printSave.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                //array with denomination and total amount.
-                ArrayList<String> denomData = new ArrayList<>();
-                //adding the first element to denomData, so we know which currency is counted
-                denomData.add(lb_currency.getText());
-                //getting denomination data from JTable as array of Strings
-                for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
-                    if ((jt_denom.getValueAt(i, 1) == null) || (jt_denom.getValueAt(i, 1).equals(""))) {
-                        continue;
+                if (jt_denom.getValueAt(1, 1).equals("")) {
+                    JOptionPane.showMessageDialog(null, "Nema podataka u tabeli", "Greška!", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    //array with denomination and total amount.
+                    ArrayList<String> denomData = new ArrayList<>();
+                    //adding the first element to denomData, so we know which currency is counted
+                    denomData.add(lb_currency.getText());
+                    //getting denomination data from JTable as array of Strings
+                    for (int i = 0; i < jt_denom.getRowCount() - 1; i++) {
+                        if ((jt_denom.getValueAt(i, 1) == null) || (jt_denom.getValueAt(i, 1).equals(""))) {
+                            continue;
+                        }
+                        denomData.add(jt_denom.getValueAt(i, 1).toString());
                     }
-                    denomData.add(jt_denom.getValueAt(i, 1).toString());
-                }
-                //getting the total amount as the last element of the array
-                denomData.add(jt_denom.getValueAt(9, 2).toString());
-                //converting denomData array to a string delimited with comma, so it can be saved to SQLite
-                String denomData2 = String.join(", ", denomData);
+                    //getting the total amount as the last element of the array
+                    denomData.add(jt_denom.getValueAt(9, 2).toString());
+                    //converting denomData array to a string delimited with comma, so it can be saved to SQLite
+                    String denomData2 = String.join(", ", denomData);
 
 
-                //array for OCR value of serial numbers
-                ArrayList<String> ocrData = new ArrayList<>();
-                //getting OCR value of serial numbers from a table in GUI and adding it to the array
-                for (int i = 0; i < model_ocrText.size(); i++) {
-                    ocrData.add(model_ocrText.getElementAt(i).replace(" ", ", "));
-                }
-                //converting ocrData array to a string delimited with comma, so it can be saved to SQLite
-                String ocrData2 = String.join(", ", ocrData);
+                    //array for OCR value of serial numbers
+                    ArrayList<String> ocrData = new ArrayList<>();
+                    //getting OCR value of serial numbers from a table in GUI and adding it to the array
+                    for (int i = 0; i < model_ocrText.size(); i++) {
+                        ocrData.add(model_ocrText.getElementAt(i).replace(" ", ", "));
+                    }
+                    //converting ocrData array to a string delimited with comma, so it can be saved to SQLite
+                    String ocrData2 = String.join(", ", ocrData);
 
 
-                //array for serial number images
-                ArrayList<Image> serialImagePrint = new ArrayList<>();
-                //getting all images from table in GUI for printing in PDF
-                for (int i = 0; i < model_serialImage.size(); i++) {
-                    serialImagePrint.add(model_serialImage.getElementAt(i).getImage());
-                }
-                //getting binary data of images from GUI and saving as String, so it can be saved to SQLite
-                String imageData = jt_serialBinary.getText();
+                    //array for serial number images
+                    ArrayList<Image> serialImagePrint = new ArrayList<>();
+                    //getting all images from table in GUI for printing in PDF
+                    for (int i = 0; i < model_serialImage.size(); i++) {
+                        serialImagePrint.add(model_serialImage.getElementAt(i).getImage());
+                    }
+                    //getting binary data of images from GUI and saving as String, so it can be saved to SQLite
+                    String imageData = jt_serialBinary.getText();
 
-                //asking user to enter the name of client when saving the transaction
-                String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
+                    //getting the name of the operator
+                    String operator = LoginScreen.getUser();
 
-                String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage) " +
-                        "VALUES (?, ?, ?, ?, ?)";
+                    //asking user to enter the name of client when saving the transaction
+                    String client = JOptionPane.showInputDialog(null, "Unesite ime klijenta", "Unos podataka", JOptionPane.INFORMATION_MESSAGE);
 
-                try {
-                    PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
+                    String statement = "INSERT INTO transactions(Client, Timestamp, Denomination, SerialNumberOCR, SerialNumberImage, Operator) " +
+                            "VALUES (?, ?, ?, ?, ?, ?)";
 
-                    pst.setString(1, client);
-                    pst.setString(2, dtf.format(now2));
-                    pst.setString(3, denomData2);
-                    pst.setString(4, ocrData2);
-                    pst.setString(5, imageData);
-                    pst.execute();
-                    pst.close();
+                    try {
+                        PreparedStatement pst = ConnectionDB.conn.prepareStatement(statement);
 
-                    System.out.println("Transaction saved successfully");
-                    log.info("Transaction saved successfully for client " + client + " with counted data [" + denomData2 + "].");
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                    log.error(ex.getMessage());
-                }
+                        pst.setString(1, client);
+                        pst.setString(2, dtf.format(now2));
+                        pst.setString(3, denomData2);
+                        pst.setString(4, ocrData2);
+                        pst.setString(5, imageData);
+                        pst.setString(6, operator);
+                        pst.execute();
+                        pst.close();
 
-                String Id = " ";
-                String user = LoginScreen.getUser();
-                String[] denomination = denomData2.split(", ");
-                String[] serialOcr = ocrData2.split(", ");
+                        System.out.println("Transaction saved successfully");
+                        jt_logs.append(lb_timeDate.getText() + "     Transakcija uspešno snimljena za klijenta " + client + "\n");
+                        log.info("Transaction saved successfully for client " + client + " with counted data [" + denomData2 + "].");
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                        log.error(ex.getMessage());
+                    }
 
-                JFileChooser jFileChooser = new JFileChooser();
-                jFileChooser.setDialogTitle("Odaberite mesto za snimanje fajla");
+                    String Id = " ";
+                    String user = LoginScreen.getUser();
+                    String[] denomination = denomData2.split(", ");
+                    String[] serialOcr = ocrData2.split(", ");
 
-                File file = new File("test.pdf");
-                String filePath = file.getAbsolutePath();
-                log.info("Saving PDF file to " + file.getAbsolutePath() + ".");
+                    JFileChooser jFileChooser = new JFileChooser();
+                    jFileChooser.setDialogTitle("Odaberite mesto za snimanje fajla");
 
-                try {
-                    PdfExport.createPdfExport(Id, user, client, filePath, denomination, serialOcr, serialImagePrint);
-                    buttonListeners.PDFPrinter(file);
-                    log.info("PDF file sucessfully saved");
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                    log.error(e1.getMessage());
+                    try {
+                        File tempFile = File.createTempFile("temp1", ".pdf");
+                        String filePath = tempFile.getAbsolutePath();
+                        PdfExport.createPdfExport(Id, lb_timeDate.getText(), user, client, filePath, denomination, serialOcr, serialImagePrint);
+                        buttonListeners.PDFPrinter(tempFile);
+                        jt_logs.append(lb_timeDate.getText() + "     Štampam transakciju\n");
+                        log.info("PDF file sucessfully printed");
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                        log.error(e1.getMessage());
+                    }
                 }
             }
         });

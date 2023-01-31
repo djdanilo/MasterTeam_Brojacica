@@ -9,7 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sqlite-jdbc-3.39.3.0" level="project" />
-    <orderEntry type="library" name="jSerialComm-2.9.2" level="project" />
     <orderEntry type="library" name="rs2xml" level="project" />
     <orderEntry type="library" name="itextpdf-5.5.13.2" level="project" />
     <orderEntry type="library" name="poi-3.17" level="project" />
@@ -22,7 +21,6 @@
     <orderEntry type="library" name="jboss-vfs-3.2.17.Final" level="project" />
     <orderEntry type="library" name="jna-5.12.1" level="project" />
     <orderEntry type="library" name="lept4j-1.16.2" level="project" />
-    <orderEntry type="library" name="pdfbox-2.0.26" level="project" />
     <orderEntry type="library" name="pdfbox-debugger-2.0.26" level="project" />
     <orderEntry type="library" name="pdfbox-tools-2.0.26" level="project" />
     <orderEntry type="library" name="slf4j-api-1.7.36" level="project" />
@@ -34,5 +32,7 @@
     <orderEntry type="library" name="slf4j-api-1.7.25" level="project" />
     <orderEntry type="library" name="log4j1" level="project" />
     <orderEntry type="library" name="pdf-renderer" level="project" />
+    <orderEntry type="library" name="jSerialComm-2.9.3" level="project" />
+    <orderEntry type="library" name="pdfbox-2.0.27" level="project" />
   </component>
 </module>

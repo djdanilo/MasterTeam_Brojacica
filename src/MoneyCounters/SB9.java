@@ -18,8 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static GUI.MainWindow.model_ocrText;
-import static GUI.MainWindow.model_serialImage;
+import static GUI.MainWindow.*;
 
 public class SB9 {
     public static Logger log = Logger.getLogger(SB9.class.getName());
@@ -91,7 +90,9 @@ public class SB9 {
                             i--; // decrease the index by 1 to compensate for the removed element
                         }
                     }
+                    //logs
                     log.info("Receiving and modifying count data +" + countData);
+                    jt_logs.append(lb_timeDate.getText() + "     Preuzeta apoenska struktura\n");
 
                     //checking what currency is counted and processing data accordingly
                     if (countData.contains("RSD")) {
@@ -101,7 +102,6 @@ public class SB9 {
                     } else {
                         log.info("Received data for EUR or USD currency.");
                         //checking to see what currency is the data from the machine, and building the gui table accordingly
-                        MainWindow.lb_currency.setText(countData.get(6));
                         if (countData.contains("USD")) {
                             MainWindow.lb_currency.setText("RSD");
                             insertUSD(countData, MainWindow.jt_denom);
@@ -115,6 +115,7 @@ public class SB9 {
                             JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
 
                         ProgressBarFrame.label.setText("Preuzimam serijske brojeve");
+                        jt_logs.append(lb_timeDate.getText() + "     Preuzimam serijske brojeve\n");
 
                         //here I reset the InputStream, so it can be read again to receive the bytes needed to get the image
                         //of serial number
@@ -207,6 +208,9 @@ public class SB9 {
                     ButtonListeners.tableTotalAmountRows(MainWindow.jt_denom);
                     ButtonListeners.tableTotalAmountColumns(MainWindow.jt_denom);
 
+                    //logs
+                    jt_logs.append(lb_timeDate.getText() + "     Podaci primljeni\n");
+                    //closing progressBar
                     ProgressBarFrame.frame.dispose();
 
                 } catch (Exception e) {

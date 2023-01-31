@@ -1,0 +1,40 @@
+31-Jan-2023 21:12:26,633  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+31-Jan-2023 21:12:26,806  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+31-Jan-2023 21:12:26,806  INFO  (Main.java:22) - Attempting to connect to database.
+31-Jan-2023 21:12:27,012  INFO  (Main.java:25) - Succesfully connected to database!
+31-Jan-2023 21:12:27,482  INFO  (Main.java:32) - Showing login screen.
+31-Jan-2023 22:15:46,207  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+31-Jan-2023 22:15:46,335  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+31-Jan-2023 22:15:46,335  INFO  (Main.java:22) - Attempting to connect to database.
+31-Jan-2023 22:15:46,528  INFO  (Main.java:25) - Succesfully connected to database!
+31-Jan-2023 22:15:46,888  INFO  (Main.java:32) - Showing login screen.
+31-Jan-2023 22:16:34,388  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+31-Jan-2023 22:16:34,498  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+31-Jan-2023 22:16:34,499  INFO  (Main.java:22) - Attempting to connect to database.
+31-Jan-2023 22:16:34,680  INFO  (Main.java:25) - Succesfully connected to database!
+31-Jan-2023 22:16:34,987  INFO  (Main.java:32) - Showing login screen.
+31-Jan-2023 22:17:17,742  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+31-Jan-2023 22:17:17,862  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+31-Jan-2023 22:17:17,862  INFO  (Main.java:22) - Attempting to connect to database.
+31-Jan-2023 22:17:18,043  INFO  (Main.java:25) - Succesfully connected to database!
+31-Jan-2023 22:17:18,359  INFO  (Main.java:32) - Showing login screen.
+31-Jan-2023 22:20:17,908  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+31-Jan-2023 22:20:18,019  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+31-Jan-2023 22:20:18,020  INFO  (Main.java:22) - Attempting to connect to database.
+31-Jan-2023 22:20:18,201  INFO  (Main.java:25) - Succesfully connected to database!
+31-Jan-2023 22:20:18,537  INFO  (Main.java:32) - Showing login screen.
+31-Jan-2023 22:21:05,784  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+31-Jan-2023 22:21:05,904  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+31-Jan-2023 22:21:05,905  INFO  (Main.java:22) - Attempting to connect to database.
+31-Jan-2023 22:21:06,086  INFO  (Main.java:25) - Succesfully connected to database!
+31-Jan-2023 22:21:06,399  INFO  (Main.java:32) - Showing login screen.
+31-Jan-2023 22:23:45,773  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+31-Jan-2023 22:23:45,887  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+31-Jan-2023 22:23:45,887  INFO  (Main.java:22) - Attempting to connect to database.
+31-Jan-2023 22:23:46,066  INFO  (Main.java:25) - Succesfully connected to database!
+31-Jan-2023 22:23:46,375  INFO  (Main.java:32) - Showing login screen.
+31-Jan-2023 22:27:24,804  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+31-Jan-2023 22:27:24,923  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+31-Jan-2023 22:27:24,923  INFO  (Main.java:22) - Attempting to connect to database.
+31-Jan-2023 22:27:25,112  INFO  (Main.java:25) - Succesfully connected to database!
+31-Jan-2023 22:27:25,428  INFO  (Main.java:32) - Showing login screen.

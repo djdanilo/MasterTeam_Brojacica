@@ -1,0 +1,262 @@
+28-Jan-2023 22:02:11,052  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:02:11,165  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:02:11,165  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:02:11,358  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:02:11,676  INFO  (Main.java:32) - Showing login screen.
+28-Jan-2023 22:03:05,053  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:03:05,166  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:03:05,166  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:03:05,346  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:03:05,657  INFO  (Main.java:32) - Showing login screen.
+28-Jan-2023 22:03:14,310  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:03:14,424  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:03:14,424  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:03:14,605  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:03:14,915  INFO  (Main.java:32) - Showing login screen.
+28-Jan-2023 22:17:28,965  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:17:29,077  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:17:29,077  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:17:29,258  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:17:29,572  INFO  (Main.java:32) - Showing login screen.
+28-Jan-2023 22:19:12,288  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:19:12,403  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:19:12,403  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:19:12,581  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:19:12,834  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:19:16,015  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:19:16,060  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:19:16,061  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:19:16,139  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:19:18,005  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:19:18,025  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:19:18,186  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:19:57,139  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:19:57,252  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:19:57,252  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:19:57,438  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:19:57,668  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:20:00,423  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:20:00,467  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:20:00,468  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:20:00,511  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:20:01,644  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:20:01,647  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:20:01,789  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:26:07,290  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:26:07,402  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:26:07,402  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:26:07,583  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:26:07,811  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:26:10,190  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:26:10,236  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:26:10,236  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:26:10,280  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:26:11,885  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:26:11,888  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:26:12,042  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:26:13,422  INFO  (MainWindow.java:318) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:26:29,105  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:26:29,215  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:26:29,215  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:26:29,401  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:26:29,627  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:26:32,151  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:26:32,195  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:26:32,196  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:26:32,239  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:26:33,500  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:26:33,503  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:26:33,593  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:26:34,575  INFO  (MainWindow.java:318) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:28:45,935  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:28:46,046  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:28:46,047  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:28:46,228  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:28:46,463  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:28:55,275  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:28:55,388  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:28:55,388  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:28:55,580  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:28:55,810  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:28:58,679  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:28:58,725  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:28:58,726  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:28:58,769  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:29:00,172  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:29:00,176  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:29:00,335  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:29:02,415  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:29:11,286  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:29:46,410  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:29:46,520  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:29:46,521  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:29:46,711  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:29:46,937  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:29:49,863  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:29:49,906  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:29:49,907  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:29:49,950  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:29:51,188  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:29:51,191  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:29:51,280  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:29:52,686  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:29:53,879  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:29:55,159  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:29:55,806  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:29:56,534  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:29:58,271  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:29:59,255  INFO  (MainWindow.java:320) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:16,048  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:32:16,158  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:32:16,158  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:32:16,346  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:32:16,572  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:32:19,015  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:32:19,059  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:32:19,060  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:32:19,102  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:32:20,333  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:32:20,337  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:32:20,496  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:32:21,510  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:24,727  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:24,919  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:25,119  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:25,359  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:25,622  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:26,031  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:26,398  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:26,583  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:26,767  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:33,676  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:32:33,792  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:32:33,792  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:32:33,978  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:32:34,210  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:32:36,615  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:32:36,660  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:32:36,661  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:32:36,705  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:32:37,724  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:32:37,727  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:32:37,804  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:32:41,879  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:42,519  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:42,687  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:42,847  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:43,015  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:43,167  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:43,327  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:43,479  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:43,630  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:32:43,791  INFO  (MainWindow.java:322) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:36,825  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:33:36,935  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:33:36,935  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:33:37,117  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:33:37,341  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:33:39,423  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:33:39,470  INFO  (ChooseCounter.java:85) - Adding machines SB-9 to be available
+28-Jan-2023 22:33:39,471  INFO  (ChooseCounter.java:85) - Adding machines ML-2F to be available
+28-Jan-2023 22:33:39,513  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:33:40,676  INFO  (ChooseCounter.java:195) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:33:40,679  INFO  (ChooseCounter.java:204) - Opening port with settings for SB-9
+28-Jan-2023 22:33:40,821  INFO  (ChooseCounter.java:217) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:33:43,230  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:43,694  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:43,855  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:44,014  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:44,175  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:44,359  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:44,847  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:45,015  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:45,175  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:45,335  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:33:45,503  INFO  (MainWindow.java:323) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:37:04,216  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:37:04,332  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:37:04,333  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:37:04,517  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:37:04,746  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:37:07,663  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:37:07,716  INFO  (ChooseCounter.java:86) - Adding machines SB-9 to be available
+28-Jan-2023 22:37:07,717  INFO  (ChooseCounter.java:86) - Adding machines ML-2F to be available
+28-Jan-2023 22:37:07,781  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:37:09,254  INFO  (ChooseCounter.java:196) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:37:09,257  INFO  (ChooseCounter.java:205) - Opening port with settings for SB-9
+28-Jan-2023 22:37:09,267  ERROR (ChooseCounter.java:215) - Cannot invoke "javax.swing.JTextArea.append(String)" because "GUI.MainWindow.jt_logs" is null
+28-Jan-2023 22:37:09,343  INFO  (ChooseCounter.java:220) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:39:48,756  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:39:48,866  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:39:48,866  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:39:49,045  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:39:49,269  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:39:51,432  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:39:51,483  INFO  (ChooseCounter.java:86) - Adding machines SB-9 to be available
+28-Jan-2023 22:39:51,484  INFO  (ChooseCounter.java:86) - Adding machines ML-2F to be available
+28-Jan-2023 22:39:51,549  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:39:52,516  INFO  (ChooseCounter.java:196) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:39:52,519  INFO  (ChooseCounter.java:205) - Opening port with settings for SB-9
+28-Jan-2023 22:39:52,655  INFO  (ChooseCounter.java:218) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:40:43,734  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:40:43,844  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:40:43,844  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:40:44,022  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:40:44,249  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:40:46,416  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:40:46,460  INFO  (ChooseCounter.java:86) - Adding machines SB-9 to be available
+28-Jan-2023 22:40:46,461  INFO  (ChooseCounter.java:86) - Adding machines ML-2F to be available
+28-Jan-2023 22:40:46,504  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:40:47,485  INFO  (ChooseCounter.java:196) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:40:47,488  INFO  (ChooseCounter.java:205) - Opening port with settings for SB-9
+28-Jan-2023 22:40:47,587  INFO  (ChooseCounter.java:218) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:40:51,247  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:40:57,256  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:41:02,544  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:41:03,415  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:41:12,311  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:42:03,750  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:42:03,872  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:42:03,873  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:42:04,056  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:42:04,281  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:42:06,503  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:42:06,549  INFO  (ChooseCounter.java:86) - Adding machines SB-9 to be available
+28-Jan-2023 22:42:06,550  INFO  (ChooseCounter.java:86) - Adding machines ML-2F to be available
+28-Jan-2023 22:42:06,592  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:42:07,604  INFO  (ChooseCounter.java:196) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:42:07,607  INFO  (ChooseCounter.java:205) - Opening port with settings for SB-9
+28-Jan-2023 22:42:07,710  INFO  (ChooseCounter.java:218) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:42:12,527  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:42:14,303  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:42:15,023  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:42:17,271  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:42:17,791  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:42:17,959  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:42:18,143  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:42:18,479  INFO  (MainWindow.java:325) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:43:45,168  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:43:45,284  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:43:45,285  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:43:45,475  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:43:45,705  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:43:47,752  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:43:47,798  INFO  (ChooseCounter.java:86) - Adding machines SB-9 to be available
+28-Jan-2023 22:43:47,799  INFO  (ChooseCounter.java:86) - Adding machines ML-2F to be available
+28-Jan-2023 22:43:47,842  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:43:48,853  INFO  (ChooseCounter.java:196) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:43:48,857  INFO  (ChooseCounter.java:205) - Opening port with settings for SB-9
+28-Jan-2023 22:43:48,997  INFO  (ChooseCounter.java:218) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+28-Jan-2023 22:43:51,191  INFO  (MainWindow.java:326) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:43:53,775  INFO  (MainWindow.java:326) - Clearing OCR and Serial Image data.
+28-Jan-2023 22:44:33,872  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+28-Jan-2023 22:44:33,981  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+28-Jan-2023 22:44:33,981  INFO  (Main.java:22) - Attempting to connect to database.
+28-Jan-2023 22:44:34,159  INFO  (Main.java:25) - Succesfully connected to database!
+28-Jan-2023 22:44:34,386  INFO  (Main.java:31) - Showing login screen.
+28-Jan-2023 22:44:37,415  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+28-Jan-2023 22:44:37,461  INFO  (ChooseCounter.java:86) - Adding machines SB-9 to be available
+28-Jan-2023 22:44:37,462  INFO  (ChooseCounter.java:86) - Adding machines ML-2F to be available
+28-Jan-2023 22:44:37,507  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+28-Jan-2023 22:44:39,318  INFO  (ChooseCounter.java:196) - Connected to port Communications Port (COM1)
+28-Jan-2023 22:44:39,321  INFO  (ChooseCounter.java:205) - Opening port with settings for SB-9

@@ -164,7 +164,6 @@ public class ButtonListeners {
                             (int) (format.getImageableX() + ((pwidth - width) / 2)),
                             (int) format.getImageableY(), width, (int) pheight);
                 }
-
                 // render the page
                 PDFRenderer pgs = new PDFRenderer(page, g2, imgbounds, null,
                         null);
@@ -172,6 +171,7 @@ public class ButtonListeners {
                     page.waitForFinish();
                     pgs.run();
                 } catch (InterruptedException ie) {
+                    ie.printStackTrace();
                 }
 
                 return PAGE_EXISTS;

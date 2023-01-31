@@ -32,14 +32,16 @@ public class PDFExportDatabase {
             Font.BOLD);
 
 
-    public static void createPdfExport(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, String[] serialImage) {
+    public static void createPdfExport(String Id, String time, String user, String client, String file, String[] denomination, String[] serialOcr, String[] serialImage) {
         try {
             Document document = new Document();
-            PdfWriter.getInstance(document, new FileOutputStream(file));
+            FileOutputStream fos = new FileOutputStream(file);
+            PdfWriter.getInstance(document, fos);
             document.open();
             addMetaData(document);
-            createPdf(document, Id, user, new Date(), client, denomination, serialOcr, serialImage);
+            createPdf(document, Id, time, user, new Date(), client, denomination, serialOcr, serialImage);
             document.close();
+            fos.close();
             System.out.println("PDF file has been generated successfully.");
         } catch (Exception e) {
             e.printStackTrace();
@@ -54,7 +56,7 @@ public class PDFExportDatabase {
         document.addCreator("Danilo Djurovic");
     }
 
-    public static void createPdf(Document document, String id, String user, Date date, String client, String[] denomination, String[] serialOcr, String[] serialImage)
+    public static void createPdf(Document document, String id, String time, String user, Date date, String client, String[] denomination, String[] serialOcr, String[] serialImage)
             throws DocumentException {
         Paragraph preface = new Paragraph();
         // We add one empty line
@@ -70,6 +72,7 @@ public class PDFExportDatabase {
         addEmptyLine(preface, 2);
 
         preface.add(new Paragraph("Id transakcije: " + id, smallBold));
+        preface.add(new Paragraph("Vreme transakcije: " + time, smallBold));
         preface.add(new Paragraph("Klijent: " + client, smallBold));
 
         addEmptyLine(preface, 1);
@@ -94,7 +97,7 @@ public class PDFExportDatabase {
         int rowsPerTable = 20;
         int currentRow = 0;
 
-        while(currentRow < rows.size()){
+        while (currentRow < rows.size()) {
             PdfPTable smallTable = new PdfPTable(largeTable.getNumberOfColumns());
             smallTable.setWidthPercentage(100);
             for (int i = currentRow; i < currentRow + rowsPerTable; i++) {
@@ -263,39 +266,51 @@ public class PDFExportDatabase {
         try {
             int i = 0;
             int j = 1;
-            while (j < serialImage.length) {
-                table.addCell(serialOcr[i]);
-                table.addCell(serialOcr[i + 1]);
+            int row = 0;
 
-                BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
-                Graphics2D g2d = img.createGraphics();
-                java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
-                g2d.setFont(font);
-                int height = g2d.getFontMetrics().getHeight();
-                g2d.dispose();
+            while (row < (serialOcr.length + 1) / 2) {
+                if (serialImage.length > 1) {
+                    table.addCell(serialOcr[i]);
+                    table.addCell(serialOcr[i + 1]);
 
-                img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
-                g2d = img.createGraphics();
+                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
+                    Graphics2D g2d = img.createGraphics();
+                    java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
+                    g2d.setFont(font);
+                    int height = g2d.getFontMetrics().getHeight();
+                    g2d.dispose();
 
-                g2d.setFont(font);
-                g2d.setColor(Color.WHITE);
-                int fontSize = 1;
+                    img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
+                    g2d = img.createGraphics();
 
-                for (String line2 : serialImage[j].split(newLine2)) {
+                    g2d.setFont(font);
+                    g2d.setColor(Color.WHITE);
+                    int fontSize = 1;
 
-                    g2d.drawString(line2, 0, height);
-                    height += fontSize;
+                    for (String line2 : serialImage[j].split(newLine2)) {
+
+                        g2d.drawString(line2, 0, height);
+                        height += fontSize;
+                    }
+
+                    File file = new File("images\\TextDB" + j + ".png");
+
+                    ImageIO.write(img, "png", file);
+
+                    g2d.dispose();
+
+                    table.addCell(Image.getInstance(img, null));
+                    i += 2;
+                    j++;
+                    row++;
+                } else {
+                    table.addCell(serialOcr[i]);
+                    table.addCell(serialOcr[i + 1]);
+                    table.addCell("/");
+                    i += 2;
+                    j++;
+                    row++;
                 }
-
-                File file = new File("images\\TextDB" + j + ".png");
-
-                ImageIO.write(img, "png", file);
-
-                g2d.dispose();
-
-                table.addCell(Image.getInstance(img, null));
-                i += 2;
-                j++;
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();

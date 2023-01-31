@@ -14,14 +14,10 @@ import java.awt.event.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Objects;
 
 public class ChooseCounter extends JFrame {
     public static Logger log = Logger.getLogger(ChooseCounter.class.getName());
-    private JPanel panel;
-    private JLabel lb_title;
-    private JLabel lb_chooseMachine;
-    private JLabel lb_chooseComPort;
-    private JLabel lb_baudrate;
     private static JComboBox<String> cb_chooseMachine;
     public static JComboBox<String> cb_chooseComPort;
     private static JComboBox<String> cb_baudrate;
@@ -29,7 +25,6 @@ public class ChooseCounter extends JFrame {
     private JButton btn_reset;
     private JButton btn_refreshPort;
     public static String port;
-    private LoginScreen loginScreen;
 
 
     public ChooseCounter() {
@@ -42,31 +37,30 @@ public class ChooseCounter extends JFrame {
         initComponents();
         initListeners();
         this.setVisible(true);
-
     }
 
     private void initComponents() {
 
         //setting a layout for the window
-        panel = new JPanel();
+        JPanel panel = new JPanel();
         SpringLayout sl = new SpringLayout();
         panel.setLayout(sl);
         Border b = BorderFactory.createEtchedBorder(1);
 
-        Font f = new Font("Arial", 1, 12);
+        Font f = new Font("Arial", Font.BOLD, 12);
 
         //initializing components
-        lb_title = new JLabel("PODEŠAVANJA BROJAČICE");
-        lb_title.setFont(new Font("Arial", 1, 14));
+        JLabel lb_title = new JLabel("PODEŠAVANJA BROJAČICE");
+        lb_title.setFont(new Font("Arial", Font.BOLD, 14));
         lb_title.setBorder(b);
 
-        lb_chooseMachine = new JLabel("Izaberite brojač novca:");
+        JLabel lb_chooseMachine = new JLabel("Izaberite brojač novca:");
         lb_chooseMachine.setFont(f);
 
-        lb_chooseComPort = new JLabel("Izaberite port:");
+        JLabel lb_chooseComPort = new JLabel("Izaberite port:");
         lb_chooseComPort.setFont(f);
 
-        lb_baudrate = new JLabel("Izaberite brzinu:");
+        JLabel lb_baudrate = new JLabel("Izaberite brzinu:");
         lb_baudrate.setFont(f);
 
         cb_chooseMachine = new JComboBox<>();
@@ -199,11 +193,11 @@ public class ChooseCounter extends JFrame {
                     }
 
                     try {
-                        if (cb_chooseMachine.getSelectedItem().equals("SB-9")) {
+                        if (Objects.equals(cb_chooseMachine.getSelectedItem(), "SB-9")) {
                             SB9.readingData(serialPort);
                             log.info("Opening port with settings for SB-9");
-                        } else if (cb_chooseMachine.getSelectedItem().equals("ML-2F")
-                                            || cb_chooseMachine.getSelectedItem().equals("ML-2FS")) {
+                        } else if (Objects.equals(cb_chooseMachine.getSelectedItem(), "ML-2F")
+                                            || Objects.equals(cb_chooseMachine.getSelectedItem(), "ML-2FS")) {
                             ML2F.readingData(serialPort);
                             log.info("Opening port with settings for ML-2F");
                         }

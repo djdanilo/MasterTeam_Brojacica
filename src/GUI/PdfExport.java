@@ -32,13 +32,13 @@ public class PdfExport {
             Font.BOLD);
 
 
-    public static void createPdfExport(String Id, String user, String client, String file, String[] denomination, String[] serialOcr, ArrayList<java.awt.Image> serialImage) {
+    public static void createPdfExport(String Id, String time, String user, String client, String file, String[] denomination, String[] serialOcr, ArrayList<java.awt.Image> serialImage) {
         try {
             Document document = new Document();
             PdfWriter.getInstance(document, new FileOutputStream(file));
             document.open();
             addMetaData(document);
-            createPdf(document, Id, user, new Date(), client, denomination, serialOcr, serialImage);
+            createPdf(document, Id, time, user, new Date(), client, denomination, serialOcr, serialImage);
             document.close();
             System.out.println("PDF file has been generated successfully.");
         } catch (Exception e) {
@@ -54,7 +54,7 @@ public class PdfExport {
         document.addCreator("Master Team");
     }
 
-    public static void createPdf(Document document, String id, String user, Date date, String client, String[] denomination, String[] serialOcr, ArrayList<java.awt.Image> serialImage)
+    public static void createPdf(Document document, String id, String time, String user, Date date, String client, String[] denomination, String[] serialOcr, ArrayList<java.awt.Image> serialImage)
             throws DocumentException {
         Paragraph preface = new Paragraph();
         // We add one empty line
@@ -70,6 +70,7 @@ public class PdfExport {
         addEmptyLine(preface, 2);
 
         preface.add(new Paragraph("Id transakcije: " + id, smallBold));
+        preface.add(new Paragraph("Vreme transakcije: " + time, smallBold));
         preface.add(new Paragraph("Klijent: " + client, smallBold));
 
         addEmptyLine(preface, 1);

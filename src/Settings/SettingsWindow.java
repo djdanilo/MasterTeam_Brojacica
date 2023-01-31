@@ -228,6 +228,9 @@ public class SettingsWindow extends JFrame {
                         System.out.println("User successfully added");
                         log.info("Adding user [" + tf_username.getText() + "] with password " + Arrays.toString(pf_password.getPassword()));
 
+                        JOptionPane.showMessageDialog(null, "Uspešno ste izvršili podešavanja. \n Ponovo pokrenite program nakon potvrde.", "Pažnja!", JOptionPane.OK_OPTION);
+                        System.exit(0);
+
                     } catch (Exception ex) {
                         ex.printStackTrace();
                         log.error(ex.getMessage());

@@ -15,9 +15,7 @@
       <element id="library" level="project" name="jboss-logging-3.1.4.GA" />
       <element id="library" level="project" name="jboss-vfs-3.2.17.Final" />
       <element id="library" level="project" name="jna-5.12.1" />
-      <element id="library" level="project" name="jSerialComm-2.9.2" />
       <element id="library" level="project" name="lept4j-1.16.2" />
-      <element id="library" level="project" name="pdfbox-2.0.26" />
       <element id="library" level="project" name="pdfbox-debugger-2.0.26" />
       <element id="library" level="project" name="pdfbox-tools-2.0.26" />
       <element id="library" level="project" name="poi-3.17" />
@@ -54,6 +52,8 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/tess4j/jna-5.12.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-io-2.11.0.jar" path-in-jar="/" />
       <element id="library" level="project" name="log4j1" />
+      <element id="library" level="project" name="jSerialComm-2.9.3" />
+      <element id="library" level="project" name="pdf-renderer" />
     </root>
   </artifact>
 </component>
