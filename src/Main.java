@@ -27,8 +27,7 @@ public class Main {
             log.fatal(e.getMessage());
         }
         //Showing login screen
-        //new LoginScreen();
-        new DatabaseWindow();
+        new LoginScreen();
         log.info("Showing login screen.");
     }
 }

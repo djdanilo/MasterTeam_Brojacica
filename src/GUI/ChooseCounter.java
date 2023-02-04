@@ -182,7 +182,8 @@ public class ChooseCounter extends JFrame {
                     ComPorts comPorts = new ComPorts();
                     port = cb_chooseComPort.getSelectedItem().toString();
 
-                    SerialPort serialPort = comPorts.openSerialPort(SerialPort.getCommPort(port), 0, (String) cb_baudrate.getSelectedItem());
+                    try {
+                        SerialPort serialPort = comPorts.openSerialPort(SerialPort.getCommPort(port), 0, (String) cb_baudrate.getSelectedItem());
 
                     if (serialPort.isOpen()) {
                         JOptionPane.showMessageDialog(null, "Uspešno ste se povezali na " + serialPort.getSystemPortName() + ".", "Obaveštenje", JOptionPane.INFORMATION_MESSAGE);
@@ -192,7 +193,7 @@ public class ChooseCounter extends JFrame {
                         log.error("Error while opening the port.");
                     }
 
-                    try {
+
                         if (Objects.equals(cb_chooseMachine.getSelectedItem(), "SB-9")) {
                             SB9.readingData(serialPort);
                             log.info("Opening port with settings for SB-9");

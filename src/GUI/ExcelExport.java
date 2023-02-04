@@ -10,13 +10,11 @@ import org.apache.poi.ss.util.CellRangeAddress;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Date;
 
 public class ExcelExport {
@@ -30,6 +28,7 @@ public class ExcelExport {
             HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
             HSSFSheet hssfSheet = hssfWorkbook.createSheet("Transkacija");
             HSSFRow row0 = hssfSheet.createRow(0);
+            hssfSheet.setColumnWidth(1,3500);
             hssfSheet.setColumnWidth(3,7000);
 
             String newLine2 = "01100000110110010001101100010001101000011100001000101";
@@ -177,64 +176,75 @@ public class ExcelExport {
                 int i = 0;
                 int j = 1;
                 int row = 28;
-                while (j < serialImage.length){
-                    HSSFRow rowLoop = hssfSheet.createRow(row);
-                    rowLoop.createCell(0).setCellValue(serialOcr[i]);
-                    rowLoop.createCell(1).setCellValue(serialOcr[i+1]);
 
-                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
-                    Graphics2D g2d = img.createGraphics();
-                    java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
-                    g2d.setFont(font);
-                    int height = g2d.getFontMetrics().getHeight();
-                    g2d.dispose();
+                while (j < (serialOcr.length + 1) / 2) {
+                    if (serialImage.length > 1) {
+                        HSSFRow rowLoop = hssfSheet.createRow(row);
+                        rowLoop.createCell(0).setCellValue(serialOcr[i]);
+                        rowLoop.createCell(1).setCellValue(serialOcr[i + 1]);
 
-                    img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
-                    g2d = img.createGraphics();
+                        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
+                        Graphics2D g2d = img.createGraphics();
+                        java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
+                        g2d.setFont(font);
+                        int height = g2d.getFontMetrics().getHeight();
+                        g2d.dispose();
 
-                    g2d.setFont(font);
-                    g2d.setColor(Color.WHITE);
-                    int fontSize = 1;
+                        img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
+                        g2d = img.createGraphics();
 
-                    for (String line2 : serialImage[j].split(newLine2)) {
+                        g2d.setFont(font);
+                        g2d.setColor(Color.WHITE);
+                        int fontSize = 1;
 
-                        g2d.drawString(line2, 0, height);
-                        height += fontSize;
+                        for (String line2 : serialImage[j].split(newLine2)) {
+
+                            g2d.drawString(line2, 0, height);
+                            height += fontSize;
+                        }
+
+                        File file2 = new File("images\\TextDB" + j + ".png");
+
+                        ImageIO.write(img, "png", file2);
+
+                        g2d.dispose();
+
+                        InputStream inputStream = new FileInputStream(file2);
+                        //Get the contents of an InputStream as a byte[].
+                        byte[] bytes = IOUtils.toByteArray(inputStream);
+                        //Adds a picture to the workbook
+                        int pictureIdx = hssfWorkbook.addPicture(bytes, hssfWorkbook.PICTURE_TYPE_PNG);
+                        //close the input stream
+                        inputStream.close();
+
+                        //Returns an object that handles instantiating concrete classes
+                        CreationHelper helper = hssfWorkbook.getCreationHelper();
+                        //Creates the top-level drawing patriarch.
+                        Drawing drawing = hssfSheet.createDrawingPatriarch();
+                        //Create an anchor that is attached to the worksheet
+                        ClientAnchor anchor = helper.createClientAnchor();
+                        anchor.setCol1(3); //Column B
+                        anchor.setRow1(row); //Row 3
+                        anchor.setCol2(4); //Column C
+                        anchor.setRow2(row + 1); //Row 4
+
+                        Picture pict = drawing.createPicture(anchor, pictureIdx);
+
+                        //Cell cell = hssfSheet.createRow(28).createCell(3);
+                        //rowLoop.createCell(2).setCellValue(img);
+
+                        i += 2;
+                        j++;
+                        row++;
+                    }else {
+                        HSSFRow rowLoop = hssfSheet.createRow(row);
+                        rowLoop.createCell(0).setCellValue(serialOcr[i]);
+                        rowLoop.createCell(1).setCellValue(serialOcr[i + 1]);
+                        rowLoop.createCell(2).setCellValue("/");
+                        i += 2;
+                        row++;
+                        j++;
                     }
-
-                    File file2 = new File("images\\TextDB" + j + ".png");
-
-                    ImageIO.write(img, "png", file2);
-
-                    g2d.dispose();
-
-                    InputStream inputStream = new FileInputStream(file2);
-                    //Get the contents of an InputStream as a byte[].
-                    byte[] bytes = IOUtils.toByteArray(inputStream);
-                    //Adds a picture to the workbook
-                    int pictureIdx = hssfWorkbook.addPicture(bytes, hssfWorkbook.PICTURE_TYPE_PNG);
-                    //close the input stream
-                    inputStream.close();
-
-                    //Returns an object that handles instantiating concrete classes
-                    CreationHelper helper = hssfWorkbook.getCreationHelper();
-                    //Creates the top-level drawing patriarch.
-                    Drawing drawing = hssfSheet.createDrawingPatriarch();
-                    //Create an anchor that is attached to the worksheet
-                    ClientAnchor anchor = helper.createClientAnchor();
-                    anchor.setCol1(3); //Column B
-                    anchor.setRow1(row); //Row 3
-                    anchor.setCol2(4); //Column C
-                    anchor.setRow2(row+1); //Row 4
-
-                    Picture pict = drawing.createPicture(anchor, pictureIdx);
-
-                    //Cell cell = hssfSheet.createRow(28).createCell(3);
-                    //rowLoop.createCell(2).setCellValue(img);
-
-                    i+=2;
-                    j++;
-                    row++;
                 }
             }catch (ArrayIndexOutOfBoundsException e){
                 e.printStackTrace();

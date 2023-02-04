@@ -31,7 +31,7 @@ public class ConnectionDB {
 
     String sqlQuery = "CREATE TABLE IF NOT EXISTS users(\n" +
             "    Id integer primary key autoincrement not null,\n" +
-            "    userName text not null,\n" +
+            "    userName text not null unique,\n" +
             "    password text not null\n" +
             ");";
     String sqlQuery1 = "CREATE TABLE IF NOT EXISTS transactions(\n" +
@@ -40,7 +40,7 @@ public class ConnectionDB {
             "    Timestamp datetime not null,\n" +
             "    Denomination text not null,\n" +
             "    SerialNumberOCR text,\n" +
-            "    SerialNumberImage text\n" +
+            "    SerialNumberImage text,\n" +
             "    Operator text\n" +
             ")";
     String sqlQuery2 = "CREATE TABLE IF NOT EXISTS machines(\n" +
