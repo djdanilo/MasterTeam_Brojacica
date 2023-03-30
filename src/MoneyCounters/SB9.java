@@ -49,6 +49,8 @@ public class SB9 {
                     List<String> ocrText = new ArrayList<>();
                     //here I save the images from the machine
                     List<ImageIcon> serialImage = new ArrayList<>();
+                    //string for denomination
+                    String denomination = "";
 
                     //Strings that represent the start of the serial number and new lines on each serial number
                     String startSn = "110000010011010001101100100011011000100011010000111000010001010";
@@ -97,23 +99,27 @@ public class SB9 {
                     //checking what currency is counted and processing data accordingly
                     if (countData.contains("RSD")) {
                         MainWindow.lb_currency.setText("RSD");
+                        denomination = "RSD";
                         insertRSD(countData, MainWindow.jt_denom);
                         log.info("Received data for RSD currency. Saving to table.");
                     } else {
                         log.info("Received data for EUR or USD currency.");
                         //checking to see what currency is the data from the machine, and building the gui table accordingly
                         if (countData.contains("USD")) {
-                            MainWindow.lb_currency.setText("RSD");
+                            denomination = "USD";
                             insertUSD(countData, MainWindow.jt_denom);
                         }
                         else if (countData.contains("EUR")) {
-                            MainWindow.lb_currency.setText("RSD");
+                            MainWindow.lb_currency.setText("EUR");
+                            denomination = "EUR";
                             insertEUR(countData, MainWindow.jt_denom);
                         }
-                        else
+                        else {
                             //in case none of the above currencies is chosen, we show the error message on JOptionPane
                             JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
-
+                            ProgressBarFrame.frame.dispose();
+                            return;
+                        }
                         ProgressBarFrame.label.setText("Preuzimam serijske brojeve");
                         jt_logs.append(lb_timeDate.getText() + "     Preuzimam serijske brojeve\n");
 
@@ -160,25 +166,26 @@ public class SB9 {
                                 height += fontSize;
                             }
                             //creating the image file
-                            File file = new File("images\\Serijski broj" + i + ".png");
+                            File tempFile = File.createTempFile("temp"+i, ".png");
+                            tempFile.deleteOnExit();
                             //saving the image to file
-                            ImageIO.write(img, "png", file);
+                            ImageIO.write(img, "png", tempFile);
                             g2d.dispose();
-                            log.info("Creating an image of serial number in file " + file.getAbsolutePath());
+                            log.info("Creating an image of serial number in file " + tempFile.getAbsolutePath());
 
                             //here we fix some mistakes that Tesseracts does when doing OCR on images and add the data to OCR string array
-                            MainWindow.ocrDenomination.add(trainOcr(ButtonListeners.SerialOcr(file)));
-                            ocrText.add(trainOcr(ButtonListeners.SerialOcr(file)));
+                            MainWindow.ocrDenomination.add(trainOcr(ButtonListeners.SerialOcr(tempFile)));
+                            ocrText.add(trainOcr(ButtonListeners.SerialOcr(tempFile)));
                             log.info("Doing OCR on image files of serial numbers.");
                             //we convert to image to ImageIcon and add it to ImageIcon array
                             serialImage.add(makeIcon(img));
                             log.info("Adding images to an array");
 
-                            ProgressBarFrame.label.setText("Preuzimam serijske brojeve: " + file.getName());
+                            ProgressBarFrame.label.setText("Preuzimam serijske brojeve: "
+                                    + ButtonListeners.SerialOcr(tempFile));
                         }
                         //here we add ocrText to gui MainWindow
                         try {
-                            DefaultListModel<String> model1 = new DefaultListModel<>();
                             int j = 0;
                             boolean valid = true;
                             for (int i = 51; i < countData.size(); i++) {
@@ -203,11 +210,11 @@ public class SB9 {
                         }
                         MainWindow.jList_serialImage.setModel(model_serialImage);
 
+                        in.close();
                     }
                     //after getting all the data to the table in MainWindow, we calculate the total count data
                     ButtonListeners.tableTotalAmountRows(MainWindow.jt_denom);
-                    ButtonListeners.tableTotalAmountColumns(MainWindow.jt_denom);
-
+                    ButtonListeners.tableTotalAmountColumns(MainWindow.jt_denom, denomination);
                     //logs
                     jt_logs.append(lb_timeDate.getText() + "     Podaci primljeni\n");
                     //closing progressBar
@@ -236,6 +243,8 @@ public class SB9 {
         jt_denom.setValueAt("100", 4, 0);
         jt_denom.setValueAt("200", 5, 0);
         jt_denom.setValueAt("500", 6, 0);
+        jt_denom.setValueAt("", 7, 0);
+        jt_denom.setValueAt("", 8, 0);
         jt_denom.setValueAt("Ukupno", 9, 0);
 
         for (int i = 0; i < line.size(); i++) {
@@ -261,6 +270,8 @@ public class SB9 {
         jt_denom.setValueAt("20", 4, 0);
         jt_denom.setValueAt("50", 5, 0);
         jt_denom.setValueAt("100", 6, 0);
+        jt_denom.setValueAt("", 7, 0);
+        jt_denom.setValueAt("", 8, 0);
         jt_denom.setValueAt("Ukupno", 9, 0);
 
         for (int i = 0; i < line.size(); i++) {

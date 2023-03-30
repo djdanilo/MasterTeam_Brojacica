@@ -117,7 +117,7 @@ create table machines(
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\Danilo\Desktop\MasterTeam_Brojacica\MoneyCounter_App.db" schema="main" />
+            <file path="C:\Users\danilodjurovic\IdeaProjects\MasterTeam_Brojacica\MoneyCounter_App.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

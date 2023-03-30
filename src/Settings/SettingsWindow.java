@@ -35,7 +35,7 @@ public class SettingsWindow extends JFrame {
         this.setSize(400, 350);
         this.setTitle("Servisna podešavanja");
         this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setResizable(false);
         initComponents();
         initListeners();

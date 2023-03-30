@@ -44,7 +44,7 @@ public class ButtonListeners {
         }
     }
 
-    public static void tableTotalAmountColumns(JTable table) {
+    public static void tableTotalAmountColumns(JTable table, String denomination) {
         int totalPcs2 = 0;
         int denom2 = 0;
         try {
@@ -61,7 +61,7 @@ public class ButtonListeners {
             }
 
             table.setValueAt(String.valueOf(totalPcs2), 9, 1);
-            table.setValueAt(String.valueOf(denom2), 9, 2);
+            table.setValueAt(String.valueOf(denom2) + " " + denomination, 9, 2);
 
         } catch (NumberFormatException | NullPointerException e) {
             e.printStackTrace();
@@ -204,6 +204,17 @@ public class ButtonListeners {
     }
 
     public static String SerialOcr(File file) throws TesseractException {
+
+        Tesseract tesseract = new Tesseract();
+        tesseract.setDatapath("tessdata");
+        tesseract.setLanguage("eng");
+        tesseract.setPageSegMode(7);
+        tesseract.setOcrEngineMode(1);
+
+        return tesseract.doOCR(file);
+    }
+
+    public static String SerialOcrK2(File file) throws TesseractException {
 
         Tesseract tesseract = new Tesseract();
         tesseract.setDatapath("tessdata");

@@ -117,6 +117,8 @@ public class PdfExport {
             throws BadElementException {
         PdfPTable table = new PdfPTable(3);
 
+        table.setWidthPercentage(100);
+
         // t.setBorderColor(BaseColor.GRAY);
         // t.setPadding(4);
         // t.setSpacing(4);
@@ -238,6 +240,8 @@ public class PdfExport {
             throws BadElementException {
         PdfPTable table = new PdfPTable(3);
 
+        table.setWidthPercentage(100);
+
         // t.setBorderColor(BaseColor.GRAY);
         // t.setPadding(4);
         // t.setSpacing(4);
@@ -255,7 +259,6 @@ public class PdfExport {
         c1.setHorizontalAlignment(Element.ALIGN_CENTER);
         table.addCell(c1);
         table.setHeaderRows(serialImage.size() - 1);
-
 
         try {
             int i = 0;

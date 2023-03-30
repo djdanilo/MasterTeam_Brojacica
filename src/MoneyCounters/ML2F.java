@@ -11,8 +11,12 @@ import org.apache.log4j.chainsaw.Main;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.InputStream;
 import java.util.*;
 import java.util.List;
+
+import static GUI.MainWindow.jt_logs;
+import static GUI.MainWindow.lb_timeDate;
 
 public class ML2F {
     public static Logger log = Logger.getLogger(ML2F.class.getName());
@@ -24,6 +28,9 @@ public class ML2F {
             public int getListeningEvents() {
                 return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
             }
+
+            //string for denomination
+            String denomination = "";
 
             @Override
             public void serialEvent(SerialPortEvent serialPortEvent) {
@@ -37,9 +44,11 @@ public class ML2F {
                 ButtonListeners.clearTable(MainWindow.jt_denom);
                 //showing progress of receiving data
                 new ProgressBarFrame();
+                //receiving data from Serial port
+                InputStream in = comPort.getInputStream();
 
                 try {
-                    Scanner sc = new Scanner(comPort.getInputStream());
+                    Scanner sc = new Scanner(in);
                     List<String> countData = new ArrayList<>();
                     while (sc.hasNextLine()) {
                         countData.add(sc.next());
@@ -47,31 +56,41 @@ public class ML2F {
                             break;
                         }
                     }
-                    System.out.println(countData);
                     log.info("Receiving: " + countData);
+                    jt_logs.append(lb_timeDate.getText() + "     Preuzeta apoenska struktura\n");
                     //inserting count data to the table in gui
                     if (countData.contains("RSD")) {
+                        denomination = "RSD";
                         insertRSD(countData, MainWindow.jt_denom);
+                        getSerialOcrRSD(MainWindow.jList_ocrText, MainWindow.jList_serialImage, countData, MainWindow.model_ocrText, MainWindow.model_serialImage);
                         log.info("Receiving data for RSD");
                     } else if (countData.contains("EUR")) {
                         insertEUR(countData, MainWindow.jt_denom);
+                        getSerialOcrEUR(MainWindow.jList_ocrText, MainWindow.jList_serialImage, countData, MainWindow.model_ocrText, MainWindow.model_serialImage);
+                        denomination = "EUR";
                         log.info("Receiving data for EUR");
                     } else if (countData.contains("USD")) {
                         insertUSD(countData, MainWindow.jt_denom);
+                        getSerialOcrUSD(MainWindow.jList_ocrText, MainWindow.jList_serialImage, countData, MainWindow.model_ocrText, MainWindow.model_serialImage);
+                        denomination = "USD";
                         log.info("Receiving data for USD");
                     } else {
                         //in case none of the above currencies is chosen, we show the error message on JOptionPane
                         JOptionPane.showMessageDialog(null, "Odabrana valuta nije podržana", "Greška!", JOptionPane.ERROR_MESSAGE);
                     }
 
+                    jt_logs.append(lb_timeDate.getText() + "     Preuzimam serijske brojeve\n");
                     //inserting serial numbers in table in gui
                     ProgressBarFrame.label.setText("Preuzimam serijske brojeve");
-                    getSerialOcrRSD(countData, MainWindow.model_ocrText, MainWindow.model_serialImage);
 
                     //calculating values in count data table
                     ButtonListeners.tableTotalAmountRows(MainWindow.jt_denom);
-                    ButtonListeners.tableTotalAmountColumns(MainWindow.jt_denom);
+                    ButtonListeners.tableTotalAmountColumns(MainWindow.jt_denom, denomination);
 
+                    jt_logs.append(lb_timeDate.getText() + "     Podaci primljeni\n");
+                    ProgressBarFrame.frame.dispose();
+
+                    in.close();
                 } catch (Exception e) {
                     e.printStackTrace();
                     log.error(e.getMessage());
@@ -90,17 +109,25 @@ public class ML2F {
         jt_denom.setValueAt("100", 4, 0);
         jt_denom.setValueAt("200", 5, 0);
         jt_denom.setValueAt("500", 6, 0);
+        jt_denom.setValueAt("", 7, 0);
+        jt_denom.setValueAt("", 8, 0);
         jt_denom.setValueAt("Ukupno", 9, 0);
 
         for (int i = 0; i < line.size(); i++) {
-            switch (line.get(i)) {
-                case "E5" -> jt_denom.setValueAt(line.get(i + 1), 0, 1);
-                case "E10" -> jt_denom.setValueAt(line.get(i + 1), 1, 1);
-                case "E20" -> jt_denom.setValueAt(line.get(i + 1), 2, 1);
-                case "E50" -> jt_denom.setValueAt(line.get(i + 1), 3, 1);
-                case "E100" -> jt_denom.setValueAt(line.get(i + 1), 4, 1);
-                case "E200" -> jt_denom.setValueAt(line.get(i + 1), 5, 1);
-                case "E500" -> jt_denom.setValueAt(line.get(i + 1), 6, 1);
+            if (line.get(i).equals("EUR") && line.get(i + 1).equals("5")) {
+                jt_denom.setValueAt(line.get(i + 3), 0, 1);
+            } else if (line.get(i).equals("EUR") && line.get(i + 1).equals("10")) {
+                jt_denom.setValueAt(line.get(i + 3), 1, 1);
+            } else if (line.get(i).equals("EUR") && line.get(i + 1).equals("20")) {
+                jt_denom.setValueAt(line.get(i + 3), 2, 1);
+            } else if (line.get(i).equals("EUR") && line.get(i + 1).equals("50")) {
+                jt_denom.setValueAt(line.get(i + 3), 3, 1);
+            } else if (line.get(i).equals("EUR") && line.get(i + 1).equals("100")) {
+                jt_denom.setValueAt(line.get(i + 3), 4, 1);
+            } else if (line.get(i).equals("EUR") && line.get(i + 1).equals("200")) {
+                jt_denom.setValueAt(line.get(i + 3), 5, 1);
+            } else if (line.get(i).equals("EUR") && line.get(i + 1).equals("500")) {
+                jt_denom.setValueAt(line.get(i + 3), 6, 1);
             }
         }
     }
@@ -115,17 +142,25 @@ public class ML2F {
         jt_denom.setValueAt("20", 4, 0);
         jt_denom.setValueAt("50", 5, 0);
         jt_denom.setValueAt("100", 6, 0);
+        jt_denom.setValueAt("", 7, 0);
+        jt_denom.setValueAt("", 8, 0);
         jt_denom.setValueAt("Ukupno", 9, 0);
 
         for (int i = 0; i < line.size(); i++) {
-            switch (line.get(i)) {
-                case "$1" -> jt_denom.setValueAt(line.get(i + 1), 0, 1);
-                case "$2" -> jt_denom.setValueAt(line.get(i + 1), 1, 1);
-                case "$5" -> jt_denom.setValueAt(line.get(i + 1), 2, 1);
-                case "$10" -> jt_denom.setValueAt(line.get(i + 1), 3, 1);
-                case "$20" -> jt_denom.setValueAt(line.get(i + 1), 4, 1);
-                case "$50" -> jt_denom.setValueAt(line.get(i + 1), 5, 1);
-                case "$100" -> jt_denom.setValueAt(line.get(i + 1), 6, 1);
+            if (line.get(i).equals("USD") && line.get(i + 1).equals("1")) {
+                jt_denom.setValueAt(line.get(i + 3), 0, 1);
+            } else if (line.get(i).equals("USD") && line.get(i + 1).equals("2")) {
+                jt_denom.setValueAt(line.get(i + 3), 1, 1);
+            } else if (line.get(i).equals("USD") && line.get(i + 1).equals("5")) {
+                jt_denom.setValueAt(line.get(i + 3), 2, 1);
+            } else if (line.get(i).equals("USD") && line.get(i + 1).equals("10")) {
+                jt_denom.setValueAt(line.get(i + 3), 3, 1);
+            } else if (line.get(i).equals("USD") && line.get(i + 1).equals("20")) {
+                jt_denom.setValueAt(line.get(i + 3), 4, 1);
+            } else if (line.get(i).equals("USD") && line.get(i + 1).equals("50")) {
+                jt_denom.setValueAt(line.get(i + 3), 5, 1);
+            } else if (line.get(i).equals("USD") && line.get(i + 1).equals("100")) {
+                jt_denom.setValueAt(line.get(i + 3), 6, 1);
             }
         }
     }
@@ -167,15 +202,48 @@ public class ML2F {
         }
     }
 
-    public static void getSerialOcrRSD(List<String> line, DefaultListModel<String> ocrModel, DefaultListModel<ImageIcon> serialImage) {
+    public static void getSerialOcrRSD(JList jList, JList jlist2, List<String> line, DefaultListModel<String> ocrModel, DefaultListModel<ImageIcon> serialImage) {
         String serial = "";
         int j = 0;
         for (int i = 0; i < line.size(); i++) {
             if (line.get(i).equals("N")) {
                 serial = "D" + line.get(i + 1) + " " + line.get(i + 2) + line.get(i + 3);
                 ocrModel.add(j, serial);
+                jList.setModel(ocrModel);
                 System.out.println(serial);
                 serialImage.add(j, createTransparentIcon(384, 40));
+                jlist2.setModel(serialImage);
+                j++;
+            }
+        }
+    }
+
+    public static void getSerialOcrUSD(JList jList, JList jlist2, List<String> line, DefaultListModel<String> ocrModel, DefaultListModel<ImageIcon> serialImage) {
+        String serial = "";
+        int j = 0;
+        for (int i = 0; i < line.size(); i++) {
+            if ((line.get(i).equals("O")) && (line.get(i + 2).length() >= 10)) {
+                serial = "$" + line.get(i + 1) + " " + line.get(i + 2);
+                ocrModel.add(j, serial);
+                jList.setModel(ocrModel);
+                serialImage.add(j, createTransparentIcon(384, 40));
+                jlist2.setModel(serialImage);
+                j++;
+            }
+        }
+    }
+
+    public static void getSerialOcrEUR(JList jList, JList jlist2, List<String> line, DefaultListModel<String> ocrModel, DefaultListModel<ImageIcon> serialImage) {
+        String serial = "";
+        int j = 0;
+        for (int i = 0; i < line.size(); i++) {
+            if (line.get(i).equals("N")) {
+                serial = "€" + line.get(i + 1) + " " + line.get(i + 2);
+                ocrModel.add(j, serial);
+                jList.setModel(ocrModel);
+                System.out.println(serial);
+                serialImage.add(j, createTransparentIcon(384, 40));
+                jlist2.setModel(serialImage);
                 j++;
             }
         }

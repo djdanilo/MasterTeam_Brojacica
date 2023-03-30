@@ -1,0 +1,68 @@
+10-Feb-2023 08:43:27,275  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+10-Feb-2023 08:43:27,500  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+10-Feb-2023 08:43:27,501  INFO  (Main.java:22) - Attempting to connect to database.
+10-Feb-2023 08:43:27,874  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+10-Feb-2023 08:43:28,092  INFO  (Main.java:31) - Showing login screen.
+10-Feb-2023 08:43:30,572  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+10-Feb-2023 08:43:30,653  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+10-Feb-2023 08:43:30,752  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+10-Feb-2023 08:43:32,827  ERROR (ChooseCounter.java:193) - Error while opening the port.
+10-Feb-2023 08:43:32,830  INFO  (ChooseCounter.java:208) - Opening port with settings for K2
+10-Feb-2023 08:43:33,003  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM8, 115200.
+10-Feb-2023 08:43:36,444  INFO  (MainWindow.java:315) - ChangeSettings pressed. Closing port: COM8 and showing ChooseCounter window
+10-Feb-2023 08:43:36,461  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+10-Feb-2023 08:43:37,879  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+10-Feb-2023 08:43:37,881  INFO  (ChooseCounter.java:208) - Opening port with settings for K2
+10-Feb-2023 08:43:37,960  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM8, 115200.
+10-Feb-2023 08:43:42,827  INFO  (K2.java:38) - Receiving data from K2.
+10-Feb-2023 08:45:10,544  INFO  (K2.java:95) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-02-10, 10:27:07, Machine, ID, :, N18G03-T16090, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, AUTO, --------------------------------, Currency, Count, Amount, USD, 2, 2, --------------------------------, --------------------------------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 2, 2, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 2, 2, --------------------------------, Total, Amount, 2, --------------------------------, ARM, :, v01.01.01, (11), DB, :, USD, (, 1., 2., 13), Grand, Total, :, 253888, 1, 1, v0, 2, 1, v0]
+10-Feb-2023 08:45:10,546  INFO  (K2.java:105) - Received data for EUR or USD currency.
+10-Feb-2023 08:45:10,566  INFO  (K2.java:139) - Storing binary data of serial numbers to array.
+10-Feb-2023 08:45:10,567  INFO  (K2.java:143) - Storing binary data of serial numbers to GUI table.
+10-Feb-2023 08:45:10,567  ERROR (K2.java:203) - Index 0 out of bounds for length 0
+10-Feb-2023 08:48:25,483  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+10-Feb-2023 08:48:25,681  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+10-Feb-2023 08:48:25,681  INFO  (Main.java:22) - Attempting to connect to database.
+10-Feb-2023 08:48:25,901  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+10-Feb-2023 08:48:26,111  INFO  (Main.java:31) - Showing login screen.
+10-Feb-2023 08:48:28,963  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+10-Feb-2023 08:48:29,037  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+10-Feb-2023 08:48:29,124  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+10-Feb-2023 08:48:30,200  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+10-Feb-2023 08:48:30,204  INFO  (ChooseCounter.java:208) - Opening port with settings for K2
+10-Feb-2023 08:48:30,378  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM8, 115200.
+10-Feb-2023 08:48:32,307  INFO  (K2.java:38) - Receiving data from K2.
+10-Feb-2023 08:50:56,902  INFO  (K2.java:99) - Storing binary data of serial numbers to array.
+10-Feb-2023 08:50:56,910  INFO  (K2.java:103) - Storing binary data of serial numbers to GUI table.
+10-Feb-2023 08:51:00,680  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+10-Feb-2023 08:51:00,872  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+10-Feb-2023 08:51:00,872  INFO  (Main.java:22) - Attempting to connect to database.
+10-Feb-2023 08:51:01,173  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+10-Feb-2023 08:51:01,380  INFO  (Main.java:31) - Showing login screen.
+10-Feb-2023 08:51:05,246  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+10-Feb-2023 08:51:05,316  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+10-Feb-2023 08:51:05,402  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+10-Feb-2023 08:51:06,724  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+10-Feb-2023 08:51:06,734  INFO  (ChooseCounter.java:208) - Opening port with settings for K2
+10-Feb-2023 08:51:06,875  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM8, 115200.
+10-Feb-2023 08:51:13,043  INFO  (K2.java:38) - Receiving data from K2.
+10-Feb-2023 08:51:32,028  INFO  (K2.java:99) - Storing binary data of serial numbers to array.
+10-Feb-2023 08:51:32,033  INFO  (K2.java:103) - Storing binary data of serial numbers to GUI table.
+10-Feb-2023 08:51:32,100  INFO  (K2.java:99) - Storing binary data of serial numbers to array.
+10-Feb-2023 08:51:32,104  INFO  (K2.java:103) - Storing binary data of serial numbers to GUI table.
+10-Feb-2023 08:51:35,964  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+10-Feb-2023 08:51:36,146  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+10-Feb-2023 08:51:36,146  INFO  (Main.java:22) - Attempting to connect to database.
+10-Feb-2023 08:51:36,431  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+10-Feb-2023 08:51:36,635  INFO  (Main.java:31) - Showing login screen.
+10-Feb-2023 08:51:41,146  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+10-Feb-2023 08:51:41,205  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+10-Feb-2023 08:51:41,288  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+10-Feb-2023 08:51:42,500  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+10-Feb-2023 08:51:42,503  INFO  (ChooseCounter.java:208) - Opening port with settings for K2
+10-Feb-2023 08:51:42,657  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM8, 115200.
+10-Feb-2023 08:51:51,127  INFO  (K2.java:38) - Receiving data from K2.
+10-Feb-2023 09:01:46,918  INFO  (K2.java:99) - Storing binary data of serial numbers to array.
+10-Feb-2023 09:01:46,922  INFO  (K2.java:103) - Storing binary data of serial numbers to GUI table.
+10-Feb-2023 09:01:47,021  INFO  (K2.java:99) - Storing binary data of serial numbers to array.
+10-Feb-2023 09:01:47,028  INFO  (K2.java:103) - Storing binary data of serial numbers to GUI table.

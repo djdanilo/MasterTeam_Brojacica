@@ -2,12 +2,14 @@ package GUI;
 
 import ConnectionComPort.ComPorts;
 import Database.ConnectionDB;
+import MoneyCounters.ProgressBarFrame;
 import Settings.SettingsWindow;
 import com.fazecast.jSerialComm.SerialPort;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -55,7 +57,7 @@ public class MainWindow {
     private StringSelection stringSelection;
     private Clipboard clipboard;
     private JButton btn_settings;
-    private final String[] columnNames = {"Apoen - " + lb_currency.getText(), "Broj komada", "Vrednost"};
+    private final String[] columnNames = {"Apoen", "Broj komada", "Vrednost"};
     private final String[][] denominationEmpty = {{"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}, {"", "", ""}};
 
     public MainWindow() {
@@ -199,6 +201,10 @@ public class MainWindow {
         lb_currency.setVisible(false);
 
         jt_denom = new JTable(denominationEmpty, columnNames);
+        jt_denom.setShowGrid(true);
+        jt_denom.getColumnModel().getColumn(0).setCellRenderer(new BoldCellRenderer(9, 0));
+        jt_denom.getColumnModel().getColumn(1).setCellRenderer(new BoldCellRenderer(9, 1));
+        jt_denom.getColumnModel().getColumn(2).setCellRenderer(new BoldCellRenderer(9, 2));
         jsp_denom = new JScrollPane(jt_denom);
         jsp_denom.setPreferredSize(new Dimension(371, 350));
 
@@ -517,6 +523,7 @@ public class MainWindow {
 
                     try {
                         File tempFile = File.createTempFile("temp1", ".pdf");
+                        tempFile.deleteOnExit();
                         String filePath = tempFile.getAbsolutePath();
                         PdfExport.createPdfExport(Id, lb_timeDate.getText(), user, client, filePath, denomination, serialOcr, serialImagePrint);
                         buttonListeners.PDFPrinter(tempFile);
@@ -553,5 +560,24 @@ public class MainWindow {
                 }
             }
         });
+    }
+
+    class BoldCellRenderer extends DefaultTableCellRenderer {
+        private int boldRow;
+        private int boldColumn;
+
+        public BoldCellRenderer(int boldRow, int boldColumn) {
+            this.boldRow = boldRow;
+            this.boldColumn = boldColumn;
+        }
+
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+            Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+            if (row == boldRow && column == boldColumn) {
+                c.setFont(c.getFont().deriveFont(Font.BOLD));
+            }
+            return c;
+        }
     }
 }

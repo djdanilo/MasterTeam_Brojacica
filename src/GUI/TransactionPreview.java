@@ -4,16 +4,12 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 import static GUI.DatabaseWindow.jt_transactions;
 
@@ -275,48 +271,117 @@ public class TransactionPreview {
         jTable.getColumnModel().getColumn(1).setMaxWidth(140);
         jTable.getColumnModel().getColumn(2).setMaxWidth(210);
 
-        String newLine2 = "01100000110110010001101100010001101000011100001000101";
-        int i = 0;
-        int j = 1;
-        int row = 0;
+        String newLineSB9 = "01100000110110010001101100010001101000011100001000101";
 
-        while (row < (serialOcr.length + 1) / 2) {
-            if (serialImage.length > 1) {
-                BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
-                Graphics2D g2d = img.createGraphics();
-                java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
-                g2d.setFont(font);
-                int height = g2d.getFontMetrics().getHeight();
-                g2d.dispose();
+        try {
+            int i = 0;
+            int j = 1;
+            int row = 0;
 
-                img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
-                g2d = img.createGraphics();
-
-                g2d.setFont(font);
-                g2d.setColor(Color.WHITE);
-                int fontSize = 1;
-
-                for (String line2 : serialImage[j].split(newLine2)) {
-                    g2d.drawString(line2, 0, height);
-                    height += fontSize;
-                }
-
-                File file = new File("images\\TextDB" + j + ".png");
-                ImageIO.write(img, "png", file);
-                g2d.dispose();
-
-                model.addRow(new Object[]{serialOcr[i], serialOcr[i + 1], file.getAbsolutePath()});
-                jt_serialNumbers.getColumnModel().getColumn(2).setCellRenderer(new ImageRenderer());
-
-            } else {
-                model.addRow(new Object[]{serialOcr[i], serialOcr[i + 1], "/"});
+            for (int count = 1; count < serialImage.length; count++){
+                System.out.println("Image " + serialImage[count]);
             }
-            jt_serialNumbers.setModel(model);
-            i += 2;
-            j++;
-            row++;
-        }
 
+            if (serialImage[1].contains(newLineSB9)) {
+                while (row < (serialOcr.length + 1) / 2) {
+                    if (serialImage.length > 1 && serialOcr.length > 1) {
+
+                        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
+                        Graphics2D g2d = img.createGraphics();
+                        java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
+                        g2d.setFont(font);
+                        int height = g2d.getFontMetrics().getHeight();
+                        g2d.dispose();
+
+                        img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
+                        g2d = img.createGraphics();
+
+                        g2d.setFont(font);
+                        g2d.setColor(Color.WHITE);
+                        int fontSize = 1;
+
+                        for (String line2 : serialImage[j].split(newLineSB9)) {
+
+                            g2d.drawString(line2, 0, height);
+                            height += fontSize;
+                        }
+
+                        File tempFile = File.createTempFile("temp" + j, ".png");
+                        tempFile.deleteOnExit();
+                        ImageIO.write(img, "png", tempFile);
+                        g2d.dispose();
+
+                        model.addRow(new Object[]{serialOcr[i], serialOcr[i + 1], tempFile.getAbsolutePath()});
+                        jt_serialNumbers.getColumnModel().getColumn(2).setCellRenderer(new ImageRenderer());
+                        i += 2;
+                        j++;
+                        row++;
+                    } else if (serialOcr.length == 1) {
+                        return;
+                    } else {
+                        model.addRow(new Object[]{serialOcr[i], serialOcr[i + 1], "/"});
+                    }
+                    jt_serialNumbers.setModel(model);
+                    i += 2;
+                    j++;
+                    row++;
+                }
+            } else {
+                while (row < (serialOcr.length + 1) / 2) {
+                    if (serialImage.length > 1 && serialOcr.length > 1) {
+
+                        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+                        Graphics2D g2d = img.createGraphics();
+                        java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 1);
+                        g2d.setFont(font);
+                        int height = g2d.getFontMetrics().getHeight();
+                        g2d.dispose();
+                        //here we start to create the actual image of the serial number
+                        img = new BufferedImage(256, 25, BufferedImage.TYPE_BYTE_BINARY);
+                        g2d = img.createGraphics();
+
+                        g2d.setFont(font);
+                        g2d.setColor(Color.WHITE);
+                        int fontSize = 1;
+                        int length = serialImage[j].length();
+                        int p = 40;
+                        int xH = 248;
+
+                        while (p < length) {
+                            int end = Math.min(length, p + xH);
+                            g2d.drawString(serialImage[j].substring(p, end), 0, height);
+                            height += fontSize;
+                            p = end;
+                        }
+
+                        File tempFile = File.createTempFile("temp", ".png");
+                        tempFile.deleteOnExit();
+                        ImageIO.write(img, "png", tempFile);
+                        g2d.dispose();
+
+                        model.addRow(new Object[]{serialOcr[i], serialOcr[i + 1], tempFile.getAbsolutePath()});
+                        jt_serialNumbers.getColumnModel().getColumn(2).setCellRenderer(new ImageRenderer());
+                        i += 2;
+                        j++;
+                        row++;
+                    } else if (serialOcr.length == 1) {
+                        return;
+                    } else {
+                        model.addRow(new Object[]{serialOcr[i], serialOcr[i + 1], "/"});
+                    }
+                    jt_serialNumbers.setModel(model);
+                    i += 2;
+                    j++;
+                    row++;
+                }
+            }
+        } catch (
+                ArrayIndexOutOfBoundsException e) {
+            e.printStackTrace();
+        } catch (
+                IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     static class ImageRenderer extends DefaultTableCellRenderer {

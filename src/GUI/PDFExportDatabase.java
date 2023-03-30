@@ -16,8 +16,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.*;
 import java.util.List;
 
 public class PDFExportDatabase {
@@ -248,7 +247,7 @@ public class PDFExportDatabase {
         // t.setSpacing(4);
         // t.setBorderWidth(1);
 
-        String newLine2 = "01100000110110010001101100010001101000011100001000101";
+        String newLineSB9 = "01100000110110010001101100010001101000011100001000101";
 
         PdfPCell c1 = new PdfPCell(new Phrase("Apoen"));
         c1.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -268,48 +267,101 @@ public class PDFExportDatabase {
             int j = 1;
             int row = 0;
 
-            while (row < (serialOcr.length + 1) / 2) {
-                if (serialImage.length > 1) {
-                    table.addCell(serialOcr[i]);
-                    table.addCell(serialOcr[i + 1]);
+            if (serialImage[1].contains(newLineSB9)) {
+                while (row < (serialOcr.length + 1) / 2) {
+                    if (serialImage.length > 1 && serialOcr.length > 1) {
+                        table.addCell(serialOcr[i]);
+                        table.addCell(serialOcr[i + 1]);
 
-                    BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
-                    Graphics2D g2d = img.createGraphics();
-                    java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
-                    g2d.setFont(font);
-                    int height = g2d.getFontMetrics().getHeight();
-                    g2d.dispose();
+                        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
+                        Graphics2D g2d = img.createGraphics();
+                        java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 2);
+                        g2d.setFont(font);
+                        int height = g2d.getFontMetrics().getHeight();
+                        g2d.dispose();
 
-                    img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
-                    g2d = img.createGraphics();
+                        img = new BufferedImage(384, 40, BufferedImage.TYPE_INT_RGB);
+                        g2d = img.createGraphics();
 
-                    g2d.setFont(font);
-                    g2d.setColor(Color.WHITE);
-                    int fontSize = 1;
+                        g2d.setFont(font);
+                        g2d.setColor(Color.WHITE);
+                        int fontSize = 1;
 
-                    for (String line2 : serialImage[j].split(newLine2)) {
+                        for (String line2 : serialImage[j].split(newLineSB9)) {
 
-                        g2d.drawString(line2, 0, height);
-                        height += fontSize;
+                            g2d.drawString(line2, 0, height);
+                            height += fontSize;
+                        }
+
+                        File tempFile = File.createTempFile("temp" + j, ".png");
+                        tempFile.deleteOnExit();
+                        ImageIO.write(img, "png", tempFile);
+                        g2d.dispose();
+
+                        table.addCell(Image.getInstance(img, null));
+                        i += 2;
+                        j++;
+                        row++;
+                    } else if (serialOcr.length == 1) {
+                        break;
+                    } else {
+                        table.addCell(serialOcr[i]);
+                        table.addCell(serialOcr[i + 1]);
+                        table.addCell("/");
+                        i += 2;
+                        j++;
+                        row++;
                     }
+                }
+            } else{
+                while (row < (serialOcr.length + 1) / 2) {
+                    if (serialImage.length > 1 && serialOcr.length > 1) {
+                        table.addCell(serialOcr[i]);
+                        table.addCell(serialOcr[i + 1]);
 
-                    File file = new File("images\\TextDB" + j + ".png");
+                        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+                        Graphics2D g2d = img.createGraphics();
+                        java.awt.Font font = new java.awt.Font("Arial", java.awt.Font.PLAIN, 1);
+                        g2d.setFont(font);
+                        int height = g2d.getFontMetrics().getHeight();
+                        g2d.dispose();
+                        //here we start to create the actual image of the serial number
+                        img = new BufferedImage(256, 25, BufferedImage.TYPE_BYTE_BINARY);
+                        g2d = img.createGraphics();
 
-                    ImageIO.write(img, "png", file);
+                        g2d.setFont(font);
+                        g2d.setColor(Color.WHITE);
+                        int fontSize = 1;
+                        int length = serialImage[i].length();
+                        int p = 40;
+                        int xH = 256;
 
-                    g2d.dispose();
+                        while (p < length) {
+                            int end = Math.min(length, p + xH);
+                            g2d.drawString(serialImage[i].substring(p, end), 0, height);
+                            height += fontSize;
+                            p = end;
+                        }
 
-                    table.addCell(Image.getInstance(img, null));
-                    i += 2;
-                    j++;
-                    row++;
-                } else {
-                    table.addCell(serialOcr[i]);
-                    table.addCell(serialOcr[i + 1]);
-                    table.addCell("/");
-                    i += 2;
-                    j++;
-                    row++;
+                        File tempFile = File.createTempFile("temp" + j, ".png");
+                        tempFile.deleteOnExit();
+                        ImageIO.write(img, "png", tempFile);
+                        g2d.dispose();
+
+                        table.addCell(Image.getInstance(img, null));
+                        i += 2;
+                        j++;
+                        row++;
+                    } else if (serialOcr.length == 1) {
+                        break;
+                    } else {
+                        table.addCell(serialOcr[i]);
+                        table.addCell(serialOcr[i + 1]);
+                        table.addCell("/");
+                        i += 2;
+                        j++;
+                        row++;
+                    }
                 }
             }
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -317,10 +369,7 @@ public class PDFExportDatabase {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
         return table;
-
     }
 
     private static void addEmptyLine(Paragraph paragraph, int number) {

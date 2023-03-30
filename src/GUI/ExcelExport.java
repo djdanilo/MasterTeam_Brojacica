@@ -203,13 +203,14 @@ public class ExcelExport {
                             height += fontSize;
                         }
 
-                        File file2 = new File("images\\TextDB" + j + ".png");
+                        File tempFile = File.createTempFile("temp"+j, ".png");
+                        tempFile.deleteOnExit();
 
-                        ImageIO.write(img, "png", file2);
+                        ImageIO.write(img, "png", tempFile);
 
                         g2d.dispose();
 
-                        InputStream inputStream = new FileInputStream(file2);
+                        InputStream inputStream = new FileInputStream(tempFile);
                         //Get the contents of an InputStream as a byte[].
                         byte[] bytes = IOUtils.toByteArray(inputStream);
                         //Adds a picture to the workbook

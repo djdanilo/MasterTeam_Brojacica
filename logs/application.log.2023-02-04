@@ -1,0 +1,1306 @@
+01-Feb-2023 20:43:48,985  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 20:43:49,150  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 20:43:49,150  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 20:43:49,410  INFO  (Main.java:25) - Succesfully connected to database!
+01-Feb-2023 20:43:49,920  INFO  (Main.java:32) - Showing login screen.
+01-Feb-2023 20:44:02,188  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 20:44:02,300  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 20:44:02,300  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 20:44:02,483  INFO  (Main.java:25) - Succesfully connected to database!
+01-Feb-2023 20:44:02,729  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 20:44:06,560  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 20:44:06,612  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 20:44:06,613  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 20:44:06,719  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 20:44:07,990  INFO  (ChooseCounter.java:189) - Connected to port Communications Port (COM1)
+01-Feb-2023 20:44:08,009  INFO  (ChooseCounter.java:198) - Opening port with settings for SB-9
+01-Feb-2023 20:44:08,180  INFO  (ChooseCounter.java:211) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 20:44:16,597  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 20:44:34,631  INFO  (MainWindow.java:338) - Serial numbers copied to clipboard.
+01-Feb-2023 20:44:35,168  INFO  (MainWindow.java:324) - Clearing OCR and Serial Image data.
+01-Feb-2023 20:44:42,288  INFO  (MainWindow.java:309) - ChangeSettings pressed. Closing port: COM1 and showing ChooseCounter window
+01-Feb-2023 20:44:42,301  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 20:44:42,302  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 20:44:44,542  ERROR (ChooseCounter.java:192) - Error while opening the port.
+01-Feb-2023 20:44:44,542  INFO  (ChooseCounter.java:198) - Opening port with settings for SB-9
+01-Feb-2023 20:44:44,579  INFO  (ChooseCounter.java:211) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 20:46:46,534  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 20:46:46,648  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 20:46:46,649  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 20:46:46,830  INFO  (Main.java:25) - Succesfully connected to database!
+01-Feb-2023 20:46:47,062  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 20:46:51,513  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 20:46:51,564  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 20:46:51,565  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 20:46:51,630  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 20:46:53,230  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 20:46:53,234  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 20:46:53,317  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 20:46:54,241  INFO  (MainWindow.java:309) - ChangeSettings pressed. Closing port: COM1 and showing ChooseCounter window
+01-Feb-2023 20:46:54,254  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 20:46:54,254  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 20:46:56,044  ERROR (ChooseCounter.java:193) - Error while opening the port.
+01-Feb-2023 20:46:56,044  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 20:46:56,083  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 20:47:00,920  INFO  (MainWindow.java:309) - ChangeSettings pressed. Closing port: COM1 and showing ChooseCounter window
+01-Feb-2023 20:47:00,934  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 20:47:00,934  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:18:26,706  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:18:26,820  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:18:26,821  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:18:26,995  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:18:27,232  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:18:35,634  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:18:35,680  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:18:35,680  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:18:35,726  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:18:51,217  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:18:51,220  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:18:51,311  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:18:56,241  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:18:56,354  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:18:56,354  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:18:56,518  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:18:56,756  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:18:59,850  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:18:59,898  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:18:59,899  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:18:59,942  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:19:01,065  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:19:01,069  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:19:01,155  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:44:17,538  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:44:17,656  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:44:17,656  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:44:17,820  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:44:18,057  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:44:21,220  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:44:21,263  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:44:21,264  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:44:21,311  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:44:22,770  ERROR (ChooseCounter.java:193) - Error while opening the port.
+01-Feb-2023 21:44:22,773  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:44:22,863  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:44:27,627  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 21:45:34,173  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:45:34,284  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:45:34,284  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:45:34,445  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:45:34,671  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:45:37,140  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:45:37,185  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:45:37,186  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:45:37,229  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:45:38,266  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:45:38,270  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:45:38,356  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:45:42,124  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 21:48:04,274  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:48:04,387  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:48:04,387  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:48:04,548  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:48:04,779  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:48:08,459  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:48:08,504  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:48:08,505  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:48:08,549  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:48:09,625  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:48:09,628  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:48:09,714  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:48:10,663  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 21:50:22,919  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:50:23,032  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:50:23,032  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:50:23,192  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:50:23,422  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:50:26,556  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:50:26,598  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:50:26,599  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:50:26,645  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:50:28,203  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:50:28,207  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:50:28,297  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:51:04,025  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 21:53:47,347  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:53:47,459  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:53:47,460  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:53:47,628  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:53:47,854  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:53:50,492  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:53:50,539  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:53:50,540  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:53:50,586  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:53:51,555  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:53:51,559  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:53:51,641  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:53:52,977  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 21:55:37,563  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:55:37,679  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:55:37,680  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:55:37,839  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:55:38,070  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:55:43,212  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:55:43,261  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:55:43,262  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:55:43,308  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:55:44,641  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:55:44,645  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:55:44,731  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:55:45,794  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 21:56:21,864  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:56:21,980  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:56:21,980  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:56:22,141  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:56:22,367  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:56:25,668  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:56:25,714  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:56:25,715  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:56:25,759  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:56:27,075  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:56:27,079  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:56:27,163  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:56:35,026  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 21:57:12,159  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:57:12,271  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:57:12,272  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:57:12,436  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:57:12,662  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:57:15,645  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:57:15,690  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:57:15,691  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:57:15,734  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:57:17,018  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:57:17,021  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:57:17,107  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:57:18,240  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 21:59:47,630  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 21:59:47,741  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 21:59:47,741  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 21:59:47,901  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 21:59:48,130  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 21:59:51,628  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 21:59:51,673  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 21:59:51,674  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 21:59:51,718  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 21:59:52,914  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 21:59:52,918  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 21:59:53,004  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 21:59:54,082  INFO  (MainWindow.java:367) - Opening Database window
+01-Feb-2023 22:00:46,929  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+01-Feb-2023 22:00:47,044  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+01-Feb-2023 22:00:47,044  INFO  (Main.java:22) - Attempting to connect to database.
+01-Feb-2023 22:00:47,206  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+01-Feb-2023 22:00:47,435  INFO  (Main.java:31) - Showing login screen.
+01-Feb-2023 22:00:49,908  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+01-Feb-2023 22:00:49,954  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+01-Feb-2023 22:00:49,955  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+01-Feb-2023 22:00:50,000  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+01-Feb-2023 22:00:53,219  INFO  (ChooseCounter.java:190) - Connected to port Communications Port (COM1)
+01-Feb-2023 22:00:53,223  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+01-Feb-2023 22:00:53,308  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM1, 115200.
+01-Feb-2023 22:00:55,836  INFO  (MainWindow.java:367) - Opening Database window
+04-Feb-2023 09:49:32,077  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 09:49:32,326  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 09:49:32,327  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 09:49:32,594  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 09:49:32,810  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 09:49:37,038  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 09:49:37,128  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 09:49:37,129  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 09:49:37,311  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 09:49:40,689  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 09:49:40,694  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 09:49:40,941  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 09:49:52,619  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 09:49:53,557  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 10:56, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 3, $, 3, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 3, $, 3, --------------------------------, Note, Serial, No., --------------------------------, E16625824B, B88155835C, F04085344K, 3, m3]
+04-Feb-2023 09:49:53,562  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 09:49:54,100  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 09:49:54,135  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 09:49:54,245  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp110498996389379049918png
+04-Feb-2023 09:49:54,275  ERROR (SB9.java:217) - java.lang.RuntimeException: Unsupported image format. May need to install JAI Image I/O package.
+https://github.com/jai-imageio/jai-imageio-core
+04-Feb-2023 09:52:56,046  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 09:52:56,383  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 09:52:56,384  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 09:52:56,832  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 09:52:57,193  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 09:53:36,022  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 09:53:36,137  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 09:53:36,139  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 09:53:36,353  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 09:53:37,698  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 09:53:37,704  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 09:53:38,060  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 09:53:39,696  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 09:53:40,637  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 10:59, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 3, $, 3, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 3, $, 3, --------------------------------, Note, Serial, No., --------------------------------, E16625824B, B88155835C, F04085344K, 3, m3]
+04-Feb-2023 09:53:40,641  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 09:53:41,140  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 09:53:41,172  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 09:53:41,309  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp15304776521677611959.png
+04-Feb-2023 09:53:42,322  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:53:42,324  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:53:42,332  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp218248872281324095832.png
+04-Feb-2023 09:53:42,722  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:53:42,723  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:53:42,728  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp312897181678922810073.png
+04-Feb-2023 09:53:43,015  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:53:43,015  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:55:36,189  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 09:55:36,397  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 09:55:36,398  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 09:55:36,692  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 09:55:36,907  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 09:56:02,959  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 09:56:03,044  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 09:56:03,045  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 09:56:03,194  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 09:56:05,189  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 09:56:05,193  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 09:56:05,442  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 09:56:09,381  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 09:56:14,883  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:02, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 21, $, 21, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 21, $, 21, --------------------------------, Note, Serial, No., --------------------------------, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, 3, m3]
+04-Feb-2023 09:56:14,887  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 09:56:17,507  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 09:56:17,581  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 09:56:17,720  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp15598322793215740973.png
+04-Feb-2023 09:56:18,452  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:18,457  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:18,655  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp21515280270438270256.png
+04-Feb-2023 09:56:18,967  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:18,967  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:19,133  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp3413223767827069301.png
+04-Feb-2023 09:56:19,454  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:19,454  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:19,627  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp411226978951351720118.png
+04-Feb-2023 09:56:19,978  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:19,978  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:20,139  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp514046407750190105414.png
+04-Feb-2023 09:56:20,455  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:20,456  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:20,660  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp612697256742772204426.png
+04-Feb-2023 09:56:21,006  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:21,006  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:21,165  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp716670827497302710047.png
+04-Feb-2023 09:56:21,580  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:21,580  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:21,760  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp89778021760439660285.png
+04-Feb-2023 09:56:22,070  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:22,070  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:22,231  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp913540902038620771601.png
+04-Feb-2023 09:56:22,555  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:22,556  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:22,748  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1016884977780852030916.png
+04-Feb-2023 09:56:23,052  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:23,052  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:23,208  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp116435220759194496465.png
+04-Feb-2023 09:56:23,529  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:23,530  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:23,725  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp121346455030515107781.png
+04-Feb-2023 09:56:24,005  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:24,005  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:24,149  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1317878507325644818559.png
+04-Feb-2023 09:56:24,431  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:24,432  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:24,629  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp14472824909159035067.png
+04-Feb-2023 09:56:25,000  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:25,000  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:25,187  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp153850004895921217901.png
+04-Feb-2023 09:56:25,468  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:25,468  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:25,612  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1618397269475130011075.png
+04-Feb-2023 09:56:25,896  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:25,896  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:26,040  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp178732303635836020232.png
+04-Feb-2023 09:56:26,391  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:26,391  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:26,537  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1811098386222265545114.png
+04-Feb-2023 09:56:26,812  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:26,812  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:26,955  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp199950026749080175255.png
+04-Feb-2023 09:56:27,348  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:27,348  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:27,495  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp201812419108924409365.png
+04-Feb-2023 09:56:27,763  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:27,764  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:27,905  INFO  (SB9.java:167) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp2118358185781953625327.png
+04-Feb-2023 09:56:28,174  INFO  (SB9.java:172) - Doing OCR on image files of serial numbers.
+04-Feb-2023 09:56:28,174  INFO  (SB9.java:175) - Adding images to an array
+04-Feb-2023 09:56:40,318  INFO  (MainWindow.java:504) - Transaction saved successfully for client Danilo with counted data [USD, 21, 0, 0, 0, 0, 0, 0, 21].
+04-Feb-2023 09:56:46,923  INFO  (MainWindow.java:524) - PDF file sucessfully printed
+04-Feb-2023 09:59:10,863  INFO  (MainWindow.java:367) - Opening Database window
+04-Feb-2023 10:00:13,474  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:00:13,866  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:00:13,866  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:00:14,307  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:00:14,562  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:00:16,985  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:00:17,079  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:00:17,081  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:00:17,330  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:00:18,564  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:00:18,571  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:00:18,810  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:00:24,315  INFO  (MainWindow.java:367) - Opening Database window
+04-Feb-2023 10:01:16,079  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:01:16,274  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:01:16,275  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:01:16,605  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:01:17,031  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:01:19,861  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:01:19,942  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:01:19,944  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:01:20,209  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:01:22,067  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:01:22,072  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:01:22,302  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:01:24,483  INFO  (MainWindow.java:367) - Opening Database window
+04-Feb-2023 10:07:01,032  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:07:01,328  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:07:01,328  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:07:01,795  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:07:02,011  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:07:04,639  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:07:04,722  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:07:04,724  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:07:04,864  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:07:06,352  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:07:06,357  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:07:06,617  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:17:17,067  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:17:17,236  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:17:17,237  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:17:17,604  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:17:18,058  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:17:20,795  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:17:20,877  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:17:20,878  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:17:21,003  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:17:22,411  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:17:22,416  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:17:22,639  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:17:24,299  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:17:29,769  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:23, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 21, $, 21, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 21, $, 21, --------------------------------, Note, Serial, No., --------------------------------, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, 3, m3]
+04-Feb-2023 10:17:29,772  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:17:32,477  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:17:32,527  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:17:32,631  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp13858222497077333316.png
+04-Feb-2023 10:17:33,166  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:33,169  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:33,359  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp2921268870424315972.png
+04-Feb-2023 10:17:33,755  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:33,756  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:33,903  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp311646757080545020776.png
+04-Feb-2023 10:17:34,225  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:34,225  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:34,402  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp418065617172858129865.png
+04-Feb-2023 10:17:34,755  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:34,756  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:34,900  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp513375101555627911337.png
+04-Feb-2023 10:17:35,202  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:35,202  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:35,371  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp617050204909014917987.png
+04-Feb-2023 10:17:35,718  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:35,718  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:35,921  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp717630181215863572312.png
+04-Feb-2023 10:17:36,210  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:36,211  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:36,355  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp87662092730934156798.png
+04-Feb-2023 10:17:36,705  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:36,705  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:36,901  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp917414966760439632000.png
+04-Feb-2023 10:17:37,313  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:37,313  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:37,495  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1017482095588286775126.png
+04-Feb-2023 10:17:37,784  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:37,784  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:37,931  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1111828108238015124390.png
+04-Feb-2023 10:17:38,245  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:38,245  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:38,390  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1210194468859219490464.png
+04-Feb-2023 10:17:38,709  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:38,709  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:38,852  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp136071452934731989108.png
+04-Feb-2023 10:17:39,134  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:39,134  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:39,293  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1412634469137606127733.png
+04-Feb-2023 10:17:39,594  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:39,594  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:39,736  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1514317087576889610833.png
+04-Feb-2023 10:17:40,061  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:40,062  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:40,207  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1611157591837137705122.png
+04-Feb-2023 10:17:40,520  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:40,520  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:40,664  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp172419129004766223852.png
+04-Feb-2023 10:17:41,032  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:41,032  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:41,178  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1817708757804594350799.png
+04-Feb-2023 10:17:41,458  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:41,459  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:41,603  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp19631432476413424977.png
+04-Feb-2023 10:17:41,882  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:41,882  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:42,058  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp208515732008593269871.png
+04-Feb-2023 10:17:42,464  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:42,464  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:17:42,612  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp214297273207501306437.png
+04-Feb-2023 10:17:42,889  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:17:42,890  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:29,125  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:20:29,309  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:20:29,309  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:20:29,619  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:20:29,968  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:20:32,416  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:20:32,505  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:20:32,506  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:20:32,643  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:20:33,863  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:20:33,871  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:20:34,110  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:20:35,350  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:20:40,853  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:26, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 21, $, 21, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 21, $, 21, --------------------------------, Note, Serial, No., --------------------------------, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, E16625824B, B88155835C, F04085344K, 3, m3]
+04-Feb-2023 10:20:40,857  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:20:43,344  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:20:43,407  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:20:43,478  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp13493774487039129864.png
+04-Feb-2023 10:20:44,082  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:44,086  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:44,287  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp23335251472093657926.png
+04-Feb-2023 10:20:44,650  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:44,650  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:44,849  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp37254312905881027496.png
+04-Feb-2023 10:20:45,216  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:45,217  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:45,401  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp44308528481412078981.png
+04-Feb-2023 10:20:45,680  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:45,680  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:45,824  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp512441853633585610951.png
+04-Feb-2023 10:20:46,130  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:46,131  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:46,330  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp612070354456460535592.png
+04-Feb-2023 10:20:46,609  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:46,610  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:46,755  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp77358476098840641793.png
+04-Feb-2023 10:20:47,099  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:47,099  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:47,274  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp811064386532330068310.png
+04-Feb-2023 10:20:47,666  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:47,666  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:47,844  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp95736205416892174639.png
+04-Feb-2023 10:20:48,164  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:48,164  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:48,306  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1017440032305930783699.png
+04-Feb-2023 10:20:48,655  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:48,655  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:48,799  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp114303122082875154130.png
+04-Feb-2023 10:20:49,079  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:49,079  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:49,223  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp124258883917801197950.png
+04-Feb-2023 10:20:49,621  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:49,621  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:49,768  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp134013705258600169910.png
+04-Feb-2023 10:20:50,047  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:50,047  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:50,191  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp14717105245734279616.png
+04-Feb-2023 10:20:50,467  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:50,467  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:50,633  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp152100885515553389918.png
+04-Feb-2023 10:20:50,949  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:50,949  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:51,092  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp161562927422653619142.png
+04-Feb-2023 10:20:51,372  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:51,372  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:51,548  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp17680506794561506433.png
+04-Feb-2023 10:20:51,863  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:51,863  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:52,006  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp18667096157840932933.png
+04-Feb-2023 10:20:52,285  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:52,285  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:52,427  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1913023947653189949484.png
+04-Feb-2023 10:20:52,708  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:52,709  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:52,852  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp2014140212460349479397.png
+04-Feb-2023 10:20:53,131  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:53,131  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:20:53,274  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp214630337391093039203.png
+04-Feb-2023 10:20:53,549  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:20:53,550  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:22:31,732  INFO  (MainWindow.java:504) - Transaction saved successfully for client Danilo with counted data [USD, 21, 0, 0, 0, 0, 0, 0, 21].
+04-Feb-2023 10:22:36,462  INFO  (MainWindow.java:525) - PDF file sucessfully printed
+04-Feb-2023 10:24:13,381  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:24:13,572  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:24:13,572  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:24:13,871  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:24:14,079  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:24:24,288  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:24:24,377  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:24:24,380  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:24:24,542  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:24:25,837  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:24:25,843  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:24:26,089  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:24:27,267  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:24:28,205  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:30, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 3, $, 3, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 3, $, 3, --------------------------------, Note, Serial, No., --------------------------------, E16625824B, F04085344K, B88155835C, 3, m3]
+04-Feb-2023 10:24:28,210  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:24:28,759  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:24:28,809  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:24:29,172  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp116194239043567747138.png
+04-Feb-2023 10:24:29,876  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:24:29,879  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:24:30,053  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28211742317186449105.png
+04-Feb-2023 10:24:30,368  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:24:30,368  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:24:30,519  INFO  (SB9.java:168) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp3877304339553429209.png
+04-Feb-2023 10:24:30,805  INFO  (SB9.java:173) - Doing OCR on image files of serial numbers.
+04-Feb-2023 10:24:30,805  INFO  (SB9.java:176) - Adding images to an array
+04-Feb-2023 10:24:45,993  INFO  (MainWindow.java:504) - Transaction saved successfully for client test with counted data [USD, 3, 0, 0, 0, 0, 0, 0, 3].
+04-Feb-2023 10:24:52,729  INFO  (MainWindow.java:525) - PDF file sucessfully printed
+04-Feb-2023 10:29:30,553  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:29:30,751  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:29:30,751  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:29:31,149  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:29:31,382  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:29:41,061  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:29:41,146  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:29:41,147  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:29:41,295  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:29:43,189  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:29:43,196  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:29:43,413  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:32:24,541  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:32:24,747  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:38, Station:1, Deposit, No.:, 1, Mixed, Mode, RSD, UV, MG, IR, DENOM, UNIT, TOTAL, D10, 19, D, 190, D20, 3, D, 60, D50, 2, D, 100, D100, 10, D, 1,000, D200, 8, D, 1,600, D500, 4, D, 2,000, D1000, 8, D, 8,000, D2000, 7, D, 14,000, D5000, 3, D, 15,000, --------------------------------, TOTAL, 64, D, 41,950, --------------------------------, m3]
+04-Feb-2023 10:32:24,752  INFO  (SB9.java:101) - Received data for RSD currency. Saving to table.
+04-Feb-2023 10:34:53,546  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:34:53,767  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:34:53,769  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:34:54,030  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:34:54,231  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:34:57,141  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:34:57,225  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:34:57,226  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:34:57,362  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:34:58,559  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:34:58,568  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:34:58,823  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:35:05,236  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:35:23,611  INFO  (SB9.java:94) - Receiving and modifying count data +[***, GRAND, TOTAL, REPORT, ***, Feb.4,2023,, 11:41, Station:1, Mixed, Mode, RSD, DENOM, UNIT, TOTAL, D10, 19, D, 190, D20, 3, D, 60, D50, 2, D, 100, D100, 10, D, 1,000, D200, 8, D, 1,600, D500, 4, D, 2,000, D1000, 8, D, 8,000, D2000, 7, D, 14,000, D5000, 3, D, 15,000, --------------------------------, TOTAL, 64, D, 41,950, --------------------------------, --------------------------------, m, ***, GRAND, TOTAL, REPORT, ***, Feb.4,2023,, 11:41, Station:1, Mixed, Mode, RSD, DENOM, UNIT, TOTAL, D10, 19, D, 190, D20, 3, D, 60, D50, 2, D, 100, D100, 10, D, 1,000, D200, 8, D, 1,600, D500, 4, D, 2,000, D1000, 8, D, 8,000, D2000, 7, D, 14,000, D5000, 3, D, 15,000, --------------------------------, TOTAL, 64, D, 41,950, --------------------------------, --------------------------------, m, ***, REPORT, ***, Feb.4,2023,, 11:41, Station:1, Deposit, No.:, 0, Mixed, Mode, RSD, UV, MG, IR, DENOM, UNIT, TOTAL, D10, 0, D, 0, D20, 0, D, 0, D50, 0, D, 0, D100, 0, D, 0, D200, 0, D, 0, D500, 0, D, 0, D1000, 0, D, 0, D2000, 0, D, 0, D5000, 0, D, 0, --------------------------------, TOTAL, 0, D, 0, --------------------------------, m3]
+04-Feb-2023 10:35:23,617  INFO  (SB9.java:101) - Received data for RSD currency. Saving to table.
+04-Feb-2023 10:35:35,834  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:35:49,032  INFO  (SB9.java:94) - Receiving and modifying count data +[***, GRAND, TOTAL, REPORT, ***, Feb.4,2023,, 11:41, Station:1, Mixed, Mode, RSD, DENOM, UNIT, TOTAL, D10, 0, D, 0, D20, 0, D, 0, D50, 0, D, 0, D100, 0, D, 0, D200, 0, D, 0, D500, 0, D, 0, D1000, 0, D, 0, D2000, 0, D, 0, D5000, 0, D, 0, --------------------------------, TOTAL, 0, D, 0, --------------------------------, --------------------------------, m, ***, REPORT, ***, Feb.4,2023,, 11:42, Station:1, EUR, UV, MG, IR, DENOM, UNIT, TOTAL, E5, 0, E, 0, E10, 0, E, 0, E20, 0, E, 0, E50, 0, E, 0, E100, 0, E, 0, E200, 0, E, 0, E500, 0, E, 0, --------------------------------, TOTAL, 0, E, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 10:35:49,034  INFO  (SB9.java:101) - Received data for RSD currency. Saving to table.
+04-Feb-2023 10:35:56,207  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:35:56,377  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:42, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 0, $, 0, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 0, $, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 10:35:56,378  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:35:56,464  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:35:56,471  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:38:08,724  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:38:08,991  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:38:08,992  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:38:09,374  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:38:09,599  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:38:12,091  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:38:12,192  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:38:12,194  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:38:12,339  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:38:13,653  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:38:13,659  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:38:13,896  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:38:15,842  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:38:16,042  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:44, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 0, $, 0, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 0, $, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 10:38:16,046  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:38:16,133  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:38:16,140  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:38:20,053  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:38:20,224  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:44, Station:1, EUR, UV, MG, IR, DENOM, UNIT, TOTAL, E5, 0, E, 0, E10, 0, E, 0, E20, 0, E, 0, E50, 0, E, 0, E100, 0, E, 0, E200, 0, E, 0, E500, 0, E, 0, --------------------------------, TOTAL, 0, E, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 10:38:20,226  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:38:20,281  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:38:20,285  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:38:23,363  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:38:23,520  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:44, Station:1, Deposit, No.:, 0, Mixed, Mode, CHF, UV, MG, IR, DENOM, UNIT, TOTAL, F10, 0, F, 0, F20, 0, F, 0, F50, 0, F, 0, F100, 0, F, 0, F200, 0, F, 0, F1000, 0, F, 0, --------------------------------, TOTAL, 0, F, 0, --------------------------------, m3]
+04-Feb-2023 10:38:23,521  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:38:25,070  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:38:25,071  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:38:34,311  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:38:44,671  INFO  (SB9.java:94) - Receiving and modifying count data +[***, GRAND, TOTAL, REPORT, ***, Feb.4,2023,, 11:44, Station:1, Mixed, Mode, CHF, DENOM, UNIT, TOTAL, F10, 0, F, 0, F20, 0, F, 0, F50, 0, F, 0, F100, 0, F, 0, F200, 0, F, 0, F1000, 0, F, 0, --------------------------------, TOTAL, 0, F, 0, --------------------------------, --------------------------------, m, ***, REPORT, ***, Feb.4,2023,, 11:44, Station:1, Deposit, No.:, 0, Mixed, Mode, GBP, UV, MG, IR, DENOM, UNIT, TOTAL, P5, 0, P, 0, P10, 0, P, 0, P20, 0, P, 0, P50, 0, P, 0, --------------------------------, TOTAL, 0, P, 0, --------------------------------, m3]
+04-Feb-2023 10:38:44,673  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:38:45,847  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:38:45,850  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:38:45,850  ERROR (SB9.java:198) - Index 0 out of bounds for length 0
+04-Feb-2023 10:39:23,872  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:39:24,076  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:39:24,076  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:39:24,457  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:39:24,820  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:39:27,506  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:39:27,593  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:39:27,594  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:39:27,721  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:39:28,943  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:39:28,948  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:39:29,170  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:39:32,900  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:39:33,118  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:45, Station:1, Deposit, No.:, 0, Mixed, Mode, RSD, UV, MG, IR, DENOM, UNIT, TOTAL, D10, 0, D, 0, D20, 0, D, 0, D50, 0, D, 0, D100, 0, D, 0, D200, 0, D, 0, D500, 0, D, 0, D1000, 0, D, 0, D2000, 0, D, 0, D5000, 0, D, 0, --------------------------------, TOTAL, 0, D, 0, --------------------------------, m3]
+04-Feb-2023 10:39:33,124  INFO  (SB9.java:101) - Received data for RSD currency. Saving to table.
+04-Feb-2023 10:39:35,919  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:39:36,177  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:45, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 0, $, 0, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 0, $, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 10:39:36,178  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:39:36,204  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:39:36,206  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:39:37,983  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:39:38,202  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:45, Station:1, EUR, UV, MG, IR, DENOM, UNIT, TOTAL, E5, 0, E, 0, E10, 0, E, 0, E20, 0, E, 0, E50, 0, E, 0, E100, 0, E, 0, E200, 0, E, 0, E500, 0, E, 0, --------------------------------, TOTAL, 0, E, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 10:39:38,203  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:39:38,259  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:39:38,265  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:39:40,266  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:39:40,415  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:45, Station:1, Deposit, No.:, 0, Mixed, Mode, CHF, UV, MG, IR, DENOM, UNIT, TOTAL, F10, 0, F, 0, F20, 0, F, 0, F50, 0, F, 0, F100, 0, F, 0, F200, 0, F, 0, F1000, 0, F, 0, --------------------------------, TOTAL, 0, F, 0, --------------------------------, m3]
+04-Feb-2023 10:39:40,417  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:39:42,788  INFO  (SB9.java:133) - Storing binary data of serial numbers to array.
+04-Feb-2023 10:39:42,789  INFO  (SB9.java:137) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 10:41:15,166  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:41:15,482  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:41:15,483  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:41:15,876  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:41:16,104  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:41:18,458  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:41:18,549  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:41:18,550  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:41:18,699  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:41:19,825  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:41:19,831  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:41:20,082  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:41:22,198  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:41:22,374  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:47, Station:1, Deposit, No.:, 0, Mixed, Mode, GBP, UV, MG, IR, DENOM, UNIT, TOTAL, P5, 0, P, 0, P10, 0, P, 0, P20, 0, P, 0, P50, 0, P, 0, --------------------------------, TOTAL, 0, P, 0, --------------------------------, m3]
+04-Feb-2023 10:41:22,378  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:41:56,661  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 10:41:56,853  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 10:41:56,853  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 10:41:57,193  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 10:41:57,560  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 10:42:00,177  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 10:42:00,257  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 10:42:00,258  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 10:42:00,394  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 10:42:01,573  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 10:42:01,579  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 10:42:01,876  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 10:42:05,658  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:42:05,849  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:48, Station:1, Deposit, No.:, 0, Mixed, Mode, CHF, UV, MG, IR, DENOM, UNIT, TOTAL, F10, 0, F, 0, F20, 0, F, 0, F50, 0, F, 0, F100, 0, F, 0, F200, 0, F, 0, F1000, 0, F, 0, --------------------------------, TOTAL, 0, F, 0, --------------------------------, m3]
+04-Feb-2023 10:42:05,852  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 10:42:17,439  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 10:42:17,626  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 11:48, Station:1, Deposit, No.:, 0, Mixed, Mode, RSD, UV, MG, IR, DENOM, UNIT, TOTAL, D10, 0, D, 0, D20, 0, D, 0, D50, 0, D, 0, D100, 0, D, 0, D200, 0, D, 0, D500, 0, D, 0, D1000, 0, D, 0, D2000, 0, D, 0, D5000, 0, D, 0, --------------------------------, TOTAL, 0, D, 0, --------------------------------, m3]
+04-Feb-2023 10:42:17,628  INFO  (SB9.java:101) - Received data for RSD currency. Saving to table.
+04-Feb-2023 11:10:07,446  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:10:07,766  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:10:07,767  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:10:08,267  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:10:08,611  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:10:11,289  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:10:11,387  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:10:11,388  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:10:11,576  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:10:12,941  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:10:12,947  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:10:13,209  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:10:18,867  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:10:19,093  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:16, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 0, $, 0, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 0, $, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 11:10:19,098  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 11:10:19,175  INFO  (SB9.java:135) - Storing binary data of serial numbers to array.
+04-Feb-2023 11:10:19,183  INFO  (SB9.java:139) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 11:10:28,271  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:10:29,175  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:16, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 3, $, 3, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 3, $, 3, --------------------------------, Note, Serial, No., --------------------------------, E16625824B, F04085344K, B88155835C, 3, m3]
+04-Feb-2023 11:10:29,176  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 11:10:29,525  INFO  (SB9.java:135) - Storing binary data of serial numbers to array.
+04-Feb-2023 11:10:29,536  INFO  (SB9.java:139) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 11:10:29,727  INFO  (SB9.java:170) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp143590388998446055.png
+04-Feb-2023 11:10:30,721  INFO  (SB9.java:175) - Doing OCR on image files of serial numbers.
+04-Feb-2023 11:10:30,724  INFO  (SB9.java:178) - Adding images to an array
+04-Feb-2023 11:10:30,876  INFO  (SB9.java:170) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp25958275456690806183.png
+04-Feb-2023 11:10:31,221  INFO  (SB9.java:175) - Doing OCR on image files of serial numbers.
+04-Feb-2023 11:10:31,222  INFO  (SB9.java:178) - Adding images to an array
+04-Feb-2023 11:10:31,372  INFO  (SB9.java:170) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp314237331992865671789.png
+04-Feb-2023 11:10:31,656  INFO  (SB9.java:175) - Doing OCR on image files of serial numbers.
+04-Feb-2023 11:10:31,656  INFO  (SB9.java:178) - Adding images to an array
+04-Feb-2023 11:11:06,825  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 11:11:38,782  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:11:38,970  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:17, Station:1, Deposit, No.:, 1, Mixed, Mode, RSD, UV, MG, IR, DENOM, UNIT, TOTAL, D10, 0, D, 0, D20, 0, D, 0, D50, 0, D, 0, D100, 1, D, 100, D200, 1, D, 200, D500, 0, D, 0, D1000, 0, D, 0, D2000, 0, D, 0, D5000, 0, D, 0, --------------------------------, TOTAL, 2, D, 300, --------------------------------, m3]
+04-Feb-2023 11:11:38,972  INFO  (SB9.java:101) - Received data for RSD currency. Saving to table.
+04-Feb-2023 11:11:48,355  INFO  (MainWindow.java:436) - Transaction saved successfully for client RSD test with counted data [RSD, 0, 0, 0, 1, 1, 0, 0, 0, 0, 300].
+04-Feb-2023 11:11:50,128  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 11:13:50,148  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:13:50,327  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:13:50,327  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:13:50,598  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:13:50,798  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:13:54,444  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:13:54,560  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:13:54,562  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:13:54,709  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:13:56,060  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:13:56,066  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:13:56,416  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:13:57,808  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 11:15:21,452  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:15:21,663  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:15:21,663  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:15:22,023  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:15:22,496  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:15:25,161  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:15:25,244  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:15:25,246  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:15:25,381  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:15:26,617  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:15:26,622  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:15:26,941  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:15:28,194  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 11:16:13,469  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:16:13,782  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:16:13,782  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:16:14,049  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:16:14,270  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:16:16,792  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:16:16,872  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:16:16,873  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:16:17,012  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:16:18,038  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:16:18,044  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:16:18,431  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:16:21,724  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 11:17:33,778  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:17:34,125  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:17:34,126  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:17:34,555  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:17:34,757  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:17:37,407  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:17:37,497  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:17:37,498  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:17:37,638  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:17:39,334  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:17:39,339  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:17:39,573  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:17:44,829  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:17:45,025  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:23, Station:1, Deposit, No.:, 0, Mixed, Mode, RSD, UV, MG, IR, DENOM, UNIT, TOTAL, D10, 0, D, 0, D20, 0, D, 0, D50, 0, D, 0, D100, 0, D, 0, D200, 0, D, 0, D500, 0, D, 0, D1000, 0, D, 0, D2000, 0, D, 0, D5000, 0, D, 0, --------------------------------, TOTAL, 0, D, 0, --------------------------------, m3]
+04-Feb-2023 11:17:45,031  INFO  (SB9.java:101) - Received data for RSD currency. Saving to table.
+04-Feb-2023 11:17:50,085  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:17:50,240  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:24, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 0, $, 0, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 0, $, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 11:17:50,241  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 11:17:50,301  INFO  (SB9.java:135) - Storing binary data of serial numbers to array.
+04-Feb-2023 11:17:50,303  INFO  (SB9.java:139) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 11:17:54,073  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:17:54,235  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:24, Station:1, EUR, UV, MG, IR, DENOM, UNIT, TOTAL, E5, 0, E, 0, E10, 0, E, 0, E20, 0, E, 0, E50, 0, E, 0, E100, 0, E, 0, E200, 0, E, 0, E500, 0, E, 0, --------------------------------, TOTAL, 0, E, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 11:17:54,237  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 11:17:54,299  INFO  (SB9.java:135) - Storing binary data of serial numbers to array.
+04-Feb-2023 11:17:54,304  INFO  (SB9.java:139) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 11:17:56,969  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:17:57,108  INFO  (SB9.java:94) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:24, Station:1, Deposit, No.:, 0, Mixed, Mode, CHF, UV, MG, IR, DENOM, UNIT, TOTAL, F10, 0, F, 0, F20, 0, F, 0, F50, 0, F, 0, F100, 0, F, 0, F200, 0, F, 0, F1000, 0, F, 0, --------------------------------, TOTAL, 0, F, 0, --------------------------------, m3]
+04-Feb-2023 11:17:57,109  INFO  (SB9.java:103) - Received data for EUR or USD currency.
+04-Feb-2023 11:33:07,198  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:33:07,585  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:33:07,585  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:33:08,078  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:33:08,492  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:33:11,336  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:33:11,481  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:33:11,485  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:33:11,874  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:33:13,555  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:33:13,562  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:33:14,089  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:33:18,211  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:33:18,399  INFO  (SB9.java:96) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:39, Station:1, Deposit, No.:, 0, Mixed, Mode, GBP, UV, MG, IR, DENOM, UNIT, TOTAL, P5, 0, P, 0, P10, 0, P, 0, P20, 0, P, 0, P50, 0, P, 0, --------------------------------, TOTAL, 0, P, 0, --------------------------------, m3]
+04-Feb-2023 11:33:18,402  INFO  (SB9.java:106) - Received data for EUR or USD currency.
+04-Feb-2023 11:33:22,816  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:33:23,074  INFO  (SB9.java:96) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:39, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 0, $, 0, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 0, $, 0, --------------------------------, Note, Serial, No., --------------------------------, 3, m3]
+04-Feb-2023 11:33:23,076  INFO  (SB9.java:106) - Received data for EUR or USD currency.
+04-Feb-2023 11:33:23,159  INFO  (SB9.java:139) - Storing binary data of serial numbers to array.
+04-Feb-2023 11:33:23,167  INFO  (SB9.java:143) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 11:33:57,558  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:33:57,899  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:33:57,900  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:33:58,380  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:33:58,711  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:34:02,420  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:34:02,550  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:34:02,555  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:34:02,988  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:34:33,832  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:34:34,144  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:34:34,145  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:34:34,612  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:34:34,993  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:34:37,510  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:34:37,616  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:34:37,621  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:34:37,959  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:34:39,481  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:34:39,488  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:34:40,008  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:34:52,163  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:34:53,103  INFO  (SB9.java:96) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:41, Station:1, USD, UV, MG, IR, DENOM, UNIT, TOTAL, $1, 3, $, 3, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 3, $, 3, --------------------------------, Note, Serial, No., --------------------------------, B88155835C, F04085344K, E16625824B, 3, m3]
+04-Feb-2023 11:34:53,107  INFO  (SB9.java:106) - Received data for EUR or USD currency.
+04-Feb-2023 11:34:53,594  INFO  (SB9.java:139) - Storing binary data of serial numbers to array.
+04-Feb-2023 11:34:53,643  INFO  (SB9.java:143) - Storing binary data of serial numbers to GUI table.
+04-Feb-2023 11:34:53,984  INFO  (SB9.java:174) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp12462156990306140265.png
+04-Feb-2023 11:34:54,728  INFO  (SB9.java:179) - Doing OCR on image files of serial numbers.
+04-Feb-2023 11:34:54,731  INFO  (SB9.java:182) - Adding images to an array
+04-Feb-2023 11:34:54,894  INFO  (SB9.java:174) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp217046366238906584239.png
+04-Feb-2023 11:34:55,177  INFO  (SB9.java:179) - Doing OCR on image files of serial numbers.
+04-Feb-2023 11:34:55,177  INFO  (SB9.java:182) - Adding images to an array
+04-Feb-2023 11:34:55,326  INFO  (SB9.java:174) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp33300864073757851118.png
+04-Feb-2023 11:34:55,603  INFO  (SB9.java:179) - Doing OCR on image files of serial numbers.
+04-Feb-2023 11:34:55,603  INFO  (SB9.java:182) - Adding images to an array
+04-Feb-2023 11:36:02,985  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:36:03,238  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:36:03,239  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:36:03,818  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:36:04,434  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:36:07,316  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:36:07,591  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:36:07,593  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:36:07,893  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:37:03,224  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:37:03,228  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:37:03,402  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:37:13,245  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:37:13,440  INFO  (SB9.java:96) - Receiving and modifying count data +[***, REPORT, ***, Feb.4,2023,, 12:43, Station:1, Deposit, No.:, 1, Mixed, Mode, RSD, UV, MG, IR, DENOM, UNIT, TOTAL, D10, 0, D, 0, D20, 0, D, 0, D50, 0, D, 0, D100, 1, D, 100, D200, 1, D, 200, D500, 0, D, 0, D1000, 0, D, 0, D2000, 0, D, 0, D5000, 0, D, 0, --------------------------------, TOTAL, 2, D, 300, --------------------------------, m3]
+04-Feb-2023 11:37:13,442  INFO  (SB9.java:104) - Received data for RSD currency. Saving to table.
+04-Feb-2023 11:37:20,325  INFO  (MainWindow.java:510) - Transaction saved successfully for client Test RSD with counted data [RSD, 0, 0, 0, 1, 1, 0, 0, 0, 0, 300 RSD].
+04-Feb-2023 11:37:23,165  INFO  (MainWindow.java:531) - PDF file sucessfully printed
+04-Feb-2023 11:37:25,932  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 11:40:26,206  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:40:26,352  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:40:26,353  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:40:26,577  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:40:26,751  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:40:29,902  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:40:29,982  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:40:29,984  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:40:30,075  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:40:31,463  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:40:31,468  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:40:31,630  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:40:33,258  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 11:42:47,477  INFO  (MainWindow.java:555) - Opening SettingWindow. Password enter successfully.
+04-Feb-2023 11:43:20,804  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:43:20,948  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:43:20,948  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:43:21,156  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:43:21,319  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:43:24,704  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:43:24,773  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:43:24,774  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:43:24,874  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:43:27,704  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:43:27,708  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:43:27,876  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:43:36,561  INFO  (MainWindow.java:555) - Opening SettingWindow. Password enter successfully.
+04-Feb-2023 11:43:47,642  INFO  (SettingsWindow.java:173) - Adding machine: SB-9
+04-Feb-2023 11:43:47,642  INFO  (SettingsWindow.java:173) - Adding machine: ML-2F
+04-Feb-2023 11:43:47,642  INFO  (SettingsWindow.java:173) - Adding machine: ML-2FS
+04-Feb-2023 11:43:56,583  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:43:56,731  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:43:56,731  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:43:56,947  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:43:57,106  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:46:09,287  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:46:09,370  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:46:09,371  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:46:09,372  INFO  (ChooseCounter.java:79) - Adding machines ML-2FS to be available
+04-Feb-2023 11:46:09,473  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:46:12,755  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:46:12,759  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 11:46:12,917  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 11:46:41,565  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:46:41,654  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , Signature]
+04-Feb-2023 11:46:41,656  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 11:47:33,701  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:47:33,858  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:47:33,859  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:47:34,076  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:47:34,243  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:47:37,145  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:47:37,218  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:47:37,219  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:47:37,219  INFO  (ChooseCounter.java:79) - Adding machines ML-2FS to be available
+04-Feb-2023 11:47:37,301  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:47:38,454  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:47:38,459  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:47:38,608  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:47:40,417  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:47:53,710  INFO  (SB9.java:96) - Receiving and modifying count data +[@LS, aFri, 2000/00/00, 00:00:00, 1/1, <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, Signature, :, ___________________________, a, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, m]
+04-Feb-2023 11:47:53,712  INFO  (SB9.java:104) - Received data for RSD currency. Saving to table.
+04-Feb-2023 11:47:55,920  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:47:56,096  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:47:56,096  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:47:56,326  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:47:56,504  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:47:59,714  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:47:59,789  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:47:59,789  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:47:59,790  INFO  (ChooseCounter.java:79) - Adding machines ML-2FS to be available
+04-Feb-2023 11:47:59,889  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:48:03,124  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:48:03,130  INFO  (ChooseCounter.java:199) - Opening port with settings for SB-9
+04-Feb-2023 11:48:03,287  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: SB-9, COM8, 115200.
+04-Feb-2023 11:48:06,353  INFO  (MainWindow.java:315) - ChangeSettings pressed. Closing port: COM8 and showing ChooseCounter window
+04-Feb-2023 11:48:06,393  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:48:06,393  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:48:06,394  INFO  (ChooseCounter.java:79) - Adding machines ML-2FS to be available
+04-Feb-2023 11:48:09,542  ERROR (ChooseCounter.java:193) - Error while opening the port.
+04-Feb-2023 11:48:09,544  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 11:48:09,639  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 11:48:11,558  INFO  (SB9.java:40) - Receiving data from SB-9.
+04-Feb-2023 11:48:17,695  INFO  (SB9.java:96) - Receiving and modifying count data +[@LS, aFri, 2000/00/00, 00:00:00, 1/1, <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, Signature, :, ___________________________, a, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, -, m]
+04-Feb-2023 11:48:17,696  INFO  (SB9.java:104) - Received data for RSD currency. Saving to table.
+04-Feb-2023 11:48:19,969  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:48:20,120  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:48:20,120  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:48:20,343  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:48:20,501  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:48:22,854  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:48:22,937  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:48:22,938  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:48:22,939  INFO  (ChooseCounter.java:79) - Adding machines ML-2FS to be available
+04-Feb-2023 11:48:23,050  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:48:25,410  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:48:25,415  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 11:48:25,562  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 11:48:27,076  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:48:27,124  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , Signature]
+04-Feb-2023 11:48:27,125  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 11:48:52,157  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:48:52,267  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, B?, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 11:48:52,267  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 11:49:49,861  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:49:49,905  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, B?, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 11:49:49,906  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 11:49:52,514  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:49:52,625  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, B?, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 11:49:52,625  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 11:49:53,119  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:49:53,229  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, B?, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 11:49:53,230  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 11:49:53,870  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:49:53,916  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, B?, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 11:49:53,916  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 11:54:05,595  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:54:05,738  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:54:05,739  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:54:05,952  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:54:06,113  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:54:08,461  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:54:08,525  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 11:54:08,526  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:54:08,527  INFO  (ChooseCounter.java:79) - Adding machines ML-2FS to be available
+04-Feb-2023 11:54:08,625  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:54:11,310  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:54:11,314  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 11:54:11,459  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 11:54:13,029  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:54:13,082  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, B?, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 11:54:13,083  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 11:54:39,967  INFO  (MainWindow.java:510) - Transaction saved successfully for client Test ML-2F with counted data [RSD, 0, 0, 0, 1, 1, 0, 0, 0, 0, 300 RSD].
+04-Feb-2023 11:54:43,701  INFO  (MainWindow.java:531) - PDF file sucessfully printed
+04-Feb-2023 11:54:48,351  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 11:56:31,921  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:56:31,972  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , Signature]
+04-Feb-2023 11:56:31,973  INFO  (ML2F.java:67) - Receiving data for USD
+04-Feb-2023 11:58:48,840  INFO  (MainWindow.java:555) - Opening SettingWindow. Password enter successfully.
+04-Feb-2023 11:58:51,347  INFO  (SettingsWindow.java:173) - Adding machine: ML-2F
+04-Feb-2023 11:58:57,663  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 11:58:57,820  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 11:58:57,820  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 11:58:58,047  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 11:58:58,215  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 11:59:00,719  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 11:59:00,811  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 11:59:00,897  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 11:59:01,996  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 11:59:02,000  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 11:59:02,156  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 11:59:04,280  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 11:59:04,358  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , Signature]
+04-Feb-2023 11:59:04,359  INFO  (ML2F.java:67) - Receiving data for USD
+04-Feb-2023 12:00:14,006  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:00:14,163  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:00:14,163  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:00:14,388  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:00:14,553  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:00:16,811  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:00:16,877  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:00:16,969  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:00:18,090  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:00:18,094  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:00:18,258  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:00:19,899  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 12:00:19,946  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , Signature]
+04-Feb-2023 12:00:19,947  INFO  (ML2F.java:67) - Receiving data for USD
+04-Feb-2023 12:01:14,443  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:01:14,587  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:01:14,587  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:01:14,811  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:01:14,966  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:01:17,387  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:01:17,455  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:01:17,545  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:01:18,513  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:01:18,518  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:01:18,684  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:01:20,283  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 12:01:20,331  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , Signature]
+04-Feb-2023 12:01:20,332  INFO  (ML2F.java:67) - Receiving data for USD
+04-Feb-2023 12:01:36,540  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 12:01:36,639  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:01:36,639  INFO  (ML2F.java:67) - Receiving data for USD
+04-Feb-2023 12:03:53,095  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:03:53,238  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:03:53,238  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:03:53,466  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:03:53,624  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:03:55,954  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:03:56,025  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:03:56,115  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:03:57,474  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:03:57,478  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:03:57,642  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:03:59,391  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 12:03:59,495  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:03:59,496  INFO  (ML2F.java:67) - Receiving data for USD
+04-Feb-2023 12:04:31,092  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:04:31,229  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:04:31,229  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:04:31,451  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:04:31,612  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:04:34,911  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:04:34,976  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:04:35,061  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:04:37,178  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:04:37,183  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:04:37,341  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:04:38,470  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 12:04:38,575  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:04:38,575  INFO  (ML2F.java:67) - Receiving data for USD
+04-Feb-2023 12:28:21,160  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:28:21,391  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:28:21,391  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:28:21,623  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:28:21,855  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:28:29,742  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:28:29,820  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:28:29,932  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:28:30,987  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:28:30,991  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:28:31,173  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:28:38,617  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 12:28:38,675  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344?, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:28:38,677  INFO  (ML2F.java:67) - Receiving data for USD
+04-Feb-2023 12:29:10,203  INFO  (ML2F.java:36) - Receiving data from ML-2F
+04-Feb-2023 12:29:10,247  INFO  (ML2F.java:54) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, BB, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 12:29:10,248  INFO  (ML2F.java:59) - Receiving data for RSD
+04-Feb-2023 12:31:34,209  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:31:34,353  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:31:34,354  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:31:34,575  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:31:34,743  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:31:37,169  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:31:37,241  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:31:37,322  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:31:38,420  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:31:38,424  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:31:38,577  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:31:40,678  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:31:40,789  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, BB, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 12:31:40,789  INFO  (ML2F.java:61) - Receiving data for RSD
+04-Feb-2023 12:32:13,562  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:32:13,606  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, BB, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 12:32:13,607  INFO  (ML2F.java:61) - Receiving data for RSD
+04-Feb-2023 12:33:48,779  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:33:48,928  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:33:48,928  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:33:49,157  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:33:49,322  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:33:51,442  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:33:51,507  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:33:51,607  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:33:52,657  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:33:52,662  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:33:52,831  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:33:54,469  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:33:54,514  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, BB, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 12:33:54,521  INFO  (ML2F.java:62) - Receiving data for RSD
+04-Feb-2023 12:34:17,392  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:34:17,496  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:34:17,497  INFO  (ML2F.java:71) - Receiving data for USD
+04-Feb-2023 12:39:55,334  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:39:55,500  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:39:55,500  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:39:55,712  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:39:55,877  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:39:58,226  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:39:58,298  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:39:58,377  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:39:59,683  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:39:59,688  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:39:59,848  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:40:02,411  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:40:02,453  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:40:02,454  INFO  (ML2F.java:71) - Receiving data for USD
+04-Feb-2023 12:41:35,094  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:41:35,249  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:41:35,249  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:41:35,451  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:41:35,609  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:41:38,115  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:41:38,179  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:41:38,265  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:41:39,297  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:41:39,302  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:41:39,451  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:41:40,837  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:41:40,941  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:41:40,946  INFO  (ML2F.java:71) - Receiving data for USD
+04-Feb-2023 12:42:47,177  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:42:47,344  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:42:47,344  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:42:47,567  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:42:47,727  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:42:50,167  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:42:50,239  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:42:50,333  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:42:51,370  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:42:51,374  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:42:51,528  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:42:52,845  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:42:52,893  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:42:52,894  INFO  (ML2F.java:71) - Receiving data for USD
+04-Feb-2023 12:44:53,123  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:44:53,299  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:44:53,300  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:44:53,533  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:44:53,695  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:45:06,580  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:45:06,641  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:45:06,723  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:45:08,307  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:45:08,312  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:45:08,465  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:45:10,133  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:45:10,191  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:45:10,198  INFO  (ML2F.java:71) - Receiving data for USD
+04-Feb-2023 12:45:54,575  INFO  (ML2F.java:38) - Receiving data from ML-2F
+04-Feb-2023 12:45:54,621  INFO  (ML2F.java:56) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 15, 15, ---------------------------------------, TOTAL, 15, 15, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, 4, O, 1, E16625824B, 5, O, 1, F04085344K, 6, O, 1, B88155835C, 7, O, 1, E16625824B, 8, O, 1, F04085344K, 9, O, 1, B88155835C, 10, O, 1, E16625824B, 11, O, 1, F04085344?, 12, O, 1, B88155835C, 13, O, 1, F16625824B, 14, O, 1, F04085344K, 15, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:45:54,625  INFO  (ML2F.java:71) - Receiving data for USD
+04-Feb-2023 12:49:50,822  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:49:51,003  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:49:51,004  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:49:51,221  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:49:51,381  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:49:53,856  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:49:53,922  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:49:54,023  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:49:55,157  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:49:55,161  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:49:55,309  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:49:58,967  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 12:49:59,105  INFO  (ML2F.java:60) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 15, 15, ---------------------------------------, TOTAL, 15, 15, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, 4, O, 1, E16625824B, 5, O, 1, F04085344K, 6, O, 1, B88155835C, 7, O, 1, E16625824B, 8, O, 1, F04085344K, 9, O, 1, B88155835C, 10, O, 1, E16625824B, 11, O, 1, F04085344?, 12, O, 1, B88155835C, 13, O, 1, F16625824B, 14, O, 1, F04085344K, 15, O, 1, B88155835C, a ==========================================, a , Signature]
+04-Feb-2023 12:49:59,114  INFO  (ML2F.java:76) - Receiving data for USD
+04-Feb-2023 12:50:18,550  INFO  (MainWindow.java:436) - Transaction saved successfully for client Test Lidix USD with counted data [USD, 15, 0, 0, 0, 0, 0, 0, 15 USD].
+04-Feb-2023 12:51:43,840  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 12:51:43,916  INFO  (ML2F.java:60) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, USD, 100, x, 0, 0, USD, 50, x, 0, 0, USD, 20, x, 0, 0, USD, 10, x, 0, 0, USD, 5, x, 0, 0, USD, 2, x, 0, 0, USD, 1, x, 3, 3, ---------------------------------------, TOTAL, 3, 3, ==========================================, a , Signature]
+04-Feb-2023 12:51:43,916  INFO  (ML2F.java:76) - Receiving data for USD
+04-Feb-2023 12:52:10,580  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 12:52:10,662  INFO  (ML2F.java:60) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , Signature]
+04-Feb-2023 12:52:10,663  INFO  (ML2F.java:67) - Receiving data for RSD
+04-Feb-2023 12:52:25,321  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 12:52:25,365  INFO  (ML2F.java:60) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, RSD, 5,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 500, x, 0, 0, RSD, 200, x, 1, 200, RSD, 100, x, 1, 100, RSD, 50, x, 0, 0, RSD, 20, x, 0, 0, RSD, 10, x, 0, 0, ---------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, BB, 3478382, 2, N, 100, BA, 1456646, a ==========================================, a , Signature]
+04-Feb-2023 12:52:25,366  INFO  (ML2F.java:67) - Receiving data for RSD
+04-Feb-2023 12:53:34,401  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 12:53:34,446  INFO  (ML2F.java:60) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, EUR, 500, x, 0, 0, EUR, 200, x, 0, 0, EUR, 100, x, 0, 0, EUR, 50, x, 1, 50, EUR, 20, x, 0, 0, EUR, 10, x, 0, 0, EUR, 5, x, 0, 0, ---------------------------------------, TOTAL, 1, 50, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 50, SC2180547309, a ==========================================, a , Signature]
+04-Feb-2023 12:53:34,446  INFO  (ML2F.java:71) - Receiving data for EUR
+04-Feb-2023 12:56:50,951  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:56:51,170  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:56:51,170  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:56:51,397  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:56:51,607  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:56:54,416  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:56:54,503  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:56:54,606  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:56:55,661  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:56:55,666  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:56:55,876  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:56:57,182  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 12:56:57,283  INFO  (ML2F.java:60) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, EUR, 500, x, 0, 0, EUR, 200, x, 0, 0, EUR, 100, x, 0, 0, EUR, 50, x, 1, 50, EUR, 20, x, 0, 0, EUR, 10, x, 0, 0, EUR, 5, x, 0, 0, ---------------------------------------, TOTAL, 1, 50, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 50, SC2180547309, a ==========================================, a , Signature]
+04-Feb-2023 12:56:57,286  INFO  (ML2F.java:71) - Receiving data for EUR
+04-Feb-2023 12:57:55,726  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:57:55,868  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:57:55,868  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:57:56,105  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:57:56,277  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:57:58,453  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:57:58,525  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:57:58,615  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:57:59,641  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:57:59,646  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:57:59,800  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:58:00,857  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 12:58:00,950  INFO  (ML2F.java:60) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, EUR, 500, x, 0, 0, EUR, 200, x, 0, 0, EUR, 100, x, 0, 0, EUR, 50, x, 1, 50, EUR, 20, x, 0, 0, EUR, 10, x, 0, 0, EUR, 5, x, 0, 0, ---------------------------------------, TOTAL, 1, 50, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 50, SC2180547309, a ==========================================, a , Signature]
+04-Feb-2023 12:58:00,956  INFO  (ML2F.java:72) - Receiving data for EUR
+04-Feb-2023 12:58:28,342  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 12:58:28,491  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 12:58:28,491  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 12:58:28,716  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 12:58:28,877  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 12:58:34,960  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 12:58:35,033  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 12:58:35,138  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 12:58:47,629  INFO  (ChooseCounter.java:223) - Refreshing ports.
+04-Feb-2023 12:58:52,050  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 12:58:52,055  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 12:58:52,241  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 12:59:15,254  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 12:59:15,353  INFO  (ML2F.java:60) - Receiving: [@LS, aFri, 2000/00/00, 00:00:00, 1/1, a , <, Customer, Report, >, ==========================================, DENOM, PCS, AMOUNT, ----------------------------------------, EUR, 500, x, 0, 0, EUR, 200, x, 0, 0, EUR, 100, x, 0, 0, EUR, 50, x, 1, 50, EUR, 20, x, 0, 0, EUR, 10, x, 0, 0, EUR, 5, x, 0, 0, ---------------------------------------, TOTAL, 1, 50, ==========================================, a , <, Serial, Number, List>, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 50, SC2180547309, a ==========================================, a , Signature]
+04-Feb-2023 12:59:15,360  INFO  (ML2F.java:72) - Receiving data for EUR
+04-Feb-2023 12:59:32,045  INFO  (MainWindow.java:436) - Transaction saved successfully for client Mladen Ratkovic with counted data [EUR, 0, 0, 0, 1, 0, 0, 0, 50 EUR].
+04-Feb-2023 12:59:33,485  INFO  (MainWindow.java:373) - Opening Database window
+04-Feb-2023 13:01:09,001  INFO  (MainWindow.java:555) - Opening SettingWindow. Password enter successfully.
+04-Feb-2023 13:01:28,880  INFO  (SettingsWindow.java:173) - Adding machine: SB-9
+04-Feb-2023 13:01:28,881  INFO  (SettingsWindow.java:173) - Adding machine: ML-2F
+04-Feb-2023 13:01:36,705  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Feb-2023 13:01:36,851  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Feb-2023 13:01:36,851  INFO  (Main.java:22) - Attempting to connect to database.
+04-Feb-2023 13:01:37,077  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Feb-2023 13:01:37,247  INFO  (Main.java:31) - Showing login screen.
+04-Feb-2023 13:01:39,921  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Feb-2023 13:01:39,987  INFO  (ChooseCounter.java:79) - Adding machines SB-9 to be available
+04-Feb-2023 13:01:39,988  INFO  (ChooseCounter.java:79) - Adding machines ML-2F to be available
+04-Feb-2023 13:01:40,070  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Feb-2023 13:08:35,630  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+04-Feb-2023 13:08:35,636  INFO  (ChooseCounter.java:203) - Opening port with settings for ML-2F
+04-Feb-2023 13:08:35,797  INFO  (ChooseCounter.java:212) - Showing MainWindow, with following settings: ML-2F, COM8, 115200.
+04-Feb-2023 13:09:20,211  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:09:20,427  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:40:28, 1/1, <, RSD, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, RSD, 10, x, 0, 0, RSD, 20, x, 0, 0, RSD, 50, x, 0, 0, RSD, 100, x, 1, 100, RSD, 200, x, 1, 200, RSD, 500, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 5,000, x, 0, 0, -----------------------------------------, TOTAL, 2, 300, ==========================================, a , <, Serial, Number, List, >, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 200, BB, 3478382, 2, N, 100, BA, 1456646, ==========================================, Signature]
+04-Feb-2023 13:09:20,435  INFO  (ML2F.java:67) - Receiving data for RSD
+04-Feb-2023 13:09:42,558  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:09:42,605  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:40:50, 1/1, <, RSD, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, RSD, 10, x, 0, 0, RSD, 20, x, 0, 0, RSD, 50, x, 0, 0, RSD, 100, x, 1, 100, RSD, 200, x, 1, 200, RSD, 500, x, 0, 0, RSD, 1,000, x, 0, 0, RSD, 2,000, x, 0, 0, RSD, 5,000, x, 0, 0, -----------------------------------------, TOTAL, 2, 300, ==========================================, Signature]
+04-Feb-2023 13:09:42,605  INFO  (ML2F.java:67) - Receiving data for RSD
+04-Feb-2023 13:09:55,206  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:09:55,276  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:41:03, 1/1, <, EUR, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, EUR, 5, x, 0, 0, EUR, 10, x, 0, 0, EUR, 20, x, 0, 0, EUR, 50, x, 1, 50, EUR, 100, x, 0, 0, EUR, 200, x, 0, 0, EUR, 500, x, 0, 0, -----------------------------------------, TOTAL, 1, 50, ==========================================, Signature]
+04-Feb-2023 13:09:55,278  INFO  (ML2F.java:72) - Receiving data for EUR
+04-Feb-2023 13:10:02,406  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:10:02,554  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:41:10, 1/1, <, EUR, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, EUR, 5, x, 0, 0, EUR, 10, x, 0, 0, EUR, 20, x, 0, 0, EUR, 50, x, 1, 50, EUR, 100, x, 0, 0, EUR, 200, x, 0, 0, EUR, 500, x, 0, 0, -----------------------------------------, TOTAL, 1, 50, ==========================================, a , <, Serial, Number, List, >, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, N, 50, SC2180547309, ==========================================, Signature]
+04-Feb-2023 13:10:02,555  INFO  (ML2F.java:72) - Receiving data for EUR
+04-Feb-2023 13:10:23,180  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:10:23,249  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:41:31, 1/1, <, USD, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, USD, 1, x, 3, 3, USD, 2, x, 0, 0, USD, 5, x, 0, 0, USD, 10, x, 0, 0, USD, 20, x, 0, 0, USD, 50, x, 0, 0, USD, 100, x, 0, 0, -----------------------------------------, TOTAL, 3, 3, ==========================================, Signature]
+04-Feb-2023 13:10:23,250  INFO  (ML2F.java:77) - Receiving data for USD
+04-Feb-2023 13:10:34,825  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:10:35,093  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:41:42, 1/1, <, USD, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, USD, 1, x, 3, 3, USD, 2, x, 0, 0, USD, 5, x, 0, 0, USD, 10, x, 0, 0, USD, 20, x, 0, 0, USD, 50, x, 0, 0, USD, 100, x, 0, 0, -----------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List, >, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, ==========================================, Signature]
+04-Feb-2023 13:10:35,094  INFO  (ML2F.java:77) - Receiving data for USD
+04-Feb-2023 13:10:54,408  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:10:54,599  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:42:02, 1/1, <, USD, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, USD, 1, x, 3, 3, USD, 2, x, 0, 0, USD, 5, x, 0, 0, USD, 10, x, 0, 0, USD, 20, x, 0, 0, USD, 50, x, 0, 0, USD, 100, x, 0, 0, -----------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List, >, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, ==========================================, Signature]
+04-Feb-2023 13:10:54,600  INFO  (ML2F.java:77) - Receiving data for USD
+04-Feb-2023 13:11:04,200  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:11:04,392  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:42:12, 1/1, <, USD, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, USD, 1, x, 3, 3, USD, 2, x, 0, 0, USD, 5, x, 0, 0, USD, 10, x, 0, 0, USD, 20, x, 0, 0, USD, 50, x, 0, 0, USD, 100, x, 0, 0, -----------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List, >, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, ==========================================, Signature]
+04-Feb-2023 13:11:04,393  INFO  (ML2F.java:77) - Receiving data for USD
+04-Feb-2023 13:11:13,427  INFO  (ML2F.java:40) - Receiving data from ML-2F
+04-Feb-2023 13:11:13,619  INFO  (ML2F.java:60) - Receiving: [2023/02/04, 12:42:21, 1/1, <, USD, Count, Result, >, ==========================================, DENOM, PCS, AMOUNT, ------------------------------------------, USD, 1, x, 3, 3, USD, 2, x, 0, 0, USD, 5, x, 0, 0, USD, 10, x, 0, 0, USD, 20, x, 0, 0, USD, 50, x, 0, 0, USD, 100, x, 0, 0, -----------------------------------------, TOTAL, 3, 3, ==========================================, a , <, Serial, Number, List, >, ==========================================, No, Ver, Denom, S/N, Image, ----------------------------------------, 1, O, 1, E16625824B, 2, O, 1, F04085344K, 3, O, 1, B88155835C, ==========================================, Signature]
+04-Feb-2023 13:11:13,620  INFO  (ML2F.java:77) - Receiving data for USD

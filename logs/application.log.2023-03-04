@@ -1,0 +1,10 @@
+04-Mar-2023 19:18:12,083  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+04-Mar-2023 19:18:12,453  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+04-Mar-2023 19:18:12,454  INFO  (Main.java:22) - Attempting to connect to database.
+04-Mar-2023 19:18:12,783  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+04-Mar-2023 19:18:13,121  INFO  (Main.java:31) - Showing login screen.
+04-Mar-2023 19:18:17,161  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+04-Mar-2023 19:18:17,272  INFO  (ChooseCounter.java:80) - Adding machines K2 to be available
+04-Mar-2023 19:18:17,427  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+04-Mar-2023 19:18:23,056  INFO  (ChooseCounter.java:225) - Refreshing ports.
+04-Mar-2023 19:18:26,046  INFO  (ChooseCounter.java:236) - Logging out. Showing LoginScreen.
