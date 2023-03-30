@@ -1,0 +1,772 @@
+14-Mar-2023 09:55:28,681  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 09:55:28,923  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 09:55:28,923  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 09:55:29,379  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 09:55:29,617  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 09:55:32,812  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 09:55:32,889  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 09:55:33,000  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 09:55:34,162  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 09:55:34,163  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 09:55:34,357  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 09:56:45,249  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 09:56:47,125  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 11:48:09, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 09:56:47,126  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 09:57:17,105  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 09:57:17,310  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 09:57:17,311  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 09:57:17,547  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 09:57:17,768  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 09:57:20,088  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 09:57:20,308  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 09:57:20,466  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 09:57:21,470  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 09:57:21,470  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 09:57:21,751  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 09:57:23,514  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 09:57:25,395  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 11:48:47, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 09:57:25,397  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:03:20,698  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:03:20,851  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:03:20,852  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:03:21,059  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:03:21,222  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:03:23,633  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:03:23,694  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:03:23,781  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:03:24,817  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:03:24,818  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:03:24,980  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:03:27,033  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:03:28,908  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 11:54:51, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:03:28,909  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:03:28,955  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:03:28,959  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:07:02,009  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:07:02,160  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:07:02,160  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:07:02,383  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:07:02,547  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:07:04,730  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:07:04,798  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:07:04,890  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:07:05,822  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:07:05,822  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:07:05,969  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:07:07,600  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:07:09,478  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 11:58:31, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:07:09,479  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:07:09,547  INFO  (K2.java:150) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:07:09,552  INFO  (K2.java:154) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:08:03,178  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:08:03,420  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:08:03,420  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:08:03,699  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:08:03,878  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:08:06,434  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:08:06,496  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:08:06,585  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:08:07,621  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:08:07,622  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:08:07,774  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:08:09,661  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:08:11,539  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 11:59:33, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:08:11,540  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:08:11,602  INFO  (K2.java:150) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:08:11,605  INFO  (K2.java:154) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:09:43,662  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:09:43,864  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:09:43,864  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:09:44,136  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:09:44,327  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:09:46,726  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:09:46,794  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:09:46,871  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:09:47,901  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:09:47,902  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:09:48,049  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:09:49,679  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:09:51,582  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 12:01:13, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:09:51,583  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:09:51,655  INFO  (K2.java:151) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:09:51,659  INFO  (K2.java:155) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:10:47,436  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:10:47,606  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:10:47,606  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:10:47,878  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:10:48,072  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:10:50,318  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:10:50,381  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:10:50,461  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:10:51,341  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:10:51,342  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:10:51,491  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:10:53,110  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:10:55,010  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 12:02:17, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:10:55,011  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:10:55,052  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:10:55,057  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:12:26,449  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:12:26,609  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:12:26,609  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:12:26,855  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:12:27,035  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:12:29,198  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:12:29,260  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:12:29,352  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:12:30,275  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:12:30,276  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:12:30,426  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:12:33,304  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:12:35,180  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 12:03:57, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:12:35,181  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:12:35,222  INFO  (K2.java:151) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:12:35,226  INFO  (K2.java:157) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:13:06,444  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:13:06,612  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:13:06,612  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:13:06,871  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:13:07,060  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:13:09,950  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:13:10,011  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:13:10,102  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:13:11,420  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:13:11,420  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:13:11,574  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:13:15,387  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:13:17,288  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 12:04:39, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:13:17,289  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:13:17,333  INFO  (K2.java:151) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:13:17,337  INFO  (K2.java:157) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:15:15,742  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:15:15,918  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:15:15,919  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:15:16,167  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:15:16,344  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:15:18,538  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:15:18,604  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:15:18,690  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:15:19,835  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:15:19,835  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:15:19,986  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:15:22,365  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:15:24,267  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 12:06:46, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:15:24,269  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:15:24,310  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:15:24,316  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:16:04,699  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:16:04,892  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:16:04,892  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:16:05,182  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:16:05,377  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:16:08,561  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:16:08,621  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:16:08,716  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:16:09,788  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:16:09,788  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:16:09,937  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:16:11,576  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:16:13,456  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 12:07:35, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:16:13,456  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:16:13,498  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:16:13,501  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:20:28,198  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:20:28,353  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:20:28,354  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:20:28,593  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:20:28,757  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:20:31,226  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:20:31,288  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:20:31,365  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:20:32,434  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:20:32,434  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:20:32,580  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:20:34,600  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:20:36,501  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 12:11:58, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:20:36,501  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:20:36,544  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:20:36,548  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:27:25,607  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:27:25,793  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:27:25,794  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:27:26,059  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:27:26,256  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:27:29,480  INFO  (LoginScreen.java:134) - Trying to login a user: [admon] with password: [a, d, m, i, n].
+14-Mar-2023 10:27:30,102  ERROR (ButtonListeners.java:201) - Unsuccessfully trying to login, wrong username or password.
+14-Mar-2023 10:27:33,236  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:27:33,290  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:27:33,366  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:27:36,063  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:27:36,064  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:27:36,209  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:27:40,668  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:27:42,566  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 12:19:04, Machine, ID, :, N18K04-T17169, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
+14-Mar-2023 10:27:42,567  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:27:42,608  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:27:42,612  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:28:24,887  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:28:25,075  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:28:25,076  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:28:25,363  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:28:25,567  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:28:28,320  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:28:28,383  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:28:28,462  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:28:29,585  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:28:29,585  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:28:29,738  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:28:31,890  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:28:33,794  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:19:56, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 1, 1, ------------------------------------------, Total, Amount, 1, ------------------------------------------, 1, 1, v0]
+14-Mar-2023 10:28:33,795  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:28:33,842  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:28:33,848  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:28:33,910  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\danilodjurovic\IdeaProjects\MasterTeam_Brojacica\image.png
+14-Mar-2023 10:28:34,396  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:28:34,398  INFO  (K2.java:205) - Adding images to an array
+14-Mar-2023 10:29:55,953  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:29:56,111  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:29:56,111  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:29:56,333  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:29:56,501  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:29:58,836  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:29:58,900  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:29:58,998  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:29:59,985  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:29:59,986  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:30:00,158  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:30:01,879  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:30:03,786  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:21:26, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 1, 1, ------------------------------------------, Total, Amount, 1, ------------------------------------------, 1, 1, v0]
+14-Mar-2023 10:30:03,787  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:30:03,830  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:30:03,836  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:30:03,876  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp13593554341756228359.png
+14-Mar-2023 10:30:04,246  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:30:04,248  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:34:40,372  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:34:40,513  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:34:40,513  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:34:40,734  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:34:40,887  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:34:44,159  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:34:44,223  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:34:44,314  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:34:45,620  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:34:45,620  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:34:45,761  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:34:47,553  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:34:49,484  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:26:11, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 1, 1, ------------------------------------------, Total, Amount, 1, ------------------------------------------, 1, 1, v0]
+14-Mar-2023 10:34:49,484  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:34:49,532  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:34:49,552  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:34:49,600  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp110673190791811138177.png
+14-Mar-2023 10:34:49,953  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:34:49,955  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:35:19,322  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:35:19,458  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:35:19,459  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:35:19,683  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:35:19,855  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:35:22,447  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:35:22,509  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:35:22,579  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:35:23,837  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:35:23,838  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:35:23,991  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:35:25,885  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:35:27,790  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:26:50, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 1, 1, ------------------------------------------, Total, Amount, 1, ------------------------------------------, 1, 1, v0]
+14-Mar-2023 10:35:27,792  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:35:27,838  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:35:27,843  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:35:27,882  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp13539017022882469271.png
+14-Mar-2023 10:35:28,217  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:35:28,220  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:35:48,621  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:35:51,131  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:27:12, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 3, 3, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 3, 3, ------------------------------------------, Total, Amount, 3, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0]
+14-Mar-2023 10:35:51,132  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:35:51,169  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:35:51,173  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:35:51,177  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp13392957341000705424.png
+14-Mar-2023 10:35:51,330  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:35:51,330  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:35:51,402  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28960304867410660985.png
+14-Mar-2023 10:35:51,535  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:35:51,535  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:35:51,605  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp311400587649096608972.png
+14-Mar-2023 10:35:51,840  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:35:51,840  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:35:51,980  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:36:14,253  INFO  (K2.java:106) - Receiving and modifying count data +[Date, :, 2023-03-14, 12:27:35, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 3, 3, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 3, 3, ------------------------------------------, Total, Amount, 3, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0]
+14-Mar-2023 10:36:14,254  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:36:14,278  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:36:14,282  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:36:14,286  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp19858742976523012352.png
+14-Mar-2023 10:36:14,470  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:36:14,470  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:36:14,637  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28422915323985995241.png
+14-Mar-2023 10:36:14,776  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:36:14,777  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:36:14,850  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp315902775955493428825.png
+14-Mar-2023 10:36:15,213  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:36:15,213  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:36:15,353  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:37:34,559  INFO  (K2.java:106) - Receiving and modifying count data +[Date, :, 2023-03-14, 12:28:56, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 1, 1, ------------------------------------------, Total, Amount, 1, ------------------------------------------, 1, 1, v0]
+14-Mar-2023 10:37:34,560  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:37:34,593  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:37:34,595  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:37:34,599  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp13880474621199453234.png
+14-Mar-2023 10:37:34,836  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:37:34,837  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:38:01,457  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:38:03,360  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:29:25, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 1, 1, ------------------------------------------, Total, Amount, 1, ------------------------------------------, 1, 1, v0]
+14-Mar-2023 10:38:03,361  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:38:03,370  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:38:03,371  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:38:03,375  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp19843600887125826786.png
+14-Mar-2023 10:38:03,656  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:38:03,657  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:38:15,056  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:38:17,265  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:29:39, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 2, 2, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 2, 2, ------------------------------------------, Total, Amount, 2, ------------------------------------------, 1, 1, v0, 2, 1, v0]
+14-Mar-2023 10:38:17,265  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:38:17,275  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:38:17,277  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:38:17,281  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp19507708453645493841.png
+14-Mar-2023 10:38:17,527  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:38:17,527  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:38:17,647  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp23896138930797489732.png
+14-Mar-2023 10:38:17,880  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:38:17,880  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:38:31,197  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:38:33,736  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:29:55, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 3, 3, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 3, 3, ------------------------------------------, Total, Amount, 3, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0]
+14-Mar-2023 10:38:33,736  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:38:33,751  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:38:33,753  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:38:33,756  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp13913939591359506901.png
+14-Mar-2023 10:38:33,985  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:38:33,985  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:38:34,100  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp215192296737270526023.png
+14-Mar-2023 10:38:34,322  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:38:34,323  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:38:34,437  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp317949256511140032810.png
+14-Mar-2023 10:38:34,559  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:38:34,559  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:38:34,639  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:39:55,007  INFO  (K2.java:106) - Receiving and modifying count data +[Date, :, 2023-03-14, 12:31:16, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 5, 5, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 5, 5, ------------------------------------------, Total, Amount, 5, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1]
+14-Mar-2023 10:39:55,008  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:39:55,031  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:39:55,032  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:39:55,034  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp112759403334551450092.png
+14-Mar-2023 10:39:55,259  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:39:55,259  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:39:55,373  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp23807809834010549926.png
+14-Mar-2023 10:39:55,619  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:39:55,619  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:39:55,742  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp313392749526902597375.png
+14-Mar-2023 10:39:55,965  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:39:55,965  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:39:56,078  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp42435277901976779933.png
+14-Mar-2023 10:39:56,205  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:39:56,205  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:39:56,270  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp518197295104228025615.png
+14-Mar-2023 10:39:56,403  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:39:56,404  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:40:15,163  INFO  (MainWindow.java:510) - Transaction saved successfully for client Branislav Pantelic with counted data [USD, 5, 0, 0, 0, 0, 0, 0, 5 USD].
+14-Mar-2023 10:41:12,697  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:41:12,842  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:41:12,843  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:41:13,063  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:41:13,227  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:41:15,792  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:41:15,867  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:41:15,966  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:41:17,503  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:41:17,503  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:41:17,654  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:41:19,338  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:41:22,489  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:32:43, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 5, 5, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 5, 5, ------------------------------------------, Total, Amount, 5, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1]
+14-Mar-2023 10:41:22,490  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:41:22,600  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:41:22,609  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:41:22,657  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp112286689271324533452.png
+14-Mar-2023 10:41:23,000  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:41:23,002  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:41:23,127  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp27007012153210092820.png
+14-Mar-2023 10:41:23,382  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:41:23,383  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:41:23,516  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp35200124494757713616.png
+14-Mar-2023 10:41:23,756  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:41:23,756  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:41:23,897  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp412138208949937860801.png
+14-Mar-2023 10:41:24,031  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:41:24,031  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:41:24,100  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp52785787938696277840.png
+14-Mar-2023 10:41:24,234  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:41:24,234  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:41:32,306  INFO  (MainWindow.java:510) - Transaction saved successfully for client Branislav Pantelic with counted data [USD, 5, 0, 0, 0, 0, 0, 0, 5 USD].
+14-Mar-2023 10:41:35,374  INFO  (MainWindow.java:531) - PDF file sucessfully printed
+14-Mar-2023 10:43:28,536  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 10:46:48,895  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:46:49,045  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:46:49,045  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:46:49,266  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:46:49,435  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:46:54,572  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:46:54,640  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:46:54,721  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:46:58,396  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:46:58,396  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:46:58,547  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:47:00,198  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:47:03,351  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:38:24, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 5, 5, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 5, 5, ------------------------------------------, Total, Amount, 5, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1]
+14-Mar-2023 10:47:03,352  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:47:03,445  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:47:03,455  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:47:03,499  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp18971047061510631438.png
+14-Mar-2023 10:47:03,871  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:47:03,874  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:47:03,994  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp24081185697662660149.png
+14-Mar-2023 10:47:04,239  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:47:04,240  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:47:04,365  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp310458334181172232844.png
+14-Mar-2023 10:47:04,666  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:47:04,666  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:47:04,782  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp41100986418869121748.png
+14-Mar-2023 10:47:04,933  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:47:04,933  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:47:05,007  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp516101713089596652660.png
+14-Mar-2023 10:47:05,150  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:47:05,150  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:47:16,003  INFO  (MainWindow.java:510) - Transaction saved successfully for client Test with counted data [USD, 5, 0, 0, 0, 0, 0, 0, 5 USD].
+14-Mar-2023 10:47:19,298  INFO  (MainWindow.java:531) - PDF file sucessfully printed
+14-Mar-2023 10:48:28,876  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 10:50:13,506  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:50:13,666  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:50:13,666  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:50:13,886  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:50:14,045  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:50:16,407  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:50:16,482  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:50:16,559  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:50:17,733  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:50:17,733  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:50:17,888  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:50:19,518  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:50:22,671  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:41:43, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 5, 5, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 5, 5, ------------------------------------------, Total, Amount, 5, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1]
+14-Mar-2023 10:50:22,672  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:50:22,759  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:50:22,770  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:50:22,821  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp111221243019591813216.png
+14-Mar-2023 10:50:23,176  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:50:23,178  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:50:23,340  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp211897188774997670853.png
+14-Mar-2023 10:50:23,653  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:50:23,655  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:50:23,784  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp317464828584455011481.png
+14-Mar-2023 10:50:24,020  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:50:24,020  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:50:24,148  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp413741810483668022369.png
+14-Mar-2023 10:50:24,280  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:50:24,280  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:50:24,348  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp516696177580008149648.png
+14-Mar-2023 10:50:24,485  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:50:24,485  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:50:32,232  INFO  (MainWindow.java:510) - Transaction saved successfully for client Branislav Pantelic with counted data [USD, 5, 0, 0, 0, 0, 0, 0, 5 USD].
+14-Mar-2023 10:50:34,684  INFO  (MainWindow.java:531) - PDF file sucessfully printed
+14-Mar-2023 10:51:11,915  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:51:12,054  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:51:12,054  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:51:12,283  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:51:12,441  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:51:36,710  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:51:36,773  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:51:36,849  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:51:38,047  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:51:38,048  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:51:38,189  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:51:40,874  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:51:44,060  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:43:05, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 5, 5, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 5, 5, ------------------------------------------, Total, Amount, 5, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1]
+14-Mar-2023 10:51:44,062  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:51:44,153  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:51:44,164  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:51:44,219  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp115976270023490651675.png
+14-Mar-2023 10:51:44,558  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:51:44,560  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:51:44,684  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28012079284956905359.png
+14-Mar-2023 10:51:44,946  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:51:44,947  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:51:45,072  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp314510995811594360088.png
+14-Mar-2023 10:51:45,313  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:51:45,313  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:51:45,436  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp46691239991489435986.png
+14-Mar-2023 10:51:45,573  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:51:45,573  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:51:45,644  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp56418643539812945596.png
+14-Mar-2023 10:51:45,787  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:51:45,787  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:52:04,136  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 10:52:04,282  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 10:52:04,282  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 10:52:04,491  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 10:52:04,663  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 10:52:06,803  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 10:52:06,867  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 10:52:06,949  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 10:52:07,843  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 10:52:07,844  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 10:52:07,991  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 10:52:09,745  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 10:52:12,898  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 12:43:33, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 5, 5, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 5, 5, ------------------------------------------, Total, Amount, 5, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1]
+14-Mar-2023 10:52:12,899  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 10:52:12,998  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 10:52:13,010  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 10:52:13,060  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp110393121381818947054.png
+14-Mar-2023 10:52:13,380  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:52:13,381  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:52:13,498  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28879625561529042936.png
+14-Mar-2023 10:52:13,781  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:52:13,781  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:52:13,902  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp37424589899115826154.png
+14-Mar-2023 10:52:14,140  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:52:14,141  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:52:14,272  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp418045145213523616236.png
+14-Mar-2023 10:52:14,406  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:52:14,406  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:52:14,476  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp514993727959174199037.png
+14-Mar-2023 10:52:14,603  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 10:52:14,603  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 10:52:25,944  INFO  (MainWindow.java:510) - Transaction saved successfully for client Branislav Pantelic with counted data [USD, 5, 0, 0, 0, 0, 0, 0, 5 USD].
+14-Mar-2023 10:52:28,809  INFO  (MainWindow.java:531) - PDF file sucessfully printed
+14-Mar-2023 10:56:49,055  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 11:23:32,792  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 11:23:33,005  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 11:23:33,005  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 11:23:33,237  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 11:23:33,443  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 11:23:35,709  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 11:23:35,785  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 11:23:35,886  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 11:23:37,026  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 11:23:37,026  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 11:23:37,200  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 11:23:38,094  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 11:27:45,655  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 11:27:45,802  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 11:27:45,802  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 11:27:46,016  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 11:27:46,174  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 11:27:48,516  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 11:27:48,585  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 11:27:48,662  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 11:27:49,615  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 11:27:49,616  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 11:27:49,770  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 11:27:51,381  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 11:32:10,935  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 11:32:11,075  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 11:32:11,076  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 11:32:11,309  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 11:32:11,484  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 11:32:13,856  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 11:32:13,919  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 11:32:14,009  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 11:32:15,272  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 11:32:15,272  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 11:32:15,422  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 11:32:16,377  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 11:42:08,687  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 11:42:08,850  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 11:42:08,850  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 11:42:09,096  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 11:42:09,262  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 11:42:11,627  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 11:42:11,696  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 11:42:11,776  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 11:42:13,159  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 11:42:13,160  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 11:42:13,321  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 11:42:14,358  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 11:48:56,130  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 11:48:56,281  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 11:48:56,281  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 11:48:56,509  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 11:48:56,668  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 11:48:58,979  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 11:48:59,049  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 11:48:59,133  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 11:49:00,346  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 11:49:00,346  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 11:49:00,494  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 11:49:01,670  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 11:56:21,538  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 11:56:21,770  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 11:56:21,770  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 11:56:21,994  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 11:56:22,212  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 11:56:24,573  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 11:56:24,649  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 11:56:24,737  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 11:56:25,777  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 11:56:25,777  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 11:56:25,948  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 11:56:26,861  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 11:57:21,845  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 11:57:21,989  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 11:57:21,989  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 11:57:22,209  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 11:57:22,375  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 11:57:24,725  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 11:57:24,788  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 11:57:24,880  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 11:57:25,972  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 11:57:25,972  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 11:57:26,120  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 11:57:27,024  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 12:01:48,179  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 12:01:48,343  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 12:01:48,343  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 12:01:48,575  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 12:01:48,743  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 12:01:51,020  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 12:01:51,080  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 12:01:51,156  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 12:01:52,253  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 12:01:52,254  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 12:01:52,412  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 12:01:53,280  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 12:03:32,634  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 12:03:35,817  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 13:54:57, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 5, 5, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 5, 5, ------------------------------------------, Total, Amount, 5, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1]
+14-Mar-2023 12:03:35,818  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 12:03:35,899  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 12:03:35,905  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 12:03:35,910  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp15582096925635567171.png
+14-Mar-2023 12:03:36,402  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 12:03:36,402  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 12:03:36,521  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp216134969118574034368.png
+14-Mar-2023 12:03:36,767  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 12:03:36,767  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 12:03:36,895  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp318287849054152334260.png
+14-Mar-2023 12:03:37,118  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 12:03:37,118  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 12:03:37,234  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp411125956476309819614.png
+14-Mar-2023 12:03:37,377  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 12:03:37,377  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 12:03:37,464  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp57378541789864618094.png
+14-Mar-2023 12:03:37,634  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 12:03:37,634  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 12:29:23,792  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 12:29:23,934  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 12:29:23,935  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 12:29:24,149  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 12:29:24,309  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 12:29:26,589  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 12:29:26,652  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 12:29:26,744  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 12:29:27,712  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 12:29:27,713  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 12:29:27,878  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 12:29:28,770  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 12:59:21,624  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 12:59:21,836  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 12:59:21,836  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 12:59:22,156  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 12:59:22,373  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 12:59:24,939  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 12:59:25,014  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 12:59:25,112  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 12:59:26,179  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 12:59:26,180  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 12:59:26,349  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 12:59:27,611  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 12:59:52,427  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 12:59:52,567  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 12:59:52,568  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 12:59:52,792  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 12:59:52,948  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 12:59:55,658  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 12:59:55,725  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 12:59:55,800  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 12:59:57,014  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 12:59:57,015  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 12:59:57,169  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 13:00:00,788  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 13:00:27,511  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 13:00:27,681  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 13:00:27,682  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 13:00:27,911  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 13:00:28,067  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 13:00:31,222  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 13:00:31,286  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 13:00:31,374  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 13:00:32,439  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 13:00:32,439  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 13:00:32,592  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 13:00:33,465  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 13:00:58,702  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 13:00:58,858  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 13:00:58,858  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 13:00:59,092  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 13:00:59,258  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 13:01:02,702  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 13:01:02,767  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 13:01:02,848  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 13:01:03,974  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 13:01:03,974  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 13:01:04,120  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 13:01:05,516  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 13:02:07,093  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 13:02:07,235  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 13:02:07,235  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 13:02:07,459  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 13:02:07,620  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 13:02:10,446  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 13:02:10,519  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 13:02:10,616  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 13:02:11,812  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 13:02:11,812  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 13:02:11,965  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 13:02:12,710  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 13:04:45,482  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 13:04:45,623  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 13:04:45,623  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 13:04:45,843  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 13:04:46,013  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 13:04:48,487  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 13:04:48,548  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 13:04:48,644  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 13:04:49,804  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 13:04:49,805  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 13:04:49,953  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 13:04:50,974  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 13:05:11,231  INFO  (K2.java:42) - Receiving data from K2.
+14-Mar-2023 13:05:14,413  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 14:56:35, Machine, ID, :, N18K04-T17169, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 5, 5, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 5, 5, ------------------------------------------, Total, Amount, 5, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1]
+14-Mar-2023 13:05:14,414  INFO  (K2.java:116) - Received data for EUR or USD currency.
+14-Mar-2023 13:05:14,515  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
+14-Mar-2023 13:05:14,524  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
+14-Mar-2023 13:05:14,529  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1789775365278517009.png
+14-Mar-2023 13:05:15,072  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 13:05:15,072  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 13:05:15,194  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp214807174185740846469.png
+14-Mar-2023 13:05:15,450  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 13:05:15,450  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 13:05:15,584  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp310121960839511504882.png
+14-Mar-2023 13:05:15,837  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 13:05:15,837  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 13:05:16,016  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp47079686080925868401.png
+14-Mar-2023 13:05:16,161  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 13:05:16,162  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 13:05:16,234  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp56435338822529740528.png
+14-Mar-2023 13:05:16,379  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
+14-Mar-2023 13:05:16,379  INFO  (K2.java:202) - Adding images to an array
+14-Mar-2023 13:05:25,499  INFO  (MainWindow.java:436) - Transaction saved successfully for client test k2 5 USD novcanica with counted data [USD, 5, 0, 0, 0, 0, 0, 0, 5 USD].
+14-Mar-2023 13:05:29,017  INFO  (MainWindow.java:373) - Opening Database window
+14-Mar-2023 13:06:01,955  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+14-Mar-2023 13:06:02,106  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+14-Mar-2023 13:06:02,106  INFO  (Main.java:22) - Attempting to connect to database.
+14-Mar-2023 13:06:02,332  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+14-Mar-2023 13:06:02,514  INFO  (Main.java:31) - Showing login screen.
+14-Mar-2023 13:06:05,079  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+14-Mar-2023 13:06:05,139  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+14-Mar-2023 13:06:05,216  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+14-Mar-2023 13:06:06,404  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+14-Mar-2023 13:06:06,404  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+14-Mar-2023 13:06:06,561  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+14-Mar-2023 13:06:07,532  INFO  (MainWindow.java:373) - Opening Database window

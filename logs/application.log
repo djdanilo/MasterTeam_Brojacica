@@ -1,611 +1,114 @@
-16-Mar-2023 12:57:53,919  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 12:57:54,184  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 12:57:54,184  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 12:57:54,432  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 12:57:54,679  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 12:57:58,398  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 12:57:58,472  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 12:57:58,579  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 12:58:00,062  ERROR (ChooseCounter.java:180) - Port wasn't chosen.
-16-Mar-2023 12:58:22,938  INFO  (ChooseCounter.java:227) - Refreshing ports.
-16-Mar-2023 13:14:26,634  INFO  (ChooseCounter.java:190) - Connected to port USB Serial Port
-16-Mar-2023 13:14:26,635  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 13:14:26,818  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 13:14:29,664  INFO  (MainWindow.java:373) - Opening Database window
-16-Mar-2023 13:39:42,573  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 13:39:53,660  INFO  (K2.java:106) - Receiving and modifying count data +[]
-16-Mar-2023 13:39:53,661  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 13:39:56,207  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 13:39:56,439  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 13:39:56,439  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 13:39:56,667  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 13:39:56,877  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 13:39:59,653  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 13:39:59,725  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 13:39:59,818  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 13:40:01,546  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 13:40:01,547  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 13:40:01,715  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 13:44:37,513  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 13:44:40,010  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 20:52:46, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 3, 3, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 3, 3, --------------------------------, Total, Amount, 3, --------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0]
-16-Mar-2023 13:44:40,011  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 13:44:40,057  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
-16-Mar-2023 13:44:40,062  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 13:52:50,773  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 13:52:50,907  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 13:52:50,907  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 13:52:51,116  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 13:52:51,275  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 13:52:53,507  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 13:52:53,578  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 13:52:53,653  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 13:52:54,598  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 13:52:54,599  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 13:52:54,751  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 13:52:56,317  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 13:52:58,833  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 21:01:05, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 3, 3, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 3, 3, --------------------------------, Total, Amount, 3, --------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0]
-16-Mar-2023 13:52:58,834  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 13:52:58,880  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
-16-Mar-2023 13:52:58,887  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 13:52:58,926  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp15887125958211234960.png
-16-Mar-2023 13:52:59,394  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:52:59,396  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:52:59,518  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp23075483383928528272.png
-16-Mar-2023 13:52:59,743  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:52:59,743  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:52:59,870  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp315242546531518348335.png
-16-Mar-2023 13:53:00,106  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:00,106  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:00,249  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 13:53:41,917  INFO  (K2.java:106) - Receiving and modifying count data +[Date, :, 2023-03-14, 21:01:47, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 9, 9, --------------------------------, Total, Amount, 9, --------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 13:53:41,917  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 13:53:42,043  INFO  (K2.java:149) - Storing binary data of serial numbers to array.
-16-Mar-2023 13:53:42,050  INFO  (K2.java:153) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 13:53:42,054  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp12788987255455315566.png
-16-Mar-2023 13:53:42,334  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:42,334  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:42,452  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28283776409740858224.png
-16-Mar-2023 13:53:42,680  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:42,680  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:42,803  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp33497199754856786475.png
-16-Mar-2023 13:53:42,939  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:42,939  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:43,014  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp48487144824797000343.png
-16-Mar-2023 13:53:43,251  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:43,251  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:43,367  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp510066343137304450276.png
-16-Mar-2023 13:53:43,610  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:43,610  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:43,766  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp612972594151613901375.png
-16-Mar-2023 13:53:43,925  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:43,925  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:43,993  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp715330583434964386202.png
-16-Mar-2023 13:53:44,224  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:44,224  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:44,339  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp88321390280421382002.png
-16-Mar-2023 13:53:44,578  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:44,578  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:44,704  INFO  (K2.java:195) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp915806065454791615593.png
-16-Mar-2023 13:53:44,941  INFO  (K2.java:199) - Doing OCR on image files of serial numbers.
-16-Mar-2023 13:53:44,941  INFO  (K2.java:202) - Adding images to an array
-16-Mar-2023 13:53:45,080  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:01:20,378  INFO  (K2.java:106) - Receiving and modifying count data +[]
-16-Mar-2023 14:01:20,379  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:01:24,438  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:01:24,720  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:01:24,720  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:01:25,036  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:01:25,323  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:01:28,298  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:01:28,368  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:01:28,472  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:01:29,550  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:01:29,550  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:01:29,718  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:01:34,203  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:01:38,453  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 21:09:43, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 9, 9, --------------------------------, Total, Amount, 9, --------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:01:38,454  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:01:38,613  INFO  (K2.java:152) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:01:38,626  INFO  (K2.java:156) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:01:38,688  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp11099636786543358060.png
-16-Mar-2023 14:01:39,154  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:39,157  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:39,333  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp23024474661329466372.png
-16-Mar-2023 14:01:39,608  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:39,608  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:39,729  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp34512779666774425503.png
-16-Mar-2023 14:01:39,866  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:39,866  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:39,938  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp414405267149662548980.png
-16-Mar-2023 14:01:40,180  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:40,180  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:40,300  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp514686538321392922742.png
-16-Mar-2023 14:01:40,539  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:40,539  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:40,659  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp63923405568083857338.png
-16-Mar-2023 14:01:40,797  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:40,797  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:40,873  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp710159200680277504773.png
-16-Mar-2023 14:01:41,118  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:41,118  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:41,248  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp82096247901399902620.png
-16-Mar-2023 14:01:41,504  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:41,504  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:41,633  INFO  (K2.java:198) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp911462786622606992714.png
-16-Mar-2023 14:01:41,871  INFO  (K2.java:202) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:01:41,871  INFO  (K2.java:205) - Adding images to an array
-16-Mar-2023 14:01:42,015  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:02:18,783  INFO  (K2.java:106) - Receiving and modifying count data +[]
-16-Mar-2023 14:02:18,784  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:02:22,478  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:02:22,624  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:02:22,625  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:02:22,841  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:02:23,000  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:02:25,635  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:02:25,715  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:02:25,809  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:02:27,334  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:02:27,334  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:02:27,477  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:02:29,207  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:02:33,457  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 21:10:38, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 9, 9, --------------------------------, Total, Amount, 9, --------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:02:33,458  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:02:33,658  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:02:33,673  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:02:33,724  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp14182101763678255683.png
-16-Mar-2023 14:02:34,132  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:34,134  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:34,260  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp21353755469709721042.png
-16-Mar-2023 14:02:34,502  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:34,503  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:34,624  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp317372807191603068940.png
-16-Mar-2023 14:02:34,764  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:34,764  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:34,840  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp413213984493865678932.png
-16-Mar-2023 14:02:35,084  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:35,084  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:35,210  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp515395816734219637424.png
-16-Mar-2023 14:02:35,455  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:35,456  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:35,582  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp614151855317875751794.png
-16-Mar-2023 14:02:35,722  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:35,723  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:35,806  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp74572682806879221016.png
-16-Mar-2023 14:02:36,067  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:36,068  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:36,191  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp87899203603142193487.png
-16-Mar-2023 14:02:36,452  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:36,452  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:36,586  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp94999479729910141876.png
-16-Mar-2023 14:02:36,840  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:02:36,840  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:02:36,989  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:04:31,086  INFO  (K2.java:106) - Receiving and modifying count data +[Date, :, 2023-03-14, 21:12:37, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 3, 3, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 3, 3, --------------------------------, Total, Amount, 3, --------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0]
-16-Mar-2023 14:04:31,087  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:04:31,111  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:04:31,116  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:04:31,120  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp118198276564291638603.png
-16-Mar-2023 14:04:31,359  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:04:31,359  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:04:31,477  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28276175375918830721.png
-16-Mar-2023 14:04:31,726  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:04:31,727  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:04:31,851  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp310838009300930000319.png
-16-Mar-2023 14:04:32,097  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:04:32,097  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:04:32,234  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:04:44,402  INFO  (K2.java:106) - Receiving and modifying count data +[Date, :, 2023-03-14, 21:12:51, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 1, 1, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 1, 1, --------------------------------, Total, Amount, 1, --------------------------------, 1, 1, v0]
-16-Mar-2023 14:04:44,402  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:04:44,411  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:04:44,413  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:04:44,419  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp116163019525657049100.png
-16-Mar-2023 14:04:44,738  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:04:44,738  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:05:03,180  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:05:05,404  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 21:13:12, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 2, 2, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 2, 2, --------------------------------, Total, Amount, 2, --------------------------------, 1, 1, v0, 2, 1, v0]
-16-Mar-2023 14:05:05,405  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:05:05,411  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:05:05,413  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:05:05,418  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp117625797909727353001.png
-16-Mar-2023 14:05:05,562  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:05:05,562  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:05:05,672  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp215108388437090467199.png
-16-Mar-2023 14:05:05,994  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:05:05,994  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:05:28,066  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:05:30,378  INFO  (K2.java:106) - Receiving and modifying count data +[--------------------------------, Date, :, 2023-03-14, 21:13:37, Machine, ID, :, N18G03-T16198, User, ID, :, User1, -------, Value, Count, Total, ------, Currency, :, USD, --------------------------------, Denom, Count, Amount, 1, 2, 2, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, --------------------------------, Total, 2, 2, --------------------------------, Total, Amount, 2, --------------------------------, 1, 1, v0, 2, 1, v0]
-16-Mar-2023 14:05:30,378  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:05:30,382  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:05:30,383  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:05:30,387  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp113388956980823634410.png
-16-Mar-2023 14:05:30,629  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:05:30,629  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:05:30,758  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp21778434031241398520.png
-16-Mar-2023 14:05:31,103  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:05:31,104  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:05:31,293  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:06:04,793  INFO  (K2.java:106) - Receiving and modifying count data +[Date, :, 2023-03-14, 21:14:11, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 2, 2, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 2, 2, ------------------------------------------, Total, Amount, 2, ------------------------------------------, 1, 1, v0, 2, 1, v0]
-16-Mar-2023 14:06:04,793  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:06:04,805  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:06:04,805  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:06:04,808  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp18278028839298284883.png
-16-Mar-2023 14:06:05,044  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:05,045  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:05,162  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp210226464571454220821.png
-16-Mar-2023 14:06:05,404  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:05,404  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:27,813  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:06:30,344  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:14:37, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 3, 3, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 3, 3, ------------------------------------------, Total, Amount, 3, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `]
-16-Mar-2023 14:06:30,344  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:06:30,355  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:06:30,359  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:06:30,361  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp11352550854222557918.png
-16-Mar-2023 14:06:30,509  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:30,510  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:30,586  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28516670426782949882.png
-16-Mar-2023 14:06:30,812  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:30,812  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:30,927  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp314777223513093084633.png
-16-Mar-2023 14:06:31,236  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:31,236  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:46,515  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:06:50,698  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:14:55, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 9, 9, ------------------------------------------, Total, Amount, 9, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:06:50,699  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:06:50,767  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:06:50,768  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:06:50,771  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1969854223217494881.png
-16-Mar-2023 14:06:50,912  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:50,912  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:50,982  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp28510315536844081322.png
-16-Mar-2023 14:06:51,213  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:51,213  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:51,331  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp3428425455577725673.png
-16-Mar-2023 14:06:51,564  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:51,565  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:51,679  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp416297660539126001179.png
-16-Mar-2023 14:06:51,913  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:51,913  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:52,030  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp513328652785120732407.png
-16-Mar-2023 14:06:52,260  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:52,260  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:52,378  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp64010465597729096039.png
-16-Mar-2023 14:06:52,707  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:52,707  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:52,836  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp78191297995514335174.png
-16-Mar-2023 14:06:53,087  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:53,087  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:53,214  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp817296657522085624366.png
-16-Mar-2023 14:06:53,441  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:53,441  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:06:53,566  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp916845675306201671879.png
-16-Mar-2023 14:06:53,696  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:06:53,696  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:12:50,998  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:12:51,139  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:12:51,140  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:12:51,353  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:12:51,515  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:12:53,848  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:12:53,908  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:12:54,013  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:12:56,066  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:12:56,066  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:12:56,224  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:12:57,944  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:13:02,130  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:21:07, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 9, 9, ------------------------------------------, Total, Amount, 9, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:13:02,131  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:13:02,307  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:13:02,317  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:13:02,365  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp15993314152983997769.png
-16-Mar-2023 14:13:02,605  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:02,608  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:02,678  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp211273518667057191395.png
-16-Mar-2023 14:13:03,013  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:03,014  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:03,143  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp3854278608891778977.png
-16-Mar-2023 14:13:03,527  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:03,527  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:03,713  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp410298144755884132022.png
-16-Mar-2023 14:13:03,962  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:03,962  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:04,091  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp53361398740064930365.png
-16-Mar-2023 14:13:04,464  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:04,464  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:04,651  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp62062822039822103843.png
-16-Mar-2023 14:13:04,901  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:04,901  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:05,030  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp78123009090499333340.png
-16-Mar-2023 14:13:05,278  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:05,278  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:05,410  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp817222841002886612868.png
-16-Mar-2023 14:13:05,779  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:05,779  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:05,969  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp96518180573275444225.png
-16-Mar-2023 14:13:06,102  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:06,102  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:39,793  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:13:39,938  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:13:39,938  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:13:40,166  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:13:40,326  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:13:42,537  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:13:42,597  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:13:42,684  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:13:43,574  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:13:43,575  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:13:43,722  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:13:45,192  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:13:49,347  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:21:54, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 9, 9, ------------------------------------------, Total, Amount, 9, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:13:49,348  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:13:49,516  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:13:49,527  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:13:49,581  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp19247803767950923277.png
-16-Mar-2023 14:13:50,101  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:50,103  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:50,317  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp218268057376328832810.png
-16-Mar-2023 14:13:50,535  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:50,536  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:50,662  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp37372505104795462894.png
-16-Mar-2023 14:13:50,876  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:50,876  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:50,985  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp43313225352461973326.png
-16-Mar-2023 14:13:51,195  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:51,195  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:51,303  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp516658665300331997136.png
-16-Mar-2023 14:13:51,513  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:51,514  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:51,629  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp69877391324858142611.png
-16-Mar-2023 14:13:51,879  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:51,879  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:51,992  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp7913663869407510117.png
-16-Mar-2023 14:13:52,211  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:52,211  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:52,324  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp811305160864163190709.png
-16-Mar-2023 14:13:52,538  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:52,539  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:13:52,651  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp97677445283868509280.png
-16-Mar-2023 14:13:52,990  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:13:52,990  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:12,947  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:14:13,093  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:14:13,093  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:14:13,334  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:14:13,541  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:14:15,739  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:14:15,829  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:14:15,907  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:14:16,988  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:14:16,988  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:14:17,130  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:14:19,015  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:14:23,195  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:22:28, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 9, 9, ------------------------------------------, Total, Amount, 9, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:14:23,196  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:14:23,359  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:14:23,372  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:14:23,418  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp13453852746826674733.png
-16-Mar-2023 14:14:23,961  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:23,964  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:24,149  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp23826044282474102110.png
-16-Mar-2023 14:14:24,398  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:24,398  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:24,540  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp313481228123612790446.png
-16-Mar-2023 14:14:24,826  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:24,826  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:24,956  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp412874123386081908894.png
-16-Mar-2023 14:14:25,204  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:25,205  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:25,339  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp518152277937228851308.png
-16-Mar-2023 14:14:25,610  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:25,610  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:25,739  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp64327447723837017286.png
-16-Mar-2023 14:14:25,996  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:25,996  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:26,120  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp78267913366481303865.png
-16-Mar-2023 14:14:26,429  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:26,429  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:26,555  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp86201425502038770532.png
-16-Mar-2023 14:14:26,792  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:26,793  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:26,914  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp95816461452652231271.png
-16-Mar-2023 14:14:27,366  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:27,366  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:39,644  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:14:39,838  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:14:39,838  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:14:40,148  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:14:40,356  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:14:42,985  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:14:43,046  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:14:43,131  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:14:44,125  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:14:44,125  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:14:44,276  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:14:46,616  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:14:50,771  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:22:56, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 9, 9, ------------------------------------------, Total, Amount, 9, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:14:50,772  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:14:50,924  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:14:50,937  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:14:50,993  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp17635287510274931492.png
-16-Mar-2023 14:14:51,454  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:51,458  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:51,643  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp213675064186569046953.png
-16-Mar-2023 14:14:51,886  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:51,886  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:52,012  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp312163989515751708991.png
-16-Mar-2023 14:14:52,246  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:52,246  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:52,371  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp411261864215701620199.png
-16-Mar-2023 14:14:52,599  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:52,600  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:52,717  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp59886028849164284370.png
-16-Mar-2023 14:14:52,957  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:52,957  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:53,118  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp66298230094720510811.png
-16-Mar-2023 14:14:53,359  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:53,359  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:53,486  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp710013215262774517555.png
-16-Mar-2023 14:14:53,743  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:53,743  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:53,863  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp8814145360671211343.png
-16-Mar-2023 14:14:54,107  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:54,107  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:14:54,226  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp93317198628350395916.png
-16-Mar-2023 14:14:54,693  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:14:54,694  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:07,176  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:15:07,323  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:15:07,324  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:15:07,536  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:15:07,698  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:15:10,352  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:15:10,422  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:15:10,507  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:15:11,654  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:15:11,655  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:15:11,806  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:15:16,099  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:15:20,252  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:23:25, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 9, 9, ------------------------------------------, Total, Amount, 9, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:15:20,253  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:15:20,437  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:15:20,453  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:15:20,501  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp111198486434764842107.png
-16-Mar-2023 14:15:21,000  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:21,002  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:21,190  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp26056600604687786455.png
-16-Mar-2023 14:15:21,436  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:21,436  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:21,569  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp32314169284731093405.png
-16-Mar-2023 14:15:21,819  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:21,819  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:21,951  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp413743745700144477218.png
-16-Mar-2023 14:15:22,196  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:22,197  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:22,324  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp510394059400226540654.png
-16-Mar-2023 14:15:22,578  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:22,578  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:22,705  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp63554563651822671956.png
-16-Mar-2023 14:15:22,961  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:22,962  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:23,134  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp77718272244253928791.png
-16-Mar-2023 14:15:23,399  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:23,399  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:23,568  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp81319290595981523464.png
-16-Mar-2023 14:15:23,836  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:23,837  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:15:23,961  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp97869048285515732492.png
-16-Mar-2023 14:15:24,401  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:15:24,401  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:15,935  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:16:16,086  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:16:16,086  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:16:16,372  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:16:16,565  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:16:19,144  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:16:19,220  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:16:19,304  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:16:20,477  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:16:20,478  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:16:20,638  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:16:22,529  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:16:26,683  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:24:31, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 9, 9, ------------------------------------------, Total, Amount, 9, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:16:26,684  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:16:26,841  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:16:26,851  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:16:26,897  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp117800821213136849821.png
-16-Mar-2023 14:16:27,367  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:27,369  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:27,543  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp218290005958780473197.png
-16-Mar-2023 14:16:27,780  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:27,780  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:27,899  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp312228542410468983039.png
-16-Mar-2023 14:16:28,133  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:28,133  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:28,254  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp48272197386197269547.png
-16-Mar-2023 14:16:28,484  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:28,485  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:28,603  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp511644521951520107531.png
-16-Mar-2023 14:16:28,842  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:28,842  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:28,960  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp611981179061735997179.png
-16-Mar-2023 14:16:29,196  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:29,196  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:29,358  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp76452932291192457112.png
-16-Mar-2023 14:16:29,649  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:29,650  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:29,777  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp8616289442568927178.png
-16-Mar-2023 14:16:30,086  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:30,086  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:16:30,203  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp93271351108006636714.png
-16-Mar-2023 14:16:30,527  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:16:30,527  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:05,557  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:17:05,696  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:17:05,697  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:17:05,925  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:17:06,078  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:17:08,416  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:17:08,489  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:17:08,564  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:17:09,670  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:17:09,670  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:17:09,823  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:17:11,678  INFO  (K2.java:42) - Receiving data from K2.
-16-Mar-2023 14:17:15,832  INFO  (K2.java:106) - Receiving and modifying count data +[------------------------------------------, Date, :, 2023-03-14, 21:25:21, Machine, ID, :, N18G03-T16198, User, ID, :, User1, ------------, Value, Count, Total, -----------, Currency, :, USD, ------------------------------------------, Denom, Count, Amount, 1, 9, 9, 2, 0, 0, 5, 0, 0, 10, 0, 0, 20, 0, 0, 50, 0, 0, 100, 0, 0, ------------------------------------------, Total, 9, 9, ------------------------------------------, Total, Amount, 9, ------------------------------------------, 1, 1, v0, 2, 1, v0, 3, 1, v0, `, 4, 1, v0, 5, 1, v0, 6, 1, v0, 7, 1, v0, 8, 1, v0, 9, 1, v0]
-16-Mar-2023 14:17:15,833  INFO  (K2.java:116) - Received data for EUR or USD currency.
-16-Mar-2023 14:17:15,995  INFO  (K2.java:154) - Storing binary data of serial numbers to array.
-16-Mar-2023 14:17:16,006  INFO  (K2.java:158) - Storing binary data of serial numbers to GUI table.
-16-Mar-2023 14:17:16,052  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp1860483247262379294.png
-16-Mar-2023 14:17:16,494  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:16,496  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:16,716  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp27967684712657030246.png
-16-Mar-2023 14:17:16,962  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:16,962  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:17,084  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp3579959134738897337.png
-16-Mar-2023 14:17:17,321  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:17,321  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:17,441  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp412568989854152491341.png
-16-Mar-2023 14:17:17,672  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:17,673  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:17,797  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp517121427442622728137.png
-16-Mar-2023 14:17:18,033  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:18,033  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:18,172  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp68960155053793401238.png
-16-Mar-2023 14:17:18,409  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:18,409  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:18,532  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp78674301014444474229.png
-16-Mar-2023 14:17:18,784  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:18,784  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:18,902  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp815920703584705524753.png
-16-Mar-2023 14:17:19,147  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:19,147  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:19,264  INFO  (K2.java:200) - Creating an image of serial number in file C:\Users\DANILO~1\AppData\Local\Temp\temp92163821804074730749.png
-16-Mar-2023 14:17:19,587  INFO  (K2.java:204) - Doing OCR on image files of serial numbers.
-16-Mar-2023 14:17:19,587  INFO  (K2.java:207) - Adding images to an array
-16-Mar-2023 14:17:24,999  INFO  (MainWindow.java:510) - Transaction saved successfully for client Branislav with counted data [USD, 9, 0, 0, 0, 0, 0, 0, 9 USD].
-16-Mar-2023 14:17:27,891  INFO  (MainWindow.java:531) - PDF file sucessfully printed
-16-Mar-2023 14:17:51,193  INFO  (MainWindow.java:373) - Opening Database window
-16-Mar-2023 14:22:56,369  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:22:56,505  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:22:56,505  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:22:56,723  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:22:56,882  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:22:59,295  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:22:59,364  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:22:59,450  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:23:00,886  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:23:00,887  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:23:01,031  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:23:01,904  INFO  (MainWindow.java:373) - Opening Database window
-16-Mar-2023 14:34:09,058  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
-16-Mar-2023 14:34:09,210  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
-16-Mar-2023 14:34:09,211  INFO  (Main.java:22) - Attempting to connect to database.
-16-Mar-2023 14:34:09,442  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
-16-Mar-2023 14:34:09,643  INFO  (Main.java:31) - Showing login screen.
-16-Mar-2023 14:34:12,483  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
-16-Mar-2023 14:34:12,549  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
-16-Mar-2023 14:34:12,618  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
-16-Mar-2023 14:34:13,599  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
-16-Mar-2023 14:34:13,599  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
-16-Mar-2023 14:34:13,748  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
-16-Mar-2023 14:34:16,240  INFO  (MainWindow.java:373) - Opening Database window
+30-Mar-2023 10:02:10,922  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+30-Mar-2023 10:02:11,192  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+30-Mar-2023 10:02:11,192  INFO  (Main.java:22) - Attempting to connect to database.
+30-Mar-2023 10:02:11,602  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+30-Mar-2023 10:02:11,873  INFO  (Main.java:31) - Showing login screen.
+30-Mar-2023 10:02:14,601  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+30-Mar-2023 10:02:14,711  INFO  (ChooseCounter.java:81) - Adding machines K2 to be available
+30-Mar-2023 10:02:14,851  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+30-Mar-2023 10:02:17,775  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+30-Mar-2023 10:02:17,775  INFO  (ChooseCounter.java:207) - Opening port with settings for K2
+30-Mar-2023 10:02:17,976  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: K2, COM7, 115200.
+30-Mar-2023 10:02:21,857  INFO  (MainWindow.java:555) - Opening SettingWindow. Password enter successfully.
+30-Mar-2023 10:02:23,988  INFO  (SettingsWindow.java:173) - Adding machine: MIB-9
+30-Mar-2023 10:02:28,874  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+30-Mar-2023 10:02:29,019  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+30-Mar-2023 10:02:29,019  INFO  (Main.java:22) - Attempting to connect to database.
+30-Mar-2023 10:02:29,259  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+30-Mar-2023 10:02:29,472  INFO  (Main.java:31) - Showing login screen.
+30-Mar-2023 10:02:31,733  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+30-Mar-2023 10:02:31,797  INFO  (ChooseCounter.java:81) - Adding machines MIB-9 to be available
+30-Mar-2023 10:02:31,890  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+30-Mar-2023 10:02:33,205  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+30-Mar-2023 10:02:33,212  INFO  (ChooseCounter.java:205) - Opening port with settings for MIB-9
+30-Mar-2023 10:02:33,363  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: MIB-9, COM7, 115200.
+30-Mar-2023 10:02:35,614  INFO  (MIB9.java:37) - Receiving data from SB-9.
+30-Mar-2023 10:02:37,171  INFO  (MIB9.java:98) - Receiving and modifying count data +[***, REPORT, ***, Mar.30,2023,, 10:00, Station:1, USD, UV, MG, IR, --------------------------------, DENOM, UNIT, TOTAL, $1, 6, $, 6, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 6, $, 6, --------------------------------, Note, Serial, No., --------------------------------, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, 3, m3]
+30-Mar-2023 10:02:37,172  INFO  (MIB9.java:108) - Received data for EUR or USD currency.
+30-Mar-2023 10:02:44,125  INFO  (MainWindow.java:436) - Transaction saved successfully for client Test MIB9 with counted data [USD, 6, 0, 0, 0, 0, 0, 0, 6 USD].
+30-Mar-2023 10:02:45,571  INFO  (MainWindow.java:373) - Opening Database window
+30-Mar-2023 10:03:48,878  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+30-Mar-2023 10:03:49,078  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+30-Mar-2023 10:03:49,078  INFO  (Main.java:22) - Attempting to connect to database.
+30-Mar-2023 10:03:49,365  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+30-Mar-2023 10:03:49,626  INFO  (Main.java:31) - Showing login screen.
+30-Mar-2023 10:03:51,892  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+30-Mar-2023 10:03:51,972  INFO  (ChooseCounter.java:81) - Adding machines MIB-9 to be available
+30-Mar-2023 10:03:52,063  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+30-Mar-2023 10:03:53,535  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+30-Mar-2023 10:03:53,545  INFO  (ChooseCounter.java:205) - Opening port with settings for MIB-9
+30-Mar-2023 10:03:53,715  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: MIB-9, COM7, 115200.
+30-Mar-2023 10:03:54,807  INFO  (MainWindow.java:373) - Opening Database window
+30-Mar-2023 10:04:37,629  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+30-Mar-2023 10:04:37,789  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+30-Mar-2023 10:04:37,789  INFO  (Main.java:22) - Attempting to connect to database.
+30-Mar-2023 10:04:38,012  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+30-Mar-2023 10:04:38,231  INFO  (Main.java:31) - Showing login screen.
+30-Mar-2023 10:04:40,525  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+30-Mar-2023 10:04:40,605  INFO  (ChooseCounter.java:81) - Adding machines MIB-9 to be available
+30-Mar-2023 10:04:40,676  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+30-Mar-2023 10:04:41,697  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+30-Mar-2023 10:04:41,706  INFO  (ChooseCounter.java:205) - Opening port with settings for MIB-9
+30-Mar-2023 10:04:41,858  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: MIB-9, COM7, 115200.
+30-Mar-2023 10:04:42,848  INFO  (MainWindow.java:373) - Opening Database window
+30-Mar-2023 10:11:34,588  INFO  (MIB9.java:37) - Receiving data from SB-9.
+30-Mar-2023 10:11:36,143  INFO  (MIB9.java:98) - Receiving and modifying count data +[***, REPORT, ***, Mar.30,2023,, 10:09, Station:1, USD, UV, MG, IR, --------------------------------, DENOM, UNIT, TOTAL, $1, 6, $, 6, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 6, $, 6, --------------------------------, Note, Serial, No., --------------------------------, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, 3, m3]
+30-Mar-2023 10:11:36,143  INFO  (MIB9.java:108) - Received data for EUR or USD currency.
+30-Mar-2023 10:11:44,144  ERROR (MainWindow.java:513) - [SQLITE_CONSTRAINT_NOTNULL] A NOT NULL constraint failed (NOT NULL constraint failed: transactions.Client)
+30-Mar-2023 10:12:00,570  INFO  (MIB9.java:37) - Receiving data from SB-9.
+30-Mar-2023 10:12:02,085  INFO  (MainWindow.java:531) - PDF file sucessfully printed
+30-Mar-2023 10:12:03,260  INFO  (MIB9.java:98) - Receiving and modifying count data +[***, REPORT, ***, Mar.30,2023,, 10:10, Station:1, USD, UV, MG, IR, --------------------------------, DENOM, UNIT, TOTAL, $1, 12, $, 12, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 12, $, 12, --------------------------------, Note, Serial, No., --------------------------------, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, , 3, m3]
+30-Mar-2023 10:12:03,260  INFO  (MIB9.java:108) - Received data for EUR or USD currency.
+30-Mar-2023 10:12:03,260  ERROR (MIB9.java:138) - Index 25 out of bounds for length 25
+30-Mar-2023 10:12:07,759  INFO  (MIB9.java:37) - Receiving data from SB-9.
+30-Mar-2023 10:12:10,447  INFO  (MIB9.java:98) - Receiving and modifying count data +[***, REPORT, ***, Mar.30,2023,, 10:10, Station:1, USD, UV, MG, IR, --------------------------------, DENOM, UNIT, TOTAL, $1, 12, $, 12, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 12, $, 12, --------------------------------, Note, Serial, No., --------------------------------, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, , 3, m3]
+30-Mar-2023 10:12:10,447  INFO  (MIB9.java:108) - Received data for EUR or USD currency.
+30-Mar-2023 10:12:10,447  ERROR (MIB9.java:138) - Index 25 out of bounds for length 25
+30-Mar-2023 10:14:14,429  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+30-Mar-2023 10:14:14,583  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+30-Mar-2023 10:14:14,583  INFO  (Main.java:22) - Attempting to connect to database.
+30-Mar-2023 10:14:14,793  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+30-Mar-2023 10:14:14,951  INFO  (Main.java:31) - Showing login screen.
+30-Mar-2023 10:14:17,815  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+30-Mar-2023 10:14:17,884  INFO  (ChooseCounter.java:81) - Adding machines MIB-9 to be available
+30-Mar-2023 10:14:17,968  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+30-Mar-2023 10:14:19,168  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+30-Mar-2023 10:14:19,168  INFO  (ChooseCounter.java:205) - Opening port with settings for MIB-9
+30-Mar-2023 10:14:19,328  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: MIB-9, COM7, 115200.
+30-Mar-2023 10:14:20,688  INFO  (MIB9.java:37) - Receiving data from SB-9.
+30-Mar-2023 10:14:23,365  INFO  (MIB9.java:98) - Receiving and modifying count data +[***, REPORT, ***, Mar.30,2023,, 10:12, Station:1, USD, UV, MG, IR, --------------------------------, DENOM, UNIT, TOTAL, $1, 12, $, 12, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 12, $, 12, --------------------------------, Note, Serial, No., --------------------------------, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, , 3, m3]
+30-Mar-2023 10:14:23,365  INFO  (MIB9.java:108) - Received data for EUR or USD currency.
+30-Mar-2023 10:14:23,374  ERROR (MIB9.java:138) - Index 25 out of bounds for length 25
+30-Mar-2023 10:15:24,779  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+30-Mar-2023 10:15:24,929  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+30-Mar-2023 10:15:24,929  INFO  (Main.java:22) - Attempting to connect to database.
+30-Mar-2023 10:15:25,143  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+30-Mar-2023 10:15:25,303  INFO  (Main.java:31) - Showing login screen.
+30-Mar-2023 10:15:27,535  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+30-Mar-2023 10:15:27,585  INFO  (ChooseCounter.java:81) - Adding machines MIB-9 to be available
+30-Mar-2023 10:15:27,685  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+30-Mar-2023 10:15:29,518  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+30-Mar-2023 10:15:29,528  INFO  (ChooseCounter.java:205) - Opening port with settings for MIB-9
+30-Mar-2023 10:15:29,658  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: MIB-9, COM7, 115200.
+30-Mar-2023 10:15:30,870  INFO  (MIB9.java:37) - Receiving data from SB-9.
+30-Mar-2023 10:15:33,551  INFO  (MIB9.java:99) - Receiving and modifying count data +[***, REPORT, ***, Mar.30,2023,, 10:13, Station:1, USD, UV, MG, IR, --------------------------------, DENOM, UNIT, TOTAL, $1, 12, $, 12, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 12, $, 12, --------------------------------, Note, Serial, No., --------------------------------, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, , 3, m3]
+30-Mar-2023 10:15:33,552  INFO  (MIB9.java:109) - Received data for EUR or USD currency.
+30-Mar-2023 10:15:33,556  ERROR (MIB9.java:139) - Index 25 out of bounds for length 25
+30-Mar-2023 10:16:19,112  INFO  (Main.java:13) - ------------------------------Starting application------------------------------
+30-Mar-2023 10:16:19,252  INFO  (Main.java:16) - Setting LookAndFeel to NimbusLookAndFeel.
+30-Mar-2023 10:16:19,252  INFO  (Main.java:22) - Attempting to connect to database.
+30-Mar-2023 10:16:19,492  FATAL (Main.java:27) - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: users.userName)
+30-Mar-2023 10:16:19,665  INFO  (Main.java:31) - Showing login screen.
+30-Mar-2023 10:16:21,907  INFO  (LoginScreen.java:134) - Trying to login a user: [admin] with password: [a, d, m, i, n].
+30-Mar-2023 10:16:21,967  INFO  (ChooseCounter.java:81) - Adding machines MIB-9 to be available
+30-Mar-2023 10:16:22,047  INFO  (ButtonListeners.java:196) - Successful login. Showing ChooseCounter window.
+30-Mar-2023 10:16:23,131  INFO  (ChooseCounter.java:190) - Connected to port FT232R USB UART
+30-Mar-2023 10:16:23,141  INFO  (ChooseCounter.java:205) - Opening port with settings for MIB-9
+30-Mar-2023 10:16:23,283  INFO  (ChooseCounter.java:216) - Showing MainWindow, with following settings: MIB-9, COM7, 115200.
+30-Mar-2023 10:16:24,421  INFO  (MIB9.java:37) - Receiving data from SB-9.
+30-Mar-2023 10:16:27,123  INFO  (MIB9.java:100) - Receiving and modifying count data +[***, REPORT, ***, Mar.30,2023,, 10:14, Station:1, USD, UV, MG, IR, --------------------------------, DENOM, UNIT, TOTAL, $1, 12, $, 12, $2, 0, $, 0, $5, 0, $, 0, $10, 0, $, 0, $20, 0, $, 0, $50, 0, $, 0, $100, 0, $, 0, --------------------------------, TOTAL, 12, $, 12, --------------------------------, Note, Serial, No., --------------------------------, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, B88155835C, $1, B88155835C, $1, F04085344K, $1, E16625824B, $1, , 3, m3]
+30-Mar-2023 10:16:27,123  INFO  (MIB9.java:110) - Received data for EUR or USD currency.
+30-Mar-2023 10:18:29,515  INFO  (MainWindow.java:373) - Opening Database window
+30-Mar-2023 10:18:40,367  INFO  (MainWindow.java:510) - Transaction saved successfully for client Test MIB9 v2 with counted data [USD, 12, 0, 0, 0, 0, 0, 0, 12 USD].
+30-Mar-2023 10:18:42,645  INFO  (MainWindow.java:531) - PDF file sucessfully printed
+30-Mar-2023 10:19:22,187  INFO  (MainWindow.java:373) - Opening Database window

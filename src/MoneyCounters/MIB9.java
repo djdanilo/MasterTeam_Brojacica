@@ -87,6 +87,7 @@ public class MIB9 {
                     serialNumberList.remove("--------------------------------");
                     serialNumberList.remove("\u001B3");
                     serialNumberList.remove("\u001Bm\u001B3");
+                    serialNumberList.remove("\u0007\u0001");
                     for (int i = 0; i < serialNumberList.size(); i++) {
                         String str = serialNumberList.get(i);
                         if (str.contains("\u000F\u0001") || str.contains("\u000F\u0003")) {
@@ -95,6 +96,7 @@ public class MIB9 {
                         }
                     }
                     //logs
+                    log.info("Serial number list: " + serialNumberList);
                     log.info("Receiving and modifying count data +" + countData);
                     jt_logs.append(lb_timeDate.getText() + "     Preuzeta apoenska struktura\n");
 
